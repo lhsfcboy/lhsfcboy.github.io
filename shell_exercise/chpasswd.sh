@@ -1,0 +1,13 @@
+
+USERNAMEBASE=user
+USERCOUNT=99
+USERINDEX=1
+
+while [ $USERINDEX -le $USERCOUNT ]
+do
+	echo "$USERNAMEBASE$USERINDEX:root123" 
+	echo "$USERNAMEBASE$USERINDEX:root123"|chpasswd 
+
+	USERINDEX=`expr $USERINDEX + 1` 
+done
+
