@@ -1,0 +1,2 @@
+0 * * * * /root/git/lhsfcboy.github.io/src/insertHifumiPrice.sh
+ 
