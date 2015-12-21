@@ -8,7 +8,13 @@ http://lhsfcboy.github.io/
 
 
 
+投資部門別売買状況
+http://www.jpx.co.jp/markets/statistics-equities/investor-type/
 
+時価総額（普通株式ベース）
+http://www.nikkei.com/markets/kabu/index.aspx
+
+Python read Excel 
 
 
 Something To Do
