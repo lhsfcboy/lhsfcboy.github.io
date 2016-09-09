@@ -1,3 +1,9 @@
+
+
+kv700 search for none alpha 
+
+
+----------------------------------------------
 visit the homepage by
 
 http://lhsfcboy.github.io/
