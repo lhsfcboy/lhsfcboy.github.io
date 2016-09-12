@@ -1,3 +1,4 @@
+#define __STDC_FORMAT_MACROS
 #include <stdio.h>
 #include <time.h>
 #include <unistd.h>
@@ -25,7 +26,8 @@ int main()
 		sum += nanotime(&end) - nanotime(&start);
 	}
 
-	printf("Latency: %llu ns\n", sum / n);
+	printf("Latency: %" PRIu64 " ns\n", sum / n);
+	//printf("Latency: %llu ns\n", sum / n);
 	printf("--------------\n");
 	return 0;
 }
