@@ -1,1 +1,1 @@
-cd /root/git/lhsfcboy.github.io;git add -A; git commit -m "`date +"%F%t%T"` Daily Commit";git push;
+git add -A; git commit -m "`date +"%F%t%T"` Daily Commit";git push;
