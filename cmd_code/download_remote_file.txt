@@ -1,0 +1,54 @@
+Windows端运行 download_remote_file.bat 
+    一、设置
+    1 点击“开始”
+    2 点击“控制面板”
+    3 双击“任务计划”
+    4 双击“添加任务计划”
+    5 到了“任务计划向导”界面，点击“下一步”
+    6 点击“浏览”选择需要定时运行的程序(exe文件，bat文件，com文件，sys文件)然后确定。
+    7 给此任务取个名称，也可以默认，并且选择多少时间段运行一次程序，点击“下一步”
+    8 选择什么时刻运行，开始运行日期。点击“下一步”
+    9 输入用户名，密码，确认密码，这样保证系统定时启动该程序，点击“下一步”
+    10 点击“完成”
+
+    二、修改
+    回到“任务计划窗口”，就可看到刚才定制的任务了。
+    若在设置过程中，任务运行时间设置的还不是很详细，可在当前窗口下，右键点击任务名称，
+    选择属性，里面的“计划”面板有个高级，可以到那里面更详细的设置。
+
+    三、删除
+    右键点击选择删除即可。
+
+
+Linux端 运行 一个自动备份的脚本
+
+
+
+1、pscp 简要描述：
+PSCP (PuTTY Secure Copy client)是PuTTY 提供的文件传输工具 ，通过 SSH 连接，
+在两台机器之间安全的传输文件，可以用于任何 SSH（包括 SSH v1、SSH v2） 服务器。
+
+2、下载：
+可以从http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html下载pscp，
+并将其放入windows的system32 文件夹下，或者自己设置环境变量目录，
+这样在dos命令窗口中就能直接调用使用了。
+
+3、使用方法：
+1) Windows ——> Linux
+命令格式：pscp localfile rootuser@remoteip:/fileDirectory　　
+拷贝整个文件夹： pscp -r localDir rootuser@remoteip:/fileDirectory
+或者pscp -r -l root -pw 123456 localDir  remoteip:/fileDirectory
+说明：　　
+　　-r 复制目录下所有文件;　　
+　　-l 对方机器(linux)的用户名(root);
+　　-pw 密码(1234567);　　
+2) Linux ——> Windows
+把前后地址对调
+　pscp -r rootuser@remoteip:/fileDirectory localDir
+  pscp -r -l root -pw 123456 remoteip:/fileDirectory localDir
+  
+4、举例：
+    1）比如我想把windows下e:\zhangmin 整个目录的所有文件复制到linux /root目录下，命令如下：
+　　　　pscp -r -l root -pw 123456 e:\zhangmin 192.168.0.2:/root
+2）把服务器上的/tmp/dir目录取回本地"D:\data\"
+pscp -r root@192.168.0.2:/tmp/dir "D:\data\"
