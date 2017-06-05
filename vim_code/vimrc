@@ -5,6 +5,14 @@
 " https://github.com/tankywoo/dotfiles/blob/master/.vimrc
 " https://www.zhihu.com/question/19989337
 
+" 自动注释: 注释行下回车, vim会把下一行自动添加注释, 向vim复制代码时,往往因此而格式混乱
+set fo-=r
+" 一些其他的解决办法
+" http://vim.wikia.com/wiki/Disable_automatic_comment_insertion
+" http://ziloeng.blog.51cto.com/2904529/949683
+" http://bbs.csdn.net/topics/320134361
+" http://blog.sina.com.cn/s/blog_53fa47430100r60o.html
+" http://www.cnblogs.com/ayanmw/p/3432005.html
 
 set ruler          " 总是显示当前位置
 set incsearch      " 开启实时搜索功能
