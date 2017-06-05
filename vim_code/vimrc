@@ -1,3 +1,5 @@
+" more setup, refer to https://github.com/spf13/spf13-vim/blob/3.0/.vimrc
+
 set ruler          " 总是显示当前位置
 set incsearch      " 开启实时搜索功能
 set ignorecase     " 搜索时大小写不敏感
