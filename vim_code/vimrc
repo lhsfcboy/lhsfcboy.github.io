@@ -1,7 +1,24 @@
-set ruler       " show the cursor position all the time
-                " 总是显示当前位置
-                
-                
+set ruler          " 总是显示当前位置
+set incsearch      " 开启实时搜索功能
+set ignorecase     " 搜索时大小写不敏感
+set nocompatible   " 关闭兼容模式
+set wildmenu       " vim 自身命令行模式智能补全        
+
+filetype on        " 开启文件类型侦测
+filetype plugin on " 根据侦测到的不同类型加载对应的插件
+
+"添加辅助信息
+set laststatus=2   " 总是显示状态栏
+set ruler          " 显示光标当前位置
+set number         " 开启行号显示
+set cursorline     " 高亮显示当前行/列
+set cursorcolumn
+set hlsearch       " 高亮显示搜索结果
+
+"语法高亮
+syntax enable      " 开启语法高亮功能
+syntax on          " 允许用指定语法高亮配色方案替换默认方案
+
 "Quickly Run 
 """""""""""""""""""""" 
 map <F5> :call CompileRunGcc()<CR> 
@@ -38,16 +55,3 @@ endfunc
                 
                 
                 
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-""""""""""""""""""""""""""""""""""""""""""""                
