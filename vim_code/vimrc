@@ -5,6 +5,9 @@
 " https://github.com/tankywoo/dotfiles/blob/master/.vimrc
 " https://www.zhihu.com/question/19989337
 
+" 无插件VIM配置文件vimrc
+" http://vince67.github.io/2014/03/25/vimrc_file_for_vim.html
+
 " 自动注释: 注释行下回车, vim会把下一行自动添加注释, 向vim复制代码时,往往因此而格式混乱
 set fo-=r
 " 一些其他的解决办法
@@ -14,28 +17,47 @@ set fo-=r
 " http://blog.sina.com.cn/s/blog_53fa47430100r60o.html
 " http://www.cnblogs.com/ayanmw/p/3432005.html
 
+
+set encoding=utf-8 " 编码
+
 set ruler          " 总是显示当前位置
-set incsearch      " 开启实时搜索功能
+set incsearch      " 开启实时搜索功能,对当前键入的字符进行搜索而不必等待键入完成
 set ignorecase     " 搜索时大小写不敏感
 set nocompatible   " 关闭兼容模式
 " set compatible   " 就是让 vim 关闭所有扩展的功能，尽量模拟 vi 的行为
 set wildmenu       " vim 自身命令行模式智能补全        
 set showcmd        " 输入的命令显示出来，看的清楚些
+" 在Vim窗口的右下角显示一个完整的命令已经完成的部分。比如说你键入"2f",Vim就会在你键入下一个要查找的字符之前显示已经键入的"2f"。一旦你接下来再键入一个字符比如"w",那么一个完整的命令"2fw"就会被Vim 执行,同时刚才显示的"2f"也将消失。
+
 
 filetype on        " 开启文件类型侦测
 filetype plugin on " 根据侦测到的不同类型加载对应的插件
 
 "添加辅助信息
 set laststatus=2   " 总是显示状态栏
-set ruler          " 显示光标当前位置
+set ruler          " 显示光标当前位置,总是在Vim窗口的右下角显示当前光标的行列信息
 set number         " 开启行号显示
 set cursorline     " 高亮显示当前行/列
 set cursorcolumn
 set hlsearch       " 高亮显示搜索结果
 
+" 显示空格和TAB
+"set list
+"set listchars=tab:>-,trail:-
+
 "语法高亮
 syntax enable      " 开启语法高亮功能
 syntax on          " 允许用指定语法高亮配色方案替换默认方案
+
+
+" 设置tab键为4个空格，设置当行之间交错时使用4个空格
+set tabstop=4
+set shiftwidth=4
+
+
+" 设置冒号命令和搜索命令的命令历史列表的长度。
+set history=1000
+
 
 "Quickly Run 
 """""""""""""""""""""" 
