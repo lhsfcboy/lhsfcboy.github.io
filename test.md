@@ -1,14 +1,17 @@
-1. 第一則列表項目
-1. 另一個項目
-1. 第一則列表項目
-1. 另一個項目
+1.  第一則列表項目
+1.  另一個項目
+1.  第一則列表項目
+1.  另一個項目
 
 
-再合并同类项的方法得到的，要得到结果多项式中的某个系数，需要两步操作才行，有没有办法一步操作就可以得到一个系数呢？
+冒號（Colons）是用來對齊的（擺左齊左、擺右齊右，都擺就置中）。
 
-下面的计算方法就可以做到：
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
-![](/assets/import.png)
 
 ![](http://bbs.c114.net/data/attachment/forum/month_1004/20100409_ab8bbd15a02b50868f846jgYjzr6SQ8c.jpg "通信原理1.2.JPG")
 
