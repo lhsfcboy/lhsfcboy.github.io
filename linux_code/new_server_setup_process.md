@@ -33,9 +33,10 @@ ssh earlgrey@qcloud-cvm-ip 即可登陆服务器。
 不过这样还是有点麻烦，每次都得输入用户名和 IP 地址。为了进一步简化操作，我们对本地的 SSH 登陆进行配置。
 
 打开 ~/.ssh/config 文件，然后添加如下配置：
-
+```
 Host qcloud
 Hostname qcloud-cvm-ip
 User earlgrey
 IdentityFile ~/.ssh/id_rsa
+```
 之后，只需要执行 ssh qcloud 即可登陆服务器。
