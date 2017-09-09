@@ -1,1 +1,28 @@
 记录一下windows的配置,免得每次重装都折腾
+
+
+7-Zip
+Amazon Kindle
+CCLeaner
+QQTab/Clover
+Dropbox
+f.lux
+FormatFactory(格式工厂)
+Google Chrome/Firefox
+Google Japanese IME
+ImgBurn/VirtualCloneDrive
+Listary
+Mozilla Thunderbird
+QQ拼音
+QQ影音
+Sumatra PDF
+TeamViewer
+QQ轻聊版/TIM
+阿里旺旺
+百度云管家
+猎豹免费Wifi
+鼠大侠鼠标连点器
+网易云音乐
+微信
+有道词典
+有道云笔记
