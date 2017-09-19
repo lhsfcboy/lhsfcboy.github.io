@@ -14,7 +14,7 @@ ImgBurn/VirtualCloneDrive
 Listary
 Mozilla Thunderbird
 QQ拼音
-QQ影音
+PotPlayer
 Sumatra PDF
 TeamViewer
 QQ轻聊版/TIM

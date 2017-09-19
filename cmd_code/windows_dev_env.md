@@ -4,6 +4,10 @@
 Notepad++
 ATOM
     Sync Settings
+        Script (Ctrl+Shift+B to run script)
+
+    Themes
+        predawn-ui/predawn-syntax
 Git Bash
 Java 8 SDK
 Node.js
