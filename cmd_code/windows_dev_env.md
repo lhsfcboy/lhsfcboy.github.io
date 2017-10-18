@@ -2,6 +2,7 @@
 
 # 通用
 Notepad++
+Visual Studio Code
 ATOM
     Sync Settings
         Script (Ctrl+Shift+B to run script)
@@ -36,7 +37,19 @@ Strawberry Perl
 
 # Python
 ## Anaconda
-Spyder
+Spyder: 轻量级的Python开发环境
+Jupyter QTConsole: IPython
+配置Jupyter Notebooks
+    jupyter notebook config file:
+        jupyter notebook --generate-config.
+        This writes a file to C:\Users\username\.jupyter\jupyter_notebook_config.
+        Change line 179 #c.NotebookApp.notebook_dir = ''
+        to c.NotebookApp.notebook_dir = 'C:/Your/Desired/Start/Directory/'
+    在本地的Jupyter Notebooks上安装R语言的kernel
+        conda install -c r r-irkernel
+Anaconda多环境多版本python配置指导
+    http://www.jianshu.com/p/d2e15200ee9b
+
 
 ## PyCharm Community Edition
 
