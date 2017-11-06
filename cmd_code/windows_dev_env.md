@@ -72,7 +72,7 @@ plt.show()
         另外Jupyter Notebook的快捷方式里面 注意删除掉 末尾的%USERPROFILE%
 ```
 
-    - Conda下安装r-irkernel
+    + Conda下安装r-irkernel
 
 ```
     https://anaconda.org/r/r-irkernel
@@ -80,7 +80,9 @@ plt.show()
         conda install -c r r-irkernel
     Anaconda多环境多版本python配置指导    http://www.jianshu.com/p/d2e15200ee9b
 ```
-    - 一般情况下的安装
+
+    + 一般情况下的安装
+
 ```
     From R window：
     install.packages(c('repr', 'IRdisplay', 'crayon', 'pbdZMQ', 'devtools'))
