@@ -73,24 +73,31 @@ plt.show()
 ```
 
     - Conda下安装r-irkernel
+
+```
     https://anaconda.org/r/r-irkernel
     在本地的Jupyter Notebooks上安装R语言的kernel
         conda install -c r r-irkernel
-Anaconda多环境多版本python配置指导
-    http://www.jianshu.com/p/d2e15200ee9b
+    Anaconda多环境多版本python配置指导    http://www.jianshu.com/p/d2e15200ee9b
+```
     - 一般情况下的安装
+```
     From R window：
     install.packages(c('repr', 'IRdisplay', 'crayon', 'pbdZMQ', 'devtools'))
     From teminal R command:
     devtools::install_github('IRkernel/IRkernel')
     IRkernel::installspec()
+```
 
 ## PyCharm Community Edition
 
-## 配置Git Bash
+# Git Bash
+
 - 使gitbash可以使用python命令
-~/.bashrc
-alias python='winpty python.exe'
+```
+    ~/.bashrc
+    alias python='winpty python.exe'
+```
 
 - 即刻生效各类配置
 source ~/.bashrc
