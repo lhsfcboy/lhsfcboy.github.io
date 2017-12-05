@@ -1,0 +1,2 @@
+\beamer@sectionintoc {2}{楕円曲線暗号とは}{3}{0}{1}
+\beamer@subsectionintoc {2}{1}{This is subsection}{3}{0}{1}
