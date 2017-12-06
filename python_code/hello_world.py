@@ -9,3 +9,8 @@ print(sys.version)
 
 
 print("hello, world")
+
+import matplotlib
+number_list = [1, 2, 3, 4]
+
+matplotlib.pyplot.plot()

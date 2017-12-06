@@ -1,0 +1,5 @@
+PWD C:/Users/Mike/GitHubWorkSpace/lhsfcboy.github.io/latex_code/Beamer_Template
+INPUT d:/texlive/2017/texmf.cnf
+INPUT d:/texlive/2017/texmf-dist/web2c/texmf.cnf
+INPUT d:/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT ./main_jp.tex
