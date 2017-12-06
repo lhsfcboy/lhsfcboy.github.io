@@ -39,7 +39,8 @@ Strawberry Perl
 Spyder
 
 ## PyCharm Community Edition
-
+    添加第三方库和插件
+        File -- Default Settings -- + -- install package
 ## 配置Git Bash
 ~/.bashrc
 alias python='winpty python.exe'
