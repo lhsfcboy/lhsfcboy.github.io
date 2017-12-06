@@ -1,34 +1,35 @@
 本文记录了Windows下的开发环境配置.
 
 # 通用
-Notepad++
-ATOM
-    Sync Settings
-        Script (Ctrl+Shift+B to run script)
-        file-icons
-        minimap/
-    Themes
-        predawn-ui/predawn-syntax
-    Settings
-        Editor
-            Font Family: Source Code Pro
-            Scroll Past End
-            Tab Length: 4
-    Packages
-        autocomplete-python
-        (Kite or local engine?)
-        (instead of autocomplete-plus/autocomplete-snippets, dasable them)
-        python-autopep8
-            pip install autopep8
-            Format on save
-    Dangerous Zone
-        linter-flake8
-            pip install falke8
-Git Bash
-Java 8 SDK
-Node.js
-Oracle VM VirtualBox
-Strawberry Perl
+- Notepad++
+- Git Bash
+- Java 8 SDK
+- Node.js
+- Oracle VM VirtualBox
+- Strawberry Perl
+
+## ATOM
+- Themes
+    predawn-ui/predawn-syntax
+- Settings
+    - Editor
+        - Font Family: Source Code Pro
+        - Scroll Past End
+        - Tab Length: 4
+- Packages
+    - Sync Settings
+    - Script (Ctrl+Shift+B to run script)
+    - file-icons
+    - minimap
+    - autocomplete-python
+    (Kite or local engine?)
+    (instead of autocomplete-plus/autocomplete-snippets, dasable them)
+    - python-autopep8
+        pip install autopep8
+        Format on save
+- Dangerous Zone
+    linter-flake8
+        pip install falke8
 
 # SSH相关
 ## putty
