@@ -1,0 +1,336 @@
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" General/通用基础设置
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 设置 vim 为不兼容 vi 模式
+set nocompatible                           
+" 显示行号
+set number                                 
+" 显示相对行号
+"set relativenumber
+
+
+" Sets how many lines of history VIM has to remember
+set history=500
+
+" Enable filetype plugins
+filetype plugin on
+filetype indent on
+
+" Set to auto read when a file is changed from the outside
+set autoread
+
+" With a map leader it's possible to do extra key combinations
+" like <leader>w saves the current file
+" 定义快捷键的前缀，即<Leader>
+"let mapleader = ";"
+"let mapleader = ","
+"let g:mapleader = ","
+
+" Fast saving
+"nmap <leader>w :w!<cr>
+
+" :W sudo saves the file 
+" (useful for handling the permission-denied error)
+"command W w !sudo tee % > /dev/null
+
+
+" 让配置变更立即生效
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
+
+"编码
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+scriptencoding utf-8
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" VIM user interface/用户界面设置
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 显示出输入的命令
+set showcmd 
+
+" Set 7 lines to the cursor - when moving vertically using j/k
+set so=7
+"光标移动到上下两端,保持3行距离
+set scrolloff=3 
+
+" Avoid garbled characters in Chinese language windows OS
+let $LANG='en' 
+set langmenu=en
+"source $VIMRUNTIME/delmenu.vim
+"source $VIMRUNTIME/menu.vim
+
+" Turn on the WiLd menu
+" vim 自身命令行模式智能补全
+set wildmenu       
+" Ignore compiled files
+set wildignore=*.o,*~,*.pyc
+"if has("win16") || has("win32")
+"    set wildignore+=.git\*,.hg\*,.svn\*
+"else
+"    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+"endif
+
+
+" Always show current position
+" 在右下角显示当前行信息
+set ruler 
+" Height of the command bar
+" 命令行高度加1
+" Set the command window height to 2 lines, to avoid many cases of having to
+" "press <Enter> to continue"
+set cmdheight=2 
+
+
+" 取消光标所在行的底线显示, 看不清楚下划线
+set nocursorline                          
+
+" Allows hiding buffers even though they contain modifications 
+" which have not yet been written back to the associated file.
+" A buffer becomes hidden when it is abandoned
+"set hid 
+
+" Configure backspace so it acts as it should act
+set backspace=eol,start,indent
+
+" 光标从行首和行末时可以跳到另一行去
+" :help whichwrap
+" b,s means Backspace,Space in  Normal and visual
+" h,l means h,l in Normal and visual
+" <,> means Left,Right arrow in Normal and visual
+" [,] means Left,Right arrow in Insert and Replace
+set whichwrap=b,s,<,>,[,],h,l
+
+
+" 搜索for search
+" Makes search act like search in modern browsers
+" 即时搜索
+set incsearch
+" Ignore case when searching
+" 搜索时忽略大小写 
+set ignorecase
+" When searching try to be smart about cases 
+" 但在有一个或以上大写字母时,仍保持对大小写敏感  
+set smartcase
+" Highlight search results
+" 对匹配的所有项目进行高亮显示 
+set hlsearch
+
+
+" Don't redraw while executing macros (good performance config)
+" 当有太多插件时,页面滚动会变慢
+set lazyredraw 
+
+
+" 通常的正则表达式(abc)+ 在vim中要写作\(abc\)\+
+" 除非是用\v来提示  \v(abc)+  相当于  /\m\(colo\)\+   这里\m明确要求逃逸字符
+" set magic 后相当于在模式前加了\m 
+" 更加直观一点, ()表示括号自身而不是正则表达式中的字符组
+" :help magic
+set magic
+
+" Show matching brackets when text indicator is over them
+" 自动高亮匹配的括号
+set showmatch
+" How many tenths of a second to blink when matching brackets
+" set mat=2
+
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+" turn on the "visual bell" - which is much quieter than the "audio blink"
+set vb                          
+
+" Add a bit extra margin to the left
+" 左侧边距调整
+" set foldcolumn=1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colors and Fonts
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable syntax highlighting
+" 语法高亮显示
+syntax enable
+syntax on
+
+" Enable 256 colors palette in Gnome Terminal
+if $COLORTERM == 'gnome-terminal'
+    set t_Co=256
+endif
+
+try
+    colorscheme desert
+catch
+endtry
+
+"colorscheme molokai
+colorscheme desert    "沙漠配色
+"colorscheme torte
+"colorscheme solarized
+"colorscheme phd
+"colorscheme ron
+"colorscheme evening
+
+"set background=dark
+
+
+
+" Enable 256 colors palette in Gnome Terminal
+if $COLORTERM == 'gnome-terminal'
+    set t_Co=256
+endif
+
+" Set extra options when running in GUI mode
+if has("gui_running")
+    set guioptions-=T
+    set guioptions-=e
+    set t_Co=256
+    set guitablabel=%M\ %t
+endif
+
+try
+    colorscheme desert
+catch
+endtry
+
+"set background=dark
+
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Files, backups and undo
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Turn backup off, since most stuff is in SVN, git et.c anyway...
+set nobackup
+set nowb
+set noswapfile
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Text, tab and indent related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use spaces instead of tabs
+" 将tab替换为相应数量空格
+set expandtab
+
+" When on, a <Tab> in front of a line inserts blanks according to
+" 'shiftwidth'.  'tabstop' or 'softtabstop' is used in other places.  A
+" <BS> will delete a 'shiftwidth' worth of space at the start of the
+" line.
+set smarttab
+
+" 1 tab == 4 spaces
+" shiftwidth
+" The size of an "indent".
+set shiftwidth=4
+" tabstop
+" The width of a hard tabstop measured in "spaces" 
+" -- effectively the (maximum) width of an actual tab character.
+set tabstop=4
+" More about http://tedlogan.com/techblog3.html
+set softtabstop=4 
+
+
+" Linebreak on 500 characters
+"set lbr
+"set tw=500
+
+" set auto-indenting on for programming
+" 就是把当前行的对其格式应用到下一行
+set autoindent 
+" 取消后,可以避免复制时格式乱掉的问题
+" set noautoindent                           
+" Smart indent
+" 智能缩进
+set smartindent
+
+
+" 是否折行显示
+" Wrap lines
+set nowrap 
+
+
+
+" 是否在PASTE MODE 当前文件名 当前目录 当前文件EOL 最后修改时间 横竖位置
+" PASTE MODE  ~/.vimrc  CWD: /home/mike [unix] (19:05 14/12/2017)         277,2 Line: 277  Column: 2 Bot
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ CWD:\ %r%{getcwd()}%h\ [%{&ff}]\ (%{strftime(\"%H:%M\ %    d/%m/%Y\",getftime(expand(\"%:p\")))})%=%l,%c%V\ Line:\ %l\ \ Column:\ %c\ %P
+
+
+" 各种括号,双引号的匹配输入 或称 标点配对
+"inoremap { {}<ESC>i
+"inoremap ( ()<Esc>i
+"inoremap " ""<Esc>i
+"inoremap ' ''<Esc>i
+"inoremap [ []<Esc>i
+" 注意大括号是否需要换行输入
+"inoremap {<CR> {<CR>}<ESC>O    
+   
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Helper functions
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Returns true if paste mode is enabled
+function! HasPaste()
+    if &paste
+        return 'PASTE MODE  '
+    endif
+    return ''
+endfunction
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => 自定义一些快捷键
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 定义快捷键到行首和行尾
+nmap LB 0
+nmap LE $
+
+
+"按F5一键编译并运行
+map <F5> :call CompileRunGcc()<CR>
+func! CompileRunGcc()
+        exec "w"
+        if &filetype == 'c'
+           exec "!g++ % -DLOCAL -o   %<"
+           exec "!time ./%<"
+        elseif &filetype == 'cpp'
+           exec "!g++ % -std=c++11 -DLOCAL -Dxiaoai -o    %<"
+           exec "!time ./%<"
+        elseif &filetype == 'java'
+           exec "!javac %"
+           exec "!time java %<"
+        elseif &filetype == 'sh'
+           :!time bash %
+        elseif &filetype == 'python'
+        exec "!time python %"
+        endif
+endfunc    
+    
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vundle
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" https://github.com/VundleVim/Vundle.vim
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+"
+" :PluginUpdate
+" :PluginSearch
+" :PluginInstall
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+    
+    Plugin 'gmarik/Vundle.vim'
+    Plugin 'scrooloose/nerdtree'
+    Plugin 'vim-airline/vim-airline'
+    Plugin 'SirVer/ultisnips'             " Track the engine.
+    Plugin 'honza/vim-snippets'           " Snippets are separated from the engine. Add this if you want them: Plugin 'unite.vim'
+    Plugin 'kien/rainbow_parentheses.vim' " 括号增强,彩色
+    Plugin 'trailing-whitespace'          " 增加尾部空格的显示
+
+call vundle#end()   
+
