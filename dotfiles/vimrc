@@ -1,5 +1,5 @@
 """""""""""""""
-" wget https://github.com/lhsfcboy/lhsfcboy.github.io/raw/master/vim_code/.vimrc
+" wget https://github.com/lhsfcboy/lhsfcboy.github.io/raw/master/dotfiles/vimrc
 """""""""""""""
 
 
@@ -260,7 +260,6 @@ set nowrap
 
 " 是否在PASTE MODE 当前文件名 当前目录 当前文件EOL 最后修改时间 横竖位置
 " PASTE MODE  ~/.vimrc  CWD: /home/mike [unix] (19:05 14/12/2017)         277,2 Line: 277  Column: 2 Bot
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ CWD:\ %r%{getcwd()}%h\ [%{&ff}]\ (%{strftime(\"%H:%M\ %    d/%m/%Y\",getftime(expand(\"%:p\")))})%=%l,%c%V\ Line:\ %l\ \ Column:\ %c\ %P
 
 
 " 各种括号,双引号的匹配输入 或称 标点配对
@@ -331,7 +330,7 @@ call vundle#begin()
     " https://github.com/VundleVim/Vundle.vim
     
     Plugin 'scrooloose/nerdtree'
-    Plugin 'vim-airline/vim-airline'
+    "Plugin 'vim-airline/vim-airline'
     Plugin 'SirVer/ultisnips'             " Track the engine.
     Plugin 'honza/vim-snippets'           " Snippets are separated from the engine. Add this if you want them: Plugin 'unite.vim'
     Plugin 'kien/rainbow_parentheses.vim' " 括号增强,彩色
