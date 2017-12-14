@@ -325,6 +325,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
     
     Plugin 'gmarik/Vundle.vim'
+    " https://github.com/VundleVim/Vundle.vim
+    
     Plugin 'scrooloose/nerdtree'
     Plugin 'vim-airline/vim-airline'
     Plugin 'SirVer/ultisnips'             " Track the engine.
