@@ -7,9 +7,9 @@
 " General/通用基础设置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 设置 vim 为不兼容 vi 模式
-set nocompatible                           
+set nocompatible
 " 显示行号
-"set number                                 
+"set number
 " 显示相对行号
 set relativenumber
 
@@ -34,7 +34,7 @@ set autoread
 " Fast saving
 "nmap <leader>w :w!<cr>
 
-" :W sudo saves the file 
+" :W sudo saves the file
 " (useful for handling the permission-denied error)
 "command W w !sudo tee % > /dev/null
 
@@ -51,22 +51,22 @@ scriptencoding utf-8
 " VIM user interface/用户界面设置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 显示出输入的命令
-set showcmd 
+set showcmd
 
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 "光标移动到上下两端,保持3行距离
-set scrolloff=3 
+set scrolloff=3
 
 " Avoid garbled characters in Chinese language windows OS
-let $LANG='en' 
+let $LANG='en'
 set langmenu=en
 "source $VIMRUNTIME/delmenu.vim
 "source $VIMRUNTIME/menu.vim
 
 " Turn on the WiLd menu
 " vim 自身命令行模式智能补全
-set wildmenu       
+set wildmenu
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
 "if has("win16") || has("win32")
@@ -78,21 +78,23 @@ set wildignore=*.o,*~,*.pyc
 
 " Always show current position
 " 在右下角显示当前行信息
-set ruler 
+set ruler
 " Height of the command bar
 " 命令行高度加1
 " Set the command window height to 2 lines, to avoid many cases of having to
 " "press <Enter> to continue"
-set cmdheight=2 
+set cmdheight=2
+
+set statusline=%<%F%h%m%r\ [%{&ff}]\ (%{strftime(\"%H:%M\ %d/%m/%Y\",getftime(expand(\"%:p\")))})%=%l,%c%V\ %P
 
 
 " 取消光标所在行的底线显示, 看不清楚下划线
-set nocursorline                          
+set nocursorline
 
-" Allows hiding buffers even though they contain modifications 
+" Allows hiding buffers even though they contain modifications
 " which have not yet been written back to the associated file.
 " A buffer becomes hidden when it is abandoned
-"set hid 
+"set hid
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
@@ -111,24 +113,24 @@ set whichwrap=b,s,<,>,[,],h,l
 " 即时搜索
 set incsearch
 " Ignore case when searching
-" 搜索时忽略大小写 
+" 搜索时忽略大小写
 set ignorecase
-" When searching try to be smart about cases 
-" 但在有一个或以上大写字母时,仍保持对大小写敏感  
+" When searching try to be smart about cases
+" 但在有一个或以上大写字母时,仍保持对大小写敏感
 set smartcase
 " Highlight search results
-" 对匹配的所有项目进行高亮显示 
+" 对匹配的所有项目进行高亮显示
 set hlsearch
 
 
 " Don't redraw while executing macros (good performance config)
 " 当有太多插件时,页面滚动会变慢
-set lazyredraw 
+set lazyredraw
 
 
 " 通常的正则表达式(abc)+ 在vim中要写作\(abc\)\+
 " 除非是用\v来提示  \v(abc)+  相当于  /\m\(colo\)\+   这里\m明确要求逃逸字符
-" set magic 后相当于在模式前加了\m 
+" set magic 后相当于在模式前加了\m
 " 更加直观一点, ()表示括号自身而不是正则表达式中的字符组
 " :help magic
 set magic
@@ -145,7 +147,7 @@ set novisualbell
 set t_vb=
 set tm=500
 " turn on the "visual bell" - which is much quieter than the "audio blink"
-set vb                          
+set vb
 
 " Add a bit extra margin to the left
 " 左侧边距调整
@@ -231,11 +233,11 @@ set smarttab
 " The size of an "indent".
 set shiftwidth=4
 " tabstop
-" The width of a hard tabstop measured in "spaces" 
+" The width of a hard tabstop measured in "spaces"
 " -- effectively the (maximum) width of an actual tab character.
 set tabstop=4
 " More about http://tedlogan.com/techblog3.html
-set softtabstop=4 
+set softtabstop=4
 
 
 " Linebreak on 500 characters
@@ -244,9 +246,9 @@ set softtabstop=4
 
 " set auto-indenting on for programming
 " 就是把当前行的对其格式应用到下一行
-set autoindent 
+set autoindent
 " 取消后,可以避免复制时格式乱掉的问题
-" set noautoindent                           
+" set noautoindent
 " Smart indent
 " 智能缩进
 set smartindent
@@ -254,7 +256,7 @@ set smartindent
 
 " 是否折行显示
 " Wrap lines
-set nowrap 
+set nowrap
 
 
 
@@ -269,8 +271,8 @@ set nowrap
 "inoremap ' ''<Esc>i
 "inoremap [ []<Esc>i
 " 注意大括号是否需要换行输入
-"inoremap {<CR> {<CR>}<ESC>O    
-   
+"inoremap {<CR> {<CR>}<ESC>O
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -309,8 +311,8 @@ func! CompileRunGcc()
         elseif &filetype == 'python'
         exec "!time python %"
         endif
-endfunc    
-    
+endfunc
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -325,10 +327,10 @@ endfunc
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-    
+
     Plugin 'gmarik/Vundle.vim'
     " https://github.com/VundleVim/Vundle.vim
-    
+
     Plugin 'scrooloose/nerdtree'
     "Plugin 'vim-airline/vim-airline'
     Plugin 'SirVer/ultisnips'             " Track the engine.
@@ -336,5 +338,5 @@ call vundle#begin()
     Plugin 'kien/rainbow_parentheses.vim' " 括号增强,彩色
     Plugin 'trailing-whitespace'          " 增加尾部空格的显示
 
-call vundle#end()   
+call vundle#end()
 
