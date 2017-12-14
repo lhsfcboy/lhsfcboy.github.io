@@ -1,3 +1,6 @@
+"""""""""""""""
+" wget https://github.com/lhsfcboy/lhsfcboy.github.io/raw/master/vim_code/.vimrc
+"""""""""""""""
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -6,9 +9,9 @@
 " 设置 vim 为不兼容 vi 模式
 set nocompatible                           
 " 显示行号
-set number                                 
+"set number                                 
 " 显示相对行号
-"set relativenumber
+set relativenumber
 
 
 " Sets how many lines of history VIM has to remember
