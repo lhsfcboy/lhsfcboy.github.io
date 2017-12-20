@@ -1,11 +1,4 @@
-#lang planet neil/sicp 
+#lang sicp
 
-
-
-
-
-
-
-
-
+(inc 42)
 
