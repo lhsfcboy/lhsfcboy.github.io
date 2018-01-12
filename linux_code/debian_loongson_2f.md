@@ -14,7 +14,7 @@
 ## 为新用户添加 root 权限
 安装 sudo
 赋予 sudo 权限
-        ```
-        install sudo
-        usermod -a -G sudo hereisusername
-        ```
+```
+install sudo
+usermod -a -G sudo hereisusername
+```
