@@ -1,9 +1,10 @@
 from retry import retry
+from retry.api import retry_call
 from random import randint
 import time
 
 
-@retry(tries=13,delay=1)
+#@retry(tries=13,delay=1)
 def make_trouble():
 
     if randint(0,9) != 5:
@@ -13,5 +14,5 @@ def make_trouble():
         print("Another good day!",time.strftime("%X"))
 
 for i in range(10):
-    make_trouble()
+    retry_call(make_trouble,tries=10,delay=1)
 
