@@ -1,5 +1,5 @@
 from multiprocessing import Process, Queue
-import os, time, random
+ivmport os, time, random
 
 # 写数据进程执行的代码:
 def write(q):
