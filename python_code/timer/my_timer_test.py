@@ -1,8 +1,21 @@
 import time
+from time import sleep
 import random
+import logging
+logging.basicConfig(level=logging.INFO,format="%(asctime)s.%(msecs)03d[%(levelname)-8s]:%(created).6f %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
 
 
 min_interval = 1/2
+
+
+while True:
+    # 对齐到每分钟第45秒
+    sleep(60-(int(time.time())-45) % 60)
+    logging.info(f"Running heavy job, may cost 5 to 15 seconds")
+    task_time = random.randint(5,15)
+    logging.info(f"This time, it will take {task_time} seconds")
+    sleep(task_time)
+
 
 while True:
 	task_start_ts = time.time()
