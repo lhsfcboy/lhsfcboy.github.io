@@ -1,0 +1,15 @@
+# 
+
+#  Ignore everything
+*
+
+# Except tex files
+
+!.gitignore
+!*.tex
+!*.bib
+!*.pdf
+
+# ... even if they are in subdirectories
+
+!*/
