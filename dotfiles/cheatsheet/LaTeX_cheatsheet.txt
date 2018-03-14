@@ -1,0 +1,5 @@
+不带编号的行间公式推荐用 \[ … \] 
+用 $ ... $ 而不用 \( ... \)
+用 align 环境而不用 eqnarray 环境
+用 matrix, bmatrix, pmatrix, vmatrix, Vmatrix 等环境而不用 array 环境去实现矩阵
+用 \bigl, \bigr 等命令来处理定界符，而尽可能避免 \left 和 \right
