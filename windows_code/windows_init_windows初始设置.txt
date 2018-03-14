@@ -26,3 +26,10 @@ QQ轻聊版/TIM
 微信
 有道词典
 有道云笔记
+
+****************************************
+* QQTab
+****************************************
+Options
+
+Tab / When background double-clicked: Clone current
