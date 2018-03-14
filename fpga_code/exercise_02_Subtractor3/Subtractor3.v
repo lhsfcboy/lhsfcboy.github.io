@@ -31,5 +31,8 @@ endmodule
 
 module Complementer(input wire [2:0]B,
                    output wire [2:0]B_minus);
-    
+    wire [2:0]B_invert;
+    assign B_invert[0] = ~B[0];
+    assign B_invert[1] = ~B[1];
+    assign B_invert[2] = ~B[2];
 endmodule
