@@ -4,7 +4,7 @@
 7-Zip
 Amazon Kindle
 CCLeaner
-QQTab/Clover
+QTTab/Clover
 Dropbox
 f.lux
 FormatFactory(格式工厂)
@@ -28,8 +28,10 @@ QQ轻聊版/TIM
 有道云笔记
 
 ****************************************
-* QQTab
+* QTTab
 ****************************************
 Options
 
 Tab / When background double-clicked: Clone current
+
+Windows Exporer / View / Options / Show QTTabs Standard Buttons
