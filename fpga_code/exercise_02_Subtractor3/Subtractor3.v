@@ -28,3 +28,8 @@ module Adder3(input wire [2:0]A, [2:0]B,
     FullAdder FA1 (A[1], B[1], Carry[0], Result[1], Carry[1]);
     FullAdder FA2 (A[2], B[2], Carry[1], Result[2], Result[3]);
 endmodule
+
+module Complementer(input wire [2:0]B,
+                   output wire [2:0]B_minus);
+    
+endmodule
