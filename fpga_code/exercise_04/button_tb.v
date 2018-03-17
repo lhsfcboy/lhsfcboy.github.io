@@ -4,7 +4,7 @@ module TB;
     reg Button, clk, rst;
     wire [1:0] Y;
     
-    Volume v(Y, clk, Button, rst);
+    Volume v(clk, rst, Button, Y[1], Y[0]);
     
     initial begin
       clk = 1'b0;
