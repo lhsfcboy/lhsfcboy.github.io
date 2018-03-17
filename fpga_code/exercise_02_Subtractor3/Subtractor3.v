@@ -35,4 +35,18 @@ module Complementer(input wire [2:0]B,
     assign B_invert[0] = ~B[0];
     assign B_invert[1] = ~B[1];
     assign B_invert[2] = ~B[2];
+    
+    wire [3:0]B_minus_4bit;
+    Adder3 A3(B_invert, 3'b1, B_minus_4bit);
+    assign B_minus[0] = B_minus_4bit[0];
+    assign B_minus[1] = B_minus_4bit[1];
+    assign B_minus[2] = B_minus_4bit[2];
+endmodule
+
+module Subtactor3(input wire [2:0]Minuend, [2:0]Subtrahend,
+                 output wire [3:0]Result);
+    wire [2:0]Subtrahend_minus;
+    Complementer COMP(Subtrahend, Subtrahend_minus);
+
+
 endmodule
