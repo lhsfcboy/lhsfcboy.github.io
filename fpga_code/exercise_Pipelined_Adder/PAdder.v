@@ -18,7 +18,13 @@ endmodule
 module PAdder(input wire A, B,
              output wire Result);
     reg C_dash,C;
-    HalfAdder HA0 (A[0], B[0],           Result[0], Carry[0]);
-    FullAdder FA1 (A[1], B[1], Carry[0], Result[1], Carry[1]);
-    FullAdder FA2 (A[2], B[2], Carry[1], Result[2], Result[3]);
+    FullAdder FA(A[1], B[1], Carry[0], Result[1], Carry[1]);
+
+    always @(posedge clk)
+        begin
+            if(rst)
+                C <= 0;
+            else
+                C <= C_dash;
+        end
 endmodule
