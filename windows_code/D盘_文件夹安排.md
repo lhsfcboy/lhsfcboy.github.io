@@ -15,7 +15,12 @@
 - OnLineCourse
 
 - Program
- -- texlive
+  -- texlive
+  -- Android
+  -- JetBrains
+  -- LiberOfficePortable
+  -- Wolfram Research
+  -- ATOM
 - ProgramData
 
 - SoftWare
