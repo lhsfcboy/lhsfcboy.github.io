@@ -23,7 +23,7 @@ class mysql_db(object):
         self.connect()
 
         # select all the table names
-        sql = "select table_name from information_schema.tables"
+        sql = "select table_name from information_schema.tables limit 10"
         curs = self.connection.cursor()
         curs.execute(sql)
         table_names = set(x[0] for x in curs.fetchall())
@@ -36,7 +36,7 @@ class mysql_db(object):
 
 
 # test
-db_info = "localhost root 123456"
+db_info = "localhost root root123"
 test = mysql_db(db_info)
 test.connect()
 print(test.get_table_names())
