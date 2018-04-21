@@ -7,11 +7,13 @@
 - virtualenv: 创建隔绝的Python环境的工具
 - virtualenvwrapper: 对virtualenv的一层包装
 
+```bash
 wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
 python get-pip.py
 pip install virtualenv
 virtualenv --version
 pip install virtualenvwrapper
+```
 
 ## 基本使用
 
