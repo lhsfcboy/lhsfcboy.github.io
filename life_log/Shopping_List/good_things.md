@@ -16,3 +16,9 @@
   - アサヒ贅沢搾り桃
   - アサヒ贅沢搾りグレープフルーツ
   - アサヒ贅沢搾りレモン
+
+## 数码设备
+
+- 便携式显示器
+  - 华硕
+    - [产品规格](https://www.asus.com.cn/Monitors/MB16AC/specifications/)
