@@ -22,3 +22,6 @@
 - 便携式显示器
   - 华硕
     - [产品规格](https://www.asus.com.cn/Monitors/MB16AC/specifications/)
+
+- 打印机
+  - 支持无线连接, 支持自动双面, 带有扫描功能
