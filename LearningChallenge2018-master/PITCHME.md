@@ -7,7 +7,7 @@
 <span class="byline lowernote">[ Miguel Alho, DevOpsPorto Meetup, December 12th 2017 ]</span>
 
 ---
-<img src="assets/about/3d-machine-vision-vertical-2.jpg" class="faroImage"/>
+<img src="figures/GitHub.png" class="faroImage"/>
 <img src="assets/about/faro.png" class="faroImage" />
 <img src="assets/about/factory-metrology-vertical-2.jpg" class="faroImage"/>
 <hr />
