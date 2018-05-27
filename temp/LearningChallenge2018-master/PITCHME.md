@@ -9,7 +9,7 @@
 ---
 <img src="figures/GitHub.png" class="faroImage"/>
 <img src="temp/LearningChallenge2018-master/assets/about/faro.png" class="faroImage" />
-<img src="figures/Twitter" class="faroImage"/>
+<img src="figures/Twitter.png" class="faroImage"/>
 <hr />
 <span class="smallText">
     Software Engineer, Freelancer, Trainer <br/> 
