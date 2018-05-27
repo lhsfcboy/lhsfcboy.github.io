@@ -1,0 +1,4 @@
+logo : assets/logos/devopsporto_80_white.png
+footnote : "DevOpsPorto 2018"
+theme: night
+theme-override : custom.css
