@@ -1,5 +1,38 @@
 # 丹麦短期交换留学签证申请
 
+## 申请
+
+[丹麦驻日本大使馆](http://japan.um.dk/en/)
+29-6, Sarugaku-cho, Shibuya-ku
+Tokyo 150-0033
+Tel +81 (0)3 3496 3001
+tyoamb@um.dk
+http://japan.um.dk
+Office hours: Weekdays 9:30-12:00 13:30-16:30
+Personal appearance at the Embassy only by prior appointment.
+
+Appointments, consular inquiries (passport, visa, residence permit, certifications): tyoambcon@um.dk
+
+[The official portal for foreign nationals who wish to visit, live or work in Denmark](https://www.nyidanmark.dk/en-GB)
+
+Short-stay-visa
+
+Cultural-visa?
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 过程
+
 - 先是按照网页要求准备材料
 - 网上填表格申请
 - 网上付款
