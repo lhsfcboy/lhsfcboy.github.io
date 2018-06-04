@@ -18,6 +18,7 @@
       - 直线飞行距离略有上升, 声音略有下降
 
 - 新枪 M4?
+  -[コルト M4A1 リスバージョン](http://www.tokyo-marui.co.jp/products/electric/standard/2)
 
 ## 周边配件
 
