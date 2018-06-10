@@ -5,6 +5,10 @@
 - Prince POWER 4000 V
   - 初心用, 3800JPY
 
+## 学习材料
+
+- [IPA「教育用画像素材集」](http://www.pref.kanagawa.jp/cnt/f370363/)
+
 ## 体育馆利用区分速查
 
 - [亀戸スポーツセンター](http://www.koto-hsc.or.jp/sports_center3/division/)

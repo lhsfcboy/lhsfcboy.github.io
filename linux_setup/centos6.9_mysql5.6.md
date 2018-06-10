@@ -1,6 +1,35 @@
 # centos6.9 with mysql5.6
 
-## pass
+## 安装
+
+```text
+yum remove mysql*
+rpm -qa | grep mysql
+
+wget http://dev.mysql.com/get/mysql-community-release-el6-5.noarch.rpm
+wget http://dev.mysql.com/get/mysql-community-release-el6-5.noarch.rpm --no-check-certificate
+sudo rpm -Uvh mysql-community-release-el6-5.noarch.rpm
+sudo yum install mysql-community-server
+```
+
+[yumリポジトリ](http://dev.mysql.com/downloads/repo/yum/)
+
+## 基础设置
+
+```text
+mysql --version
+service mysqld status
+service mysql start
+chkconfig mysqld on
+chkconfig | grep mysqld
+```
+
+## 数据库设置
+
+```text
+mysql -u root
+
+```
 
 ## 允许mysql远程访问
 
