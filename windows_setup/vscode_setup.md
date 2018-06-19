@@ -10,7 +10,7 @@
 
 - "editor.fontFamily": "Ubuntu Mono",
 
-- 去除行末空格
+- 去除行末空格,文件末尾保留一个新行,去除文件末尾的多余连续空行,
 
 ```json
 "files.trimTrailingWhitespace": true,
@@ -21,6 +21,16 @@
 ## 外观设置
 
 Sublime Material Theme - Dark
+
+注释所用的字体格式为斜体,且是墨绿色, 很难在黑色背景中看清.
+修改配置文件: `/c/Users/Mike/.vscode/extensions/jprestidge.theme-material-theme-1.0.1/themes/Material-Theme.tmTheme`.
+
+删除掉控制`comments`格式的如下两行, 并将颜色改为 `<string>#37EC27</string>` (亮绿色.
+
+```xml
+<key>fontStyle</key>
+<string>italic</string>
+```
 
 ## Markdown 相关
 
