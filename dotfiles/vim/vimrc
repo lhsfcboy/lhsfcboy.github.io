@@ -20,6 +20,8 @@ set history=500
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
+" 根据文件类型导入插件
+filetype plugin indent on
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -209,6 +211,7 @@ set ffs=unix,dos,mac
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
+" => 文件, 备份, 撤销
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Turn backup off, since most stuff is in SVN, git et.c anyway...
 set nobackup
@@ -217,6 +220,7 @@ set noswapfile
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
+" => 文本, Tab键与缩进
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
 " 将tab替换为相应数量空格
