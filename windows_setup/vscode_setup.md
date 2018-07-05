@@ -6,6 +6,8 @@
 - font size zoom out: Ctil + -
 - `CTRL+SHIFT+X` 快速去除当前文件中的行末空格
 
+- [快捷键大全](https://blog.csdn.net/crper/article/details/54099319)
+
 ## 基础设置
 
 - "editor.fontFamily": "Ubuntu Mono",
