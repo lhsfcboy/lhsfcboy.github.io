@@ -278,6 +278,16 @@ set nowrap
 "inoremap {<CR> {<CR>}<ESC>O
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 窗口分割
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"被分割窗口之间显示空白
+set fillchars=vert:/
+
+set fillchars=stl:/
+
+set fillchars=stlnc:/
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Returns true if paste mode is enabled
@@ -336,6 +346,8 @@ call vundle#begin()
         " https://github.com/VundleVim/Vundle.vim
 
     Plugin 'scrooloose/nerdtree'
+
+    " 状态栏的显示
     Plugin 'vim-airline/vim-airline'
         if !exists('g:airline_symbols')
             let g:airline_symbols = {}
@@ -352,10 +364,12 @@ call vundle#begin()
     Plugin 'tomasr/molokai'
         " molokai原始背景色
         let g:molokai_original = 1
+
     Plugin 'altercation/vim-colors-solarized'
         let g:solarized_termtrans=1
         let g:solarized_contrast="normal"
         let g:solarized_visibility="normal"
+
     Plugin 'kien/rainbow_parentheses.vim' " 括号增强,彩色
         let g:rbpt_colorpairs = [
             \ ['darkgray',    'DarkOrchid3'],
@@ -373,6 +387,7 @@ call vundle#begin()
         au Syntax * RainbowParenthesesLoadRound
         au Syntax * RainbowParenthesesLoadSquare
         au Syntax * RainbowParenthesesLoadBraces
+
     Plugin 'bronson/vim-trailing-whitespace'
                                           " 增加尾部空格的显示
         map <leader><space> :FixWhitespace<cr>
@@ -401,4 +416,3 @@ call vundle#begin()
 
 
 call vundle#end()
-
