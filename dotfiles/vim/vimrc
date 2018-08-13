@@ -4,14 +4,101 @@
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vundle
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" https://github.com/VundleVim/Vundle.vim
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+"
+" :PluginUpdate
+" :PluginSearch
+" :PluginInstall
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+    Plugin 'gmarik/Vundle.vim'
+        " https://github.com/VundleVim/Vundle.vim
+
+    Plugin 'scrooloose/nerdtree'
+
+    " 状态栏的显示
+    Plugin 'vim-airline/vim-airline'
+        if !exists('g:airline_symbols')
+            let g:airline_symbols = {}
+        endif
+        let g:airline_left_sep = '>>'
+        let g:airline_left_alt_sep = '>'
+        let g:airline_right_sep = '<<'
+        let g:airline_right_alt_sep = '<'
+        let g:airline_symbols.linenr = '|'
+
+    "Plugin 'SirVer/ultisnips'             " Track the engine.
+    "Plugin 'honza/vim-snippets'           " Snippets are separated from the engine. Add this if you want them: Plugin 'unite.vim'
+
+    Plugin 'tomasr/molokai'
+        " molokai原始背景色
+        let g:molokai_original = 1
+
+    Plugin 'altercation/vim-colors-solarized'
+        let g:solarized_termtrans=1
+        let g:solarized_contrast="normal"
+        let g:solarized_visibility="normal"
+
+    Plugin 'kien/rainbow_parentheses.vim' " 括号增强,彩色
+        let g:rbpt_colorpairs = [
+            \ ['darkgray',    'DarkOrchid3'],
+            \ ['darkgreen',   'firebrick3'],
+            \ ['darkmagenta', 'DarkOrchid3'],
+            \ ['brown',       'firebrick3'],
+            \ ['darkmagenta', 'DarkOrchid3'],
+            \ ['darkcyan',    'SeaGreen3'],
+            \ ['darkred',     'DarkOrchid3'],
+            \ ['red',         'firebrick3'],
+            \ ]
+        let g:rbpt_max = 16
+        let g:rbpt_loadcmd_toggle = 0
+        au VimEnter * RainbowParenthesesToggle
+        au Syntax * RainbowParenthesesLoadRound
+        au Syntax * RainbowParenthesesLoadSquare
+        au Syntax * RainbowParenthesesLoadBraces
+
+    Plugin 'bronson/vim-trailing-whitespace'
+                                          " 增加尾部空格的显示
+        map <leader><space> :FixWhitespace<cr>
+
+    Plugin 'scrooloose/nerdcommenter'     " comment
+                                          " <leader>cc comment
+                                          " <leader>cu comment
+    "Plugin 'tpope/vim-commentary'
+
+    Plugin 'thinca/vim-quickrun'          " 快速执行
+    let g:quickrun_config = {
+                \   "_" : {
+                \       "outputter" : "message",
+                \   },
+    \}
+                                          " 使用message进行结果展示, 即,
+                                          " 展示运行结果后,
+                                          " 按任意键回到vim编辑
+    let g:quickrun_no_default_key_mappings = 1
+    nmap <Leader>r <Plug>(quickrun)
+    map <F10> :QuickRun<CR>
+                                          " 映射<leader>r以及F10快捷键
+call vundle#end()
+filetype plugin indent on
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General/通用基础设置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 设置 vim 为不兼容 vi 模式
 set nocompatible
 " 显示行号
-"set number
+set number
 " 显示相对行号
-set relativenumber
+" set relativenumber
 
 
 " Sets how many lines of history VIM has to remember
@@ -87,6 +174,7 @@ set ruler
 " "press <Enter> to continue"
 set cmdheight=2
 
+" 配置状态栏
 set statusline=%<%F%h%m%r\ [%{&ff}]\ (%{strftime(\"%H:%M\ %d/%m/%Y\",getftime(expand(\"%:p\")))})%=%l,%c%V\ %P
 
 
@@ -172,15 +260,15 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
-try
-    colorscheme desert
-catch
-endtry
+"try
+"    colorscheme desert
+"catch
+"endtry
 
 "colorscheme molokai
 "colorscheme desert    "沙漠配色
 "colorscheme torte
-colorscheme solarized
+"colorscheme solarized
 "colorscheme phd
 "colorscheme ron
 "colorscheme evening
@@ -332,91 +420,3 @@ func! CompileRunGcc()
 endfunc
 
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vundle
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" https://github.com/VundleVim/Vundle.vim
-" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-"
-" :PluginUpdate
-" :PluginSearch
-" :PluginInstall
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-    Plugin 'gmarik/Vundle.vim'
-        " https://github.com/VundleVim/Vundle.vim
-
-    Plugin 'scrooloose/nerdtree'
-
-    " 状态栏的显示
-    Plugin 'vim-airline/vim-airline'
-        if !exists('g:airline_symbols')
-            let g:airline_symbols = {}
-        endif
-        let g:airline_left_sep = '>>'
-        let g:airline_left_alt_sep = '>'
-        let g:airline_right_sep = '<<'
-        let g:airline_right_alt_sep = '<'
-        let g:airline_symbols.linenr = '|'
-
-    Plugin 'SirVer/ultisnips'             " Track the engine.
-    Plugin 'honza/vim-snippets'           " Snippets are separated from the engine. Add this if you want them: Plugin 'unite.vim'
-
-    Plugin 'tomasr/molokai'
-        " molokai原始背景色
-        let g:molokai_original = 1
-
-    Plugin 'altercation/vim-colors-solarized'
-        let g:solarized_termtrans=1
-        let g:solarized_contrast="normal"
-        let g:solarized_visibility="normal"
-
-    Plugin 'kien/rainbow_parentheses.vim' " 括号增强,彩色
-        let g:rbpt_colorpairs = [
-            \ ['darkgray',    'DarkOrchid3'],
-            \ ['darkgreen',   'firebrick3'],
-            \ ['darkmagenta', 'DarkOrchid3'],
-            \ ['brown',       'firebrick3'],
-            \ ['darkmagenta', 'DarkOrchid3'],
-            \ ['darkcyan',    'SeaGreen3'],
-            \ ['darkred',     'DarkOrchid3'],
-            \ ['red',         'firebrick3'],
-            \ ]
-        let g:rbpt_max = 16
-        let g:rbpt_loadcmd_toggle = 0
-        au VimEnter * RainbowParenthesesToggle
-        au Syntax * RainbowParenthesesLoadRound
-        au Syntax * RainbowParenthesesLoadSquare
-        au Syntax * RainbowParenthesesLoadBraces
-
-    Plugin 'bronson/vim-trailing-whitespace'
-                                          " 增加尾部空格的显示
-        map <leader><space> :FixWhitespace<cr>
-
-    Plugin 'scrooloose/nerdcommenter'     " comment
-                                          " <leader>cc comment
-                                          " <leader>cu comment
-    "Plugin 'tpope/vim-commentary'
-
-    Plugin 'thinca/vim-quickrun'          " 快速执行
-    let g:quickrun_config = {
-                \   "_" : {
-                \       "outputter" : "message",
-                \   },
-    \}
-                                          " 使用message进行结果展示, 即,
-                                          " 展示运行结果后,
-                                          " 按任意键回到vim编辑
-    let g:quickrun_no_default_key_mappings = 1
-    nmap <Leader>r <Plug>(quickrun)
-    map <F10> :QuickRun<CR>
-                                          " 映射<leader>r以及F10快捷键
-
-
-
-
-
-call vundle#end()
