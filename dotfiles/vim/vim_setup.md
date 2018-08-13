@@ -81,3 +81,7 @@ loggging.info(f"{}")
 ## 语法高亮
 
 Use `:color molokai` to switch to a color scheme.
+
+## 括号补全
+
+- AutoClose

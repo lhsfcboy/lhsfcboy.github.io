@@ -1,26 +1,40 @@
 # Tmux 快捷键 & 速查表
 
-启动新会话：
+## 创建会话
 
-    tmux [new -s 会话名 -n 窗口名]
+```bash
+#启动新会话：
+tmux [new -s 会话名 -n 窗口名]
+tmux new -s sessionname
+tmux new -s sessionname -d #在后台建立会话
 
-恢复会话：
+tmux ls
+tmux attach -t sessionnmae
+tmux attach #进入最近的tmux的session
+tmux a
 
-    tmux at [-t 会话名]
+ctrl+b d #脱离当前会话
 
-列出所有会话：
+tmux kill-session -t 会话名 #关闭会话
+```
 
-    tmux ls
+## 窗口操作
 
-<a name="killSessions"></a>关闭会话：
+```bash
+ctrl+b c #创建新窗口
+ctrl+b n #选择下一个窗口
+ctrl+b l #最后使用的窗口
+ctrl+b p #选择前一个窗口
+ctrl+b w #以菜单方式显示及选择窗口
+```
 
-    tmux kill-session -t 会话名
+关闭所有会话：
 
-<a name="killAllSessions"></a>关闭所有会话：
-
+```console
     tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill
+```
 
-# 在 Tmux 中，按下 Tmux 前缀 `ctrl+b`，然后：
+ 在 Tmux 中，按下 Tmux 前缀 `ctrl+b`，然后：
 
 ## 会话
 
@@ -44,7 +58,7 @@
     swap-window -t 1       交换当前和 1 号窗口
     move-window -t 1       移动当前窗口到 1 号
 
-## <a name="PanesSplits"></a>窗格（分割窗口） 
+## <a name="PanesSplits"></a>窗格（分割窗口）
 
     %  垂直分割
     "  水平分割
@@ -79,8 +93,8 @@
     PREFIX : resize-pane -R          当前窗格向右扩大 1 格
     PREFIX : resize-pane -D 20       当前窗格向下扩大 20 格
     PREFIX : resize-pane -t 2 -L 20  编号为 2 的窗格向左扩大 20 格
-    
-    
+
+
 ## 文本复制模式：
 
 按下**前缀 [**进入文本复制模式。可以使用方向键在屏幕中移动光标。默认情况下，方向键是启用的。在配置文件中启用 Vim 键盘布局来切换窗口、调整窗格大小。Tmux 也支持 Vi 模式。要是想启用 Vi 模式，只需要把下面这一行添加到 .tmux.conf 中：
