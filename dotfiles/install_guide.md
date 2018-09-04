@@ -1,10 +1,7 @@
 # dotfiles 安装向导
 
-## vim
+## Linux
 
-## bash
-
-## tmux
 
 ## Windows 7 下的 Git Bash
 
