@@ -275,13 +275,6 @@ endif
 
 "set background=dark
 
-
-
-" Enable 256 colors palette in Gnome Terminal
-if $COLORTERM == 'gnome-terminal'
-    set t_Co=256
-endif
-
 " Set extra options when running in GUI mode
 if has("gui_running")
     set guioptions-=T

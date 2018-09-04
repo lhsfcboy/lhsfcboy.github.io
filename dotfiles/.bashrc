@@ -3,12 +3,38 @@
 #echo "called .bashrc"
 # User specific aliases and functions
 
+
+
+# Git on Windows
+if [ -z "$HOMEDRIVE" ]
+then
+    echo "not a gitbash console"
+else
+    cd /D/GitHubWorkSpace/
+
+    alias myd='cd /D/GitHubWorkSpace/'
+    alias python='winpty python.exe'
+fi
+
+
+# alias
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias vi='vim'
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+alias rrm='/bin/rm -rf'
+# alias rm='mv --target-directory ~/.trash'
 
 
+# git related
 alias gs='git status'
 alias shg='git pull;git add -A; git commit -m "`date +"%F%t%T"` Daily Commit";git push;'
 # Source global definitions
