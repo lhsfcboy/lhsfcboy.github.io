@@ -71,3 +71,5 @@ PROMPT_COMMAND='history -a'
 export CLASSPATH=/root/temp/Algorithms_4th/lib/algs4.jar:$CLASSPATH
 
 export EDITOR=vim
+
+######## END #########
