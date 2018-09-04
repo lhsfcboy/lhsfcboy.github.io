@@ -1,21 +1,34 @@
 # .bashrc
 
 #echo "called .bashrc"
-# User specific aliases and functions
-
-
 
 # Git on Windows
 if [ -z "$HOMEDRIVE" ]
 then
-    echo "not a gitbash console"
+    ## if on Linux
+
+    #echo "not a gitbash console"
+
+    ### python path
+    #export PATH=/usr/local/bin:$PATH
+
+    export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
+    export PIP_REQUIRE_VIRTUALENV=true
+    export WORKON_HOME=$HOME/.virtualenvs
+    source /usr/bin/virtualenvwrapper.sh
+
+    workon p36
 else
+    ## if on Windows
+
     cd /D/GitHubWorkSpace/
 
     alias myd='cd /D/GitHubWorkSpace/'
     alias python='winpty python.exe'
+    export PYTHONIOENCODING=UTF-8
 fi
 
+# User specific aliases and functions
 
 # alias
 alias rm='rm -i'
@@ -41,16 +54,6 @@ alias shg='git pull;git add -A; git commit -m "`date +"%F%t%T"` Daily Commit";gi
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
-
-### python path
-#export PATH=/usr/local/bin:$PATH
-
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
-export PIP_REQUIRE_VIRTUALENV=true
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/bin/virtualenvwrapper.sh
-
-workon p36
 
 export TERM=xterm-256color
 force_color_prompt=yes
