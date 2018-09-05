@@ -1,5 +1,7 @@
 # dotfiles 安装向导
 
+## 下载配置文件
+
 ## Linux
 
 
