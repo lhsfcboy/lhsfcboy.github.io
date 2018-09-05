@@ -11,6 +11,7 @@ then
 
     ### python path
     #export PATH=/usr/local/bin:$PATH
+    PS1="[\D{%F %T} \u@\h:\w] \n$ "
 
     export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
     export PIP_REQUIRE_VIRTUALENV=true
@@ -30,7 +31,7 @@ fi
 
 # User specific aliases and functions
 
-# alias
+# general alias
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -42,7 +43,6 @@ alias egrep='egrep --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-
 alias rrm='/bin/rm -rf'
 # alias rm='mv --target-directory ~/.trash'
 
@@ -69,7 +69,6 @@ export HISTCONTROL=ignoredups
 PROMPT_COMMAND='history -a'
 
 export CLASSPATH=/root/temp/Algorithms_4th/lib/algs4.jar:$CLASSPATH
-
 export EDITOR=vim
 
 ######## END #########
