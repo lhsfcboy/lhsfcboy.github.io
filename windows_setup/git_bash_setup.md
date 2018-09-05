@@ -13,3 +13,8 @@ vim ~/.gitconfig
 
 [core]
         editor = /C/vim/gvim --nofork -c 'set fenc=utf-8' +1
+        
+        
+### 修改GitBash的提示符(prompt)
+
+使用管理员权限修改文件: `C:\Program Files\Git\etc\profile.d\git-prompt.sh`
