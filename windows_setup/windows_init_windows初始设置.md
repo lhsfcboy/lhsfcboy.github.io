@@ -38,11 +38,16 @@ bin文件直接扔到这个文件夹里.
 
 ### Chrome
 
+扩展插件列表
+
 - AdBlock
 - Better History
 - Enable Copy
 - ChromeReloadPlus
+- Chrome UA Spoofer
+  - 以其他平台/浏览器来请求网页
 - Grammarly for Chrome
+  - 英语语法检查
 - goog.gl URL Shortener
 - JSON viewer
 - Nimbus 截屏 录屏
@@ -56,6 +61,20 @@ bin文件直接扔到这个文件夹里.
   - Github在左侧显示目录结构树
 - Stylish
   - 为任意网站自定义主题
+- IE Tab
+- Tampermonkey
+  - 脚本扩展
+- EditThisCookie
+  - Cookie编辑/删除
+
+Chrome设置
+
+- 标签页使用梯形样式
+  - chrome://flags/#top-chrome-md 将Flag值设为Normal
+- 地址栏完整显示http/https的网络协议, 和www/m等前缀
+  - chrome://flags/#omnibox-ui-hide-steady-state-url-scheme-and-subdomains Disabled
+- 视觉上加快关闭标签页和窗口的速度
+  - chrome://flags/#enable-fast-unload Enabled
 
 ### QTTab
 
