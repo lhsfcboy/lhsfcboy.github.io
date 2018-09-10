@@ -44,6 +44,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias rrm='/bin/rm -rf'
+alias rmf='/bin/rm -rf'
 # alias rm='mv --target-directory ~/.trash'
 
 

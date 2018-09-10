@@ -16,11 +16,14 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+let mapleader = ";"
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
     Plugin 'gmarik/Vundle.vim'
         " https://github.com/VundleVim/Vundle.vim
+
+    Plugin 'terryma/vim-multiple-cursors'
 
     Plugin 'scrooloose/nerdtree'
 
@@ -388,14 +391,16 @@ endfunction
 " => 自定义一些快捷键
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 定义快捷键到行首和行尾
-nmap LB 0
-nmap LE $
-
+nmap lb 0
+"nmap lb ^
+nmap le $
+nnoremap <Leader>w :w<CR>
 
 "按F5一键编译并运行
 map <F5> :call CompileRunGcc()<CR>
 func! CompileRunGcc()
         exec "w"
+        "exec "!clear"
         if &filetype == 'c'
            exec "!g++ % -DLOCAL -o   %<"
            exec "!time ./%<"
@@ -408,8 +413,15 @@ func! CompileRunGcc()
         elseif &filetype == 'sh'
            :!time bash %
         elseif &filetype == 'python'
-        exec "!time python %"
+            exec "!time python %"
         endif
 endfunc
 
-
+function HeaderPython()
+    call setline(1, "#! /usr/bin/env python")
+    call append(1,  "#  coding:utf8")
+    normal G
+    normal o
+    normal o
+endf
+autocmd bufnewfile *.py call HeaderPython()
