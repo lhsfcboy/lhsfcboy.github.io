@@ -44,11 +44,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias rrm='/bin/rm -rf'
-<<<<<<< HEAD
-alias rmf='/bin/rm -rf'
-=======
 alias rmf='/bin/rm -f'
->>>>>>> c656d96c36d340432c602fe515d8ccdd7350ce7e
 # alias rm='mv --target-directory ~/.trash'
 alias diff="diff --color=always"
 alias less="less -r"  ### keep color
