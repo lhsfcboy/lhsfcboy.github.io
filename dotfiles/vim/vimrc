@@ -12,6 +12,7 @@
 " :PluginUpdate
 " :PluginSearch
 " :PluginInstall
+" :PluginClean
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -39,7 +40,18 @@ call vundle#begin()
         let g:airline_symbols.linenr = '|'
 
     " 代码补全
-    Plugin 'SirVer/ultisnips'             " Track the engine.
+    "Plugin 'SirVer/ultisnips'             " Track the engine.
+            " UltiSnips 有时候会报错: UltiSnips requires py >= 2.7 or py3
+            " 出现这种情况的原因主要有两种，
+            " 一种是Vim本身不支持Python，这种情况下你需要重新编译Vim打开对Python的支持，一般来说你从包管理器和官网获取的Vim都是支持Python，
+            " 另外一种情况就是Vim使用的Python版本和你系统安装的Python版本不匹配，这种情况多发生在Windows上
+    Plugin 'MarcWeber/vim-addon-mw-utils'
+    Plugin 'tomtom/tlib_vim'
+    Plugin 'garbas/vim-snipmate'
+            " 使用vim-snipmate替代UltiSnips
+            " vim-snipmat也依赖于vim-snippets提供的代码片段。
+            " 它不需要Python的支持，安装完成以后直接就能通过就能进行补全，
+            " 不过它依赖于vim-addon-mw-utils和tlib。
     Plugin 'honza/vim-snippets'           " Snippets are separated from the engine. Add this if you want them: Plugin 'unite.vim'
         let g:UltiSnipsExpandTrigger="<tab>"
 
