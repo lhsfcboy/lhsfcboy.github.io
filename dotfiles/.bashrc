@@ -21,12 +21,21 @@ then
     workon p36
 else
     ## if on Windows
-
-    cd /D/GitHubWorkSpace/
-
     alias myd='cd /D/GitHubWorkSpace/'
+    alias cdg='cd /D/GitHubWorkSpace/'
     alias python='winpty python.exe'
     export PYTHONIOENCODING=UTF-8
+
+    #cd /D/GitHubWorkSpace/
+
+    if [ -z "$TMUX" ]
+    then
+        #echo "Not in tmux terminal"
+        cd /D/GitHubWorkSpace/
+    else
+        true
+    fi
+
 fi
 
 # User specific aliases and functions
