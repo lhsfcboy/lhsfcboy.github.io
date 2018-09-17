@@ -38,8 +38,10 @@ call vundle#begin()
         let g:airline_right_alt_sep = '<'
         let g:airline_symbols.linenr = '|'
 
-    "Plugin 'SirVer/ultisnips'             " Track the engine.
-    "Plugin 'honza/vim-snippets'           " Snippets are separated from the engine. Add this if you want them: Plugin 'unite.vim'
+    " 代码补全
+    Plugin 'SirVer/ultisnips'             " Track the engine.
+    Plugin 'honza/vim-snippets'           " Snippets are separated from the engine. Add this if you want them: Plugin 'unite.vim'
+        let g:UltiSnipsExpandTrigger="<tab>"
 
     Plugin 'tomasr/molokai'
         " molokai原始背景色

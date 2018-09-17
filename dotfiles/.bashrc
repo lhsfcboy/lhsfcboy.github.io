@@ -19,6 +19,12 @@ then
     source /usr/bin/virtualenvwrapper.sh
 
     workon p36
+
+    ### CentOS/RedHat alias
+    alias install="sudo yum install -y"
+    alias update="sudo yum update -y"
+    alias upgrade="sudo yum upgrade -y"
+
 else
     ## if on Windows
     alias myd='cd /D/GitHubWorkSpace/'
@@ -36,6 +42,8 @@ else
         true
     fi
 
+    ### SSH
+    alias myserver="ssh root@183.181.60.147"
 fi
 
 # User specific aliases and functions
@@ -57,6 +65,8 @@ alias rmf='/bin/rm -f'
 # alias rm='mv --target-directory ~/.trash'
 alias diff="diff --color=always"
 alias less="less -r"  ### keep color
+
+alias ..='cd ..'
 
 # git related
 alias gs='git status'
