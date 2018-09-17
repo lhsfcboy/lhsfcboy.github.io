@@ -15,6 +15,8 @@ Git Bash 的`ln`命令只会单纯的复制文件.
 
 注意, 命令语法是: `linkd symbolfile sourcefile`
 
+```cmd
 linkd.exe ~/.bashrc /D/GitHubWorkSpace/lhsfcboy.github.io/dotfiles/.bashrc
 linkd.exe ~/.tmux.conf /D/GitHubWorkSpace/lhsfcboy.github.io/dotfiles/.tmux.conf
 linkd.exe ~/.vim/vimrc /D/GitHubWorkSpace/lhsfcboy.github.io/dotfiles/vim/vimrc
+```
