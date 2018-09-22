@@ -73,3 +73,6 @@ yum -y install ncdu
 ### 网络端口监视
 
 yum -y install nmap
+
+### 网络流量监视
+yum -y install iftop

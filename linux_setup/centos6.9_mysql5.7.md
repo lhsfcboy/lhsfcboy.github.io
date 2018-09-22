@@ -73,3 +73,28 @@ GRANT ALL PRIVILEGES ON *.* TO 'jack'@’10.10.50.127’ IDENTIFIED BY '654321' 
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 ```
+
+### 3,检查
+
+```sql
+select host, user from user;
+```
+
+## 启动后的观察
+
+启动mysqld以后, 会在 htop 中看到大量的mysqld的 PID , Linux shows threads as separate processes.
+MySQL starts one thread per connection. Running `ps` with `f`. For example, `ps auxfw` will display how the threads are related.
+
+Run `show full processlist;` in the MySQL client, to check how many connection is there.
+
+```text
+mysql> show full processlist;
++----+------+-----------+------+---------+------+----------+-----------------------+
+| Id | User | Host      | db   | Command | Time | State    | Info                  |
++----+------+-----------+------+---------+------+----------+-----------------------+
+|  5 | root | localhost | NULL | Sleep   |  238 |          | NULL                  |
+|  7 | root | localhost | NULL | Sleep   |   30 |          | NULL                  |
+|  8 | root | localhost | NULL | Query   |    0 | starting | show full processlist |
++----+------+-----------+------+---------+------+----------+-----------------------+
+3 rows in set (0.00 sec)
+```
