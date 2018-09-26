@@ -128,7 +128,13 @@ filetype indent on
 filetype plugin indent on
 
 " Set to auto read when a file is changed from the outside
+" 打开文件监视。如果在编辑过程中文件发生外部改变（比如被别的编辑器编辑了），就会发出提示
 set autoread
+
+
+" 如果行尾有多余的空格（包括 Tab 键），该配置将让这些空格显示成可见的小方块
+"set listchars=tab:»■,trail:■
+"set list
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
@@ -163,6 +169,8 @@ set showcmd
 set so=7
 "光标移动到上下两端,保持3行距离
 set scrolloff=3
+" 水平滚动时，光标距离行首或行尾的位置
+set sidescrolloff=15
 
 " Avoid garbled characters in Chinese language windows OS
 let $LANG='en'
@@ -320,6 +328,9 @@ set nobackup
 set nowb
 set noswapfile
 
+" 保留撤销历史
+"set undofile
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 " => 文本, Tab键与缩进
@@ -364,6 +375,14 @@ set smartindent
 " Wrap lines
 set nowrap
 
+" 指定折行处与编辑窗口的右边缘之间空出的字符数
+"set wrapmargin=2
+
+"设置行宽，即一行显示多少个字符
+"set textwidth=80
+
+"只有遇到指定的符号（比如空格、连词号和其他标点符号），才发生折行。也就是说，不会在单词内部折行
+"set linebreak
 
 
 " 是否在PASTE MODE 当前文件名 当前目录 当前文件EOL 最后修改时间 横竖位置
