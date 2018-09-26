@@ -414,9 +414,10 @@ nnoremap <Leader>w :w<CR>
 map <F5> :call CompileRunGcc()<CR>
 func! CompileRunGcc()
         exec "w"
-        "exec "!clear"
+        silent exec "!clear"
         if &filetype == 'c'
-           exec "!g++ % -DLOCAL -o   %<"
+           "exec "!g++ % -DLOCAL -o   %<"
+           exec "!gcc % -o %<"
            exec "!time ./%<"
         elseif &filetype == 'cpp'
            exec "!g++ % -std=c++11 -DLOCAL -Dxiaoai -o    %<"
