@@ -57,7 +57,12 @@ alias mkdir='mkdir -pv' ## 自动创建父目录
 alias rrm='/bin/rm -rf'
 alias rmf='/bin/rm -f'
 # alias rm='mv --target-directory ~/.trash'
-alias diff="diff --color=always"
+# alias diff="diff --color=always" ## For diff later then v3.4
+if [[ -x `which colordiff` ]]; then
+      alias diff='colordiff -u'
+  else
+      alias diff='diff -u'
+fi
 alias less="less -r"  ### keep color
 
 alias ls='ls --color=auto'
