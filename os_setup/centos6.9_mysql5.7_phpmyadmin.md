@@ -98,3 +98,80 @@ mysql> show full processlist;
 +----+------+-----------+------+---------+------+----------+-----------------------+
 3 rows in set (0.00 sec)
 ```
+
+## phpMyAdmin
+
+```bash
+### 确认Apache版本
+httpd -v
+# 2.2
+
+yum --enablerepo=epel install -y  phpMyAdmin
+
+vim /etc/httpd/conf.d/phpMyAdmin.conf
+```
+
+配置访问白名单时, 注意IP网段的写法
+
+``` conf
+<Directory /usr/share/phpMyAdmin/>
+   ......
+   <IfModule !mod_authz_core.c>
+     # Apache 2.2
+     Order Deny,Allow
+     Deny from All
+     Allow from 127.0.0.1
+     Allow from ::1
+     Allow from 111.222.333  # IP range
+   </IfModule>
+</Directory>
+
+<Directory /usr/share/phpMyAdmin/setup/>
+   ......
+   <IfModule !mod_authz_core.c>
+     # Apache 2.2
+     Order Deny,Allow
+     Deny from All
+     Allow from 127.0.0.1
+     Allow from ::1
+     Allow from 111.222.333  # IP range
+   </IfModule>
+</Directory>
+```
+
+如果数据库在另一台服务器上, 那么配置
+
+```php
+# /etc/phpMyAdmin/config.inc.php
+$cfg['Servers'][$i]['host']          = '111.222.333.111'; // MySQL hostname or IP address
+```
+
+注意Apache的端口问题, 这里使用8000端口
+
+```bash
+# /etc/httpd/conf/httpd.conf
+Listen 8000
+```
+
+重启Apache
+
+```bash
+/etc/init.d/httpd configtest
+/etc/init.d/httpd graceful
+```
+
+访问: <http://111.222.333.444:8000/phpMyAdmin/>
+
+## 配置phpMyAdmin
+
+### 修改默认登录有效时间
+
+```text
+vim /etc/php.ini
+
+session.gc_maxlifetime = 36000
+
+vim /etc/phpMyAdmin/config.inc.php
+
+$cfg['LoginCookieValidity'] = 36000
+```
