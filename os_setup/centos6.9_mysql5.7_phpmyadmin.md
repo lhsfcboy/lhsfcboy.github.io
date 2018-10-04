@@ -12,7 +12,11 @@ rpm -qa | grep mysql
 rpm -ivh https://dev.mysql.com/get/mysql57-community-release-el6-9.noarch.rpm
 
 sudo yum install -y mysql-community-server
+```
 
+## Setup
+
+```text
 cp -p /etc/my.cnf /etc/my.cnf.orig
 vi /etc/my.cnf
 

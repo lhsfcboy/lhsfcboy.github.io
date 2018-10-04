@@ -9,6 +9,12 @@ then
 
     #echo "not a gitbash console"
 
+    if [[ -x `which colordiff` ]]; then
+          alias diff='colordiff -u'
+      else
+          alias diff='diff -u'
+    fi
+
     ### python path
     #export PATH=/usr/local/bin:$PATH
     PS1="[\D{%F %T} \u@\h:\w] \n$ "
@@ -58,11 +64,6 @@ alias rrm='/bin/rm -rf'
 alias rmf='/bin/rm -f'
 # alias rm='mv --target-directory ~/.trash'
 # alias diff="diff --color=always" ## For diff later then v3.4
-if [[ -x `which colordiff` ]]; then
-      alias diff='colordiff -u'
-  else
-      alias diff='diff -u'
-fi
 alias less="less -r"  ### keep color
 
 alias ls='ls --color=auto'
