@@ -103,6 +103,15 @@ mysql> show full processlist;
 3 rows in set (0.00 sec)
 ```
 
+## 客户端
+
+推荐使用带有命令补全提示的`mycli`客户端
+
+```bash
+
+pip install -U mycli
+```
+
 ## phpMyAdmin
 
 ```bash
