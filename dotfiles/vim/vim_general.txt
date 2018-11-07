@@ -21,7 +21,27 @@ zz
 
 H / M / L
 
-## 多文件操作
+## 多文件操作 总述
 
 在vim中新打开一个文件
 :open file2.txt
+
+:e
+
+## 多文件操作 启动篇
+
+使用大写的O参数来垂直分屏
+
+vim -On file1 file2 ...
+
+使用小写的o参数来水平分屏
+
+vim -on file1 file2 ...
+
+## 多文件操作 操作篇
+
+:ls
+:buffers       列出所有缓冲区
+:bn[ext]            下一个缓冲区
+:bp[revious]        上一个缓冲区
+:b {number, expression}     跳转到指定缓冲区
