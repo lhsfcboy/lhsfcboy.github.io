@@ -22,7 +22,7 @@
 
 ## 外观设置
 
-Sublime Material Theme - Dark
+- Sublime Material Theme - Dark
 
 注释所用的字体格式为斜体,且是墨绿色, 很难在黑色背景中看清.
 修改配置文件: `/c/Users/Mike/.vscode/extensions/jprestidge.theme-material-theme-1.0.1/themes/Material-Theme.tmTheme`.
@@ -33,6 +33,12 @@ Sublime Material Theme - Dark
 <key>fontStyle</key>
 <string>italic</string>
 ```
+
+- Dracula Theme
+
+- Material Icon Theme
+
+- Indent Rainbow
 
 ## Markdown 相关
 
