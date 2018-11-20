@@ -1,9 +1,10 @@
 [user]
 	name = Luo Mike Hongshuai
 	email = lhsfcboy@gmail.com
-    
 ====================WIP=========================
-    
+git config --global core.quotepath false
+## 使得git的命令输出支持中文显示
+
 [core]
 	editor = vim
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
