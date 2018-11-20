@@ -4,12 +4,18 @@
 
 mineo 的 D-Plan 通话与网络正常.
 
+双卡(中国移动与Docomo)可以同时待机.
+
 ## 已知的重大问题
 
 - 分享的个人热点不可用
   - 其他终端能够连接, 但是无法连入网络
   - 是否可以使用其他的热点分享APP?
 
+- 谷歌日历与谷歌通讯录无法正常同步
+  - 使用CalenGoo作为日历程序(不依赖谷歌同步服务)
+  - <https://shadow53.com/android/no-gapps/setup-guide/3/#option-3-1-2-using-davdroid>
+  
 ## 已知的问题点
 
 - 原生日历程序不支持时间表显示格式
@@ -17,9 +23,14 @@ mineo 的 D-Plan 通话与网络正常.
 
 - 通知中心中无法对邮件进行快捷操作
   - 退订不用的邮件
-  
+
 - 中文与日文输入法之间的切换
   - 使用谷歌日语与谷歌中文
+  
+## 可能需要的操作
+
+- 安装 Google Play Service Info
+- 给 Google Play Service 开放所有权限  
 
 ## Google Play以外的APP
 
@@ -33,7 +44,7 @@ mineo 的 D-Plan 通话与网络正常.
 ## 第三方APP
 
 - 人人影视
-  
+
 ## 备份与转移的注意事项
 
 - 浏览器中打开的标签页
@@ -45,7 +56,7 @@ mineo 的 D-Plan 通话与网络正常.
 ## 谷歌的使用
 
 谷歌安装器
-  
+
 ## Docer App
 
 - GMAIL
@@ -53,7 +64,7 @@ mineo 的 D-Plan 通话与网络正常.
 - Chrome
 - 网易云笔记
 
-## 首屏 
+## 首屏
 
 - IM
     - 微信
@@ -62,7 +73,7 @@ mineo 的 D-Plan 通话与网络正常.
     - LINE
     - 联系人
     - QQ
-- SNS    
+- SNS
     - Facebook
     - 微博
     - Twitter
@@ -97,7 +108,7 @@ mineo 的 D-Plan 通话与网络正常.
 - 音乐娱乐
     - Spotify
     - 你演我猜
-- Messaging  
+- Messaging
     - Facebook Messager
     - WhatsApp
     - Slack
@@ -121,7 +132,7 @@ mineo 的 D-Plan 通话与网络正常.
     - 飞常准
 - CN 财经
     - 中泰齐富通
-    - 支付宝    
+    - 支付宝
 - JP Life
     - TCPクイック検索
     - Yodobashi
@@ -159,7 +170,7 @@ mineo 的 D-Plan 通话与网络正常.
 - 东京网球
     - テニス乱数表
     - Circlesquare
-    
+
 ## 其他
 
 - 讯飞输入法
