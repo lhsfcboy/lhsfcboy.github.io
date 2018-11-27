@@ -111,3 +111,12 @@ Windows Exporer / View / Options / Show QTTabs Standard Buttons
 默认快捷键 `Ctrl+~`
 
 ### Listary
+
+### Notepad++ (Notepad Plus Plus)
+
+插件:
+- A
+- B
+- C
+
+主题: `Solarized`
