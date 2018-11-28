@@ -27,6 +27,9 @@ mineo 的 D-Plan 通话与网络正常.
 - 中文与日文输入法之间的切换
   - 使用谷歌日语与谷歌中文
   
+- 微信不支持大爆炸
+  - 微信中, 打开<http://debugtbs.qq.com/>, 选择强制使用系统内核/安装线上内核
+  
 ## 可能需要的操作
 
 - 安装 Google Play Service Info
