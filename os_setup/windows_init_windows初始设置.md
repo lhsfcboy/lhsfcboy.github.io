@@ -118,7 +118,7 @@ Windows Exporer / View / Options / Show QTTabs Standard Buttons
 
 - NppExport
   - 把高亮显示的代码，粘贴到html中
-- B
+- Json Viewer
 - C
 
 设置:
