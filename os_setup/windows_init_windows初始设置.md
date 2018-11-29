@@ -116,7 +116,8 @@ Windows Exporer / View / Options / Show QTTabs Standard Buttons
 
 插件:
 
-- A
+- NppExport
+  - 把高亮显示的代码，粘贴到html中
 - B
 - C
 
