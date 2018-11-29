@@ -119,4 +119,11 @@ Windows Exporer / View / Options / Show QTTabs Standard Buttons
 - B
 - C
 
-主题: `Solarized`
+- 主题: `Solarized`
+- Auto-Completion
+  - Disable
+- General
+  - Tab Bar, Multi-line
+- Editing
+  - Multi-Editing Settings, Enable
+    - Ctrl + Mouse click/selection
