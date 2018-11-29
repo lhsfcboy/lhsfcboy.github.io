@@ -115,9 +115,12 @@ Windows Exporer / View / Options / Show QTTabs Standard Buttons
 ### Notepad++ (Notepad Plus Plus)
 
 插件:
+
 - A
 - B
 - C
+
+设置:
 
 - 主题: `Solarized`
 - Auto-Completion
@@ -127,3 +130,26 @@ Windows Exporer / View / Options / Show QTTabs Standard Buttons
 - Editing
   - Multi-Editing Settings, Enable
     - Ctrl + Mouse click/selection
+- Language
+  - Tab Setting, Enable `Replace by space`
+  
+快捷键:
+
+```text
+快速复制一行	CTRL+D
+快速删除一行	CTRL+L
+将上下行交换	CTRL+T
+快速定位到某一行	CTRL+G
+快速查询	CTRL+F
+进行单行注释	CTRL+K 或者是 CTRL+Q
+取消单行注释	CTRL+SHIFT+K 或者是 CTRL+Q
+进行多行注释	CTRL+SHIFT+Q
+字体放大、缩小	点击放大、缩小按钮 或 CTRL+鼠标+滚轮的方式
+选择多行	鼠标右击出现： “开始/结束” 最后一行选择 “开始/结束”
+折叠所有行	ALT+0
+释放所有行	ALT+SHIFT+0
+折叠当前行	CTRL+ALT+F
+释放当前行	CTRL+ALT+SHIFT+F
+全屏模式	F11 (和浏览器一样)
+合并行	Ctrl+J
+```
