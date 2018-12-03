@@ -77,7 +77,7 @@ alias egrep='egrep --color=auto'
 
 alias now='date +"%T"'
 alias nowtime=now
-alias nowdate='date +"%d-%m-%Y"'
+alias nowdate='date +"%Y%m%d"'
 
 alias cd..='cd ..'
 alias ..='cd ..'
