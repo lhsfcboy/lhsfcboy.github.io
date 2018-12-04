@@ -85,3 +85,23 @@ Use `:color molokai` to switch to a color scheme.
 ## 括号补全
 
 - AutoClose
+
+## 默认的颜色显示
+
+
+vim不同关键字字体颜色修改方法
+
+```vimrc
+" 修改字符串颜色
+hi Comment ctermfg =blue
+" 修改字符串颜色
+hi String ctermfg =darkred
+" 修改类型颜色
+hi Type ctermfg =yellow
+" 修改数字颜色
+hi Number ctermfg =darkblue
+" 修改常量颜色
+hi Constant ctermfg =blue
+" 修改声明颜色
+hi Statement ctermfg =darkyellow
+```
