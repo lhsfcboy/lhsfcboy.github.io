@@ -20,6 +20,12 @@
 "files.trimFinalNewlines": true,
 ```
 
+- 中文乱码
+
+```json
+"files.autoGuessEncoding": true,
+```
+
 ## 外观设置
 
 - Sublime Material Theme - Dark
