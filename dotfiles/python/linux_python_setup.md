@@ -2,7 +2,16 @@
 
 不使用Anaconda
 
-## 准备
+## pip等基础包
+
+upgrade全部包
+
+```console
+pip list --format=legacy --outdated | awk '{print $1}' | xargs pip install --upgrade
+pip list --format=columns --outdated | tail -n +3 | cut -d' ' -f 1 | xargs pip install --upgrade
+```
+
+## 准备虚拟环境相关工具
 
 - virtualenv: 创建隔绝的Python环境的工具
 - virtualenvwrapper: 对virtualenv的一层包装
@@ -31,7 +40,6 @@ virtualenv -p /usr/bin/python2.7 my_project
 source my_project/bin/activate
 
 # 停用
-
 ```
 
 ## virtualenvwrapper
@@ -61,4 +69,14 @@ lsvirtualenv
 
 # 查看环境里安装了哪些包
 lssitepackages
+```
+
+## 设置提示符样式
+
+```console
+$ cat ~/.virtualenvs/postactivate
+#!/bin/bash
+# This hook is sourced after every virtualenv is activated.
+
+PS1="\[\e[1;33;45m\](`basename \"$VIRTUAL_ENV\"`)\[\e[0m\]$_OLD_VIRTUAL_PS1"
 ```
