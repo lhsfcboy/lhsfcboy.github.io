@@ -16,9 +16,14 @@ mineo 的 D-Plan 通话与网络正常.
   - 使用CalenGoo作为日历程序(不依赖谷歌同步服务)
   - <https://shadow53.com/android/no-gapps/setup-guide/3/#option-3-1-2-using-davdroid>
   
+- 谷歌邮件APP有时报错说需要额外的GoogleService
+  
 ## 已知的问题点
 
+- 原生邮件APP需要先打开话题, 再选择具体邮件
+
 - 原生日历程序不支持时间表显示格式
+  - 不能在周视图中一览所有事件
   - 使用谷歌日历
 
 - 通知中心中无法对邮件进行快捷操作
