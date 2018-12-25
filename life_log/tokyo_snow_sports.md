@@ -6,6 +6,8 @@
 - 户狩温泉滑雪场
   - トガリ
   - http://www.togari.jp/
+  - ホテル観山
+    - ホテルURL：http://www.iiyama-catv.ne.jp/~iyashi/
 
 - 猪苗代滑雪场
   - いなわしろ
