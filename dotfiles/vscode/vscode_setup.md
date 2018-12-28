@@ -65,6 +65,10 @@
     "python.linting.pylintArgs": [
         "--disable=C0301,C0111,C0103,E0611"
     ],
+
+    "python.linting.pylintArgs": [
+        "--disable=C0413,C0301,C0111,C0103,E0611,W0105,W0611,W0621,W0404"
+    ],
 ```
 
 - 禁止的规则
@@ -76,3 +80,4 @@
   - W0105:String statement has no effect
   - W0611:Unused import random
   - W0404:Reimport ''
+  - W1203:Use % formatting in logging functions and pass the % parameters as arguments
