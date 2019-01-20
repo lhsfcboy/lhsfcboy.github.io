@@ -34,3 +34,19 @@
 - 李宁, LI-NING
 - 燕龙
   国货品牌
+
+
+## 我的拍子
+
+- Prince POWER 4000 V
+  - 初心用, 3800JPY
+
+## 学习材料
+
+- [IPA「教育用画像素材集」](http://www.pref.kanagawa.jp/cnt/f370363/)
+
+## 店铺
+
+- Yonex新桥Showroom
+- Victoria
+  - 本店的球拍 加 本店的球线 可持会员卡免去换线人工费
