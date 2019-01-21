@@ -9,13 +9,15 @@
 - 西部世界 | Westworld 2016
 - 摩登家庭 | Modern Family
 
-## 观看中的完结篇
-
-- 布莱克书店 | Black Books
-- 米兰达 | Miranda
 
 ## 观影列表
 
 - 疑犯追踪 | Person Of Interest
 - 萤火虫 | Firefly
 - 犯罪心理 | Criminal Minds
+
+
+## 已经完结篇
+
+- 布莱克书店 | Black Books
+- 米兰达 | Miranda
