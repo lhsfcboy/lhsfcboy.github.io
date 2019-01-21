@@ -6,7 +6,13 @@ pass
 ## 每周 Weekly
 确认下周行程
 清理各种TODO
-- Dropbox
+  - WorkFlowy
+  - GitHub
+  - 手机截屏
+  - Google Driver
+  - OneNote
+  - 有道云笔记
+  - Dropbox  TODO文件夹
 
 ## 每月 Monthly
 ### 健康卫生类
