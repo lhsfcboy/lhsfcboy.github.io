@@ -4,15 +4,20 @@
 pass
 
 ## 每周 Weekly
-确认下周行程
-清理各种TODO
+
+- 确认下周行程
+- 清理各种TODO
   - WorkFlowy
   - GitHub
-  - 手机截屏
+  - 微博/Twitter的收藏/点赞
   - Google Driver
   - OneNote
   - 有道云笔记
   - Dropbox  TODO文件夹
+  - Chrome标签页
+  - 手机后台任务
+  - 手机照片/截屏
+- 冰箱存货
 
 ## 每月 Monthly
 ### 健康卫生类
