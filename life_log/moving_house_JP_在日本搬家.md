@@ -24,6 +24,8 @@
   - 0570-002211
   - 03 3842 0111
 - 水道
+  - <https://www.waterworks.metro.tokyo.jp/faq/qa-4.html>
+- Internet
 
 ###### 前日
 - 冷蔵庫のコンセントを抜き、水抜きと庫内掃除。
