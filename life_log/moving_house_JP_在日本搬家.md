@@ -18,13 +18,19 @@
 
 ###### 1週間前までにすること
 - 転出届
+  - [江東区](https://www.city.koto.lg.jp/060301/kurashi/jumin/idotodoke/5015.html)
+- ワンストップ申込みサービス
+  - （引越れんらく帳）では東京都水道局のほか、電気（東京電力）やＮＨＫなどへのお申込みがワンストップで可能です。
 - 電気
   - 0120-995-001
 - ガス
-  - 0570-002211
-  - 03 3842 0111
+  - 東京ガス
+    - 0570-002211
+    - 03-3842-0111
 - 水道
-  - <https://www.waterworks.metro.tokyo.jp/faq/qa-4.html>
+  - [東京都水道局]<https://www.waterworks.metro.tokyo.jp/faq/qa-4.html>
+    - お客さま番号がわかるもの（検針票又は領収証書等）
+  - [お客さまセンター]<http://www.waterworks.metro.tokyo.jp/tetsuduki/center.html>
 - Internet
   - 想不起来是哪家的话, 可以看看银行/信用卡的账单
   - ＫＤＤＩご利用料金
