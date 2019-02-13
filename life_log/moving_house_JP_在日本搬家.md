@@ -93,7 +93,13 @@
 
 一些可能的候选项
 - mineo
+  - <https://eonet.jp/go/lp/mineo/>
 - 東京ガス
 - 
 
+
+一些不用考虑的选项
+- DTI
+  - <https://dream.jp/ftth/dti/campaign.html>
+  - 返现手续复杂到惊人
 
