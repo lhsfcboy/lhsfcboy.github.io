@@ -108,6 +108,7 @@
   - CashBack 
     - 25000
     - 18000 + 无线路由器（开通几周后送到）
+    
 - Nuro光
   - <https://www.nuro.jp/hikari/>
   - NURO光の運営会社は、So-netがサービス運営を行っています
@@ -116,9 +117,11 @@
   - ワンコイン500円キャンペーン
     - <http://xn--nuro-8c4cnopkncshb2h0794esg6a3fl.com/nuro-500-onecoin.html>
   - 0120-117-260
+  
 - レンタルポケットWi-Fi
   - ソフトバンク グローバルモバイル
-  - 1Month = 6000JPY
+    - 无流量限制
+    - 1Month = 6000JPY
   
 一些不用考虑的选项
 - DTI
