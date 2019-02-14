@@ -95,9 +95,23 @@
 - mineo
   - <https://eonet.jp/go/lp/mineo/>
 - 東京ガス
-- 
 
-
+咨询中的选项
+- ビッグローブ光 via 代理店 株式会社アウンカンパニー
+  - 「アウンカンパニー」は申し込み時に伝えた口座番号に、開通月の2ヶ月後の月末に自動的に振り込みをしてくれます
+  - 「BIGLOBE光」はプロバイダであるBIGLOBEが提供する光回線
+- Nuro光
+  - <https://www.nuro.jp/hikari/>
+  - NURO光の運営会社は、So-netがサービス運営を行っています
+  - So-netは、ソニーのグループ会社です
+  - NURO光の光回線は独自回線
+  - ワンコイン500円キャンペーン
+    - <http://xn--nuro-8c4cnopkncshb2h0794esg6a3fl.com/nuro-500-onecoin.html>
+  - 0120-117-260
+- レンタルポケットWi-Fi
+  - ソフトバンク グローバルモバイル
+  - 1Month = 6000JPY
+  
 一些不用考虑的选项
 - DTI
   - <https://dream.jp/ftth/dti/campaign.html>
