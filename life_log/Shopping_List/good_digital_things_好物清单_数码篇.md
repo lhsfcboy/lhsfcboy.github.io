@@ -22,6 +22,7 @@
 
 - 平板电脑
     + 现在使用: Kindle Fire
+    + 现在使用: iPad mini
     + 理想: iPad mini 128G / iPad Pro 9.7inch ?
 
 - 主力电脑
