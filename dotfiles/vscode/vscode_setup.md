@@ -41,21 +41,40 @@
 ```
 
 - Dracula Theme
+  深色主题
 
 - Material Icon Theme
+  依据文件类型设置不同的文件图标
 
 - Indent Rainbow
 
+- Bracket Pair Colorizer
+  为代码中的匹配的括号自动着色，以不同的颜色进行区分
+
+
 ## Markdown 相关
 
-- 原生支持实时预览? Ctrl + K, V
-- pass
+- 原生支持实时预览? `Ctrl + K, V`
+
+- Markdown All in One
+  + 自动调整列表的数字序号
+  + 自动格式化表格
+    `Alt + Shift + F`
 
 ## 文本编辑
 
 - vscode-input-sequence
 
 [vscode-input-sequence](https://marketplace.visualstudio.com/items?itemName=tomoki1207.vscode-input-sequence)
+
+## Git相关
+
+- GitLens
+  快速理解代码的修改历史
+  + Current Line Blame
+    当前行代码的结尾处查看最近一次commit的姓名、时间以及信息
+  + Current Line Hovers
+    在当前行代码的悬浮框查看详细的最近一次的commit信息
 
 ## python相关
 
