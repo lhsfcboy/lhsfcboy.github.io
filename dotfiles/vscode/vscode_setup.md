@@ -47,10 +47,13 @@
   依据文件类型设置不同的文件图标
 
 - Indent Rainbow
+  使得对齐更加具有可读性
 
 - Bracket Pair Colorizer
   为代码中的匹配的括号自动着色，以不同的颜色进行区分
 
+- highlight-matching-tag
+  高亮匹配的标签
 
 ## Markdown 相关
 
