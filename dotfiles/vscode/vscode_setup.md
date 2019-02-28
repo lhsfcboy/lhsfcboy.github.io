@@ -9,6 +9,10 @@
 - [快捷键大全](https://blog.csdn.net/crper/article/details/54099319)
 - 列编辑: `Ctrl + Shift + Alt + 方向键`
 
+- `Ctrl + D` to multi select
+  - Press `Ctrl + K` and `Ctrl + D` to skip a selection
+  - `Ctrl + U` to return to a previous selection.
+
 ## 基础设置
 
 - `"editor.fontFamily": "Ubuntu Mono",`
