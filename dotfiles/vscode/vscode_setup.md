@@ -3,10 +3,12 @@
 ## 快捷键 Shortcut
 
 - font size zoom in : `Ctrl + =`
-- font size zoom out: `Ctil + -`
+- font size zoom out: `Ctrl + -`
 - `CTRL+SHIFT+X` 快速去除当前文件中的行末空格
 
 - [快捷键大全](https://blog.csdn.net/crper/article/details/54099319)
+
+- 列编辑: `Ctrl + Shift + Alt + 方向键`
 
 ## 基础设置
 
