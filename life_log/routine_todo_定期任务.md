@@ -15,6 +15,7 @@ pass
   - 有道云笔记
   - Dropbox  TODO文件夹
   - Chrome标签页
+    - OneTab插件的标签页
   - 手机后台任务
   - 手机照片/截屏
   - 过往的邮件
