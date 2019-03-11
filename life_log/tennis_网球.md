@@ -4,6 +4,7 @@
 
 Until 201903
 
+```text
 Head Size:	100 sq. in. / 645 sq. cm.
 Length:	27.50 inches / 69.85 cm
 Strung Weight:	9.30 oz / 264 g
@@ -16,6 +17,11 @@ Power Level:	Low-Medium
 String Pattern:	16 Mains/20 Crosses
 Main Skip:	7T,9T,7H,9H
 String Tension:	53-63
+```
+
+#### Yonex ?
+
+
 
 ### 网球初学者第一次购拍的提示️
 
