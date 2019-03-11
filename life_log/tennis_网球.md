@@ -2,7 +2,9 @@
 
 #### Wilson Hyper Hammer 4.3 Midplus Stretch
 
-Until 201903
+应该是2002年左右发布, 现在网上已经找不到相关资料.
+
+2011年入手, 断断续续使用至2019年中旬
 
 实测重量 290g (带一厚一薄两层手胶)
 
@@ -21,11 +23,44 @@ Main Skip:	7T,9T,7H,9H
 String Tension:	53-63
 ```
 
-#### Yonex ?
+#### Yonex VCORE100 G
 
 试用款
 
+- <https://vcoreblack.yonex.com/#series>
+- <http://www.yonex.co.jp/tennis/racquets/vcore-100.html>
+
 实测重量：320g (带一层手胶)
+
+```text
+Head Size:	100 in² / 645 cm²
+Length:	27in / 68,5cm
+Strung Weight:	318g / 11,2oz
+Unstrung Weight:	300g / 10,6oz
+Balance:	33,02cm / 4 pts HL
+Unstrung Balance:	32cm/7 pts HL
+Swingweight:	320
+Stiffness:	69
+Beam Width:	24mm / 25mm / 22mm
+Composition:	H,M, Graphite, Naometric XT, Namd
+Racket Colours:	Black
+Grip Type:	Yonex Synthetic
+String Pattern:	16 Mains / 19 Crosses
+Mains skip: 8T,8H
+Tension:	20-27kg / 45-60lb
+
+官网数据如下:
+COLOR	Galaxy Black
+HEAD SIZE	100 sq. in.
+WEIGHT	G: 300g / 10.6oz
+BALANCE POINT	G: 320mm
+LENGTH	27 in.
+WIDTH RANGE	24.0-25.0-22.0
+GRIP SIZE	G: 1-5
+STRING PATTERN	16x19
+MATERIAL	H.M. GRAPHITE, NANOMETRIC XT, Namd
+RECOMMENDED STRINGS	POLYTOUR STRIKE, POLYTOUR PRO, REXIS
+```
 
 
 ### 网球初学者第一次购拍的提示️
