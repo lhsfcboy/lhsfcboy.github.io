@@ -4,6 +4,8 @@
 
 Until 201903
 
+实测重量 290g (带一厚一薄两层手胶)
+
 ```text
 Head Size:	100 sq. in. / 645 sq. cm.
 Length:	27.50 inches / 69.85 cm
