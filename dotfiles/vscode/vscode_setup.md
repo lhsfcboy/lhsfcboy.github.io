@@ -2,12 +2,23 @@
 
 ## 快捷键 Shortcut
 
-- font size zoom in : `Ctrl + =`
-- font size zoom out: `Ctrl + -`
-- !!!NOT WORKING!!! `CTRL+SHIFT+X` 快速去除当前文件中的行末空格
+
+  - font size zoom in : `Ctrl + =`
+  - font size zoom out: `Ctrl + -`
 
 - [快捷键大全](https://blog.csdn.net/crper/article/details/54099319)
+
+多行编辑
 - 列编辑: `Ctrl + Shift + Alt + 方向键`
+- Add Coursor Above/Below: `Ctrl + Alt + 方向键`
+
+`Ctrl + Shift + P` to setup `Multi Cursor Modifier` to `Ctrl` or `Alt`
+- 选择列块: `Alt + Shift + 鼠标拖动`
+- 选择多个编辑位点: `Alt + 点击`
+- 自由多行选择: `Alt + 鼠标拖动`
+
+
+
 
 - `Ctrl + D` to multi select
   - Press `Ctrl + K` and `Ctrl + D` to skip a selection
