@@ -23,7 +23,8 @@ Main Skip:	7T,9T,7H,9H
 String Tension:	53-63
 ```
 
-#### Yonex VCORE100 G
+
+#### Yonex VCORE100 G2
 
 试用款
 
@@ -63,6 +64,12 @@ STRING PATTERN	16x19
 MATERIAL	H.M. GRAPHITE, NANOMETRIC XT, Namd
 RECOMMENDED STRINGS	POLYTOUR STRIKE, POLYTOUR PRO, REXIS
 ```
+
+
+##### Strings ストリング
+
+- ヨネックスエアロンスーパー850スピード(ATG850S)
+  - 50 lbs
 
 ### 网球初学者第一次购拍的提示️
 
