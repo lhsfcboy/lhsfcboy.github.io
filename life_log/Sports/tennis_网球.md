@@ -70,6 +70,14 @@ RECOMMENDED STRINGS	POLYTOUR STRIKE, POLYTOUR PRO, REXIS
 
 - ヨネックスエアロンスーパー850スピード(ATG850S)
   - 50 lbs
+  
+##### 铅片
+
+(キモニー 鉛バランサー)https://www.amazon.co.jp/dp/B0016724XM/ref=twister_B07BZGR815?_encoding=UTF8&psc=1
+
+##### 避震器 振動止め
+
+
 
 ### 网球初学者第一次购拍的提示️
 
