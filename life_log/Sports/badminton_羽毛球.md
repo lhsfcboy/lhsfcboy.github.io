@@ -9,7 +9,13 @@
 
 - Yonex 双刃10 / デュオラ10 / DUORA10
 
+- NF700
+  - 5U
 
+## 俱乐部
+
+- 南千住
+  - http://minasentfc.cocolog-nifty.com/minasensc
   
 ### 羽毛球拍的重量
 
