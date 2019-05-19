@@ -9,8 +9,10 @@
 
 - Yonex 双刃10 / デュオラ10 / DUORA10
 
-- NF700
+- NF700 ナノフレア700 NANOFLARE 700 NF-700
   - 5U
+  - ブルーグリーン
+  - AEROSONICエアロソニック BGAS ホワイト 24-26
 
 ## 俱乐部
 
