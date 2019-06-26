@@ -26,7 +26,6 @@ String Tension:	53-63
 
 #### Yonex VCORE100 G2
 
-试用款
 
 - <https://vcoreblack.yonex.com/#series>
 - <http://www.yonex.co.jp/tennis/racquets/vcore-100.html>
@@ -70,7 +69,20 @@ RECOMMENDED STRINGS	POLYTOUR STRIKE, POLYTOUR PRO, REXIS
 
 - ヨネックスエアロンスーパー850スピード(ATG850S)
   - 50 lbs
-  
+- (TONIC+ BALL FEEL)
+  - 50 lbs
+  - 定价 5,500 JPY
+  - ゲージ  1.35mm
+  - 第一用的牛肠线, 非常舒服
+
+下一次换线可以考虑的
+
+- RPMブラスト(RPM Blast)
+- バボラ VSチーム125 (VS Team 125)
+  - ゲージ 1.25mm
+  - 定价 8,900 JPY
+- ウイルソン ナチュラルガット17（1.25mm）
+
 ##### 铅片
 
 (キモニー 鉛バランサー)https://www.amazon.co.jp/dp/B0016724XM/ref=twister_B07BZGR815?_encoding=UTF8&psc=1
