@@ -83,7 +83,8 @@ RECOMMENDED STRINGS	POLYTOUR STRIKE, POLYTOUR PRO, REXIS
 
 - ヨネックスエアロンスーパー850スピード(ATG850S)
   - 50 lbs
-- (TONIC+ BALL FEEL)
+  - 手感一般, 损耗快, 第一根打断的线
+- TONIC+ BALL FEEL
   - 50 lbs
   - 定价 5,500 JPY
   - ゲージ  1.35mm
