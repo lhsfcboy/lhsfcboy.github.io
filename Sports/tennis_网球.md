@@ -23,6 +23,9 @@ Main Skip:	7T,9T,7H,9H
 String Tension:	53-63
 ```
 
+##### 改造
+
+在手柄中腔, 用不干胶加了4片3g的铅片.
 
 #### Yonex VCORE100 G2
 
@@ -63,6 +66,13 @@ STRING PATTERN	16x19
 MATERIAL	H.M. GRAPHITE, NANOMETRIC XT, Namd
 RECOMMENDED STRINGS	POLYTOUR STRIKE, POLYTOUR PRO, REXIS
 ```
+
+
+#### 下一把想要尝试的球拍
+
+- Wilson RF97
+  - 340g
+  - 头轻
 
 
 ##### Strings ストリング
