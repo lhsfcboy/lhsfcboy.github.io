@@ -73,6 +73,10 @@ RECOMMENDED STRINGS	POLYTOUR STRIKE, POLYTOUR PRO, REXIS
 - Wilson RF97
   - 340g
   - 头轻
+  - WRT724820x 已经停产 <https://www.wilson.co.jp/discontinued/rackets_tennis_discontinued/wrt724820x.html>
+  - WRT731410+ <https://www.wilson.co.jp/tennis/rackets_tennis/wrt731410x.html>
+  - WRT741720+ PRO STAFF RF97 AUTOGRAPH <https://www.wilson.co.jp/tennis/rackets_tennis/wrt741720.html>
+  - WRT73141S+ 2019 PRO STAFF RF97 AUTOGRAPH BLACK in BLACK <https://www.wilson.co.jp/tennis/rackets_tennis/wrt73141s.html>
 
 
 ##### Strings ストリング
