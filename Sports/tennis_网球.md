@@ -73,11 +73,13 @@ RECOMMENDED STRINGS	POLYTOUR STRIKE, POLYTOUR PRO, REXIS
   - 50 lbs
   - 定价 5,500 JPY
   - ゲージ  1.35mm
-  - 第一用的牛肠线, 非常舒服
+  - 第一次用的牛肠线, 手感非常舒服
+  - 避免雨水! 潮湿的天气, 被打湿的网球, 没有充分晒干的球场!!
 
 下一次换线可以考虑的
 
 - RPMブラスト(RPM Blast)
+  - 八角形球线
 - バボラ VSチーム125 (VS Team 125)
   - ゲージ 1.25mm
   - 定价 8,900 JPY
