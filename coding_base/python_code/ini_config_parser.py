@@ -1,10 +1,4 @@
 #!/usr/bin/python
-# -*- coding:utf-8 -*-
-#author: lingyue.wkl
-#desc: use to db ops
-#---------------------
-#2012-02-18 created
-#---------------------
 
 import sys,os
 import ConfigParser
