@@ -4,7 +4,17 @@
 
 ## Lenovo ThinkPad X220i
 
-- 
+- Remove the Windows Recovery Partition
+
+```cmd
+diskpart
+list disk
+select disk n
+list partition
+select partition n
+delete partition override
+```
+Expanding a Partition to Use the Unallocated Space
 
 ## path
 
