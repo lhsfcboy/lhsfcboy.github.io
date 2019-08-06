@@ -1,40 +1,52 @@
-# windows
+# windows7
 
 记录一下windows的配置,免得每次重装都折腾
+
+## Lenovo ThinkPad X220i
+
+- 
 
 ## path
 
 创建一个名为C:\mybin的文件夹, 并加入path.
 bin文件直接扔到这个文件夹里.
 
-## 软件
+## OS
+
+- Windows Update
+- 硬件驱动
+- 卸载掉无用的预装软件
+
+## 软件 必备类
 
 - 7-Zip
+- Dropbox
+- Google Chrome
+- Google Japanese IME
+- QQ拼音
+- PotPlayer
+- 有道云笔记
+
+## 软件 常用类
+
+- 微信
+- QQ轻聊版/TIM
+- TeamViewer
 - Amazon Kindle
 - CCLeaner
 - QTTab/Clover
-- Dropbox
 - f.lux
 - FormatFactory(格式工厂)
-- Google Chrome/Firefox
-- Google Japanese IME
+- Firefox
 - ImgBurn/VirtualCloneDrive
 - Listary
-- Mozilla Thunderbird
-- SumatraPDF
-- QQ拼音
-- PotPlayer
 - Sumatra PDF
-- TeamViewer
-- QQ轻聊版/TIM
 - 阿里旺旺
 - 百度云管家
 - 猎豹免费Wifi
 - 鼠大侠鼠标连点器
 - 网易云音乐
-- 微信
 - 有道词典
-- 有道云笔记
 
 ### Chrome
 
