@@ -30,15 +30,16 @@ bin文件直接扔到这个文件夹里.
 ## 软件 必备类
 
 - 7-Zip
-- Dropbox
 - Google Chrome
 - Google Japanese IME
 - QQ拼音
 - PotPlayer
 - 有道云笔记
+- OneNote
 
 ## 软件 常用类
 
+- Dropbox
 - 微信
 - QQ轻聊版/TIM
 - TeamViewer
