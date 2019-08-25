@@ -10,6 +10,7 @@
 ### Prerequisites
 
 - Go version 1.11.x is required.
+  - <https://tecadmin.net/install-go-on-ubuntu/>
 
 ```text
 npm install npm@5.6.0 -g
