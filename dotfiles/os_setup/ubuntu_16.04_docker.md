@@ -50,10 +50,19 @@ npm -v
 ## Go 1.7.6
 
 ```text
+# Archived versions could be found at https://golang.org/dl/
 wget https://dl.google.com/go/go1.7.6.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.7.6.linux-amd64.tar.gz
+echo $PATH
 echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.profile
-.~/.profile
+chmod +x ~/.profile
+echo $PATH
+~/.profile
+
+# Or, install from APT
+# https://github.com/golang/go/wiki/Ubuntu
+
+go version
 ```
 
 ## Basic Dev Tools
