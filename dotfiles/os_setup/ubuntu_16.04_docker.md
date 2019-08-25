@@ -49,6 +49,11 @@ curl -sL https://deb.nodesource.com/setup_6.x | sudo bash -
 sudo apt install nodejs
 node -v
 npm -v
+
+#或者使用n工具来制定想要的版本
+  sudo npm cache clean -f
+  sudo npm install -g n
+  sudo n 8
 ```
 
 ## Go 1.7.6
