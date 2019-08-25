@@ -6,6 +6,7 @@
   - <https://hyperledger-fabric.readthedocs.io/en/release-1.4/write_first_app.html>
 - Hyperledger Fabric v1.4 のプログラミングモデル
   - <https://www.ibm.com/developerworks/jp/cloud/library/cl-hyperledger-fabric-basic-6/index.html>
+- <https://github.com/hyperledger/fabric-samples>
 
 ### Prerequisites
 
