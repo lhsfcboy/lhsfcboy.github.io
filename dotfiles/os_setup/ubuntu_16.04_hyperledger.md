@@ -1,6 +1,6 @@
 # pass
 
-## Install Docer Imagine
+## Prepare
 
 ```text
 mkdir fabric
@@ -10,10 +10,15 @@ curl -sSL https://goo.gl/kFFqh5 | sudo bash -s 1.0.6
 echo 'export PATH=$PATH:$HOME/fabric/bin' >> ~/.profile
 echo $PATH
 . ~/.profile
+
+# Download Sample
+git clone https://github.com/hyperledger/fabriccd fab-samples.git -b v1.0.6
 ```
 
-## Download Sample
+## Run fabcar
 
 ```text
-git clone https://github.com/hyperledger/fabricc-samples.git -b v1.0.6
+cd fabric-samples/fabcar
+npm install
+./startFabric.sh
 ```
