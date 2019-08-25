@@ -9,6 +9,8 @@
 
 ### Prerequisites
 
+<https://hyperledger-fabric.readthedocs.io/en/release-1.4/prereqs.html>
+
 - Go version 1.11.x is required.
   - <https://tecadmin.net/install-go-on-ubuntu/>
 
