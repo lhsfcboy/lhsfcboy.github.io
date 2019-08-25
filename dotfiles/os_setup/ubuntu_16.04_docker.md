@@ -29,6 +29,10 @@ sudo docker run hello-world
 ```text
 sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
+
+#或者直接apt安装
+sudo apt -y install docker-commpose
+
 docker-compose --version
 #docker compose会自动安装所依赖的python2.7
 python -V #检查是否是2.7
