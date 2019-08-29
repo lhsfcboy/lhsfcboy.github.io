@@ -1,5 +1,14 @@
 
 
+## Virtual Box 基础设置
+
+- 安装增强功能
+- 删除launcher中不使用的快捷方式
+- 共享粘贴板 - 双向
+- 共享文件夹
+  - 添加当前用户到vboxsf用户组
+  - `sudo adduser $USER vboxsf`
+
 ## Docker Community Edition
 
 <https://docs.docker.com/install/linux/docker-ce/ubuntu/>
