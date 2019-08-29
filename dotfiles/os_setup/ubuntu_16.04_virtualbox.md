@@ -8,6 +8,14 @@
   - 添加当前用户到vboxsf用户组
   - `sudo adduser $USER vboxsf`
 
+## Basic Dev Tools
+
+```text
+sudo apt-get install git
+sudo apt -y install make gcc g++ libtool
+apt-get install -y build-essential libssl-dev
+```
+
 ## Docker Community Edition
 <https://docs.docker.com/install/linux/docker-ce/ubuntu/>
 
@@ -57,14 +65,24 @@ Hyperledger Fabric SDK for Node.js, version 8.9.4 and higher or 10.15.3 and high
 
 ```text
 curl -sL https://deb.nodesource.com/setup_6.x | sudo bash -
-sudo apt install nodejs
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
 node -v
 npm -v
+
+#或者使用
+sudo apt-get install nodejs
 
 #或者使用n工具来制定想要的版本
   sudo npm cache clean -f
   sudo npm install -g n
   sudo n 8
+  
+#或者使用snap工具
+#https://github.com/nodesource/distributions/blob/master/README.md#snapinstall
+sudo snap install node --classic --channel=8
+sudo snap refresh node --channel=10
 ```
 
 ## Go 1.7.6
@@ -85,12 +103,6 @@ echo $PATH
 go version
 ```
 
-## Basic Dev Tools
-
-```text
-sudo apt-get install git
-sudo apt -y install make gcc g++ libtool
-```
 
 
 
