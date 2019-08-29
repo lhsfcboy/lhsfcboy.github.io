@@ -73,6 +73,8 @@ npm -v
 
 #或者使用
 sudo apt-get install nodejs
+# Node.js and npm packages are available from the default Ubuntu 18.04 repositories.
+# At the time of writing, the version included in the Ubuntu repositories is v8.10.0 which is the previous TLS version.
 
 #或者使用n工具来制定想要的版本
   sudo npm cache clean -f
