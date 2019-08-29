@@ -15,9 +15,13 @@ curl -sSL https://goo.gl/kFFqh5 | sudo bash -s 1.0.6
 # <fabric_version> <fabric-ca_version> <thirdparty_version>
 curl -sSL http://bit.ly/2ysbOFE | bash -s -- 1.4.3 1.4.3 0.4.15
 
+
+export PATH=<path to download location>/bin:$PATH
+echo 'export PATH=$PATH:$HOME/fabric-samples/bin' >> ~/.profile
 echo 'export PATH=$PATH:$HOME/fabric/bin' >> ~/.profile
 echo $PATH
 . ~/.profile
+echo $PATH
 
 # Download Sample
 git clone https://github.com/hyperledger/fabriccd fab-samples.git -b v1.0.6
