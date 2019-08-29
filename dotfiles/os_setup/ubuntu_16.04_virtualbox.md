@@ -63,9 +63,12 @@ python -V #检查是否是2.7
 
 Hyperledger Fabric SDK for Node.js, version 8.9.4 and higher or 10.15.3 and higher.
 
+- <https://github.com/nodesource/distributions/blob/master/README.md>
+
 ```text
 curl -sL https://deb.nodesource.com/setup_6.x | sudo bash -
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
 node -v
