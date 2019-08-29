@@ -1,7 +1,6 @@
-
+# VB虚拟机中Ubuntu的安装
 
 ## Virtual Box 基础设置
-
 - 安装增强功能
 - 删除launcher中不使用的快捷方式
 - 共享粘贴板 - 双向
@@ -10,7 +9,6 @@
   - `sudo adduser $USER vboxsf`
 
 ## Docker Community Edition
-
 <https://docs.docker.com/install/linux/docker-ce/ubuntu/>
 
 ```text
@@ -38,8 +36,8 @@ docker run hello-world
 ```
 
 ## Docker Compose
-
-<https://github.com/docker/compose/releases>
+- <https://docs.docker.com/compose/install/>
+- <https://github.com/docker/compose/releases>
 
 ```text
 sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -54,6 +52,8 @@ python -V #检查是否是2.7
 ```
 
 ## Node.js 6.x npm
+
+Hyperledger Fabric SDK for Node.js, version 8.9.4 and higher or 10.15.3 and higher.
 
 ```text
 curl -sL https://deb.nodesource.com/setup_6.x | sudo bash -
