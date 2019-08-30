@@ -59,7 +59,7 @@ docker-compose --version
 python -V #检查是否是2.7
 ```
 
-## Node.js 6.x npm
+## Node.js & npm
 
 Hyperledger Fabric SDK for Node.js, version 8.9.4 and higher or 10.15.3 and higher.
 
@@ -90,7 +90,7 @@ sudo snap install node --classic --channel=8
 sudo snap refresh node --channel=10
 ```
 
-## Go 1.7.6
+## Golang
 
 ```text
 # Archived versions could be found at https://golang.org/dl/
