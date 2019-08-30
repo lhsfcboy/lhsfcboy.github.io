@@ -96,11 +96,17 @@ sudo snap refresh node --channel=10
 # Archived versions could be found at https://golang.org/dl/
 wget https://dl.google.com/go/go1.7.6.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.7.6.linux-amd64.tar.gz
+
+wget https://dl.google.com/go/go1.9.2.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.9.2.linux-amd64.tar.gz 
+
 echo $PATH
 echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.profile
+echo 'export GOROOT=/usr/local/go' >> ~/.profile
+echo 'export GOPATH=$HOME/go' >> ~/.profile
 chmod +x ~/.profile
-echo $PATH
 ~/.profile
+echo $PATH
 
 # Or, install from APT
 # https://github.com/golang/go/wiki/Ubuntu
