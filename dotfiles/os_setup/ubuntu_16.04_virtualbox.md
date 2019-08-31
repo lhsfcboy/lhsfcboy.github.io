@@ -1,4 +1,4 @@
-# VB虚拟机中Ubuntu的安装
+# VB虚拟机中Ubuntu的安装配置
 
 ## Virtual Box 基础设置
 - 安装增强功能
