@@ -11,10 +11,65 @@
 ## Basic Dev Tools
 
 ```text
-sudo apt-get install git
+sudo apt-get update
+sudo apt-get install git vim
 sudo apt -y install make gcc g++ libtool
-apt-get install -y build-essential libssl-dev
+sudo apt-get install -y build-essential libssl-dev
 ```
+
+## 删除不常用的软件
+
+```text
+apt purge unity-webapps-common
+apt purge thunderbird totem rhythmbox empathy brasero simple-scan gnome-mahjongg aisleriot gnome-mines cheese gnome-sudoku transmission-common gnome-orca webbrowser-app landscape-client-ui-install
+apt purge deja-dup
+# unity-webapps-common Amazon 链接
+# thunderbird 雷鸟邮件客户端
+# totem 自带的播放器
+# rhythmbox 自带的音乐播放器
+# empathy 自带的即时聊天应用
+# brasero 自带的光盘刻录器
+# simple-scan 扫描仪
+# gnome-mahjongg 对对碰游戏
+# aisleriot 纸牌游戏
+# gnome-mines 扫雷游戏
+# cheese webcam 应用
+# gnome-sudoku 数独游戏
+# transmission-common BT 客户端
+# gnome-orca 屏幕阅读
+# webbrowser-app Ubuntu 自带的浏览器（有了 chrome 和 Firefox 根本用不到这个）
+# landscape-client-ui-install landscape 远程控制软件
+# deja-dup 备份
+# onboard 屏幕键盘
+
+
+apt purge libreoffice-common
+# libreoffice
+```
+
+## 便捷小工具
+
+```text
+sudo apt-get instll -y indicator-multiload #系统监视插件，装完在顶栏就能看到
+```
+## 中文相关
+
+- 搜狗输入法
+  - <https://pinyin.sogou.com/linux/>
+- WPS  
+  - <https://www.wps.cn/product/wpslinux>
+  - 导入Windows字体  
+    - <https://www.jianshu.com/p/5042a4855267>
+```text
+sudo dpkg -i wps-office_10.1.0.6757_amd64.deb
+sudo apt install -f
+```
+
+## 开发工具类
+
+- vscode
+  - https://code.visualstudio.com/
+
 
 ## Docker Community Edition
 <https://docs.docker.com/install/linux/docker-ce/ubuntu/>
