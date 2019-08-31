@@ -17,6 +17,7 @@
 - Add Coursor Above/Below: `Ctrl + Alt + 方向键`
 
 `Ctrl + Shift + P` to setup `Multi Cursor Modifier` to `Ctrl` or `Alt`
+
 `Ctrl` 更加直观一点
 - 选择列块: `Alt + Shift + 鼠标拖动`
 - 选择多个编辑位点: `Alt + 点击`
