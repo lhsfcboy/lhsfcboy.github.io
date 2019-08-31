@@ -42,9 +42,13 @@ apt purge deja-dup
 # deja-dup 备份
 # onboard 屏幕键盘
 
-
+# 可以删除libreoffice
 apt purge libreoffice-common
-# libreoffice
+
+# 使用chromium浏览器
+sudo apt install chromium-browser
+sudo apt remove firefox  # 卸载 FireFox，视自己喜好而定。
+chromium-browser  # 打开 Chromium 浏览器
 ```
 
 ## 便捷小工具
@@ -56,6 +60,8 @@ sudo apt-get instll -y indicator-multiload #系统监视插件，装完在顶栏
 
 - 搜狗输入法
   - <https://pinyin.sogou.com/linux/>
+  - 安装完成后, 注销再登入, 齿轮设置->language support->keyboard input method system
+  - Ctrl+空格切换输入法
 - WPS  
   - <https://www.wps.cn/product/wpslinux>
   - 导入Windows字体  
@@ -65,6 +71,8 @@ sudo dpkg -i wps-office_10.1.0.6757_amd64.deb
 sudo apt install -f
 ```
 
+- 卸载自带的fcitx输入法
+ - `sudo apt-get remove fxitx`
 ## 开发工具类
 
 - vscode
