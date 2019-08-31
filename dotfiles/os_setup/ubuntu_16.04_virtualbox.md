@@ -7,6 +7,7 @@
 - 共享文件夹
   - 添加当前用户到vboxsf用户组
   - `sudo adduser $USER vboxsf`
+- 从系统设置中关闭屏幕锁定
 
 ## Basic Dev Tools
 
