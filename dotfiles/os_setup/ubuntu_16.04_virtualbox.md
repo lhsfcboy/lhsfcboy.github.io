@@ -8,6 +8,8 @@
   - 添加当前用户到vboxsf用户组
   - `sudo adduser $USER vboxsf`
 - 从系统设置中关闭屏幕锁定
+- 从系统设置中启用自动隐藏Launcher
+  - System Settings | Appearance | Behavio
 
 ## Basic Dev Tools
 
