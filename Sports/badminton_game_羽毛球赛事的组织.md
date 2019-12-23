@@ -125,6 +125,21 @@
 (2, 3) 
 (4, 5) 
 (1, 6)
+A vs B
+C vs D
+E vs F
+B vs D
+C vs F
+B vs E
+A vs D
+C vs E
+D vs F
+A vs C
+B vs F
+A vs E
+B vs C
+D vs E
+A vs F
 ```
 
 
