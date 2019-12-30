@@ -129,6 +129,16 @@
 35
 14
 25
+A vs B
+C vs D
+A vs E
+B vs C
+D vs E
+A vs C
+B vs D
+C vs E
+A vs D
+B vs E
 ```
 
 ##### 6人制时推荐的比赛顺讯
