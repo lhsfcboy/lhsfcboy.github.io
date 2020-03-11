@@ -1,6 +1,5 @@
 # Windows 10 操作系统的配置
 
-
 ## 操作系统基础设置
 ### 更改计算机名称
 计算机名称会被用于蓝牙设备等.
@@ -16,8 +15,8 @@
 - Show taskbar on all displays: off
 ### 桌面
 - Windows 设置 / 个性化 / 主题 / 桌面图标设置 / 取消将回收站固定到桌面
-## 基础软件
 
+## 基础软件
 ### 7Zip
 - https://www.7-zip.org/
 ### QQ拼音
@@ -28,6 +27,8 @@
 ### Dropbox
 
 ## 系统增强软件
-
 ### TrafficMonitor
 任务栏中实时显示网速
+
+## 基础开发环境
+### VS Code
