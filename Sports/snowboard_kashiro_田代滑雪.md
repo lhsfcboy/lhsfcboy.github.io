@@ -1,7 +1,6 @@
 # かぐら-神乐-Kagura/田代Tashiro
 
 ### 新幹線
-- 上越新幹線(JR) <https://www.jreast.co.jp/caution/joetsu_timetable.pdf>
 - 東京駅 上越新幹線時刻表 <https://www.jorudan.co.jp/time/eki_東京_上越新幹線.html>
 - 越後湯沢駅 時刻表       <https://www.jorudan.co.jp/time/eki_越後湯沢_上越新幹線.html>
 
