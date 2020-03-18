@@ -12,11 +12,10 @@
 - 返程晚班
 
 ### バス
-
-**路線バスと急行バスでは、バス乗降場所は変わります**
-
-#### 苗場スキー場
-<https://www.princehotels.co.jp/ski/naeba/dragondola/autumn/shuttle_bus/>
+- **路線バスと急行バスでは、バス乗降場所は変わります**
+- 南越後観光バス時刻表: <http://www.minamiechigo.co.jp/>
+- **急行バス** ＜急行＞湯沢 ～ 三俣ST ～ 田代ST　線
+- **路線バス** 湯沢 ～ 三俣 ～ 貝掛温泉 ～ 浅貝 ～ 西武クリスタル　線
 
 #### かぐらスキー場 田代ステーション
 - 住所：〒949-6212　新潟県南魚沼郡湯沢町三国1066
@@ -25,3 +24,9 @@
 #### かぐらスキー場 みつまたステーション
 - 住所：〒949-6211　新潟県南魚沼郡湯沢町三俣742
 - TEL：025-788-9221
+
+#### 苗場スキー場 
+- 〒949-6292 新潟県南魚沼郡湯沢町三国　
+- TEL：025-789-4117　
+- <https://www.princehotels.co.jp/ski/naeba/winter/>
+- <https://www.princehotels.co.jp/ski/naeba/dragondola/autumn/shuttle_bus/>
