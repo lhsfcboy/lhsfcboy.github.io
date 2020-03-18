@@ -1,7 +1,8 @@
 # かぐら-神乐-Kagura/田代Tashiro
 
 ### 新幹線
-- 上越新幹線 <https://www.jreast.co.jp/caution/joetsu_timetable.pdf>
+- 上越新幹線(JR) <https://www.jreast.co.jp/caution/joetsu_timetable.pdf>
+- 上越新幹線時刻表(jorudan) <https://www.jorudan.co.jp/time/eki_%E6%9D%B1%E4%BA%AC_%E4%B8%8A%E8%B6%8A%E6%96%B0%E5%B9%B9%E7%B7%9A.html>
 
 - 去程早班 
   - 06:08(东京) --	06：14(上野) -- 07:24(越后汤泽)
