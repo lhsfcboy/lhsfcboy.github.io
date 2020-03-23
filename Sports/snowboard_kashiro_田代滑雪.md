@@ -1,8 +1,9 @@
 # かぐら-神乐-Kagura/田代Tashiro
 
 ### 上越新幹線
-- 東京駅     時刻表 <https://www.jorudan.co.jp/time/eki_東京_上越新幹線.html>
-- 越後湯沢駅 時刻表 <https://www.jorudan.co.jp/time/eki_越後湯沢_上越新幹線.html>
+- 東京駅 <https://www.jorudan.co.jp/time/eki_東京_上越新幹線.html>
+- 上野駅 <https://www.jorudan.co.jp/time/eki_上野_上越新幹線.html>
+- 越後湯沢駅 <https://www.jorudan.co.jp/time/eki_越後湯沢_上越新幹線.html>
 
 往返早晚班
 - 去程早班  
