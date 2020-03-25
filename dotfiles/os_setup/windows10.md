@@ -25,6 +25,9 @@
 ### 微信WeChat
 ### 有道云笔记
 ### Dropbox
+### PotPlayer
+- 不记录历史播放
+  - 选项 / 播放 / 列表 / 取消勾选 记忆近期播放名单/URL地址
 
 ## 系统增强软件
 ### TrafficMonitor
