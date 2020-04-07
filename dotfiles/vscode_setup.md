@@ -3,6 +3,7 @@
 ## 快捷键 Shortcut
 
 - [快捷键大全](https://blog.csdn.net/crper/article/details/54099319)
+- <https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf>
 - `文件-首选项-键盘快捷方式` or `Ctrl + K, Ctrl + S`
 
 ### 外观调整
