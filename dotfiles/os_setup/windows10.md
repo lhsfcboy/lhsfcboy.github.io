@@ -33,9 +33,9 @@ Win+Tab会显示近期打开的文档等
 - 选项 / 播放 / 鼠标指向进度条时显示缩略图
 ## 系统增强软件
 ### QTTabbar 资源浏览器增强
-<http://qttabbar.wikidot.com/>
-
-
+- <http://qttabbar.wikidot.com/>, 安装后重启系统.
+- 打开「资源管理器」,「查看」,「选项」,「QTTabBar」
+- <https://sspai.com/post/52521>
 ### 火绒安全软件
 ### TrafficMonitor
 任务栏中实时显示网速
