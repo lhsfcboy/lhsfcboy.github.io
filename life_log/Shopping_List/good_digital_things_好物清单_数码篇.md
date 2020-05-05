@@ -59,17 +59,21 @@
       - 侧听功能类似于穿透功能，麦克风会收集不同的声音选择性的进行复制放大，让我们听到自己想听到的声音
       - 专注模式下有个粉色噪音音效
 
-###### 家智能硬件
+## 家智能硬件
 - Google Home Mini
   - "Hey, Google, Good morning"
   - "Hey, Google, Set an alarm for 6 a.m. that plays music"
 
-###### 打印机
+## 打印机
   - 支持无线连接, 支持自动双面, 带有扫描功能
   
-###### 电脑包
-
-- 三角挎包
-三角形状, 自立, 
+## 电脑包
+- 三角挎包, 三角形状, 自立, 
     + abrAsus(アブラサス) ひらくPCバッグ
       - https://superclassic.jp/?pid=41001
+
+## 键盘/鼠标
+- 蓝牙USB双模式
+
+###### Dell经典键盘 SK-8115
+###### ThinkPad 键盘
