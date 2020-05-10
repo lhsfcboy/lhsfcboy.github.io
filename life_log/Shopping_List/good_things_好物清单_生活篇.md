@@ -44,3 +44,7 @@
 
 - 钱包
     + abrAsus超薄钱包, 扔掉各种会员卡, 零钱保持最低限
+## 厨卫用品
+
+-　洗洁精
+  - キュキュット CLEAR（クリア）泡スプレー <https://www.kao.com/jp/kyukyutto/kyu_clear_foamspray_nf_00.html>
