@@ -6,11 +6,10 @@
 - Settings / System / About /  Device specifications / Rename this PC
 - Restart to apply
 ### 关闭快速访问历史Clear/Diable Windows 10 Quick Access History
-- Click Start and type: file explorer options, General Tab
-- Privacy section
+- Click Start and type: file explorer options, General Tab, Privacy section
 ### 关闭活动历史时间线功能
 Win+Tab会显示近期打开的文档等
-- Setting / Privacy / Activity history 
+- Setting / Privacy / Activity history, Disable and Clear
 ### 任务栏
 - Personalization / Taskbar
 - Use small taksbar buttons
