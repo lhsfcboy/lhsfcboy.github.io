@@ -18,7 +18,8 @@ Win+Tab会显示近期打开的文档等
 - Show taskbar on all displays: off
 ### 桌面
 - Windows 设置 / 个性化 / 主题 / 桌面图标设置 / 取消将回收站固定到桌面
-
+### Uninstall Pre-Installed App
+- McAfee
 ## 基础软件
 ### 7Zip
 - https://www.7-zip.org/
