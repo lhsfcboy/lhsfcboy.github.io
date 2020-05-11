@@ -21,6 +21,13 @@ Win+Tab会显示近期打开的文档等
 - McAfee
 - MS Office
 - MS OneDrive
+### 删除自带的Metro应用
+- WIP
+- WIP
+### 关闭休眠(可选)
+管理员CMD: `powercfg -h off`
+### 关闭系统备份还原
+控制面板>系统与还原>系统，左侧“系统保护”>设置，里面选择第三项“关闭系统还原”
 ## 基础软件
 ### 7Zip
 - https://www.7-zip.org/
