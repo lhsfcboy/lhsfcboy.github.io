@@ -36,6 +36,7 @@ Win+Tab会显示近期打开的文档等
 - 隐藏状态栏
 ### 微信WeChat
 ### 有道云笔记
+- <https://note.youdao.com/download.html>
 ### Dropbox
 ### PotPlayer
 - 不记录历史播放:  选项 / 播放 / 列表 / 取消勾选 记忆近期播放名单/URL地址
