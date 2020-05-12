@@ -31,12 +31,17 @@ Win+Tab会显示近期打开的文档等
 ### 7Zip
 - https://www.7-zip.org/
 ### QQ拼音
+- <http://qq.pinyin.cn/>
 - 中文状态下使用英文标点
 - 隐藏状态栏
+### Google 日本語入力
 ### 微信WeChat
+- <https://pc.weixin.qq.com/>
+- 取消开机启动
 ### 有道云笔记
 - <https://note.youdao.com/download.html>
 ### Dropbox
+- <https://www.dropbox.com/install>
 ### PotPlayer
 - 不记录历史播放:  选项 / 播放 / 列表 / 取消勾选 记忆近期播放名单/URL地址
 - 选项 / 播放 / 鼠标指向进度条时显示缩略图
@@ -48,6 +53,8 @@ Win+Tab会显示近期打开的文档等
 ### 火绒安全软件
 ### TrafficMonitor
 任务栏中实时显示网速
-
+## 远程办公环境
+### ZOOM 
+- <https://zoom.us/download#client_4meeting>
 ## 基础开发环境
 ### VS Code
