@@ -22,8 +22,7 @@ Win+Tab会显示近期打开的文档等
 - MS Office
 - MS OneDrive
 ### 删除自带的Metro应用
-- WIP
-- WIP
+- WIP <https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/>
 ### 关闭休眠(可选)
 管理员CMD: `powercfg -h off`
 ### 关闭系统备份还原
