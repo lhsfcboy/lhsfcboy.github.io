@@ -17,6 +17,8 @@ Anaconda组件:
 
 ## 使用Conda进行虚拟环境管理
 
+Anaconda多环境多版本python配置指导 <https://www.jianshu.com/p/d2e15200ee9b>
+
 ```bash
 # 检查默认的python版本
 python --version
