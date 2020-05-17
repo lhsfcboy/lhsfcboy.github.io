@@ -30,10 +30,10 @@ Win+Tab会显示近期打开的文档等
 ### 清理Windows 资源管理器(Explorer)侧边栏 与 这台电脑(This PC)中得快捷方式
 有桌面, 文档, 下载, 音乐, 图片, 视频, 3D 对象的快捷方式, 需要通过'以管理员身份'运行regedit进行清理. 清理操作无需重启, 即刻生效.
 - 3D Objects
-  - Hkey_LOCAL_MACHINESOFTWAREMicrosoftWindowsCurrentVersionExplorerMyComputerNamespace
+  - Hkey_LOCAL_MACHINE/SOFTWARE/Microsoft/Windows/CurrentVersion/Explorer/MyComputer/Namespace
   - 右键删除{0DB7E03F-FC29-4DC6-9020-FF41B59E513A}
   - 64 位的 Windows 10 操作系统还需要追加如下操作
-    - Hkey_LOCAL_MACHINESOFTWAREWow6432NodeMicrosoftWindowsCurrentVersionExplorerMyComputerNamespace
+    - Hkey_LOCAL_MACHINE/SOFTWARE/Wow6432Node/Microsoft/Windows/CurrentVersion/Explorer/MyComputer/Namespace
 - 其他链接的清理
   - <https://www.techspot.com/guides/1703-remove-3d-objects-shortcut-windows-file-explorer/>
   
