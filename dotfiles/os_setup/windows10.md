@@ -38,6 +38,8 @@ Win+Tab会显示近期打开的文档等
   - <https://www.techspot.com/guides/1703-remove-3d-objects-shortcut-windows-file-explorer/>
 ### 双屏幕时的任务栏显示
 个性化/任务栏
+### 修改电源选项中屏幕关闭与休眠的时间
+Power&Sleep
 ## 基础软件
 ### 7Zip
 - https://www.7-zip.org/
