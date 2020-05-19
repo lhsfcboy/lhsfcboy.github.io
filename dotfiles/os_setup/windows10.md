@@ -36,7 +36,8 @@ Win+Tab会显示近期打开的文档等
     - Hkey_LOCAL_MACHINE/SOFTWARE/Wow6432Node/Microsoft/Windows/CurrentVersion/Explorer/MyComputer/Namespace
 - 其他链接的清理
   - <https://www.techspot.com/guides/1703-remove-3d-objects-shortcut-windows-file-explorer/>
-  
+### 双屏幕时的任务栏显示
+个性化/任务栏
 ## 基础软件
 ### 7Zip
 - https://www.7-zip.org/
