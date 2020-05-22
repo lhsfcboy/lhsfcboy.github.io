@@ -17,6 +17,9 @@ Win+Tab会显示近期打开的文档等
 - Show taskbar on all displays: off
 ### 桌面
 - Windows 设置 / 个性化 / 主题 / 桌面图标设置 / 取消将回收站固定到桌面
+### 总是在任务栏显示language bar (以避免其自动调整size)
+- Settings / Time & language / Keyboard / Advanced keyboard settings
+- Use the desktop language bar when it's available.
 ### Uninstall Pre-Installed App
 - McAfee
 - MS Office
