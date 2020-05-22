@@ -40,6 +40,7 @@ Win+Tab会显示近期打开的文档等
 个性化/任务栏
 ### 修改电源选项中屏幕关闭与休眠的时间
 Power&Sleep
+
 ## 基础软件
 ### 7Zip
 - https://www.7-zip.org/
@@ -56,8 +57,10 @@ Power&Sleep
 ### Dropbox
 - <https://www.dropbox.com/install>
 ### PotPlayer
+- <https://potplayer.daum.net/>
 - 不记录历史播放:  选项 / 播放 / 列表 / 取消勾选 记忆近期播放名单/URL地址
 - 选项 / 播放 / 鼠标指向进度条时显示缩略图
+
 ## 系统增强软件
 ### QTTabbar 资源浏览器增强
 - <http://qttabbar.wikidot.com/>, 安装后重启系统.
