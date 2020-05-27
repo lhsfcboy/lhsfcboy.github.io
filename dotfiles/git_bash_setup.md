@@ -33,7 +33,7 @@ git bash终端也要设置成中文和utf-8编码, 才能正确显示中文.
 git bash的界面中右击空白处，弹出菜单，选择`选项->文本->本地Locale`，设置为`zh_CN`，而旁边的字符集选框选为`UTF-8`
 
 ###### 还可以通过直接修改配置文件的方式来解决中文乱码问题
-编辑etc\gitconfig文件，也有些windows系统是存放在C:\Users\Administrator\.gitconfig路径或安装盘符:\Git\mingw64\etc\gitconfig，在文件末尾增加以下内容：
+编辑etc\gitconfig文件，也有些windows系统是存放在`C:\Users\Administrator\.gitconfig`路径或`安装盘符:\Git\mingw64\etc\gitconfig`，在文件末尾增加以下内容：
 
 ```
 [gui]  
