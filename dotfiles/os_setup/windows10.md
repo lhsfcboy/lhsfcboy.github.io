@@ -71,6 +71,7 @@ Power&Sleep
 - <https://sspai.com/post/52521>
 - QTTabBarOption 
   - 关闭文件预览 Preview, Uncheck `Show preview ...`
+  - 双击Toolbar时复制现有Tab Events, Double Clikc on Toolbar, Duplicate active tab
 ### 火绒安全软件
 ### TrafficMonitor
 任务栏中实时显示网速
