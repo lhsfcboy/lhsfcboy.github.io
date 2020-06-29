@@ -20,7 +20,11 @@
     - <https://nonio.lion.co.jp/lineup/mouth_wash.htm>
     - 600ml 的大小不占用大量洗漱台空间
     - 灰色瓶体包装
-    
+- 牙线
+  - クリニカ アドバンテージ デンタルフロス Y字タイプ
+    - 手握处宽阔, 容易握持
+  - ブラウン オーラルB フロスピック ディープクリーン
+    - 带状牙线, 覆盖面积广
 
 ## 食品饮料
 
@@ -46,5 +50,5 @@
     + abrAsus超薄钱包, 扔掉各种会员卡, 零钱保持最低限
 ## 厨卫用品
 
--　洗洁精
+- 洗洁精
   - キュキュット CLEAR（クリア）泡スプレー <https://www.kao.com/jp/kyukyutto/kyu_clear_foamspray_nf_00.html>
