@@ -4,6 +4,10 @@
 
 ## Python
 
+### pip & virtualenv 
+
+https://note.qidong.name/2018/03/python-data-analyze-init/
+
 ### Anaconda
 约需要2.6GB空间
 
