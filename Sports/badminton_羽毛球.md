@@ -14,11 +14,6 @@
   - ブルーグリーン
   - AEROSONICエアロソニック BGAS ホワイト 24-26
   - 头轻, 中杆硬度适中
-
-## 俱乐部
-
-- 南千住
-  - http://minasentfc.cocolog-nifty.com/minasensc
   
 ### 羽毛球拍的重量
 
@@ -47,19 +42,3 @@
 
 12只装的球筒不太方便收纳, 可以买3/6只装的小球筒, 以方便携行.
 
-### 羽毛球品牌
-- Yonex尤尼克斯，简称为YY
-- VICTOR(胜利)，或者翻译成维克多
-  来自台湾的品牌
-- 李宁, LI-NING
-- 燕龙
-  国货品牌
-
-## 学习材料
-
-- [IPA「教育用画像素材集」](http://www.pref.kanagawa.jp/cnt/f370363/)
-
-## 店铺
-
-- Yonex新桥Showroom
-- Victoria
