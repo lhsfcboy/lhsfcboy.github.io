@@ -7,6 +7,11 @@
 - <https://playandcrazy.com/>
 - 静岡県賀茂郡西伊豆町仁科1905-1 <https://goo.gl/maps/wyyn9K7jMK55aiEz9>
 
+## 潜点
+
+- 黄金崎 <https://arari.co.jp/wp-content/uploads/2017/07/kogannezakibeach-1024x726.jpg>
+- THE101 通り崎ビーチ <https://www.central.co.jp/lp/the101/#spot>
+
 ### 交通 
 
 - 路线
