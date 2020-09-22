@@ -13,7 +13,9 @@
   - ビーチポイント 水中マップ <https://www.central.co.jp/lp/the101/wp101/wp-content/themes/the101/img/index-im02.png>
   - 攻略 <https://oceana.ne.jp/buddydive-point-toi>  
   - 沈船 <https://www.central.co.jp/lp/the101/wp101/wp-content/uploads/2018/02/shinsen.jpg>
-- ボートダイビング とび島沖PartⅡ攻略 <https://oceana.ne.jp/after_report/103429>
+- ボートダイビング とび島沖PartⅡ
+  - <https://www.central.co.jp/lp/the101/divingspot/divingspot8/>
+  - 攻略 <https://oceana.ne.jp/after_report/103429>
 - 黄金崎 
   - 水中マップ <https://arari.co.jp/wp-content/uploads/2017/07/kogannezakibeach-1024x726.jpg>
   - 攻略 <https://oceana.ne.jp/buddydive-point-koganezaki>
