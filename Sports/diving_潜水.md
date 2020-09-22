@@ -19,6 +19,8 @@
 - 黄金崎 
   - 水中マップ <https://arari.co.jp/wp-content/uploads/2017/07/kogannezakibeach-1024x726.jpg>
   - 攻略 <https://oceana.ne.jp/buddydive-point-koganezaki>
+- 田子
+  - ダイビングポイント<https://sealand-diving.com/fundiving/>
 - 雲見 <http://kumomi-hamayu.com/seakumomi/>
   - 牛着岩(うしつきいわ) <http://kumomi-hamayu.com/wp-content/themes/hamayu/images/common/kumomi_ushitsuki_map.pdf>
   - 攻略 <https://oceana.ne.jp/buddydive-point-kumomi>
@@ -70,8 +72,6 @@
   - 理论 + 2次潜水
 - 导航
   - 理论 + 2次潜水
-- 完美浮力
-  - WIP
   
 ### 更高水平的执照
 
