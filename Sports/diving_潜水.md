@@ -10,7 +10,8 @@
 ## 潜点
 
 - 黄金崎 <https://arari.co.jp/wp-content/uploads/2017/07/kogannezakibeach-1024x726.jpg>
-- THE101 通り崎ビーチ <https://www.central.co.jp/lp/the101/#spot>
+- THE101 通り崎ビーチ <https://www.central.co.jp/lp/the101/wp101/wp-content/themes/the101/img/index-im02.png>
+  - <https://www.central.co.jp/lp/the101/#spot>
 
 ### 交通 
 
