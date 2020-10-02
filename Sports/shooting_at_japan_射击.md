@@ -19,6 +19,8 @@ https://kuniarkel.jimdofree.com/%E6%89%80%E6%8C%81%E8%A8%B1%E5%8F%AF%E5%8F%96%E5
     - 家族全員記載のもの。マイナンバーは記載不要。
     - 交付から3か月以内であれば講習後の教習資格認定申請や所持許可申請でも使用することが可能。
   - 「猟銃等講習受講申込書」
+    - 申請様式一覧 <https://www.keishicho.metro.tokyo.jp/tetsuzuki/firearms/form.html> 
+      - <https://www.keishicho.metro.tokyo.jp/tetsuzuki/firearms/form.files/j01.pdf>
 - 初心者讲习会的预约 <https://www.keishicho.metro.tokyo.jp/smph/about_mpd/welcome/event_koshu/koshu/koshukai.html>
   - 每月月初更新, 通常当天上午就会被约满.
   - 注意不是 経験者講習
