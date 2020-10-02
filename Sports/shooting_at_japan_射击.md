@@ -18,6 +18,7 @@ https://kuniarkel.jimdofree.com/%E6%89%80%E6%8C%81%E8%A8%B1%E5%8F%AF%E5%8F%96%E5
   - 「本籍地記載の住民票」
     - 家族全員記載のもの。マイナンバーは記載不要。
     - 交付から3か月以内であれば講習後の教習資格認定申請や所持許可申請でも使用することが可能。
+    - https://www.city.taito.lg.jp/index/shisetsu/kuyakusho/chosha.html
   - 「猟銃等講習受講申込書」
     - 申請様式一覧 <https://www.keishicho.metro.tokyo.jp/tetsuzuki/firearms/form.html> 
       - <https://www.keishicho.metro.tokyo.jp/tetsuzuki/firearms/form.files/j01.pdf>
