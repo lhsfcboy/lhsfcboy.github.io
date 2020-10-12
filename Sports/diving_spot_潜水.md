@@ -28,6 +28,15 @@
 |11	| 19～23 | 15～25 |
 |12	| 17～21 | 15～30 |
 
+- 旬別水温の平年値
+  - <https://fish-exp.pref.shizuoka.jp/01ocean/1-4-1.html>
+
+#### 天气与水温的预报
+
+- 水温
+  - 水温週間予報 <https://choseki.com/jp/shizuoka/izu/forecast/water-temperature>
+  - 海面水温 <https://www.umitenki.jp/tenki/2275/temperature>
+
 ### 潜点
 
 - THE101 通り崎ビーチ<https://www.central.co.jp/lp/the101/#spot>
