@@ -33,3 +33,4 @@
 # CQF(Certificate in Quantitative Finance)国际数量金融工程证书
 - <https://zhuanlan.zhihu.com/p/149377362>
 - <https://www.gaodun.com/cqf/>
+## 预计2022年6月开始
