@@ -30,6 +30,8 @@
 
 - 旬別水温の平年値
   - <https://fish-exp.pref.shizuoka.jp/01ocean/1-4-1.html>
+- 平均気温（旬ごとの平年値）
+  - <http://www.data.jma.go.jp/obd/stats/etrn/view/nml_amd_10d.php?prec_no=50&block_no=0456&year=&month=&day=&view=p1>
 
 #### 天气与水温的预报
 
