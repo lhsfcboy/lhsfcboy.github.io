@@ -4,6 +4,14 @@
 Quick Note:
 
 ```bash
+
+# Install Git Bash
+# setup publish SSH key https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh
+# setup local commiter information
+git config --global user.email "lhsfcboy@gmail.com"
+git config --global user.name "Mike Luo"
+
+
 git clone git@github.com:lhsfcboy/MyFirstGitHub.git
 git add  main.c                                            #把文件添加到仓库
 git commit -m "add the mail c file "                       #把文件提交到仓库
