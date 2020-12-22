@@ -43,6 +43,18 @@ https://kuniarkel.jimdofree.com/%E6%89%80%E6%8C%81%E8%A8%B1%E5%8F%AF%E5%8F%96%E5
 
 ### 講習の考査に合格すること
 
+### 教習資格認定申請
+- 『教習資格認定申請書』
+- 『申請人の写真２枚』
+- 『医師の診断書』
+- 『住民票』
+- 『身分証明書』
+- 『講習修了証明書』
+- 『経歴書』
+- 『同居親族書』
+- 『手数料』
+
+### 火薬類等譲受許可証
 
 ### 确保枪柜
 - 最终买枪之前需要确保枪柜，这里有文章<https://chikatoshoukai.com/start-shooting/gunslicence-application/>
