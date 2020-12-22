@@ -45,6 +45,7 @@ https://kuniarkel.jimdofree.com/%E6%89%80%E6%8C%81%E8%A8%B1%E5%8F%AF%E5%8F%96%E5
 
 ### 教習資格認定申請
 - 『教習資格認定申請書』
+  - https://www.keishicho.metro.tokyo.jp/tetsuzuki/firearms/form.html
 - 『申請人の写真２枚』
 - 『医師の診断書』
 - 『住民票』
