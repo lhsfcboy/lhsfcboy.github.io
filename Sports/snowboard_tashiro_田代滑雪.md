@@ -4,6 +4,7 @@
 - 東京駅 <https://www.jorudan.co.jp/time/eki_東京_上越新幹線.html>
 - 上野駅 <https://www.jorudan.co.jp/time/eki_上野_上越新幹線.html>
 - 越後湯沢駅 <https://www.jorudan.co.jp/time/eki_越後湯沢_上越新幹線.html>
+  - ![越後湯沢-乗車位置目安と車窓](http://www.trainfrontview.net/exit/yuzawa.png)
 - JR东京广域周游券 上野取票时间: 05:30-22:00
 
 往返早晚班
