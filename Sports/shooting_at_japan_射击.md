@@ -2,18 +2,16 @@
 
 <https://ssl.yjl.co.jp/yjl/clay/start-license-get.html>
 
+- 务必先通读所有过程，理解基本概念
 - 第一步是考出来初心者讲习证书，证书三年有效
 
 ## Reference
 
 - <https://chikatoshoukai.com/>
 
-
 ### 初心者講習の申し込み
 
-讲习会的流程总揽:
-
-https://kuniarkel.jimdofree.com/%E6%89%80%E6%8C%81%E8%A8%B1%E5%8F%AF%E5%8F%96%E5%BE%97%E3%81%B8%E3%81%AE%E9%81%93/%E5%88%9D%E5%BF%83%E8%80%85%E8%AC%9B%E7%BF%92/
+讲习会的流程总揽: <https://kuniarkel.jimdofree.com/所持許可取得への道/初心者講習/>
 
 - 必要な書類
   - 「申請者の顔写真1枚」
