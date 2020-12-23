@@ -43,6 +43,8 @@ https://kuniarkel.jimdofree.com/%E6%89%80%E6%8C%81%E8%A8%B1%E5%8F%AF%E5%8F%96%E5
 
 ### 講習の考査に合格すること
 
+获得「講習修了証明書」
+
 ### 教習資格認定申請
 - 『教習資格認定申請書』
   - https://www.keishicho.metro.tokyo.jp/tetsuzuki/firearms/form.html
