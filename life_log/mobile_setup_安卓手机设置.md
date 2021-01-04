@@ -34,23 +34,30 @@
 - 有道云笔记
   - https://play.google.com/store/apps/details?id=com.youdao.note
 
-## 手机支付- Kindl
-- 起点读书
-- 知乎
-- 知乎日报
-- 多看阅读
+## 手机支付
+- 支付宝
+- PayPay
+- Google Pay / おサイフケータイ / モバイルSuica
+- Splitwise
 
-## 信息管理/工作
-
-- 扫描全能王
-- 名片全能王 CamCard
+## cn_life
+- 滴滴出行
+  - https://play.google.com/store/apps/details?id=com.sdu.didi.psnger
+- 北京地铁亿通行
+  - http://www.ruubypay.com/download/
+- 中国移动
+  - http://www.10086.cn/cmccclient/indexc_new.html
+- QQ邮箱
+  - https://play.google.com/store/apps/details?id=com.tencent.androidqqmail
+- 网易邮箱大师  
+  - https://mail.163.com/dashi/
 
 ## 谷歌全家桶系列
 
 - 环聊/Hangout
 - Gmail
 
-## 中国生活必备
+## jp_life
 
 - 淘宝
 - 滴滴打车
