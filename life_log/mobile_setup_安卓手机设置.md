@@ -3,7 +3,10 @@
 ## 首屏软件
 - 微信
 - 谷歌地图
+- 日历
 - WorkFlowy
+- 相册
+- Chrome浏览器
 
 ## IM与通讯
 - QQ国际版
@@ -23,11 +26,10 @@
   - https://play.google.com/store/apps/details?id=com.autonavi.minimap
 - 铁路12306
   - https://kyfw.12306.cn/otn/appDownload/init
-- 非常准
+- 飞常准
   - http://www.variflight.com/
 
 ## 网盘
-
 - DropBox
 - 百度网盘
   - http://pan.baidu.com/download
@@ -51,20 +53,47 @@
   - https://play.google.com/store/apps/details?id=com.tencent.androidqqmail
 - 网易邮箱大师  
   - https://mail.163.com/dashi/
-
-## 谷歌全家桶系列
-
-- 环聊/Hangout
-- Gmail
+- 中泰齐富通
+  - https://www.95538.cn/download/downloadmobile.html
+- 中国银行
+  - https://www.boc.cn/ebanking/service/cs1/
+- 中国工商银行
+  - https://m.icbc.com.cn/ICBC/
 
 ## jp_life
+- Uber Eats
+  - https://play.google.com/store/apps/details?id=com.ubercab.eats
+- JINS - メガネ
+  - https://play.google.com/store/apps/details?id=com.jins.sales
+- ヨドバシゴールドポイントカード  
+  - https://play.google.com/store/apps/details?id=com.yodobashi.coupon
+- タイムズカーシェア検索
+  - https://play.google.com/store/apps/details?id=jp.co.park24.tcpquickapps
+- スシロー
+  - https://play.google.com/store/apps/details?id=jp.co.akindo_sushiro.sushiroapp
+- 三菱ＵＦＪ銀行
+  - https://play.google.com/store/apps/details?id=jp.mufg.bk.applisp.app
+- 三井住友銀行アプリ
+  - https://play.google.com/store/apps/details?id=jp.co.smbc.direct
+- 熊猫速汇
+  - https://play.google.com/store/apps/details?id=com.wotransfer.pandaremit
+  
+## 娱乐
+- 豆瓣
+- 哔哩哔哩
+- 知乎
+- 手机淘宝
+- Spotify
+- MySSI
+- Freedive
 
-- 淘宝
-- 滴滴打车
-- 百度地图
-- 高德导航
-- 京东
+## 办公
+各种公司办公用软件
+## 智能家居
+## 工具
+## 谷歌全家桶系列
+## 手机自带
 
-
-## 基础设置
+## 手机基础设置
 - 使用纯黑色壁纸
+- 省电模式
