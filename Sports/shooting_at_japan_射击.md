@@ -82,3 +82,7 @@
 - 有可能警察会问房东是否同意在房间里放枪，这里有两个选择，
   - 第一个是联系房东让房东同意；
   - 如果房东不同意的话，可以把枪寄存在枪店，用枪前一晚上从枪店里取出来就行
+
+### 狩猎免许
+
+- https://www.kankyo.metro.tokyo.lg.jp/nature/animals_plants/birds/hunting_license/test.html
