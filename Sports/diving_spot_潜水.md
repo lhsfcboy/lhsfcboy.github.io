@@ -1,7 +1,5 @@
 # ダイビング
 
-## 执照
-
 ### 潜店play&crazy
 
 - <https://playandcrazy.com/>
