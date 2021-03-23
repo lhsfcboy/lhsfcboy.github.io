@@ -50,18 +50,13 @@ mineo 的 D-Plan 通话与网络正常.
 - 网易 超级计算器
 - 百度网盘
 
-## 第三方APP
-
-- 人人影视
-
 ## 备份与转移的注意事项
 
 - 浏览器中打开的标签页
 - 已经下载/缓存结束的视频
 - Line
 - 微信聊天记录
-
-
+ 
 ## 谷歌的使用
 
 谷歌安装器
@@ -123,7 +118,6 @@ mineo 的 D-Plan 通话与网络正常.
     - Slack
     - Telegram
     - Skype
-    - 环聊拨号器
 - CN Life
     - 中国移动
     - 网易邮箱大师
@@ -149,10 +143,6 @@ mineo 的 D-Plan 通话与网络正常.
     - スシロー
     - Uber Eats
     - 三菱UFJ銀行
-    - SMBCパスワードカード
-- mineo
-    - mineo電話
-    - mineoアプリ
 - Work
     - 名片全能王
     - 有道云笔记
@@ -172,13 +162,8 @@ mineo 的 D-Plan 通话与网络正常.
     - 百度网盘
     - Dropbox
     - Google云端硬盘
-    - 人人影视
     - 哔哩哔哩
-    - Business ON Demand (テレ東BOD)
     - 网易云课堂
-- 东京网球
-    - テニス乱数表
-    - Circlesquare
 
 ## 其他
 
@@ -187,3 +172,4 @@ mineo 的 D-Plan 通话与网络正常.
 - 网易辞典
   - 离线发音包
   - 离线词典
+  
