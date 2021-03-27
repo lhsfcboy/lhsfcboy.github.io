@@ -5,10 +5,10 @@
 - Yonex 双刃10 / デュオラ10 / DUORA10
 
 - NF700 ナノフレア700 NANOFLARE 700 NF-700
-  - 5U
-  - ブルーグリーン
-  - AEROSONICエアロソニック BGAS ホワイト 24-26
-  - 头轻, 中杆硬度适中
+  - 5U ブルーグリーン
+  - 头轻, 中杆硬度适中, 球框极度脆, 非常容易断拍框
+  - YONEX AEROSONIC エアロソニック BGAS 24-26 0.61mm
+  - YONEXAEROBITE エアロバイト BGAB 縦0.67mm 横0.61mm
 
 想要尝试的线:
 - YONEXヨネックスBG66アルティマックス(BG66UM)
