@@ -11,7 +11,9 @@
   - YONEX AEROBITE エアロバイト BGAB 縦0.67mm 横0.61mm
 
 想要尝试的线:
-- YONEXヨネックスBG66アルティマックス(BG66UM)
+- YONEXヨネックス BG66アルティマックス (BG66UM)
+- YONEXヨネックス EXBOLT 63 エクスボルト63 BGXB63
+  - 细线
 - 李宁1号线
   
 ### 羽毛球拍的重量
