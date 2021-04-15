@@ -3,17 +3,18 @@
 ## 我的拍子
 
 - Yonex 双刃10 / デュオラ10 / DUORA10
-
-- NF700 ナノフレア700 NANOFLARE 700 NF-700
+- NF700 ナノフレア700 NANOFLARE 700 
   - 5U ブルーグリーン
   - 头轻, 中杆硬度适中, 球框极度脆, 非常容易断拍框
-  - YONEX AEROSONIC エアロソニック BGAS 24-26 0.61mm
-  - YONEX AEROBITE エアロバイト BGAB 縦0.67mm 横0.61mm
+- NF800 3U 
 
-想要尝试的线:
-- YONEXヨネックス BG66アルティマックス (BG66UM)
-- YONEXヨネックス EXBOLT 63 エクスボルト63 BGXB63
-  - 细线
+## 羽毛球线
+- YONEXヨネックス FORCEBG66フォースBG66 0.65mm
+- YONEXヨネックス AEROSONIC エアロソニック BGAS 0.61mm
+- YONEXヨネックス AEROBITE エアロバイト BGAB 縦0.67mm 横0.61mm
+- YONEXヨネックス BG66アルティマックス (BG66UM) 0.65mm
+- YONEXヨネックス EXBOLT 63 エクスボルト63 (BGXB63)
+- YONEXヨネックス NANOGY 98ナノジー98 (NBG98)0.66mm
 - 李宁1号线
   
 ### 羽毛球拍的重量
