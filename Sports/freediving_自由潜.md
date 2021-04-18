@@ -1,5 +1,14 @@
 ## 自由潜水各级别基本要求
-
+### PADI
+- 基础自由潜水员
+- 自由潜水员
+ - 静态：1min30 动态：25m 恒重：10m
+- 进阶自由潜水员 Advanced FreeDiver
+ - 静态：2min30 动态：50m 恒重：20m
+- 名仕自由潜水员 Master FreeDiver
+ - 静态：3min30 动态：70m 恒重：27m
+- 自由潜教练
+### SSI
 - SSI L1: 静态：2min00 动态：40m 恒重：10m
 - SSI L2: 静态：2min30 动态：50m 恒重：20m
 - SSI L3: 静态：3min30 动态：75m 恒重：30m
