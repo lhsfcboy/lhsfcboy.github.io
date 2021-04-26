@@ -15,9 +15,7 @@
 
 ## 中央区
 - 中央区立総合スポーツセンター (浜町駅)
-  - 午前7時から午後9時30分
-    - before 4/21 午後８時1０分　最終入場 
-  - 個人利用の日程 <https://www.chuo-sports.jp/kongo2/index.html>
+  - <https://www.chuo-sports.jp/>
 
 - 中央小学校温水プール (八丁堀駅)
 - 日本橋小学校 (人形町駅)
