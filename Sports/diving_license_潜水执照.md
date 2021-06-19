@@ -71,23 +71,23 @@
 
 记忆口诀2，Begin With Review And Friend
 
-- B – BCD
+- B – BCD 能充能放
 
 Make sure to check your buddy’s BCD (Buoyancy Control Device) fully inflates and deflates, all quick releases are working and you can also orally inflate the BCD (in case there is a problem with the power inflator).
 
-- W – Weights
+- W – Weights 左右平衡
 
 Is your buddy wearing a weight belt or an integrated weight system and does the quick release mechanism for either work? You should also familiarize yourself with any additional (trim) weights they might be carrying (those would be usually attached on the back of the BCD alongside the tank).
 
-- R – Releases
+- R – Releases 
 
 The clips, straps and buckles of your buddy’s BCD are also called ‘releases’. Make sure they are properly adjusted and tightly locked. You should also be able to understand how to open them (in case you need to help your buddy out of their gear). Don’t forget to check the tank band – there’s nothing more annoying than a tank slipping out of its place when you move around with your gear on your back or even jump in the water.
 
-- A – Air
+- A – Air 气瓶开启
 
 You want to make sure that your buddy’s tank is fully (!) opened and that you can breathe from their alternate air source. You should be able to comfortably breathe from one diver’s air delivery system simultaneously. Don’t forget to watch the pressure gauge while you do this, to check the needle isn’t moving. While you check this, also make sure to understand how your buddy’s alternate air source (or octopus) is attached and that you can quickly get to it in case you need to ‘share air’.
 
-- F – Final 
+- F – Final 管线无纠缠, 肩上肩下走线清楚, 面经脚蹼呼吸管
 
 Is everything in place and does your buddy have everything they need: mask, fins, snorkel, computer, compass and any specialized equipment which is needed for the dive (eg the torch for a night dive)? Are you feeling ok and ready to go?
 
