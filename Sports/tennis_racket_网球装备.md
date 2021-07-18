@@ -129,6 +129,9 @@ No.4 4 1/2英寸 4 号握把
 
 - 墨镜 知名平牌有: oakley, swans
 - 优衣库直接买个1500jpy的就好
+- 铅片(キモニー 鉛バランサー)https://www.amazon.co.jp/dp/B0016724XM/ref=twister_B07BZGR815?_encoding=UTF8&psc=1
+- 避震器 振動止め
+- エラストクロス　ELASTO CROSS
 
 ### ガットの豆知識
 
