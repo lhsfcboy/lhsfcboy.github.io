@@ -71,11 +71,6 @@ RECOMMENDED STRINGS	POLYTOUR STRIKE, POLYTOUR PRO, REXIS
   - 定价 8,900 JPY
 - ウイルソン ナチュラルガット17（1.25mm）
 
-##### 铅片
-
-(キモニー 鉛バランサー)https://www.amazon.co.jp/dp/B0016724XM/ref=twister_B07BZGR815?_encoding=UTF8&psc=1
-
-##### 避震器 振動止め
 
 #### 东京网球场预约
 
