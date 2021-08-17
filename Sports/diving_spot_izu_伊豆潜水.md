@@ -32,7 +32,8 @@
   - <http://www.data.jma.go.jp/obd/stats/etrn/view/nml_amd_10d.php?prec_no=50&block_no=0456&year=&month=&day=&view=p1>
 
 #### 天气与水温的预报
-
+- 天气
+ -  西伊豆町 <https://weather.yahoo.co.jp/weather/22/5020/22306.html>
 - 水温
   - 水温週間予報 <https://choseki.com/jp/shizuoka/izu/forecast/water-temperature>
   - 海面水温 <https://www.umitenki.jp/tenki/2275/temperature>
