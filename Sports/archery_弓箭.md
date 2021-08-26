@@ -1,1 +1,1 @@
-- shibuya-.com/proshop/first/list.html#n05
+- shibuya-archery.com/proshop/first/list.html#n05
