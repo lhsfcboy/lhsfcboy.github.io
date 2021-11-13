@@ -67,7 +67,7 @@
 - 「どの射撃場で教習うけますか？」
   - 伊勢原射撃場 http://www.isehara-shooting.jp/lesson.html
 - 准备好现场填写: 調査先希望確認書 
-  - 格式为<shorturl.at/crHL8>
+  - 格式为 shorturl.at/crHL8
 
 併せて、教習射撃の予約と、弾の購入許可の申請を行います。
 
