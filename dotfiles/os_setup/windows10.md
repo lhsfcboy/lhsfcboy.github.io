@@ -38,7 +38,13 @@ Win+Tab会显示近期打开的文档等
   - 64 位的 Windows 10 操作系统还需要追加如下操作
     - Hkey_LOCAL_MACHINE/SOFTWARE/Wow6432Node/Microsoft/Windows/CurrentVersion/Explorer/MyComputer/Namespace
 - 其他链接的清理
-  - <https://www.techspot.com/guides/1703-remove-3d-objects-shortcut-windows-file-explorer/>
+  - 图片文件夹：{0ddd015d-b06c-45d5-8c4c-f59713854639}＼PropertyBag
+  - 视频文件夹：{35286a68-3c57-41a1-bbb1-0eae73d76c95}＼PropertyBag
+  - 下载文件夹：{7d83ee9b-2244-4e70-b1f5-5393042af1e4}＼PropertyBag
+  - 音乐文件夹：{a0c69a99-21c8-4671-8703-7934162fcf1d}＼PropertyBag
+  - 桌面文件夹：{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}＼PropertyBag
+  - 文档文件夹：{f42ee2d3-909f-4907-8871-4c22fc0bf756}＼PropertyBag
+
 ### 双屏幕时的任务栏显示
 个性化/任务栏
 ### 修改电源选项中屏幕关闭与休眠的时间
