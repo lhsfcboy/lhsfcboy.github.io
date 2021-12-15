@@ -32,12 +32,16 @@ Win+Tab会显示近期打开的文档等
 控制面板>系统与还原>系统，左侧“系统保护”>设置，里面选择第三项“关闭系统还原”
 ### 清理Windows 资源管理器(Explorer)侧边栏 与 这台电脑(This PC)中得快捷方式
 有桌面, 文档, 下载, 音乐, 图片, 视频, 3D 对象的快捷方式, 需要通过'以管理员身份'运行regedit进行清理. 清理操作无需重启, 即刻生效.
-- 3D Objects
-  - Hkey_LOCAL_MACHINE/SOFTWARE/Microsoft/Windows/CurrentVersion/Explorer/MyComputer/Namespace
-  - 右键删除{0DB7E03F-FC29-4DC6-9020-FF41B59E513A}
-  - 64 位的 Windows 10 操作系统还需要追加如下操作
-    - Hkey_LOCAL_MACHINE/SOFTWARE/Wow6432Node/Microsoft/Windows/CurrentVersion/Explorer/MyComputer/Namespace
-- 其他链接的清理
+- 3D对象文件夹的清理
+  - 找到：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\
+  - 删除{0DB7E03F-FC29-4DC6-9020-FF41B59E513A} 
+  - 打开：HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace
+  - 删除{0DB7E03F-FC29-4DC6-9020-FF41B59E513A}
+- 3D Objects 以外
+  - 定位到HKEY_LOCAL_MACHINE＼SOFTWARE＼Microsoft＼Windows＼CurrentVersion＼Explorer＼FolderDescriptions 
+  - 可以通过该项右侧窗口中Name的数据值来判断是否是我们需要的项，这里“图片”对应的是英文名Local Pictures
+  - 进入它的子项“PropertyBag”，双击右侧窗口中的“ThisPCPolicy”，将其数据数值由Show改为Hide
+- FolderDescriptions
   - 图片文件夹：{0ddd015d-b06c-45d5-8c4c-f59713854639}＼PropertyBag
   - 视频文件夹：{35286a68-3c57-41a1-bbb1-0eae73d76c95}＼PropertyBag
   - 下载文件夹：{7d83ee9b-2244-4e70-b1f5-5393042af1e4}＼PropertyBag
