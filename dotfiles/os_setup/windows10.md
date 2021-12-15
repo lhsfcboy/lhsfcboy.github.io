@@ -68,10 +68,11 @@ Power&Sleep
 ## 系统增强软件
 ### QTTabbar 资源浏览器增强
 - <http://qttabbar.wikidot.com/>, 安装后重启系统, 打开「资源管理器」,「查看」,「选项」,「QTTabBar」
-- <https://sspai.com/post/52521>
 - QTTabBarOption 
-  - 关闭文件预览 Preview, Uncheck `Show preview ...`
-  - 双击Toolbar时复制现有Tab Events, Double Clikc on Toolbar, Duplicate active tab
+  - 关闭文件预览 
+    - Preview, Uncheck `Show preview ...`
+  - 双击Toolbar时复制现有Tab 
+    - Events, Double Clikc on Toolbar, Duplicate active tab
 ### 火绒安全软件
 ### TrafficMonitor
 任务栏中实时显示网速
