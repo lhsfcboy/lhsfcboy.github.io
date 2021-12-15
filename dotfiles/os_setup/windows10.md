@@ -76,6 +76,8 @@ Power&Sleep
 - 选项 / 基本 / 皮肤/配色 / 视频下自动隐藏
 
 ## 系统增强软件
+### Everything 文件搜索工具
+- https://www.voidtools.com/zh-cn/
 ### QTTabbar 资源浏览器增强
 - <http://qttabbar.wikidot.com/>, 安装后重启系统, 打开「资源管理器」,「查看」,「选项」,「QTTabBar」
 - QTTabBarOption 
