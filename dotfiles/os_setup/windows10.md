@@ -1,5 +1,4 @@
 # Windows 10 操作系统的配置
-
 ## 操作系统基础设置
 ### 更改计算机名称
 计算机名称会被用于蓝牙设备等.
@@ -48,7 +47,6 @@ Win+Tab会显示近期打开的文档等
   - 音乐文件夹：{a0c69a99-21c8-4671-8703-7934162fcf1d}＼PropertyBag
   - 桌面文件夹：{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}＼PropertyBag
   - 文档文件夹：{f42ee2d3-909f-4907-8871-4c22fc0bf756}＼PropertyBag
-
 ### 双屏幕时的任务栏显示
 个性化/任务栏
 ### 修改电源选项中屏幕关闭与休眠的时间
@@ -56,7 +54,6 @@ Power&Sleep
 ### 关闭无线网卡无活动时自动断电
 笔记本电脑使用电池时, 处于省电考虑, 无线网卡可能会关闭电源
 设备管理器 - 网路适配器 - 无线网卡 - 属性
-
 ## 基础软件
 ### 7Zip
 - https://www.7-zip.org/
@@ -77,7 +74,10 @@ Power&Sleep
 - 不记录历史播放:  选项 / 播放 / 列表 / 取消勾选 记忆近期播放名单/URL地址
 - 选项 / 播放 / 鼠标指向进度条时显示缩略图
 - 选项 / 基本 / 皮肤/配色 / 视频下自动隐藏
-
+### LibreOffice
+- 下载 LibreOffice <https://zh-cn.libreoffice.org/download/libreoffice/>
+- 中日韩字体 <https://zh-cn.libreoffice.org/download/fonts/>
+  - 将下载后的字体文件解压缩，然后将文件复制到 %windir%\Fonts 文件夹
 ## 系统增强软件
 ### Everything 文件搜索工具
 - https://www.voidtools.com/zh-cn/
@@ -96,3 +96,4 @@ Power&Sleep
 - <https://zoom.us/download#client_4meeting>
 ## 基础开发环境
 ### VS Code
+### Putty等远程连接
