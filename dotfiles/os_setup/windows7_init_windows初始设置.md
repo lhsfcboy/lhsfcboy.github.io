@@ -118,9 +118,6 @@ Windows Exporer / View / Options / Show QTTabs Standard Buttons
 - Preview
   - [uncheck] Show preview
 
-### Clover
-
-[ZDfans的去广告版](http://www.zdfans.com/html/596.html)
 
 ### Snipaste
 
