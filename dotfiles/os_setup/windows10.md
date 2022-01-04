@@ -4,7 +4,7 @@
 计算机名称会被用于蓝牙设备等.
 - Settings / System / About /  Device specifications / Rename this PC
 - Restart to apply
-### 关闭快速访问历史Clear/Diable Windows 10 Quick Access History
+### (已不适用)关闭快速访问历史Clear/Diable Windows 10 Quick Access History
 - Click Start and type: file explorer options, General Tab, Privacy section
 ### 关闭活动历史时间线功能
 Win+Tab会显示近期打开的文档等
@@ -13,11 +13,11 @@ Win+Tab会显示近期打开的文档等
 - Personalization / Taskbar
 - Use small taksbar buttons
 - Cobine task bar buttons: When taskbar is full
-- Show taskbar on all displays: off
+- Show taskbar on all displays: off 双屏幕时的任务栏显示 个性化/任务栏
 ### 桌面
 - Windows 设置 / 个性化 / 主题 / 桌面图标设置 / 取消将回收站固定到桌面
 ### 总是在任务栏显示language bar (以避免其自动调整size)
-- Settings / Time & language / Keyboard / Advanced keyboard settings
+- Settings / Time & language / Language / Keyboard / Advanced keyboard settings
 - Use the desktop language bar when it's available.
 ### Uninstall Pre-Installed App
 - McAfee
@@ -47,8 +47,6 @@ Win+Tab会显示近期打开的文档等
   - 音乐文件夹：{a0c69a99-21c8-4671-8703-7934162fcf1d}＼PropertyBag
   - 桌面文件夹：{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}＼PropertyBag
   - 文档文件夹：{f42ee2d3-909f-4907-8871-4c22fc0bf756}＼PropertyBag
-### 双屏幕时的任务栏显示
-个性化/任务栏
 ### 修改电源选项中屏幕关闭与休眠的时间
 Power&Sleep
 ### 关闭无线网卡无活动时自动断电
