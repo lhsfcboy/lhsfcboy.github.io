@@ -48,6 +48,7 @@
 - 事先通过SSI自由潜水Level-1
 - ダイブマスター
   - <http://www.houbou-ya.com/diving/pro/procourses.html>
+  - PADI的DM更新料在 20% off 以后约为2万日元
 - アシスタントインストラクター
 - インストラクター
 
