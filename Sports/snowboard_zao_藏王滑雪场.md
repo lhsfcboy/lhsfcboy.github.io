@@ -1,7 +1,4 @@
 
-(东北地区)
- 无限次乘坐对象区域内的电车·新干线！
-※日本在住外国人也可购买JR东日本铁路周游券！
 
 
 ## 官方网站
@@ -19,6 +16,7 @@
 - 新干线
   - JR东日本铁路周游券 5日周游券 2万日元 <https://www.jreast.co.jp/multi/zh-CHS/pass/eastpass_t.html>
   - 一般拼票比较合算
-  - 山形新幹線　約3時間10分 JR山形駅（1番乗り場）より乗車、蔵王温泉バスターミナルへ
-
-　東京駅より山形新幹線にてJR山形駅  
+  - 山形新幹線　約3時間10分 JR山形駅
+    - <https://www.jorudan.co.jp/time/eki_上野_山形新幹線.html>
+  - JR山形駅（1番乗り場）より乗車、蔵王温泉バスターミナルへ
+  - 蔵王温泉ＢＴ行<http://www.yamakobus.co.jp/rosenbus/jikoku/frame/zao-onsen.html>
