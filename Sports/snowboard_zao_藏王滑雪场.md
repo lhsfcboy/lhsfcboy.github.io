@@ -20,3 +20,7 @@
     - <https://www.jorudan.co.jp/time/eki_上野_山形新幹線.html>
   - JR山形駅（1番乗り場）より乗車、蔵王温泉バスターミナルへ
   - 蔵王温泉ＢＴ行<http://www.yamakobus.co.jp/rosenbus/jikoku/frame/zao-onsen.html>
+
+## 住宿
+
+- WIP
