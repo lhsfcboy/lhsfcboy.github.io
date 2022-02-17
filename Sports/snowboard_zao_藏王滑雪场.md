@@ -49,3 +49,13 @@
 ## 住宿 雪场型
 
 -  蔵王四季のホテル <https://www.zao-shikinohotel.jp/>
+
+## 周边景点 银山温泉
+
+千与千寻原型之一. 
+
+- 官网 <http://www.ginzanonsen.jp/index.html>
+- 散策 <http://www.ginzanonsen.jp/sansaku.html>
+- 天气 <https://weathernews.jp/onebox/tenki/yamagata/06212/>
+- 大正ろまん館 <http://bus.ginzanso.jp/>
+- 大石田駅 銀山温泉 <http://www.hanagasa-bus-taisei.co.jp/base.html>
