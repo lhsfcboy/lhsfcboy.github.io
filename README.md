@@ -7,6 +7,15 @@ Quick Note:
 
 # Install Git Bash
 # setup publish SSH key https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh
+# Git配置SSH-Key
+# ls ~/.ssh
+# cat ~/.ssh/id_rsa.pub
+# 再打开你的github，进入配置页： Settings -- SSH and GPG keys
+# 添加本地生成的ssh秘钥，选择New SSH key（这里已经配置了一个key，如果是未配置秘钥的用户，这里是空的）：
+# 测试是否配置成功
+# 用ssh链接git：ssh -T git@github.com 
+# Hi (username)! You've successfully authenticated, but GitHub does not provide shell access.
+
 # setup local commiter information
 git config --global user.email "lhsfcboy@gmail.com"
 git config --global user.name "Mike Luo"
