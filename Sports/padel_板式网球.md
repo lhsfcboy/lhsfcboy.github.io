@@ -1,4 +1,8 @@
 
+中文译名：
+
+
+
 - コート一覧: 
   - https://www.japanpadel.com/court-list/
   - https://ad-padel.jp/court
