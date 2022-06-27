@@ -4,8 +4,6 @@
 计算机名称会被用于蓝牙设备等.
 - Settings / System / About /  Device specifications / Rename this PC
 - Restart to apply
-### (已不适用)关闭快速访问历史Clear/Diable Windows 10 Quick Access History
-- Click Start and type: file explorer options, General Tab, Privacy section
 ### 关闭活动历史时间线功能
 Win+Tab会显示近期打开的文档等
 - Setting / Privacy / Activity history, Disable and Clear
@@ -24,7 +22,76 @@ Win+Tab会显示近期打开的文档等
 - MS Office
 - MS OneDrive
 ### 删除自带的Metro应用
-- WIP <https://www.howtogeek.com/224798/how-to-uninstall-windows-10s-built-in-apps-and-how-to-reinstall-them/>
+PowerShell, run as Administrator
+
+```PowerShell
+# Uninstall 3D Builder:
+Get-AppxPackage *3dbuilder* | Remove-AppxPackage
+
+# Uninstall Alarms and Clock:
+Get-AppxPackage *windowsalarms* | Remove-AppxPackage
+
+# Uninstall Calculator:
+Get-AppxPackage *windowscalculator* | Remove-AppxPackage
+
+# Uninstall Calendar and Mail:
+Get-AppxPackage *windowscommunicationsapps* | Remove-AppxPackage
+
+# Uninstall Get Office:
+Get-AppxPackage *officehub* | Remove-AppxPackage
+
+# Uninstall Get Skype:
+Get-AppxPackage *skypeapp* | Remove-AppxPackage
+
+# Uninstall Get Started:
+Get-AppxPackage *getstarted* | Remove-AppxPackage
+
+# Uninstall Groove Music:
+Get-AppxPackage *zunemusic* | Remove-AppxPackage
+
+# Uninstall Maps:
+Get-AppxPackage *windowsmaps* | Remove-AppxPackage
+
+# Uninstall Microsoft Solitaire Collection:
+Get-AppxPackage *solitairecollection* | Remove-AppxPackage
+
+# Uninstall Money:
+Get-AppxPackage *bingfinance* | Remove-AppxPackage
+
+# Uninstall Movies & TV:
+Get-AppxPackage *zunevideo* | Remove-AppxPackage
+
+# Uninstall News:
+Get-AppxPackage *bingnews* | Remove-AppxPackage
+
+# Uninstall Phone Companion:
+Get-AppxPackage *windowsphone* | Remove-AppxPackage
+
+# Uninstall Sports:
+Get-AppxPackage *bingsports* | Remove-AppxPackage
+
+# Uninstall Weather:
+Get-AppxPackage *bingweather* | Remove-AppxPackage
+
+# Uninstall Xbox:
+Get-AppxPackage *xboxapp* | Remove-AppxPackage
+
+# Uninstall Voice Recorder:
+Get-AppxPackage *soundrecorder* | Remove-AppxPackage
+
+# Uninstall Camera:
+Get-AppxPackage *windowscamera* | Remove-AppxPackage
+
+# 以下三个APP有待确认具体用途
+
+# Uninstall Store:
+Get-AppxPackage *windowsstore* | Remove-AppxPackage
+# Uninstall Photos:
+Get-AppxPackage *photos* | Remove-AppxPackage
+# Uninstall OneNote:
+Get-AppxPackage *onenote* | Remove-AppxPackage
+```
+
 ### 关闭休眠(可选)
 管理员CMD: `powercfg -h off`
 ### 关闭系统备份还原
