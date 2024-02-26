@@ -3,7 +3,7 @@
 ## 系统变量
 
 - 逐行显示path变量
-```cmd
+```bat
 @echo off
 for %i in ("%PATH:;=" "%") do echo %i
 ```
