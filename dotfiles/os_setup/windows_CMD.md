@@ -3,10 +3,10 @@
 ## 系统变量
 
 - 逐行显示path变量
-···
+```cmd
 @echo off
 for %i in ("%PATH:;=" "%") do echo %i
-···
+```
 
 ## 磁盘管理
 
