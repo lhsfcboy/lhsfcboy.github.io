@@ -4,14 +4,10 @@
 
 - 逐行显示path变量
 ```batch
-@echo off
-for %i in ("%PATH:;=" "%") do echo %i
+echo %path:;=&echo(%
 ```
 
-```wincmd
-@echo off
-for %i in ("%PATH:;=" "%") do echo %i
-```
+
 ## 磁盘管理
 
 - 创建指定大小的随机文件
