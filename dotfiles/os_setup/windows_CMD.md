@@ -5,6 +5,8 @@
 - 逐行显示path变量
 ```batch
 echo %path:;=&echo(%
+setx PATH "%PATH%;C:\your\new\path"
+echo %path:;=&echo(%
 ```
 
 
