@@ -1,4 +1,4 @@
-# VB虚拟机中Ubuntu的安装配置
+# Ubuntu的安装配置
 
 ## Virtual Box 基础设置
 - 安装增强功能
@@ -48,15 +48,16 @@ apt purge deja-dup
 # 可以删除libreoffice
 apt purge libreoffice-common
 
+```
+
+## 桌面应用类
+
+```text
 # 使用chromium浏览器
 sudo apt install chromium-browser
 sudo apt remove firefox  # 卸载 FireFox，视自己喜好而定。
 chromium-browser  # 打开 Chromium 浏览器
-```
 
-## 便捷小工具
-
-```text
 sudo apt-get instll -y indicator-multiload #系统监视插件，装完在顶栏就能看到
 ```
 ## 中文相关
