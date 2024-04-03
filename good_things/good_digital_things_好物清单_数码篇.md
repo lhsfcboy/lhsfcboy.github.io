@@ -19,9 +19,15 @@
 ###### 目前使用
 需要一台备机
 - 主力机
-    - OPPO R15
+  - iPhone 11 Pro Max
 - 备机
   - 坚果 Pro 2S 炫光蓝 6G + 64GB
+    
+## 电脑
++ 现在使用: ThinkPad x220i 加SSD 加内存
++ 现在备用：RedmiBook Pro 14 2022 锐龙版
+  + https://www.mi.com/redmibook/pro14-amd/specs 
++ 现在退役: ThinkPad E595
 
 ## 充电宝
 - 自带电源插头
@@ -34,10 +40,7 @@
 + 现在使用: Kindle Fire
 + 现在使用: iPad mini
 
-## 电脑
-+ 现在使用: ThinkPad x220i 加SSD 加内存
-+ 现在使用: ThinkPad E595
-
+  
 ###### 对电脑的需求
 + 原生支持蓝牙(几乎没有不支持的)
 + SSD硬盘, 不低于512G, 最好双硬盘
