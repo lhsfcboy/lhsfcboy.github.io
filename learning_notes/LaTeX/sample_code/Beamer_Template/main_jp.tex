@@ -1,0 +1,85 @@
+% Use pdflatex !!!!
+\documentclass[dvipdfmx]{beamer}
+
+\usepackage{cancel}
+%\usepackage{CJK}
+\usepackage{times}
+\usepackage{pxjahyper}
+\usepackage{minijs}%和文用
+%\usepackage{hyperref}
+\renewcommand{\kanjifamilydefault}{\gtdefault}%和文用に
+
+\mode<all>{
+  \usetheme{Taiwan}
+}
+
+\newcommand{\emphblue}[1]{\textcolor{blue}{#1}}
+\renewcommand{\alert}[1]{\textbf{\textcolor{red}{#1}}}
+\newcommand{\alertblue}[1]{\textbf{\textcolor{blue}{#1}}}
+\newcommand{\hint}[2][]{
+  \vskip1em
+  \begin{columns}
+    \begin{column}{8cm}
+      \begin{yellowbox}{}
+        #2
+      \end{yellowbox}
+    \end{column}
+    #1
+  \end{columns}
+}
+\newcommand{\chint}[2][]{\hint[#1]{\begin{center}#2\end{center}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\title[タイトル]{量子情報理論}
+\author{山田健太郎}
+\institute[JPN]{XX大学}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}\frametitle{}
+\titlepage %表紙
+\end{frame}
+
+\section*{TOC}
+\begin{frame}\frametitle{Contents}
+\tableofcontents %目次
+\end{frame}
+
+\section{楕円曲線暗号とは}
+\subsection{This is subsection}
+\begin{frame}\frametitle{量子情報理論}
+$$
+\frac{1}{1+e^{-x}}
+$$
+
+\begin{block}{量子情報}
+    \begin{itemize}
+         \item 量子鍵配送
+         \item NP完全問題
+         \item 量子もつれ
+    \end{itemize}
+\end{block}
+
+\begin{alertblock}{BB84}
+    \begin{itemize}
+         \item C. BennettとG. Brassard によって再発見
+         \item 実装されている量子鍵配送のほとんど
+         \item 検出器（ボブ）のノイズにより傍受の検知が出来なくなる
+    \end{itemize}
+\end{alertblock}
+\end{frame}
+
+\begin{frame}\frametitle{量子もつれ}
+\centering
+\begin{eqnarray}
+i\rho^{\prime}=U\left(  i\rho\right)  U^{\dagger}=Ad_{U}\left(  i\rho\right)\\
+i\rho^{\prime}=Ad_{U}\left(  i\rho\right)  =U\left(  i\rho\right)  U^{-1}%
+\end{eqnarray}
+\vspace{16pt}
+\href{http://www.csee.umbc.edu/~lomonaco/ams/lecturenotes/figssamtangle/unusedfigs/samtangle.tex}{ref: An Entangled Tale of Quantum Entanglement}
+\end{frame}
+
+
+\end{document}

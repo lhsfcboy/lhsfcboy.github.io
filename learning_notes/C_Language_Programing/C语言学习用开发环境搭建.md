@@ -1,0 +1,60 @@
+用来执行一些小程序，验证基本想法
+
+## Linux下的GCC环境搭建
+
+## Windows下GCWin 配合 VS Code的环境搭建
+
+## Windows下使用Visual Studio Express 或者 Visual Studio
+- 微软在上古时期推出的C/C++集成开发环境
+- https://cs-people.bu.edu/deht/CS585/VSTutorial/
+  
+## 使用类似Jupyter的在线服务
+
+大部分时候运行C语言都是
+
+### Google Colab
+- 无缝对接谷歌云盘
+- 无缝AI提示
+- 没有C的运行内核
+  - Google Colab 默认提供了 Python3 和 R语言 的运行内核。但是其实只要后台Ubuntu所支持的语言都可以通过魔术命令来操作终端实现。
+  - [Google Colaboratoryで実行できる主な言語と環境構築方法まとめ](https://qiita.com/u-10bei/items/38d6f0e4bfdc40efce3a#%E7%AC%AC%EF%BC%93%E4%BD%8Djava)
+- 目前还没有找到比较方便的代码格式化办法
+  - 临时用在线的C语言formatter 应付
+- 因为是默认Pytho，所以代码是按照Python进行解析
+  - 可以用Text Editor修改kernel的运行环境
+    - 修改后，不会显示毫无意义的语法错误提示，会有一个提示说Colab不知此C运行内核(无法识别运行时“c”；默认为“python3”)，直接无视即可   
+```json
+    "kernelspec": {
+      "name": "c",
+      "display_name": "C lang"
+    },
+    "language_info": {
+      "name": "c"
+    }
+```
+- 如下是一个简单的例子
+  - 代码部分
+```C
+%%file hello.c
+
+#include <stdio.h>
+void my_func(int p);
+int main()
+{
+    int a = 1;
+    my_func(a);
+    printf("Value of a:          %d\n", a);
+}
+
+void my_func(int p)   // p = valueOf(a); // p=1
+{
+  p = p -1;
+}
+```
+  - 执行部分，可以接受scanf一类的输入
+```
+!gcc --version
+!cat /etc/issue
+!pwd
+!gcc -Wall hello.c -o hello && ./hello
+```

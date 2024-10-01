@@ -1,0 +1,318 @@
+不带编号的行间公式推荐用 \[ … \] 
+用 $ ... $ 而不用 \( ... \)
+用 align 环境而不用 eqnarray 环境
+用 matrix, bmatrix, pmatrix, vmatrix, Vmatrix 等环境而不用 array 环境去实现矩阵
+用 \bigl, \bigr 等命令来处理定界符，而尽可能避免 \left 和 \right
+
+
+.tex 和图片文件的文件名不要有下划线
+
+自定义
+
+\newcomannd{\Ker}[1]{\mathcal{K}er(#1)}
+
+正文中输入$\Ker{A}$, 那么出现的就是$\mathcal{K}er(A)$
+
+调整版心位置/ 页边距
+
+\usepackage[left=1cm,right=1cm,top=2cm,bottom=3cm]{geometry} 
+
+页码等页眉、页脚信息
+
+\pagestyle{plain}
+plain：只有页底中央的页码；
+empty：啥也没有；
+Headings：把章节的标题写在页眉处，同时有页码；
+数学模式
+
+数学模式中，所有的字母都会被认为是分离的变量，一般会用意大利体来表示，字母间的间距也会相对更大一些。因此如果你想在公式环境中加入文字，要把文字用 \text{公式中的文字} 来表示（需要调用 amsmath 宏包），这样就会正常地排版文字。
+
+在数学公式中，只有变量才使用意大利体。而数学常数 e、i，微分符号 d，函数名 sin、cos、log、ln 等都需要用罗马正体来表示。另外表示数集的字母 R、C、Q、N 等，需要用空心字体来表示。
+
+很多函数名，应该用罗马正体书写的，都可以用反斜杠加函数名来实现。比如 \sin，\cos，\log，\ln。还有一些算子也需要这样实现，如 \lim，\max、\min、\gcd 等。
+
+行内公式(inline equation) 行间公式(displayed equation)
+
+最基本的行间公式，可以用 “\[” 和 “\]” 包围起来实现
+会生成一个不编号的公式
+
+
+矩阵 Matrix
+
+$$
+  \begin{matrix}
+   1 & 2 & 3 \\
+   4 & 5 & 6 \\
+   7 & 8 & 9
+  \end{matrix} \tag{1}
+$$
+
+pmatrix  圆括号
+bmatrix  中括号
+Bmatrix 大括号
+vmatrix  单竖线
+Vmatrix  双竖线
+省略符号	\cdots ⋯ \ddots ⋱ \vdots ⋮
+带参数的Matrix
+$$ 
+\left[
+    \begin{array}{cc|c}
+      1 & 2 & 3 \\
+      4 & 5 & 6
+    \end{array}
+\right] \tag{7}
+$$
+
+行间矩阵
+ $\bigl( \begin{smallmatrix} a & b \\ c & d \end{smallmatrix} \bigr)$ 
+
+矩阵转置
+$A^{\mathrm{T}}$
+\newcommand{\transpose}{\mathrm{T}}
+$A^\transpose$
+列表 list 
+
+\begin{enumerate}
+\item ...
+\end{enumerate}
+
+\begin{itemize}
+\item An item.
+\item
+\item Go back to upper level.
+\end{itemize}
+制作列表 Table
+http://www.tablesgenerator.com/#
+
+
+\begin{table}[H]
+\begin{tabular}{rrrrr}
+           &True Value& MCMCregress& Original Gibbs&  \\
+$\beta_0 $ & 1        & 1.0936     & 1.0938        &  \\
+$\beta_1 $ & 0.5      & 0.4616     & 0.4616        &  \\
+$\beta_2 $ & -0.5     &-0.4745     & -0.4745       &  \\
+$\sigma^2$ & 0.25     & 0.2937     & 0.2937        & 
+\end{tabular}
+\end{table}
+
+
+空白/空行/space
+\vspace*{2\baselineskip}
+\quad
+\qquad
+
+数学符号
+
+上标下标
+行内公式: 一般的上下标都是放在数学符号的右上，右下方
+行间公式:（显示格式），系统默认上下标在正上，下方
+
+公式
+\begin{equation}
+E = mc^2 \notag
+\end{equation}
+
+不带编号的另外一个写法
+\begin{equation*}
+a^2 + b^2 = c^2
+\end{equation*}
+
+
+正态分布
+    \[
+X \sim \mathcal{N}(\mu,\,\sigma^{2})\,.
+    \] 
+
+多行公式对齐
+\begin{align*}
+a 
+& = b + c \\
+& = d + e
+\end{align*}
+align 环境会给每行公式都编号。我们仍然可以用 \notag 去掉某行的编号。
+\begin{align}
+& = b + c \notag \\
+& = b + c \notag \\
+& = b + c \notag \\
+& = d + e \notag 
+\end{align}
+也可以使用align*环境，这种环境可以直接消去所有编号
+
+编号加标签和引用
+\begin{equation}
+E = mc^2 \label{clever}
+\end{equation}
+This is a reference to
+\eqref{clever}.
+
+手动编号并引用
+$$x^n+y^n=z^n \eqno{(4.3)}$$
+我们刚刚定义了由公式$(4.3)$即可得到结论。
+
+
+
+
+标签和交叉引用
+
+
+
+每行对齐多个公式
+
+
+条件函数
+\[ |x| = \left\{
+\begin{array}{rl}
+-x & \text{if } x < 0,\\
+0 & \text{if } x = 0,\\
+x & \text{if } x > 0.
+\end{array} \right. \]
+
+不过上述例子可以用 amsmath 提供的 cases 环境更轻松地完成：
+\[ |x| =
+\begin{cases}
+-x & \text{if } x < 0,\\
+0 & \text{if } x = 0,\\
+x & \text{if } x > 0.
+\end{cases} \]
+
+
+微分              	\frac{dy}{dx}
+偏微分		\partial
+积分  		\int_{a}^{b}
+开n次方 	\sqrt[n]{x}
+比例关系 	\propto
+\ell
+注意：这个不是花体字母，只是为了避免数学公式中字母 l 与数字 1 混淆而在正常数学字母的字体中加的字符。也只有这一个字母。
+
+
+希腊字母
+圆周率π   \pi 
+引用
+引用环境一般有两种，分别是\quote和\quotation，二者的区别是有无首行缩进
+
+\begin{quote}
+\begin{verbatim}
+y_example1 = c(1)
+y_example2 = c(0)
+y_example3 = c(1, rep(0, n-1))
+y_example4 = c(rep(0, n/2),rep(1, n/2))
+\end{verbatim}
+\end{quote}
+
+如果你只想对一些行文进行抄录，那么有环境：verbatim以及命令：verb，前者针对大段的行文，而后者针对小段，举个例子，输入命令：
+
+\verb!abcd   efg!\\
+abcd   efg\\
+
+插入图片
+
+\begin{figure}[H]
+  \includegraphics[width=\textwidth]{Lancaster-P20-Figure1-4.png}
+\end{figure}  
+
+Latex分文件编写
+
+把每个文档的\begin{document}之前的东西删了，再把\end{document}删了
+建一个新文档，只有\begin{document}之前的东西，和\end{document}。
+在新建的那个文档的\begin{document}和\end{document}之间加：
+
+可以不要后缀
+
+\input {file}
+\include{chapter2}
+一般编写书籍的时候使用\include，并且一章一个文件，因为它会自动给每个被include的部分创建一个新页。
+写论文的时候多用\input。
+需要提一下，导言区只需要宿主文件有就可以了，被包含的文件会沿用它。
+可以理解为只起一个文本替换的作用.
+可以嵌套使用。可以在任何位置使用（特别强调一下：可以在导言区使用）。
+只能用在正文区，用来引入正文。
+
+
+集合需要的包
+usepackage{amsmath,amssymb}
+集合的大括号：                  \{ ...   }\
+集合中的“|”：                \mid
+属于：                    \in
+不属于：                    \not\in
+A包含于B：                A\subset B
+A真包含于B：                A\subsetneqq B
+A包含B：                    A\supset B
+A真包含B：                A\supsetneqq B
+A不包含于B：                A\not\subset B
+A交B：                    A\cap B
+A并B：                    A\cup B
+A的闭包：                    \overline{A}
+A减去B:                    A\setminus B
+实数集合：                \mathbb{R}
+空集：                    \emptyset
+数学符号的花体
+用\usepackage{amsmath}
+\boldsymbol{\sigma}
+
+\mathbf 只对公式中的普通字母ABC...abcdef等起作用。
+
+方案二、更好的方法是使用\usepackage{bm}
+\bm{}来加粗。
+
+水平分割线 hrule
+
+应该用在段落之间 可以通过skip调整前后空间
+\medskip　　
+\hrule
+\medskip　　
+\vspace
+
+括号
+可以使用\big, \Big, \bigg, \Bigg控制括号的大小，比如代码\Bigg ( \bigg [ \Big \{ \big \langle \left | \| \frac{a}{b} \| \right | \big \rangle \Big \} \bigg ] \Bigg )
+
+强调文字
+\uline{Fashion}\\
+\uuline{Fashion}\\
+\uwave{Fashion}\\
+\sout{Fashion}\\
+\dotuline{Fashion}\\
+%下划线，双下划线，波浪线，划去线，着重点
+
+
+显示直立文本： \textup{文本}
+意大利斜体： \textit{文本}
+slanted斜体： \textsl{文本}
+显示小体大写文本： 　\textsc{文本}
+中等权重： \textmd{文本}
+加粗命令： \textbf{文本}
+默认值： \textnormal{文本}
+
+Latex 设置字体大小命令由小到大依次为：
+\tiny
+\scriptsize
+\footnotesize
+\small
+\normalsize
+\large
+\Large
+\LARGE
+\huge
+\Huge
+加粗：		\textbf{文字}
+数学模式下用	\usepackage{bm}	$\bm{ a }$
+
+
+
+\usepackage{color}
+
+
+引用文献管理
+
+在文档中用\cite引用标签
+
+\begin{thebibliography}{0}
+\bibitem{A}
+American Cultural Values,Gary R. Weaver, Ph.D.,published in Kokusai Bunka Kenshu (Intercultural Training),Winter, 1997, Vol. 14, pp. 14-20.
+\bibitem{B}
+Asian and European American Cultural Values and Communication Styles Among Asian American and European American College Students,Yong S. Park University of California, Santa Barbara
+ Bryan S. K. Kim University of Hawaii at Hilo
+\bibitem{C}
+How Americans Communicate,Roper Starch
+\end{thebibliography}
+
+

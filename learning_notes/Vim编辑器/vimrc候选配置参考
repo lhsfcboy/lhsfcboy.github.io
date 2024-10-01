@@ -1,0 +1,349 @@
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" General/通用基础设置
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 设置 vim 为不兼容 vi 模式
+set nocompatible
+" 显示行号
+set number
+" 显示相对行号
+" set relativenumber
+
+
+" Sets how many lines of history VIM has to remember
+set history=500
+
+filetype indent on
+
+" Set to auto read when a file is changed from the outside
+" 打开文件监视。如果在编辑过程中文件发生外部改变（比如被别的编辑器编辑了），就会发出提示
+set autoread
+
+
+" 如果行尾有多余的空格（包括 Tab 键），该配置将让这些空格显示成可见的小方块
+"set listchars=tab:»■,trail:■
+"set list
+
+" With a map leader it's possible to do extra key combinations
+" like <leader>w saves the current file
+" 定义快捷键的前缀，即<Leader>
+let mapleader = ";"
+"let mapleader = ","
+"let g:mapleader = ","
+
+" Fast saving
+"nmap <leader>w :w!<cr>
+
+" :W sudo saves the file
+" (useful for handling the permission-denied error)
+"command W w !sudo tee % > /dev/null
+
+
+" 让配置变更立即生效
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
+
+"编码
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+scriptencoding utf-8
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" VIM user interface/用户界面设置
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 显示出输入的命令
+set showcmd
+
+" Set 7 lines to the cursor - when moving vertically using j/k
+set so=7
+"光标移动到上下两端,保持3行距离
+set scrolloff=3
+" 水平滚动时，光标距离行首或行尾的位置
+set sidescrolloff=15
+
+" Avoid garbled characters in Chinese language windows OS
+let $LANG='en'
+set langmenu=en
+"source $VIMRUNTIME/delmenu.vim
+"source $VIMRUNTIME/menu.vim
+
+" Turn on the WiLd menu
+" vim 自身命令行模式智能补全
+set wildmenu
+" Ignore compiled files
+set wildignore=*.o,*~,*.pyc
+"if has("win16") || has("win32")
+"    set wildignore+=.git\*,.hg\*,.svn\*
+"else
+"    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+"endif
+
+
+" Always show current position
+" 在右下角显示当前行信息
+set ruler
+" Height of the command bar
+" 命令行高度加1
+" Set the command window height to 2 lines, to avoid many cases of having to
+" "press <Enter> to continue"
+set cmdheight=2
+
+" 配置状态栏
+set statusline=%<%F%h%m%r\ [%{&ff}]\ (%{strftime(\"%H:%M\ %d/%m/%Y\",getftime(expand(\"%:p\")))})%=%l,%c%V\ %P
+
+
+" 取消光标所在行的底线显示, 看不清楚下划线
+set nocursorline
+
+" Allows hiding buffers even though they contain modifications
+" which have not yet been written back to the associated file.
+" A buffer becomes hidden when it is abandoned
+"set hid
+
+" Configure backspace so it acts as it should act
+set backspace=eol,start,indent
+
+" 光标从行首和行末时可以跳到另一行去
+" :help whichwrap
+" b,s means Backspace,Space in  Normal and visual
+" h,l means h,l in Normal and visual
+" <,> means Left,Right arrow in Normal and visual
+" [,] means Left,Right arrow in Insert and Replace
+set whichwrap=b,s,<,>,[,],h,l
+
+
+" 搜索for search
+" Makes search act like search in modern browsers
+" 即时搜索
+set incsearch
+" Ignore case when searching
+" 搜索时忽略大小写
+set ignorecase
+" When searching try to be smart about cases
+" 但在有一个或以上大写字母时,仍保持对大小写敏感
+set smartcase
+" Highlight search results
+" 对匹配的所有项目进行高亮显示
+set hlsearch
+
+
+" Don't redraw while executing macros (good performance config)
+" 当有太多插件时,页面滚动会变慢
+set lazyredraw
+
+
+" 通常的正则表达式(abc)+ 在vim中要写作\(abc\)\+
+" 除非是用\v来提示  \v(abc)+  相当于  /\m\(colo\)\+   这里\m明确要求逃逸字符
+" set magic 后相当于在模式前加了\m
+" 更加直观一点, ()表示括号自身而不是正则表达式中的字符组
+" :help magic
+set magic
+
+" Show matching brackets when text indicator is over them
+" 自动高亮匹配的括号
+set showmatch
+" How many tenths of a second to blink when matching brackets
+" set mat=2
+
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+" turn on the "visual bell" - which is much quieter than the "audio blink"
+set vb
+
+" Add a bit extra margin to the left
+" 左侧边距调整
+" set foldcolumn=1
+
+" 代码折叠
+set foldmethod=indent
+set foldlevel=99
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colors and Fonts
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable syntax highlighting
+" 语法高亮显示
+syntax enable
+syntax on
+
+" Enable 256 colors palette in Gnome Terminal
+if $COLORTERM == 'gnome-terminal'
+    set t_Co=256
+endif
+
+"try
+"    colorscheme desert
+"catch
+"endtry
+
+"colorscheme molokai
+"colorscheme desert    "沙漠配色
+"colorscheme torte
+"colorscheme solarized
+"colorscheme phd
+"colorscheme ron
+"colorscheme evening
+
+"set background=dark
+
+" Set extra options when running in GUI mode
+if has("gui_running")
+    set guioptions-=T
+    set guioptions-=e
+    set t_Co=256
+    set guitablabel=%M\ %t
+endif
+
+try
+    colorscheme desert
+catch
+endtry
+
+"set background=dark
+
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Files, backups and undo
+" => 文件, 备份, 撤销
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Turn backup off, since most stuff is in SVN, git et.c anyway...
+set nobackup
+set nowb
+set noswapfile
+
+" 保留撤销历史
+"set undofile
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Text, tab and indent related
+" => 文本, Tab键与缩进
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use spaces instead of tabs
+" 将tab替换为相应数量空格
+set expandtab
+
+" When on, a <Tab> in front of a line inserts blanks according to
+" 'shiftwidth'.  'tabstop' or 'softtabstop' is used in other places.  A
+" <BS> will delete a 'shiftwidth' worth of space at the start of the
+" line.
+set smarttab
+
+" 1 tab == 4 spaces
+" shiftwidth
+" The size of an "indent".
+set shiftwidth=4
+" tabstop
+" The width of a hard tabstop measured in "spaces"
+" -- effectively the (maximum) width of an actual tab character.
+set tabstop=4
+" More about http://tedlogan.com/techblog3.html
+set softtabstop=4
+
+
+" Linebreak on 500 characters
+"set lbr
+"set tw=500
+
+" set auto-indenting on for programming
+" 就是把当前行的对其格式应用到下一行
+set autoindent
+" 取消后,可以避免复制时格式乱掉的问题
+" set noautoindent
+" Smart indent
+" 智能缩进
+set smartindent
+
+
+" 是否折行显示
+" Wrap lines
+set nowrap
+
+" 指定折行处与编辑窗口的右边缘之间空出的字符数
+"set wrapmargin=2
+
+"设置行宽，即一行显示多少个字符
+"set textwidth=80
+
+"只有遇到指定的符号（比如空格、连词号和其他标点符号），才发生折行。也就是说，不会在单词内部折行
+"set linebreak
+
+
+" 是否在PASTE MODE 当前文件名 当前目录 当前文件EOL 最后修改时间 横竖位置
+" PASTE MODE  ~/.vimrc  CWD: /home/mike [unix] (19:05 14/12/2017)         277,2 Line: 277  Column: 2 Bot
+
+
+" 各种括号,双引号的匹配输入 或称 标点配对
+"inoremap { {}<ESC>i
+"inoremap ( ()<Esc>i
+"inoremap " ""<Esc>i
+"inoremap ' ''<Esc>i
+"inoremap [ []<Esc>i
+" 注意大括号是否需要换行输入
+"inoremap {<CR> {<CR>}<ESC>O
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 窗口分割
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"被分割窗口之间显示空白
+set fillchars=vert:/
+
+set fillchars=stl:/
+
+set fillchars=stlnc:/
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Helper functions
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Returns true if paste mode is enabled
+function! HasPaste()
+    if &paste
+        return 'PASTE MODE  '
+    endif
+    return ''
+endfunction
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => 自定义一些快捷键
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 定义快捷键到行首和行尾
+nmap lb 0
+"nmap lb ^
+nmap le $
+nnoremap <Leader>w :w<CR>
+
+"按F5一键编译并运行
+map <F5> :call CompileRunGcc()<CR>
+func! CompileRunGcc()
+        exec "w"
+        silent exec "!clear"
+        if &filetype == 'c'
+           "exec "!g++ % -DLOCAL -o   %<"
+           exec "!gcc % -o %<"
+           exec "!time ./%<"
+        elseif &filetype == 'cpp'
+           exec "!g++ % -std=c++11 -DLOCAL -Dxiaoai -o    %<"
+           exec "!time ./%<"
+        elseif &filetype == 'java'
+           exec "!javac %"
+           exec "!time java %<"
+        elseif &filetype == 'sh'
+           :!time bash %
+        elseif &filetype == 'python'
+            exec "!time python %"
+        endif
+endfunc
+
+function HeaderPython()
+    call setline(1, "#! /usr/bin/env python")
+    call append(1,  "#  coding:utf8")
+    normal G
+    normal o
+    normal o
+endf
+autocmd bufnewfile *.py call HeaderPython()

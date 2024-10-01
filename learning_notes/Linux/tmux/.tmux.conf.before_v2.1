@@ -1,0 +1,39 @@
+# check tmux version
+# tmux -V
+# tmux 1.6
+
+
+# 修改前导键
+# unbind C-b
+# set -g prefix C-w
+
+
+# 载入配置 reload config
+# prefix, r
+bind r source-file ~/.tmux.conf \; display-message "Config reloaded"
+
+set -g mode-mouse on
+set -g mouse-select-pane on
+set -g mouse-resize-pane on
+set -g mouse-select-window on
+
+# 调整窗口大小
+# Resize panel size
+bind < resize-pane -L 10
+bind > resize-pane -R 10
+bind _ resize-pane -D 10  # _ 注意是下划线
+bind + resize-pane -U 10
+# Use mouse to resize panel.
+set -g mouse-utf8 on
+
+# 选中窗口
+bind-key k select-pane -U
+bind-key j select-pane -D
+bind-key h select-pane -L
+bind-key l select-pane -R
+
+# 分割窗口使用更加直观的快捷键
+unbind '"'
+bind - splitw -v  # - 注意是减号
+unbind %
+bind | splitw -h

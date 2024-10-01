@@ -1,0 +1,48 @@
+https://vimeo.com/15443936
+Globals, Command Line and Functions
+
+In this "advanced" video, we use the modification of an XML Mindmap into a standard bullet-style hierarchical list. To do this, we do nothing but use the Command-Line.
+
+<span class="c">    "Quickly Run</span>
+<span class="c">    """"""""""""""""""""""</span>
+    map <span class="p">&lt;</span>F5<span class="p">&gt;</span> :<span class="k">call</span> CompileRunGcc<span class="p">()&lt;</span>CR<span class="p">&gt;</span>
+    func<span class="p">!</span> CompileRunGcc<span class="p">()</span>
+        exec <span class="s2">"w"</span>
+        <span class="k">if</span> &amp;<span class="k">filetype</span> <span class="p">==</span> <span class="s1">'c'</span>
+            exec <span class="s2">"!g++ % -o %&lt;"</span>
+            exec <span class="s2">"!time ./%&lt;"</span>
+        <span class="k">elseif</span> &amp;<span class="k">filetype</span> <span class="p">==</span> <span class="s1">'cpp'</span>
+            exec <span class="s2">"!g++ % -o %&lt;"</span>
+            exec <span class="s2">"!time ./%&lt;"</span>
+        <span class="k">elseif</span> &amp;<span class="k">filetype</span> <span class="p">==</span> <span class="s1">'java'</span>
+            exec <span class="s2">"!javac %"</span>
+            exec <span class="s2">"!time java %&lt;"</span>
+        <span class="k">elseif</span> &amp;<span class="k">filetype</span> <span class="p">==</span> <span class="s1">'sh'</span>
+            :<span class="p">!</span>time bash %
+        <span class="k">elseif</span> &amp;<span class="k">filetype</span> <span class="p">==</span> <span class="s1">'python'</span>
+            exec <span class="s2">"!time python2.7 %"</span>
+        <span class="k">elseif</span> &amp;<span class="k">filetype</span> <span class="p">==</span> <span class="s1">'html'</span>
+            exec <span class="s2">"!firefox % &amp;"</span>
+        <span class="k">elseif</span> &amp;<span class="k">filetype</span> <span class="p">==</span> <span class="s1">'go'</span>
+<span class="c">    "        exec "!go build %&lt;"</span>
+            exec <span class="s2">"!time go run %"</span>
+        <span class="k">elseif</span> &amp;<span class="k">filetype</span> <span class="p">==</span> <span class="s1">'mkd'</span>
+            exec <span class="s2">"!~/.vim/markdown.pl % &gt; %.html &amp;"</span>
+            exec <span class="s2">"!firefox %.html &amp;"</span>
+        <span class="k">endif</span>
+    endfunc
+</code>
+
+
+
+这则进阶视频展示了vi的命令行的使用, 示例中把一份XML文件整理成了一份普通的缩进格式.
+----检查vi所识别出的文件类型   :set ft
+----设置文件类型为xml  :set ft=xml
+----设置取消自动换行  :set nowrap
+----搜索所有的标签并且删除  :%s/<[^>]*>//g
+----搜索所有行首的四个空格并且删除  %s/^    //g
+
+---- 把 &amp 转换为 &, 把 &lt 转换为<, 把&gt转换为>
+:%s/&amp;/\&/g
+:%s/&lt;/</g
+:%s/&gt;/>/g

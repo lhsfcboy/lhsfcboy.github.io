@@ -1,0 +1,1 @@
+from ..moduleA import bar
