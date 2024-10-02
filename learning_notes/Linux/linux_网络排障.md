@@ -38,25 +38,10 @@ netstat -ntu | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -n
 ### 查看 TCP 连接状态
 ```bash
 netstat -nat | awk '{print $6}' | sort | uniq -c | sort -rn
-```
-
-```bash
 netstat -an | awk '/^tcp/ {++S[$NF]}; END {for(a in S) print a, S[a]}'
-```
-
-```bash
 netstat -an | awk '/^tcp/ {++state[$NF]}; END {for(key in state) print key, "	", state[key]}'
-```
-
-```bash
 netstat -an | awk '/^tcp/ {++arr[$NF]}; END {for(k in arr) print k, "	", arr[k]}'
-```
-
-```bash
 netstat -an | awk '/^tcp/ {print $NF}' | sort | uniq -c | sort -rn
-```
-
-```bash
 netstat -ant | awk '{print $NF}' | grep -v '[a-z]' | sort | uniq -c
 ```
 
