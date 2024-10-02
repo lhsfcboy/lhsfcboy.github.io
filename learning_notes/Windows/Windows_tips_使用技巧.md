@@ -16,3 +16,8 @@ echo %path:;=&echo(%
   - fsutil file createnew E:/myfile 1048576000000
 - 擦除硬盘剩余空间
   - cipher /w:E
+
+
+- 命令行窗口时，用文件浏览器打开当前目录 `start .`
+- Windows 11 快速打开Terminal窗口 `Alt + X, i`
+- 在文件浏览器中用终端打开当前路径 `右键` 或 `Shift + 右键`
