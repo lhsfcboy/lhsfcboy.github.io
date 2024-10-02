@@ -20,3 +20,8 @@ http://blog.csdn.net/xiahouzuoxin/article/details/26478179
 数学公式生成器 http://www.ruanyifeng.com/webapp/formula.html
 
 Markdown中插入数学公式的方法 http://blog.csdn.net/xiahouzuoxin/article/details/26478179
+
+
+
+### Github里的Markdown
+[GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
