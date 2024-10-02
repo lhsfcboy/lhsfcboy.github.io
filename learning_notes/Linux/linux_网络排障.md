@@ -1,13 +1,14 @@
 
 # Linux 网络基本设置排障
 
----
+## 有待整理的内容
+
+[Linux 下大家喜欢用什么命令查看流量？](https://www.zhihu.com/question/19862245)
 
 ## Netstat
 
 Netstat 用于显示与 IP、TCP、UDP 和 ICMP 协议相关的统计数据，一般用于检验本机各端口的网络连接情况。
 
----
 
 ## 网络
 
@@ -83,7 +84,6 @@ netstat -n | grep TIME_WAIT | awk '{print $5}' | sort | uniq -c | sort -rn | hea
 netstat -an | grep SYN | awk '{print $5}' | awk -F: '{print $1}' | sort | uniq -c | sort -nr | more
 ```
 
----
 
 ## Tips Command
 
@@ -94,7 +94,6 @@ watch -n 1 "/sbin/ifconfig eth0 | grep bytes"
 
 `nload` 和 `iftop` 也可以用于实时查看网络流量情况。
 
----
 
 ## 如何在 Linux 下测试一个 port 是否被防火墙拦截？
 
@@ -105,7 +104,6 @@ telnet www.pku.edu.cn 80  # 可以连接
 telnet www.pku.edu.cn 8101  # 无法连接
 ```
 
----
 
 ## 查看路由表
 
@@ -114,7 +112,6 @@ ip route show
 route
 ```
 
----
 
 ## NIS
 
@@ -139,7 +136,6 @@ echo 'NISDOMAIN=nistest' >> /etc/sysconfig/network
 
 3. 设置 `ypserv` 服务的配置文件，启动 NIS 服务器，构建 NIS 数据库。
 
----
 
 ## 网卡工作模式修改
 
@@ -174,10 +170,8 @@ ethtool -s eth0 duplex half autoneg off  # 禁用自协商，启用半双工模�
 ethtool -s eth1 duplex full speed 1000 autoneg off  # 禁用自协商，启用全双工，速度设置为 1000Mb/s
 ```
 
----
 
 ## 路径追踪
 
 使用 `traceroute` 命令来追踪路径。
 
----
