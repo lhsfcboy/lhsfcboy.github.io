@@ -1,0 +1,57 @@
+bash之检测局域网主机状态
+【要求】
+检测局域网下192,168.0.1~192.168.0.100之间所有主机的存活状态。并统计up和down主机的个数。
+
+【分析】
+使用linux的ping命令进行检测
+使用for循环获取所需检测的IP地址
+用if语句进行结果判断并统计up和down主机个数
+
+【脚本】
+#!/bin/bash 
+## Use ping command to check the network's PC state. 
+ 
+network="192.168.0" 
+totalup=0 
+totaldown=0 
+for ipadd in $(seq 1 100) 
+do 
+        ping -c 1 -w 1 ${network}.${ipadd} &>/dev/null && result=0 || result=1 
+        if [ "$result" == 0 ]; then 
+                echo "PC ${network}.${ipadd} is UP." 
+                totalup=$((${totalup}+1)) 
+        else 
+                echo "PC ${network}.${ipadd} is DOWN." 
+                totaldown=$((${totaldown}+1)) 
+        fi 
+done 
+echo "The uping PC has ${totalup}" 
+echo "The downing PC has ${totaldown}" 
+
+【心得】
+首先将IP分割为192.168.0 和最后一位，通过for循环进行枚举。具体的1~100数值可通过bash内置命令seq来实现。
+在ping命令进行判断时将stdout 和stderr丢弃，并且在成功ping通时将result进行赋值0，否侧将result赋值为1
+通过if 语句进行result值的判断，统计up和down的主机个数，并输出。
+
+
+
+shell
+ shell 整型变量自增（加1）的几种方法
+#!/bin/sh
+
+a=1
+a=$(($a+1))
+a=$[$a+1]
+a=`expr $a + 1`
+let a++
+let a+=1
+
+((a++))
+
+echo $a
+
+
+
+
+
+
