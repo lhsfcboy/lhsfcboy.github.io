@@ -4,8 +4,12 @@
 
 需要集成常用的Linux命令
 
-### 安装 GitBash
+### 安装 GitBash (推荐的做法)
+https://www.pascallandau.com/blog/setting-up-git-bash-mingw-msys2-on-windows/
+
 ### WSL1 (Windows Subsystem for Linux)
+
+https://www.pascallandau.com/blog/setting-up-git-bash-mingw-msys2-on-windows/
 
 ## Linux系统
 如果需要完整的Linux环境，可以尝试以下几种方案：
@@ -18,6 +22,8 @@
 - 配置复杂，理解难度高
 
 ### 方案：Vagrant管理下的VirtualBox虚拟机
+- 类似方案还有VMWare的个人免费版
+- 启动VM需要花时间，可以考虑设置开机启动
 
 ### 方案：免费的云主机
 - 注册苦难
