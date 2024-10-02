@@ -5,6 +5,17 @@
 
 [Linux 下大家喜欢用什么命令查看流量？](https://www.zhihu.com/question/19862245)
 
+ss, nmap, dig, netcat, ping, tcpdump, socat, top, ethtool 
+
+https://twitter.com/devops_tech/status/1446683409644851201
+
+## ss / netstat
+ss command is a tool that is used for displaying network socket related information on a Linux system
+
+查看远程的 IP 连接并统计
+```bash
+netstat -atn | awk '{print $5}' | awk -F ':' '{print $1}' | sort -n | uniq -c
+```
 ## Netstat
 
 Netstat 用于显示与 IP、TCP、UDP 和 ICMP 协议相关的统计数据，一般用于检验本机各端口的网络连接情况。
