@@ -1,5 +1,11 @@
 # Tmux 快捷键 & 速查表
 
+## Tmux使用手册  
+
+- http://louiszhai.github.io/2017/09/30/tmux/#Tmux%E4%BC%98%E5%8C%96
+- http://blog.csdn.net/u010454729/article/details/49496381
+- http://www.cnblogs.com/congbo/archive/2012/08/30/2649420.html
+
 ## 创建会话Session 与使用退出
 
 ```bash
