@@ -1,0 +1,47 @@
+以下这个脚本可以简单地监视Linux下各个进程的运行状况。
+
+#!/bin/sh
+
+PSLOG=~/ps-log
+LOADLOG=~/load-log
+INTERVAL=30    # ps 运行时间间隔
+COUNTER=10     # 统计次数
+
+while [ $COUNTER -gt 0 ]
+do
+  TIME=$(date +%H:%M:%S)
+  cat /proc/loadavg |
+    sed -e "s/^/$TIME    /" >> $LOADLOG
+  ps -e --cols 200 o user,pid,ppid,pri,size,rss,stat,pagein,%cpu,%mem,time,cmd |
+    sed -e "s/^/$TIME    /" >> $PSLOG
+
+  echo $TIME  $(ls -hs $LOADLOG $PSLOG)
+  let COUNTER-=1
+  sleep $INTERVAL
+done
+该脚本每隔 $INTERVAL 秒执行一次 ps 命令并将结果记录到日志文件中， 共执行 $COUNTER 次。因此 $INTERVAL * $COUNTER 即为监视时间。 例如想监视 20:00～2:00 的情况，即可设置 COUNTER=720，因为 720 * 30 = 21600秒 = 6小时。
+#!/bin/bash
+cpu=`top -b -n 1 | grep -w Cpu | awk '{print$5}'| awk -F '%' '{printf"%d",$1}'`
+if [ $cpu -le 50 ]
+then
+echo "cpu: $((100 - cpu))%" > test.txt
+mail -s "服务器紧急, CPU占用率过高！" yourmail@domail.com < test.txt
+fi
+mem=`top -b -n 1 | grep -w Mem | awk '{printf"%d",$6/$2*100}'`
+if [ $mem -le 50 ]
+then
+echo "Memory: $((100 - mem))%" > test.txt
+mail -s "服务器紧急，内存占用率过高！" yourmail@domail.com < test.txt
+fi
+httpdnum=`ps aux | grep 'httpd' | wc -l`
+if [ $httpdnum -le 1 ]
+then
+echo "服务器紧急，apache进程结束！" > test.txt
+mail -s "服务器紧急，apache进程结束！" yourmail@domail.com < test.txt
+fi
+tomcatnum=`ps aux | grep 'tomcat' | wc -l`
+if [ $tomcatnum -le 1 ]
+then
+echo "服务器紧急，tomcat进程结束！" > test.txt
+mail -s "服务器紧急，tomcat进程结束！" yourmail@domail.com < test.txt
+fi

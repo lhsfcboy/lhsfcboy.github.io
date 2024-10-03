@@ -1,0 +1,48 @@
+
+"""
+This script will create all notes file with specified name and write the file line like:
+# 01_Lecture_01_The_geometry_of_linear_equations
+"""
+
+file_names = """01_Lecture_01_The_geometry_of_linear_equations.md
+02_Lecture_02_Elimination_with_matrices.md
+03_Lecture_03_Multiplication_and_inverse_matrices.md
+04_Lecture_04_Factorization_into_A_=_LU.md
+05_Lecture_05_Transposes_permutations_spaces_R^n.md
+06_Lecture_06_Column_space_and_nullspace.md
+07_Lecture_07_Solving_Ax_=theta_pivot_variables_special_solutions.md
+08_Lecture_08_Solving_Ax_=b_row_reduced_form_R.md
+09_Lecture_09_Independence_basis_and_dimension.md
+10_Lecture_10_The_four_fundamental_subspaces.md
+11_Lecture_11_Matrix_spaces_rank_1_small_world_graphs.md
+12_Lecture_12_Graphs_networks_incidence_matrices.md
+13_Lecture_13_Quiz_1_review.md
+14_Lecture_14_Orthogonal_vectors_and_subspaces.md
+15_Lecture_15_Projections_onto_subspaces.md
+16_Lecture_16_Projection_matrices_and_least_squares.md
+17_Lecture_17_Orthogonal_matrices_and_Gram-Schmidt.md
+18_Lecture_18_Properties_of_determinants.md
+19_Lecture_19_Determinant_formulas_and_cofactors.md
+20_Lecture_20_Cramer's_rule_inverse_matrix_and_volume.md
+21_Lecture_21_Eigenvalues_and_eigenvectors.md
+22_Lecture_22_Diagonalization_and_powers_of_A.md
+23_Lecture_23_Differential_equations_and_exp(At).md
+24_Lecture_24_Markov_matrices_fourier_series.md
+25_Lecture_24b_Quiz_2_review.md
+26_Lecture_25_Symmetric_matrices_and_positive_definiteness.md
+27_Lecture_26_Complex_matrices_fast_fourier_transform.md
+28_Lecture_27_Positive_definite_matrices_and_minima.md
+29_Lecture_28_Similar_matrices_and_jordan_form.md
+30_Lecture_29_Singular_value_decomposition.md
+31_Lecture_30_Linear_transformations_and_their_matrices.md
+32_Lecture_31_Change_of_basis_image_compression.md
+33_Lecture_32_Quiz_3_review.md
+34_Lecture_33_Left_and_right_inverses_pseudoinverse.md
+35_Lecture_34_Final_course_review.md"""
+
+for file_name in file_names.splitlines():
+    print(file_name)
+    print(file_name[0:-3])
+    
+    with open(file_name, 'w') as f:
+        f.write('# ' + file_name[0:-3])
