@@ -52,6 +52,53 @@ https://docs.python.org/zh-cn/3.12/library/venv.html
   python --version
   pip install numpy
   ```
+## 基于virtualenv/virtualenvwrapper
+
+- virtualenv: 创建隔绝的Python环境的工具
+- virtualenvwrapper: 对virtualenv的一层包装
+
+
+```bash
+
+pip install virtualenv
+virtualenv --version
+
+cd my_project_folder
+virtualenv my_project
+# virtualenv my_project 将会在当前的目录中创建一个文件夹，
+# 包含了Python可执行文件， 以及 pip 库的一份拷贝
+
+virtualenv -p /usr/bin/python2.7 my_project
+# 可以选择使用一个Python解释器来创建
+
+# 激活虚拟环境
+source my_project/bin/activate
+
+pip install virtualenvwrapper
+export WORKON_HOME=~/Envs
+source /usr/local/bin/virtualenvwrapper.sh
+
+# 创建一个虚拟环境
+mkvirtualenv my_project
+# WORKON_HOME中创建 my_project 文件夹
+mkvirtualenv --python=python3.6 p36
+
+# 在虚拟环境上工作
+workon my_project
+
+# 停止
+deactivate
+
+# 删除
+rmvirtualenv my_project
+
+# 列举所有的环境
+lsvirtualenv
+
+# 查看环境里安装了哪些包
+lssitepackages
+```
+  
 ## 基于Anaconda
 
 [Anaconda多环境多版本python配置指导](https://www.jianshu.com/p/d2e15200ee9b0)
