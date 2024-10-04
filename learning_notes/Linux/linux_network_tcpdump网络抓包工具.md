@@ -1,6 +1,5 @@
 # TCPDUMP命令详解
 
-<https://note.youdao.com/ynoteshare1/index.html?id=33436c25eb93a8a4a7edda8499aab103>
 
 tcpdump -w /opt/test.pcap
 tcpdump -i eth7 icmp          #watching ICMP packets on eth7
@@ -11,7 +10,7 @@ tcpdump -nn -s 1600 -w /opt/nTI-agent.pcap  host 172.16.181.58 and host 172.16.
 #tcpdump ip host 210.27.48.1 and ! 210.27.48.2
 tcpdump -n host 172.16.181.51 | tee test-tcpdump.log
 
-
+## 参数详解
 
 tcpdump采用命令行方式，它的命令格式为：
 tcpdump [ -adeflnNOpqStvx ] [ -c 数量 ] [ -F 文件名 ][ -i 网络接口 ] [ -r 文件名] [ -s snaplen ][ -T 类型 ] [ -w 文件名 ] [表达式 ]
