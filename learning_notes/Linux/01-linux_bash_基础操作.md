@@ -80,21 +80,7 @@ Bash Shortcuts
 | !^		            | First argument of last command |
 | ^abc^xyz	        | Replace first occurance of abc with xyz in last command and execute it |
 
-# Kill a job
-
-n = job number, to list jobs, run `jobs`
-
-```bash
-kill %n
-```
-
-Example:
-
-```bash
-kill %1
-```
 
 ## References
 0. https://gist.github.com/tuxfight3r/60051ac67c5f0445efee
-1. http://cnswww.cns.cwru.edu/php/chet/readline/readline.html
-2. https://github.com/fliptheweb/bash-shortcuts-cheat-sheet/blob/master/README.md
+1. https://github.com/fliptheweb/bash-shortcuts-cheat-sheet/blob/master/README.md
