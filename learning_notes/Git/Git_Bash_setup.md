@@ -4,18 +4,17 @@
 
 [通过 SSH 连接到 GitHub](https://docs.github.com/zh/authentication/connecting-to-github-with-ssh)
 ```bash
-        # setup publish SSH key 
-        # Git配置SSH-Key
-        ls ~/.ssh
-        cat ~/.ssh/id_rsa.pub
-        # 再打开你的github，进入配置页： Settings -- SSH and GPG keys
-        # 添加本地生成的ssh秘钥，选择New SSH key（这里已经配置了一个key，如果是未配置秘钥的用户，这里是空的）：
-        # 如果本地网络封锁了SSH默认端口，还可以尝试用443
-        # https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port
-        
-        # 测试是否配置成功
-        ssh -T git@github.com 
-        # Hi (username)! You've successfully authenticated, but GitHub does not provide shell access.
+# Git配置SSH-Key
+ls ~/.ssh
+cat ~/.ssh/id_rsa.pub
+# 再打开你的github，进入配置页： Settings -- SSH and GPG keys
+# 添加本地生成的ssh秘钥，选择New SSH key（这里已经配置了一个key，如果是未配置秘钥的用户，这里是空的）：
+# 如果本地网络封锁了SSH默认端口，还可以尝试用443
+# https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port
+
+# 测试是否配置成功
+ssh -T git@github.com 
+# Hi (username)! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
 另外一种临时的办法是使用token，但是有效期最长只能设置为一年， 
