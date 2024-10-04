@@ -4,6 +4,7 @@
 - [git - 简明指南](https://rogerdudler.github.io/git-guide/index.zh.html)
 - [廖雪峰 Git教程](https://liaoxuefeng.com/books/git/introduction/index.html)
 - Git from the inside out 深入浅出 Git  作者 Mary Rose Cook
+  - 原文链接: https://codewords.recurse.com/issues/two/git-from-the-inside-out
   - 目前没有特别好的中文翻译，下面这个链接勉强可读 (https://www.zhidat.com/7592/beb5)
   - 作者甚至用Javascript重现了git http://gitlet.maryrosecook.com/docs/gitlet.html
 
