@@ -3,7 +3,9 @@
 ## Linux下的GCC环境搭建
 
 ## Windows下GCWin 配合 VS Code的环境搭建
-
+- https://code.visualstudio.com/docs/languages/cpp
+- https://cloud.tencent.com/developer/article/1803522
+  
 ## Windows下使用Visual Studio Express 或者 Visual Studio
 - 微软在上古时期推出的C/C++集成开发环境
 - https://cs-people.bu.edu/deht/CS585/VSTutorial/
