@@ -15,6 +15,11 @@ Vim特别适合对与现有的工程文件浏览，定位，进行细微的变�
   - 远程登录的主机通常都无法自由安装插件
   - 搜索 “vim无插件编程” ，这可以视为我们学习的终点
 
+## 无插件vim配置   
+
+- https://github.com/wklken/vim-for-server
+- 
+
 ## 外观
 
 Use `:color molokai` to switch to a color scheme.
