@@ -1,4 +1,4 @@
-## linux下配置jupyter环境
+## 配置jupyter环境
 
 ### 安装
 
@@ -8,14 +8,9 @@
 或者
 > pip install --upgrade  --force-reinstall  --no-cache-dir  jupyter
 
-pass
-
 ### 启动
 
 > jupyter notebook --allow-root
-
-
-
 
 ## 测试当前是否运行在ipython实例当中
 ```Python
@@ -43,7 +38,10 @@ https://stackoverflow.com/questions/35254852/how-to-change-the-jupyter-start-up-
 
 ### 添加环境变量
 
+```path
 D:\Program\Anaconda3;D:\Program\Anaconda3\Scripts;
+```
+
 默认的安装地址是`C:\Users\xxx\Anaconda3\Scripts`
 
 ### ipython配置文件所在地
@@ -73,8 +71,7 @@ c.NotebookApp.notebook_dir = '/the/path/to/home/folder/'
 ### 其他选项
 
 ```shell
-c.NotebookApp.open_browser = False # 勝手にブラウザが立ち上がらないように
-
+c.NotebookApp.open_browser = False # 阻止Jupyter使用浏览器
 
 # lines of code to run at IPython startup.
 c.InteractiveShellApp.exec_lines = ['%matplotlib inline']
@@ -86,16 +83,14 @@ c.InteractiveShell.ast_node_interactivity = "all"
 临时启动该选项
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
-
--------------------------------------------
-c.NotebookApp.notebook_dir = u'C:\\Users\\Mike\\GitHubWorkSpace'
-
-on Windows 10 but same version of Anaconda.
-
-Click on the Start Menu, then All Programs (just Programs for Win10)
-Click on the Anaconda3 folder; mine is Anaconda3 (64-bit)
-In there you should see Jupyter Notebook. If you have a virtual environment installed, it will be followed by the environment name like this: Jupyter Notebook (env)
-Right-click Jupyter Notebook entry and navigate to More => Open File Location
-Right-click the correct Jupyter Notebook entry, then click on Properties
-Enter a path in the Start in: box; if the path has spaces in it, you must enclose it in double quotes
 ```
+
+### Windows 10 修改启动目录
+
+- Click on the Start Menu, then All Programs (just Programs for Win10)
+- Click on the Anaconda3 folder; mine is Anaconda3 (64-bit)
+- In there you should see Jupyter Notebook.
+  - If you have a virtual environment installed, it will be followed by the environment name like this: Jupyter Notebook (env)
+- Right-click Jupyter Notebook entry and navigate to More => Open File Location
+- Right-click the correct Jupyter Notebook entry, then click on Properties
+- Enter a path in the Start in: box; if the path has spaces in it, you must enclose it in double quotes
