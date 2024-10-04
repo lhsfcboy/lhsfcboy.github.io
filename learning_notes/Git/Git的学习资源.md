@@ -1,4 +1,4 @@
-
+# Git的学习资源汇总
 
 ## 入门教程
 - [git - 简明指南](https://rogerdudler.github.io/git-guide/index.zh.html)
@@ -8,9 +8,6 @@
   - 作者录制的解释视频：https://www.youtube.com/watch?v=fCtZWGhQBvo
   - 作者甚至用Javascript重现了git http://gitlet.maryrosecook.com/docs/gitlet.html
   - 原作者授权过的中文翻译 https://github.com/pysnow530/git-from-the-inside-out
-
-## 更规范的开发流程 分支管理
-[Git分支管理策略 作者： 阮一峰](https://www.ruanyifeng.com/blog/2012/07/git.html)
 
 ## 反正也没人看的部分
 
@@ -23,3 +20,5 @@
   - 官方出品的 百科全书式的Git介绍
   - [Pro Git 中文版 (备用地址)](https://gitee.com/progit/index.html)
   - 下面是个简约版 [Git核心概念](https://zhuanlan.zhihu.com/p/22750675) 
+- [Git分支管理策略 作者： 阮一峰](https://www.ruanyifeng.com/blog/2012/07/git.html)
+
