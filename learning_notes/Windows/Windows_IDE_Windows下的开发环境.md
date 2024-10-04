@@ -59,7 +59,7 @@ set convert-meta off
 - uname: 显示有关操作系统的信息。
 
 除此之外还有一些不包含在内的:
-- wget (不好含吗？)
+- wget (不含吗? 记忆有些模糊)
 
 这里我们用Windows下的包管理工具来快速安装
 
