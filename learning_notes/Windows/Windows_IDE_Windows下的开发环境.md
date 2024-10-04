@@ -18,8 +18,7 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 ```
 ### 显示中文乱码
 - 在`Git Bash`下，右键 选择 `Options`，选择 `Text` ，将 `Character set` 设置为 `UTF-8`
-- 让ls命令能够正常显示中文
- - `alias ls='ls --show-control-chars --color=auto' `
+- 让ls命令能够正常显示中文 `alias ls='ls --show-control-chars --color=auto' `
 - 终端中的字符输入输出时不进行转义
 ```bash
 ~/.inputrc
@@ -29,13 +28,7 @@ set convert-meta off
   - 重新加载 inputrc `bind -f ~/.inputrc`
 - less命令的显示
   - ` echo "export LESSHARESET=utf-8" >> ~/.bashrc `
-  - ` source ~/.bashrc `
-## 配置的生效
-
-即刻生效各类配置 
-```bash
-source ~/.bashrc
-```
+  - ` source ~/.bashrc # 即刻生效配置 `
 
 ## 增添常用的Linux命令
 
