@@ -1,9 +1,8 @@
-Bash Shortcuts
-==============
-
-![visual cheetsheet](https://raw.githubusercontent.com/fliptheweb/bash-shortcuts-cheat-sheet/master/moving_cli.png)
+# Bash的基础操作
 
 ## Moving 光标跳转
+
+![visual cheetsheet](https://raw.githubusercontent.com/fliptheweb/bash-shortcuts-cheat-sheet/master/moving_cli.png)
 
 | command  | description                    |
 |----------|--------------------------------|
