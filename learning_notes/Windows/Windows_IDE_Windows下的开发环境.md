@@ -2,10 +2,16 @@
 
 ## Git Bash 的安装
 
-## 显示中文乱码
-1.在git bash下，右键 选择options
-2.选择“Text”
-3.将“Character set”设置为  UTF-8 / GBK
+## Git Bash 的基础配置
+
+### 提示符PS1的显示
+
+- 当前目录有变化时,在PS1中显示一个星号
+```bash
+export GIT_PS1_SHOWDIRTYSTATE=1
+```
+### 显示中文乱码
+- 在git bash下，右键 选择options，选择“Text”，将“Character set”设置为  UTF-8
 
 
 ## 配置的生效
