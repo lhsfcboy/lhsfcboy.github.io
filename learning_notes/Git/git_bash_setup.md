@@ -20,20 +20,26 @@ ssh -T git@github.com
 ```
 git config --global github.token yourtoken
 ```
-
-
-## Git的本地配置
+## 找到Git的本地配置文件
 
 ```bash
-# setup local commiter information
-# 在config里面配置github.com里的用户名和邮箱
+## 查看不同级别的配置以及文件文件
+git config --system --list --show-origin # 系统级别
+git config --global --list --show-origin # 用户级别
+git config --local --list --show-origin  # Git项目内的项目级别配置以及配置文件路径
+# 查看当前生效的配置以及路径
+git config --list --show-origin
+```
 
+## Git的本地配置内容
+
+```bash
+# 在config里面配置github.com里的用户名和邮箱
 git config --global user.email  "lhsfcboy@gmail.com"
 git config --global user.name   "Mike Luo"
 git config --global color.ui    true
 
 # 常用的命令缩写
-
 git config --global alias.st status        # 通过 git st的形式来使用
 git config --global alias.co checkout 
 git config --global alias.ci commit
@@ -42,18 +48,23 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 git config --global alias.unstage 'reset HEAD'
 git config --global alias.last    'log -1'
 
-git config --list --global
-```
-.git/config    	每个仓库的Git配置文件
-.gitconfig 	当前用户的Git配置文件放在用户主目录下
+# 解决中文显示问题
+git config --global i18n.commitencoding utf-8    # 设置 Git 的 commit message 编码
+git config --global i18n.logoutputencoding utf-8 # 设置 Git 日志输出的编码
+git config --global core.pathnameencoding utf-8  # 设置 Git 文件路径名编码
+git config --global core.quotepath false         # 关闭对非 ASCII 字符的转义
+# 输出文件路径时，是否对非 ASCII 字符进行引号和转义编码的设置
 
-## 避免文件乱码
+
+# 检查当前的配置情况
+git config --list --show-origin
+```
+
+## 避免非英文的文件名出现乱码
 
 ```bash
-ls ~/.bash_profile
-
-alias gs="git status"
-alias ls='ls --show-control-chars'    # 避免日语乱码
+vim ~/.bash_profile
+alias ls='ls --show-control-chars'    # 避免汉语日语等的乱码
 
 vim ~/.gitconfig
 
@@ -61,22 +72,12 @@ vim ~/.gitconfig
         editor = /C/vim/gvim --nofork -c 'set fenc=utf-8' +1
 ```        
         
-## 修改GitBash的提示符(prompt)
+## 未整理
 
+修改GitBash的提示符(prompt)
 使用管理员权限修改文件: `C:\Program Files\Git\etc\profile.d\git-prompt.sh`
 
-## 解决git status不能显示中文
 
-status查看有改动但未提交的文件时总只显示数字串，显示不出中文文件名，在默认设置下，中文文件名在工作区状态输出，中文名不能正确显示，而是显示为八进制的字符编码。
-
-将git 配置文件 core.quotepath项设置为false。quotepath表示引用路径, 加上--global表示全局配置.
-
-git bash 终端输入命令：`git config --global core.quotepath false`
-
-## 解决git bash 终端显示中文乱码
-
-git bash终端也要设置成中文和utf-8编码, 才能正确显示中文.
-git bash的界面中右击空白处，弹出菜单，选择`选项->文本->本地Locale`，设置为`zh_CN`，而旁边的字符集选框选为`UTF-8`
 
 ###### 还可以通过直接修改配置文件的方式来解决中文乱码问题
 
@@ -91,9 +92,9 @@ git bash的界面中右击空白处，弹出菜单，选择`选项->文本->本�
     # log编码  
 [svn]  
     pathnameencoding = utf-8  
-    # 支持中文路径  
-[core]
-    quotepath = false 
+    # 支持中文路径
+
+
     # status引用路径不再是八进制（反过来说就是允许显示中文了）
 ```
 
