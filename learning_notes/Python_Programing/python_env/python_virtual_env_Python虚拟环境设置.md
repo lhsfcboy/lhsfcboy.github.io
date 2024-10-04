@@ -1,4 +1,4 @@
-# linux下配置jupyter环境
+# 配置jupyter环境
 
 ## 所谓全局环境
 
