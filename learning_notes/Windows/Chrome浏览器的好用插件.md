@@ -18,7 +18,7 @@
 - Distill web monitor
   - 页面变化监视
 
-相对不常用的部分插件
+## 相对不常用的部分插件
 
 - Grammarly for Chrome
   - 英语语法检查
@@ -32,9 +32,8 @@
   - 脚本扩展
 - ChromeReloadPlus
   - 刷新当前页
-- PopTranslate
-  - 选中文字后，直接将翻译显示在右上角的弹窗
-  - 很多时候弹窗有点影响
+- 书签检查器 - 移除坏旧链接
+  - https://chromewebstore.google.com/detail/%E4%B9%A6%E7%AD%BE%E6%A3%80%E6%9F%A5%E5%99%A8-%E7%A7%BB%E9%99%A4%E5%9D%8F%E6%97%A7%E9%93%BE%E6%8E%A5/eeckiajfclogcacnhgigljkcgabfcmco
 
 ## 编程开发相关的插件
 
