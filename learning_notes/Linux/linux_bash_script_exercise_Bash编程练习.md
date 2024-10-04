@@ -526,3 +526,39 @@ do
     sleep $INTERVAL
 done
 ```
+
+## 练习题: 检测局域网主机状态
+
+### 具体要求：
+
+- 检测局域网（192.168.0.x 网段）中 1-100 的 IP 地址是否在线
+- 统计在线（UP）和离线（DOWN）的主机数量
+
+### 参考实现
+```bash
+#!/bin/bash
+# Use ping command to check the network's PC state.
+
+network="192.168.0"
+totalup=0
+totaldown=0
+
+echo "Starting network check on ${network}.1 to ${network}.100..."
+
+for ipadd in $(seq 1 100)
+do
+    # Ping the IP address and check the result
+    if ping -c 1 -w 1 ${network}.${ipadd} &>/dev/null; then
+        echo "PC ${network}.${ipadd} is UP."
+        totalup=$((totalup + 1))
+    else
+        echo "PC ${network}.${ipadd} is DOWN."
+        totaldown=$((totaldown + 1))
+    fi
+done
+
+echo "---------------------------"
+echo "Network scan complete."
+echo "Total UP PCs: ${totalup}"
+echo "Total DOWN PCs: ${totaldown}"
+```
