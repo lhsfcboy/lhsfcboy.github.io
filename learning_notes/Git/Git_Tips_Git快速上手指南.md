@@ -1,23 +1,26 @@
 ## 快速使用
 
 ```bash
+####远程拉取####
 #仅获取最新版和一个历史版本,即最后2个版本
 git clone git@github.com:nutzam/nutz --depth=1
 #压缩空间
 git gc --aggressive
 
+####本体修改并push#####
 git add  main.c                                            #把文件添加到仓库
 git commit -m "add the mail c file "                       #把文件提交到仓库
 git push origin master
 
-git fetch                            #先把git的东西fetch到你本地
-git merge                            # merge
+####与远程保持同步#####
+git fetch                            #把git的东西抓取到你本地
+git merge                            # 再merge
 
 git pull                             # 等价于git fetch ; git merge
 
 git push                             #再push
 
-#完全重建版本库
+####完全重建版本库####危险!!!!#####
 rm -rf .git
 git init
 git add .
