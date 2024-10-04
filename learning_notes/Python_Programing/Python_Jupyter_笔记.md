@@ -85,6 +85,16 @@ from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
 ```
 
+### 在指定目录下启动Jupyter Notebook
+
+如果配置文件中没有滴定启动目录的话, Jupyter 会从当前目录启动.
+
+Windows下, 在该目录下, Alt + D定位到地址栏, `cmd` 命令启动命令行, `jupyter notebook` 在该目录下启动
+
+Windows 7修改默认的启动目录：修改配置文件 `jupyter_notebook_config.py`
+    ```python
+    c.NotebookApp.notebook_dir = u'D:\\GitHubWorkSpace'
+    ```
 ### Windows 10 修改启动目录
 
 - Click on the Start Menu, then All Programs (just Programs for Win10)
