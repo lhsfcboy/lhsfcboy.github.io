@@ -16,6 +16,7 @@
 ```bash
 export GIT_PS1_SHOWDIRTYSTATE=1
 ```
+  - 加入 `~/.bashrc` ， 以如下命令生效`source ~/.bashrc`
 ### 显示中文乱码
 - 在`Git Bash`下，右键 选择 `Options`，选择 `Text` ，将 `Character set` 设置为 `UTF-8`
 - 让ls命令能够正常显示中文 `alias ls='ls --show-control-chars --color=auto' `
