@@ -1,14 +1,19 @@
 # Windows下的开发环境
 
-## Git Bash 的安装
+## Windows CMD 的基础配置
 
-## Git Bash 的基础配置
 - 快速编辑模式：在Bash窗口上点右键 选择Properties，选中QuiteEditMode
   - 启用快速编辑模式后，可以直接在 Git Bash 窗口中通过鼠标右键来复制和粘贴文本
   - 选择文本：你可以通过左键单击并拖动鼠标来选择文本，松开鼠标后，选择的文本会自动复制到剪贴板
   - 粘贴文本：右键单击 Bash 窗口，将剪贴板中的内容粘贴到当前光标位置。
 - 同样的位置设置插入模式InsertMode复选框勾上
   - 插入模式下，输入的文本将插入到当前光标所在位置，而不会替换光标后的文本
+- 按行显示PATH
+```cmd
+echo %PATH:;=&echo.%
+```
+
+## Git Bash 
 
 ### 提示符PS1的显示
 
@@ -33,16 +38,49 @@ set convert-meta off
 
 ## 增添常用的Linux命令
 
+大部分的常用命令可以在官网找到 https://www.gnu.org/software/coreutils/ 包括了
+- cat: 连接文件并打印内容。
+- chgrp: 更改文件的组所有权。
+- chmod: 更改文件的权限。
+- chown: 更改文件的所有者。
+- cp: 复制文件或目录。
+- date: 显示或设置系统日期和时间。
+- dd: 转换和复制文件，通常用于低级别文件操作。
+- df: 显示文件系统磁盘使用情况。
+- echo: 显示一段文本或变量的值。
+- ln: 创建硬链接或符号链接。
+- ls: 列出目录内容。
+- mkdir: 创建目录。
+- mv: 移动或重命名文件。
+- pwd: 显示当前工作目录。
+- rm: 删除文件或目录。
+- rmdir: 删除空目录。
+- touch: 更新文件的时间戳或创建空文件。
+- uname: 显示有关操作系统的信息。
+
+除此之外还有一些不包含在内的:
+- wget (不好含吗？)
+
+这里我们用Windows下的包管理工具来快速安装
+
+## Windows的包安装工具的选择
+
+### Windows 10 
+
+两个主要选择，我们这里以更新，更流行的Scoop为例
+- Scoop 
+- Chocolatey
+
+```bash
+# 通过PowerShell 安装
+
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+iwr -useb get.scoop.sh | iex
+# 上面两行也可以尝试换位 Invoke-WebRequest -Uri 'https://get.scoop.sh' -UseBasicParsing | Iex
+scoop install coreutils
+```  
+
+### Windows 11 自带了WinGet
 ```
-Add wget command
-https://eternallybored.org/misc/wget/
-C:\Program Files\Git\mingw64\bin\
-
-Add Tree Command
-Download from http://gnuwin32.sourceforge.net/packages/tree.htm
-and unzip exe to C:\Program Files\Git\usr\bin
-
-Download Files
-默认没有安装wget 可以使用curl -O 来下载文件
-curl -k https://www.example.com/file.txt -o file.txt
+winget install CoreUtils
 ```
