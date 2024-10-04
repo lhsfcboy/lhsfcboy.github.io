@@ -28,9 +28,9 @@ git config --global github.token yourtoken
 # setup local commiter information
 # 在config里面配置github.com里的用户名和邮箱
 
-git config --global user.email "lhsfcboy@gmail.com"
-git config --global user.name "Mike Luo"
-git config --global color.ui true
+git config --global user.email  "lhsfcboy@gmail.com"
+git config --global user.name   "Mike Luo"
+git config --global color.ui    true
 
 # 常用的命令缩写
 
@@ -38,10 +38,9 @@ git config --global alias.st status        # 通过 git st的形式来使用
 git config --global alias.co checkout 
 git config --global alias.ci commit
 git config --global alias.br branch
-git config --global alias.unstage 'reset HEAD'
-git config --global alias.last 'log -1'
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-
+git config --global alias.unstage 'reset HEAD'
+git config --global alias.last    'log -1'
 
 git config --list --global
 ```
@@ -80,6 +79,7 @@ git bash终端也要设置成中文和utf-8编码, 才能正确显示中文.
 git bash的界面中右击空白处，弹出菜单，选择`选项->文本->本地Locale`，设置为`zh_CN`，而旁边的字符集选框选为`UTF-8`
 
 ###### 还可以通过直接修改配置文件的方式来解决中文乱码问题
+
 编辑etc\gitconfig文件，也有些windows系统是存放在`C:\Users\Administrator\.gitconfig`路径或`安装盘符:\Git\mingw64\etc\gitconfig`，在文件末尾增加以下内容：
 
 ```
@@ -114,5 +114,9 @@ export LESSHARESET=utf-8
 ```
 
 ## GitBash 使用的其他技巧
-快速编辑模式：在Bash窗口上点右键 选择Properties把QuiteEditMode，InsertMode复选框勾上
-
+- 快速编辑模式：在Bash窗口上点右键 选择Properties，选中QuiteEditMode
+  - 启用快速编辑模式后，可以直接在 Git Bash 窗口中通过鼠标右键来复制和粘贴文本
+  - 选择文本：你可以通过左键单击并拖动鼠标来选择文本，松开鼠标后，选择的文本会自动复制到剪贴板
+  - 粘贴文本：右键单击 Bash 窗口，将剪贴板中的内容粘贴到当前光标位置。
+- 同样的位置设置插入模式InsertMode复选框勾上
+  - 插入模式下，输入的文本将插入到当前光标所在位置，而不会替换光标后的文本
