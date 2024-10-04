@@ -6,8 +6,10 @@ Linux操作系统自带的编辑器。需要远程登陆到主机上临时操作
 Vim特别适合对与现有的工程文件浏览，定位，进行细微的变动。比如修正Typo，调整参数等。
 
 - [Vim系列教程by左耳朵耗子](http://coolshell.cn/tag/vim)
-- 适合入门：[简明 Vim 练级攻略](http://coolshell.cn/articles/5426.html)
+- [简明 Vim 练级攻略](http://coolshell.cn/articles/5426.html)
+- [Vim 配置入门 作者： 阮一峰](https://www.ruanyifeng.com/blog/2018/09/vimrc.html)
 
+- 作者： 阮一峰
 注意我们学习的目的：
 - 需要学会最基本的操作
   - 不追求vim的高级操作技巧
