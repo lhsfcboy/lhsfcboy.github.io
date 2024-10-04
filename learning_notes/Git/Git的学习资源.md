@@ -8,7 +8,7 @@
   - 作者录制的解释视频：https://www.youtube.com/watch?v=fCtZWGhQBvo
   - 作者用Javascript重现了git http://gitlet.maryrosecook.com/docs/gitlet.html
   - 原作者授权过的中文翻译 https://github.com/pysnow530/git-from-the-inside-out
-
+- [Git 原理入门 作者： 阮一峰](https://www.ruanyifeng.com/blog/2018/10/git-internals.html)
 ## 反正也没人看的部分
 
 - [图解Git](http://marklodato.github.io/visual-git-guide/index-zh-cn.html)
