@@ -432,3 +432,97 @@ send "exit\n"
 # 退出 expect 脚本
 exit 0
 ```
+
+## 练习题: 记录负载和进程
+
+### 具体要求：
+
+- 每隔 $INTERVAL 秒记录系统的负载和进程状态，并将这些信息分别保存到 ~/load-log 和 ~/ps-log 中
+- 脚本会执行 $COUNTER 次，之后停止
+
+### 参考实现
+```bash
+#!/bin/sh
+
+# 日志文件路径
+PSLOG=~/ps-log
+LOADLOG=~/load-log
+INTERVAL=30    # ps 运行时间间隔
+COUNTER=10     # 统计次数
+
+while [ $COUNTER -gt 0 ]
+do
+  # 获取当前时间
+  TIME=$(date '+%Y-%m-%d %H:%M:%S')
+
+  # 记录系统负载信息
+  cat /proc/loadavg | sed -e "s/^/$TIME    /" >> $LOADLOG
+
+  # 记录系统进程信息
+  ps -e --cols 200 -o user,pid,ppid,pri,size,rss,stat,pagein,%cpu,%mem,time,cmd |
+    sed -e "s/^/$TIME    /" >> $PSLOG
+
+  # 显示当前日志文件的大小
+  echo "$TIME  $(ls -lh $LOADLOG $PSLOG | awk '{print $9": "$5}')"
+
+  # 递减 COUNTER
+  let COUNTER-=1
+
+  # 等待指定间隔
+  sleep $INTERVAL
+done
+```
+
+## 练习题: 练习题: 系统自监视脚本
+
+### 具体要求：
+
+- 每隔固定的时间间隔（由 $INTERVAL 和 $COUNTER 控制）监控 CPU、内存和 Apache（httpd）、Tomcat 进程的状态
+- 如果 CPU 占用率或内存使用率超过 50%，或者 Apache/Tomcat 进程结束，发送一封邮件进行警告。
+
+### 参考实现
+```bash
+#!/bin/bash
+
+# 定义参数
+INTERVAL=30  # 每隔多少秒执行一次
+COUNTER=720  # 执行的次数，720 * 30秒 = 6小时
+
+for ((i=1; i<=COUNTER; i++))
+do
+    # CPU 监控
+    cpu=$(top -b -n 1 | grep -w Cpu | awk '{print $5}' | awk -F '%' '{printf "%d", $1}')
+    if [ "$cpu" -le 50 ]
+    then
+        echo "CPU: $((100 - cpu))%" > test.txt
+        mail -s "服务器紧急, CPU占用率过高！" yourmail@domain.com < test.txt
+    fi
+
+    # 内存监控
+    mem=$(top -b -n 1 | grep -w Mem | awk '{printf "%d", $6/$2*100}')
+    if [ "$mem" -le 50 ]
+    then
+        echo "Memory: $((100 - mem))%" > test.txt
+        mail -s "服务器紧急，内存占用率过高！" yourmail@domain.com < test.txt
+    fi
+
+    # Apache 进程监控
+    httpdnum=$(ps aux | grep -c '[h]ttpd')
+    if [ "$httpdnum" -le 1 ]
+    then
+        echo "服务器紧急，Apache 进程结束！" > test.txt
+        mail -s "服务器紧急，Apache 进程结束！" yourmail@domain.com < test.txt
+    fi
+
+    # Tomcat 进程监控
+    tomcatnum=$(ps aux | grep -c '[t]omcat')
+    if [ "$tomcatnum" -le 1 ]
+    then
+        echo "服务器紧急，Tomcat 进程结束！" > test.txt
+        mail -s "服务器紧急，Tomcat 进程结束！" yourmail@domain.com < test.txt
+    fi
+
+    # 等待 $INTERVAL 秒后再继续
+    sleep $INTERVAL
+done
+```
