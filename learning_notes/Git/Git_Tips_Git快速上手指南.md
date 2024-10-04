@@ -52,3 +52,23 @@ git reset --hard HEAD^        # HEAD表示当前版本，这个命令使得版�
 git reset --hard 3628164      # 版本回退到3628164开头的版本
 git reflog                    # 用来记录你的每一次命令
 ```
+
+## Git使用技巧
+
+### 永久删除文件(包括历史记录)
+ 
+- https://rtyley.github.io/bfg-repo-cleaner/
+- https://stackoverflow.com/questions/2100907/how-to-remove-delete-a-large-file-from-commit-history-in-git-repository
+ 
+Github官方指南
+- https://help.github.com/articles/removing-files-from-a-repository-s-history/
+- https://help.github.com/articles/removing-sensitive-data-from-a-repository/
+ 
+### Git管理空目录
+ 
+Git仅跟踪文件的变动，不跟踪目录。变通的解决办法是在空目录下存一个 .gitignore 文件。然后 git add 。
+
+如果有许多这样的空目录，可以用下面的命令自动补充 .gitignore 文件：
+`$ find . \( -type d -empty \) -and \( -not -regex ./\.git.* \) -exec touch {}/.gitignore \;`
+
+递归找寻当前目录下，类型为目录，且为空，也没有 .git 开头的文件，在其中用 touch 新建一个空的 .gitignore 文件。然后 git add . 之后即可。
