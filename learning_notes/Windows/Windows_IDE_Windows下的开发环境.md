@@ -1,5 +1,10 @@
 # Windows下的开发环境
 
+## Windows 窗口与CMD的切换
+- 命令行窗口时，用文件浏览器打开当前目录 `start .`
+- 在文件浏览器中用终端打开当前路径 `右键` 在终端中打开
+  - Win10 需要用 `Shift + 右键`
+    
 ## Windows CMD 的基础配置
 
 - 快速编辑模式：在Bash窗口上点右键 选择Properties，选中QuiteEditMode
@@ -12,6 +17,13 @@
 ```cmd
 echo %PATH:;=&echo.%
 ```
+
+## Windows CMD 下的磁盘操作
+
+- 创建指定大小的随机文件
+  - ` fsutil file createnew E:/myfile 1048576000000 `
+- 擦除硬盘剩余空间!!!!危险命令!!!!
+  - ` cipher /w:E `
 
 ## Git Bash 
 
