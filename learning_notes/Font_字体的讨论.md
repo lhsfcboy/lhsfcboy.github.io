@@ -24,6 +24,22 @@ Menlo
 Consolas (only if using Windows)
 Bitstream Vera Sans Mono / DejaVu Sans Mono (only if using Linux)
 ```
+## 常见的中文字体名称
+在筛选字体时，可以参考以下常见的中文字体名称：
+
+- SimSun（宋体）
+- SimHei（黑体）
+- KaiTi（楷体）
+- FangSong（仿宋）
+- Microsoft YaHei（微软雅黑）
+- Microsoft JhengHei（微软正黑体）
+- DengXian（等线）
+- LiSu（隶书）
+- YouYuan（幼圆）
+- STXihei（华文细黑）
+- STKaiti（华文楷体）
+- STSong（华文宋体）
+- STFangSong
 
 ## 开源且可以商用的字体
 
