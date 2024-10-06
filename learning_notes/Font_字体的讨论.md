@@ -39,7 +39,7 @@ Bitstream Vera Sans Mono / DejaVu Sans Mono (only if using Linux)
 - STXihei（华文细黑）
 - STKaiti（华文楷体）
 - STSong（华文宋体）
-- STFangSong
+- STFangSong（华文仿宋）
 
 ## 开源且可以商用的字体
 
