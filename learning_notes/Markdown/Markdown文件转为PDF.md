@@ -1,4 +1,6 @@
-# 讨论如何把Markdown文件转换为PDF格式
+# 讨论如何通过命令行环境在本体把Markdown文件转换为PDF格式
+
+这是一份未完成的文档，目前还没有尝试成功。
 
 ## Pandoc工具 与 pypandoc包
 
