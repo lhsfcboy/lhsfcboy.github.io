@@ -1,11 +1,13 @@
 # LaTeX
 
 - TeX
+
 高德纳教授开发的排版引擎,
 同时也是该引擎使用的标记语言(Markup Lang)的名称.
 TeX引擎则输出 dvi 格式的文档.
 
 - LaTeX
+  
 L.Lamport教授开发的基于TeX的排版系统
 
 ## 编译套装
