@@ -24,6 +24,16 @@ Menlo
 Consolas (only if using Windows)
 Bitstream Vera Sans Mono / DejaVu Sans Mono (only if using Linux)
 ```
+## Windows下查看当前系统安装的字体
+- CMD查看当前系统的字体: `dir  %windir%\Fonts`
+- PoswerShell查看：
+```PowerShell
+[System.Reflection.Assembly]::LoadWithPartialName("System.Drawing") | Out-Null
+$fonts = New-Object System.Drawing.Text.InstalledFontCollection
+$fonts.Families | ForEach-Object { $_.Name }
+```
+
+
 ## 常见的中文字体名称
 在筛选字体时，可以参考以下常见的中文字体名称：
 
