@@ -3,9 +3,17 @@
 一些能够提高ChatGPT效果的提示词
 
 ## ChatGPT Plus的使用限制
+- GPT-4o     80 msg per 3 hours
+- GPT-4      40 msg per 3 hours
+- o1-preview 50 msg per week (refresh on Wednesay?)
+- o1-mini    50 msg per day
 
-- o1-mini 50 per day
-- o1-preview 50 per week
+As of May 13th 2024, Plus users will be able to send 80 messages every 3 hours on GPT-4o. 
+and 40 messages every 3 hours on GPT-4. 
+  
+GPT-4o mini does not have limits on the Plus tier.
+
+Plus user have access to 50 messages a week with OpenAI o1-preview and 50 messages a day with OpenAI o1-mini to start with our research preview.
 
 ## 使用`Shift + Enter`在输入框中输入多行提示词
 
