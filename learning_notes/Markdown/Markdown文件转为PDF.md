@@ -47,3 +47,11 @@ pandoc .\LaTeX.md -o a.pdf
 
 默认的字体可能是英文字体，会导致非英文文档报错。
 > [WARNING] Missing character: There is no 标 (U+6807) in font [lmroman12-bold]:mapping=tex-text;!
+
+- CMD查看当前系统的字体: `dir  %windir%\Fonts`
+- PoswerShell查看：
+```PowerShell
+[System.Reflection.Assembly]::LoadWithPartialName("System.Drawing") | Out-Null
+$fonts = New-Object System.Drawing.Text.InstalledFontCollection
+$fonts.Families | ForEach-Object { $_.Name }
+```
