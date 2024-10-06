@@ -1,7 +1,5 @@
 # 讨论如何通过命令行环境在本体把Markdown文件转换为PDF格式
 
-这是一份未完成的文档，目前还没有尝试成功。
-
 ## Pandoc工具 与 pypandoc包
 
 Pandoc 是一个独立的工具，而不是 Python 包。
@@ -33,6 +31,7 @@ print("PDF 文件已生成:", output)
 ```bash
 scoop install pandoc
 scoop search tex  # 查看有哪些可以通过scoop安装的tex相关软件
+
 scoop install MiKTex
 pandoc .\LaTeX.md -o a.pdf
 ```
@@ -43,6 +42,7 @@ pandoc .\LaTeX.md -o a.pdf
 - (?)安装中文需要的ctex包
 
 ### 执行
+使用支持UTF-8的xelatex来编译
 > pandoc .\LaTeX.md -o a.pdf --pdf-engine=xelatex
 
 默认的字体可能是英文字体，会导致非英文文档报错。
@@ -53,3 +53,12 @@ pandoc .\LaTeX.md -o a.pdf
 
 默认的页边距设置有点太夸张了，设置使用纸面的80%区域显示
 > pandoc input.md -o output.pdf --pdf-engine=xelatex -V mainfont="Microsoft YaHei"  -V geometry=scale=0.8
+
+### 碰到的问题
+
+中文的等宽字体
+- 原始文本的代码部分默认是用等宽字体显示的，而默认的等宽字体是英文字体。
+- 如果其中包含中文，比如注释部分。会导致默认调用的等宽字体无法显示。有如下报错：
+> [WARNING] Missing character: There is no 使 (U+4F7F) in font [lmmono10-italic]:!
+- 安装中文等宽字体，例如Source Han Mono, 并指定其为编译时使用的中文字体
+> pandoc input.md -o output.pdf -f markdown-raw_tex --pdf-engine=xelatex -V mainfont="Microsoft YaHei" -V monofont="Source Han Mono"
