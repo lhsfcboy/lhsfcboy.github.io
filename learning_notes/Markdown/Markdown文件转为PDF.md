@@ -44,3 +44,5 @@ pandoc .\LaTeX.md -o a.pdf
 
 ### 执行
 > pandoc .\LaTeX.md -o a.pdf --pdf-engine=xelatex
+默认的字体可能是英文字体，会导致非英文文档报错。
+> [WARNING] Missing character: There is no 标 (U+6807) in font [lmroman12-bold]:mapping=tex-text;!
