@@ -2,6 +2,11 @@
 
 一些能够提高ChatGPT效果的提示词
 
+## ChatGPT Plus的使用限制
+
+- o1-mini 50 per day
+- o1-preview 50 per week
+
 ## 使用`Shift + Enter`在输入框中输入多行提示词
 
 ## 提示词应该有一定的结构化
