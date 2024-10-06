@@ -1,45 +1,43 @@
 # LaTeX
 
 - TeX
+
 高德纳教授开发的排版引擎,
 同时也是该引擎使用的标记语言(Markup Lang)的名称.
 TeX引擎则输出 dvi 格式的文档.
 
 - LaTeX
+  
 L.Lamport教授开发的基于TeX的排版系统
 
 ## 编译套装
 
 - TexLive
-大而全, 体积上G. 
-内置了可以处理中文的XeLaTeX.
+  - 大而全, 体积上G. 
+  - 内置了可以处理中文的XeLaTeX.
 
 - MiKTeX
-MiKTeX体积小, 会在需要时自动下载配置缺少的包. 
-内置了可以处理中文的XeLaTeX.
-[https://miktex.org/](https://miktex.org/).
-安装完成有运行"Miktex console"进行配置(选择"以管理员身份运行").
-点击"Packages"标签,然后依次安装ctex和CJK包, 以便支持中文.
-
-- pdfTeX/pdfLaTeX
-
-Hàn Thế Thành 博士在他的博士论文中提出了 pdfTeX 这个对 TeX 引擎的扩展.
-pdfTeX 直接输出 pdf 格式文档.
+  - https://miktex.org/ 
+  - MiKTeX体积小, 会在需要时自动下载配置缺少的包. 
+  - 内置了可以处理中文的XeLaTeX.
+  - 安装完成有运行"Miktex console"进行配置(选择"以管理员身份运行").
+  - 点击"Packages"标签,然后依次安装ctex和CJK包, 以便支持中文.
 
 - XeTeX/XeLaTeX
-
-XeTeX 引擎直接支持 Unicode 字符.
-使用 XeTeX 引擎需要使用 UTF-8 编码.
-中文环境最常用的LaTex版本.
+  - XeTeX 引擎直接支持 Unicode 字符.
+  - 使用 XeTeX 引擎需要使用 UTF-8 编码.
+  - 中文环境最常用的LaTex版本.
 
 - bibtex
 
-- TinyTeX 是基于 TeX Live 的瘦身版本,覆盖了大多数常用包,安装下来占用大概 150 MB 空间,比起原 TeX Live 动辄上 GB 的身躯实在要小不少.
-TinyTeX 支持 Linux,macOS 及 Windows.
-[https://yihui.name/tinytex/](https://yihui.name/tinytex/)
+- pdfTeX/pdfLaTeX
+  - Hàn Thế Thành 博士在他的博士论文中提出了 pdfTeX 这个对 TeX 引擎的扩展.
+  - pdfTeX 直接输出 pdf 格式文档.
 
-默认没有中文支持的相关包.还要安装ctex等一堆包.
-装完大概是230M.texdoc这种命令自然也是没有了的.
+- TinyTeX 
+  - 基于 TeX Live 的瘦身版本,覆盖了大多数常用包,安装下来占用大概 150 MB 空间.
+  - [https://yihui.name/tinytex/](https://yihui.name/tinytex/)
+  - 默认没有中文支持的相关包.还要安装ctex等一堆包.
 
 ## 常用的云端环境
 
