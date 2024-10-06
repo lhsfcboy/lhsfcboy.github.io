@@ -11,6 +11,9 @@
 - 语法 http://oiltang.com/2014/05/04/markdown-and-mathjax/ http://www.tuicool.com/articles/mEzqeaM
 - 数学公式生成器 http://www.ruanyifeng.com/webapp/formula.html
 - Markdown中插入数学公式的方法 http://blog.csdn.net/xiahouzuoxin/article/details/26478179
+- 目前可用的codecogs
+  - <img src="https://latex.codecogs.com/gif.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}">
+- 另外知乎似乎也还可以  
 
 ### Github里的Markdown
 - [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
