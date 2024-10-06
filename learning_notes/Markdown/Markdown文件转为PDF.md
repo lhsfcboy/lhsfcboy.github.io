@@ -38,6 +38,7 @@ pandoc .\LaTeX.md -o a.pdf
 启用按需下载包：
 - 在 MiKTeX 控制台中，点击“Settings”。
 - 在“General”选项卡中，确保“Install missing packages on-the-fly”
+- (?)安装中文需要的ctex包
 
 ### 执行
-> 
+> pandoc .\LaTeX.md -o a.pdf --pdf-engine=xelatex
