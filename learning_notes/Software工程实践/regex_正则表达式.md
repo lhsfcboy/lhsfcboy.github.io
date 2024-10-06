@@ -54,16 +54,13 @@
 
 正则表达式只是我们用于在文本中检索字母和数字的模式。例如正则表达式 `cat`，表示: 字母 `c` 后面跟着一个字母 `a`，再后面跟着一个字母 `t`。
 
-<pre>
-"cat" => The <a href="#learn-regex"><strong>cat</strong></a> sat on the mat
+> "cat" => The <strong>cat</strong> sat on the mat
 </pre>
 
 正则表达式 `123` 会匹配字符串 "123"。通过将正则表达式中的每个字符逐个与要匹配的字符串中的每个字符进行比较，来完成正则匹配。
 正则表达式通常区分大小写，因此正则表达式 `Cat` 与字符串 "cat" 不匹配。
 
-<pre>
-"Cat" => The cat sat on the <a href="#learn-regex"><strong>Cat</strong></a>
-</pre>
+> "Cat" => The cat sat on the <strong>Cat</strong>
 
 ## 2. 元字符
 

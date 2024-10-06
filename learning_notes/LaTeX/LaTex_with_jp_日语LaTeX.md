@@ -12,6 +12,8 @@
 - lualatex
 - uplatex
 
+日语的文档常用如下俩个工具:pLaTeX/upLaTeX.
+
 ## Hello World
 
 ```tex
@@ -23,6 +25,16 @@
 注意: Windows系统在测试 pLaTeX 的时候使用 ShiftJIS 编码,其他时候使用 UTF-8 编码.
 原因在于：在 Windows 系统上,pTeX 以 ShiftJIS 编码作为默认编码；在其他系统上以 UTF-8 编码作为默认编码。
 当然,你也可以在 Windows 上把 pLaTeX 的测试文档以 UTF-8 编码保存,但是在编译的时候你得加上 -kanji utf8 这样的参数。
+
+## 中文日文混排
+
+使用支持中日文字的统一字体，可以避免字符缺失的问题。
+
+解决方案：
+- 下载 思源宋体 或 思源黑体。
+- 安装字体到系统中。
+- 在命令中指定字体
+  - 例如 ` pandoc input.md -o output.pdf --pdf-engine=xelatex -V CJKmainfont="Source Han Serif SC" `
 
 ## pLaTeX 以及 upLaTeX
 
