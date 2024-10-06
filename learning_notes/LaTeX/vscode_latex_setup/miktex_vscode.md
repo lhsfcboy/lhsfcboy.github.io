@@ -1,12 +1,6 @@
 # Miktex
-
-[https://miktex.org/](https://miktex.org/)
-
 ## 安装
 
-安装完成有运行"Miktex console"进行配置(选择"以管理员身份运行")。
-
-点击"Packages"标签，然后依次安装ctex和CJK包， 以便支持中文。
 
 ## 配置VSCode
 

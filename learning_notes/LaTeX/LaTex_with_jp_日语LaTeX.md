@@ -12,6 +12,8 @@
 - lualatex
 - uplatex
 
+日语的文档常用如下俩个工具:pLaTeX/upLaTeX.
+
 ## Hello World
 
 ```tex

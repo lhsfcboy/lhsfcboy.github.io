@@ -3,7 +3,7 @@
 ## 配置编译命令
 
 LaTeX Workshop默认的编译工具是latexmk,
-把其修改为中文环境最常用的xelatex
+把其修改为的xelatex
 
 ```json
 "latex-workshop.latex.tools": [
