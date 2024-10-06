@@ -48,10 +48,8 @@ pandoc .\LaTeX.md -o a.pdf
 默认的字体可能是英文字体，会导致非英文文档报错。
 > [WARNING] Missing character: There is no 标 (U+6807) in font [lmroman12-bold]:mapping=tex-text;!
 
-- CMD查看当前系统的字体: `dir  %windir%\Fonts`
-- PoswerShell查看：
-```PowerShell
-[System.Reflection.Assembly]::LoadWithPartialName("System.Drawing") | Out-Null
-$fonts = New-Object System.Drawing.Text.InstalledFontCollection
-$fonts.Families | ForEach-Object { $_.Name }
-```
+这里先用微软雅黑对付一下。
+> pandoc input.md -o output.pdf --pdf-engine=xelatex -V mainfont="Microsoft YaHei"
+
+默认的页边距设置有点太夸张了，设置使用纸面的80%区域显示
+> pandoc input.md -o output.pdf --pdf-engine=xelatex -V mainfont="Microsoft YaHei"  -V geometry=scale=0.8
