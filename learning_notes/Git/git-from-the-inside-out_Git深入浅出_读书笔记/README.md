@@ -4,7 +4,7 @@
 - 翻译地址：<https://github.com/pysnow530/git-from-the-inside-out/blob/master/README.md>.
 
 GitHub网友 [pysnow530](https://github.com/pysnow530) 对文件进行了第一次翻译。
-这里在他工作的基础上进行了扩展，加入了个人的读书笔记，把语句修改为个人的习惯表达。
+这里在其工作的基础上进行了扩展，加入了个人的读书笔记，把语句修改为个人的习惯表达。
 
 ## 预备知识
 
@@ -54,7 +54,7 @@ mkdir alpha
 cd alpha
 pwd
 # 以下的大部分示例我们都没有显示提示符，默认都是工作在`alpha`的根目录下。
-# 因此也没有却分命令和命令的输出，请自行分辨。
+# 因此也没有区分命令和命令的输出，请自行分辨。
 ```
 
 我们创建了一个`alpha`目录来存放项目。
