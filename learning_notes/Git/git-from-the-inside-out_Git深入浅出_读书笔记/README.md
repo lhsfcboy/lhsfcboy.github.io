@@ -221,11 +221,11 @@ git commit -m 'a1'
 
 Git通过tree图来记录项目的当前状态。
 
-tree图由两类对象组成：blob对象和tree对象。
+- tree图由两类对象组成：blob对象和tree对象。
+- blob对象是在执行`git add`命令时创建的，用来保存项目文件的内容。
+- tree对象是在执行`git commit`命令时创建的，一个tree对象对应工作区的一个目录。
 
-blob对象是在执行`git add`命令时创建的，用来保存项目文件的内容。
-
-tree对象是在执行`git commit`命令时创建的，一个tree对象对应工作区的一个目录。
+我们可以不严谨的把blob理解为文件，把tree理解为文件夹。现在再去读一遍上面三行。
 
 创建新提交后，对应`data`目录的tree对象如下：
 
