@@ -1,9 +1,9 @@
 ## 前言
 
 - 英文原版：<http://maryrosecook.com/blog/post/git-from-the-inside-out>.
-- 翻译地址：<https://github.com/pysnow530/git-from-the-inside-out/blob/master/README.md>.
+- 翻译地址：<https://github.com/pysnow530/git-from-the-inside-out/blob/master/README.md>.  
 
-GitHub网友 [pysnow530](https://github.com/pysnow530) 对文件进行了第一次翻译。
+GitHub网友 [pysnow530](https://github.com/pysnow530) 取得原作者MaryRosecook同意后对文件进行了第一次翻译。
 这里在其工作的基础上进行了扩展，加入了个人的读书笔记，把语句修改为个人的习惯表达。
 
 ## 预备知识
@@ -993,20 +993,10 @@ delta
 
 ![14 commit pushed from alpha to delta](images/32-14-pushed-to-delta.png)
 
-### 总结
+### 总结 & 脚注
 
 Git构建在图上，几乎所有的Git命令都是在操作这个图。想要深入了解Git，关注图属性而不是执行流程或命令。
 
-想要学习更多Git知识，可以研究一下`.git`目录。没什么可怕的。看看它里面有哪些东西。修改文件内容，观察发生了什么。手动创建一个提交，看看你能把仓库搞得多惨。然后试着修复它。
-
-### 脚注
-
-1. 在这个例子中，哈希值内容比原文件更长。不管是否能节约空间，Git始终选择使用哈希值作为文件名。
-2. 也有可能两个不同的内容有相同的哈希值，但这个可能性很低。
 3. `git prune`删除所有不能被ref访问到的对象。执行此命令可能会丢失数据。
 4. `git stash`将工作区和`HEAD`提交的所有差异保存到一个安全的地方。它们可以在以后取回。
 5. `rebase`命令可以用来添加、编辑或删除历史提交。
-
-### 译者注
-
-本文翻译已取得原作者MaryRosecook同意。
