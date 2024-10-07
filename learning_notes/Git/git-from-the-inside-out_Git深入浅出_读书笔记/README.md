@@ -158,6 +158,8 @@ git hash-object data/letter.txt
 第二，git将`data/letter.txt`文件添加到index。index是一个列表，它记录着仓库需要维护的所有文件。该列表保存在`.git/index`文件内，每一行维护一个文件名到blob哈希值的映射。执行`git add`命令后的index如下：
 
 ```
+git ls-files --stage
+
 data/letter.txt 2e65efe2a145dda7ee51d1741299f848e5bf752e
 ```
 
@@ -185,19 +187,12 @@ alpha
 `git add`命令创建一个包含`data/number.txt`内容的blob对象，然后添加一个index项，将`data/number.txt`指向刚刚创建的blob对象。执行完后的index如下：
 
 ```
+git ls-files --stage
+
 data/letter.txt 2e65efe2a145dda7ee51d1741299f848e5bf752e
 data/number.txt 274c0052dd5408f8ae2bc8440029ff67d79bc5c3
 ```
 
-
-- What is in the .git/index ?
-```bash
-git ls-files --stage
-https://stackoverflow.com/questions/4084921/what-does-the-git-index-contain-exactly
-git ls-tree -r HEAD
-git update-index 
-git index viewer
-```
 
 
 注意，虽然我们执行的是`git add data`，但只有`data`目录内的文件被加到index，`data`目录不会被加到index。
