@@ -128,7 +128,10 @@ alpha
 这个blob文件包含了`data/letter.txt`文件压缩处理后的内容，并以内容的哈希值作为文件名。
 这意味着我们用`cat`命令来直接查看这个文件是看不到`a`的。
 
-可以用如下命令查看Git压缩处理后的文件的内容：`git cat-file -p 2e65 #至少要给四个字符作为文件名`
+可以用如下命令查看Git压缩处理后的文件的内容：
+```
+git cat-file -p 2e65 #至少要给四个字符作为文件名
+```
 
 
 
@@ -149,14 +152,9 @@ git hash-object data/letter.txt
 
 经过这一步的操作，Git将它的内容保存到`objects`目录的过程。如果需要的话，我们随时可以把`data/letter.txt`文件的内容复原出来。当然，目前这些信息下，我们还不知道这个文件的文件名。
 
----
----
----
----
-
-
-第二，git将`data/letter.txt`文件添加到index。index是一个列表，它记录着仓库需要维护的所有文件。
-该列表保存在`.git/index`文件内，每一行维护一个文件名到blob哈希值的映射。
+第二，git将`data/letter.txt`文件添加到index。
+index是一个列表，它记录着仓库需要维护的所有文件。
+该列表保存在`.git/index`文件内，每一行维护一个**文件名到blob哈希值**的映射。
 查看index的命令：`git ls-files --stage`。
 执行`git add`命令后的index如下：
 
@@ -210,11 +208,12 @@ data/number.txt 274c0052dd5408f8ae2bc8440029ff67d79bc5c3
 ### 创建提交
 
 ```
- git commit -m 'a1'
-          [master (root-commit) 774b54a] a1
+git commit -m 'a1'
+>  [master (root-commit) 774b54a] a1
 ```
 
 创建一个提交`a1`。Git会打印出此次提交的简短描述。
+
 
 提交命令对应三个步骤。创建提交版本对应文件的tree对象，创建一个提交对象，将当前分支指向该提交对象。
 
@@ -237,15 +236,17 @@ tree对象是在执行`git commit`命令时创建的，一个tree对象对应工
 
 第一行记录了`data/letter.txt`文件的所有信息，我们可以使用这些信息来恢复`data/letter.txt`文件。空格分隔的第一部分表示该文件的权限，第二部分表示该记录对应的是一个blob对象，第三部分是该blob的哈希值，第四部分记录了文件名。
 
-第二行是`data/number.txt`的信息。
+第二行是`data/number.txt`的对应的信息。
 
 下面是对应`alpha`目录（项目根目录）的tree对象：
 
 ```
 040000 tree 0eed1217a2947f4930583229987d90fe5e8e0b74 data
 ```
+注意，`git`并不知道`alpha`目录的名字，毕竟`.git`目录是在`alpha`目录之下。
+但是，`git`知道这是项目的根目录，所以后文直接以root来代表。
 
-仅有一行记录，它指向`data`目录对应的tree对象。
+这个表示根目录的tree对象现在仅有一行记录，它指向`data`目录对应的tree对象。
 
 ![Tree graph for the a1 commit](images/1-a1-tree-graph.png)
 
@@ -294,6 +295,51 @@ ref: refs/heads/master
 ![HEAD pointing at master and master pointing at the a1 commit](images/3-a1-refs.png)
 
 `HEAD`指向`master`，这跟提交前一样。但是`master`现在已经存在了，而且指向我们新创建的提交对象。
+
+### 在看一遍第一次提交
+
+- HEAD指向master
+```
+cat .git/HEAD
+> ref: refs/heads/master
+```
+
+- master指向a1
+```
+cat .git/refs/heads/master
+> 3bc18c673b33623656070b2efdcdf3f5dfe59860
+```
+
+- a1指向root
+```
+git cat-file -p 3bc1
+tree ffe298c3ce8bb07326f888907996eaa48d266db4
+author Your Name <you@example.com> 1728297034 +0000
+committer Your Name <you@example.com> 1728297034 +0000
+
+a1
+```
+
+- root指向data目录
+```
+git cat-file -p ffe2
+040000 tree 0eed1217a2947f4930583229987d90fe5e8e0b74    data
+```
+
+- data目录指向两个blob文件
+```
+git cat-file -p 0eed
+100644 blob 2e65efe2a145dda7ee51d1741299f848e5bf752e    letter.txt
+100644 blob 56a6051ca2b02b04ef92d5150c9ef600403cb1de    number.txt
+```
+
+- 两个blob文件里储存了文件的具体内容
+```
+git cat-file -p 2e65
+a
+git cat-file -p 56a6
+1
+```
 
 ### 创建第二个提交
 
