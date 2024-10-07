@@ -155,7 +155,10 @@ git hash-object data/letter.txt
 ---
 
 
-第二，git将`data/letter.txt`文件添加到index。index是一个列表，它记录着仓库需要维护的所有文件。该列表保存在`.git/index`文件内，每一行维护一个文件名到blob哈希值的映射。执行`git add`命令后的index如下：
+第二，git将`data/letter.txt`文件添加到index。index是一个列表，它记录着仓库需要维护的所有文件。
+该列表保存在`.git/index`文件内，每一行维护一个文件名到blob哈希值的映射。
+查看index的命令：`git ls-files --stage`。
+执行`git add`命令后的index如下：
 
 ```
 git ls-files --stage
