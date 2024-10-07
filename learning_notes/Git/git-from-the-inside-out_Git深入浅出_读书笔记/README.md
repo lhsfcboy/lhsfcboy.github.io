@@ -102,6 +102,9 @@ alpha
 - 但是，`.git/refs/`还是个空文件夹
 - 注意此时还没后`index`文件
 - 总的来说，`git` 准备了一个空架子，下面我们将看到它是如何被填充的
+- 为了方便起见，我们可以用下面的tree命令暂时省去一些细节
+
+`tree -a -I 'COMMIT_EDITMSG|branches|description|hooks|tags'`
 
 ### 向git添加文件
 
