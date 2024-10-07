@@ -137,7 +137,7 @@ alpha
 哈希值的头两个字符用作对象数据库的目录名：`.git/objects/2e/`，剩下的字符用作blob文件的文件名：`.git/objects/2e/65efe2a145dda7ee51d1741299f848e5bf752e`。
 
 再请注意，Git在对这个压缩处理过的文件求哈希值时加了料：除了文件内容，还加上了文件大小等信息。
-所以，单纯运算SHA1的不等`2e65`的结果 
+所以，单纯运算SHA1得不到`2e65`的结果 
 ```
 sha1sum .git/objects/2e/65efe2a145dda7ee51d1741299f848e5bf752e
 > c8938cbcb4ebb2d711f08e858f7635a3f6d39cde 
