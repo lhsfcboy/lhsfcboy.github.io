@@ -6,6 +6,41 @@
 GitHub网友 [pysnow530](https://github.com/pysnow530) 对文件进行了第一次翻译。
 这里在他工作的基础上进行了扩展，加入了个人的读书笔记，把语句修改为个人的习惯表达。
 
+## 预备知识
+
+### Git流行之前的文件版本管理
+
+自动合并：
+同一文件的修改如果不是相同部分的修改，都可以自动合并。如果是相同部分的代码，比如同一行，或者连续的一部分，这时VCS无法做出自动合并，必须你手动解决冲突后再合并
+
+注意，这种合并在函数的语义层面未必是正确的，因此不能疏于检查且未必充分的测试每个新提交。
+
+### 哈希函数/摘要算法
+
+哈希函数是一种将给定内容转换为更小的值，且能唯一确定原内容的算法。
+
+- 无论多大的输入，给出的输出是定长的。
+  - 例如，Git默认的哈希算法: `SHA-1`，输出为 40 个十六进制字符
+  - 例如我们查看单个字母的SHA-1哈希值`echo -n "a" | sha1sum`
+    - 得到输出`86f7e437faa5a7fce15d1ddcb9eaeaea377667b8`
+    - 在这个例子中，哈希值内容比原文件更长。
+  - 更常见的应用中，我们求文件的哈希值 
+  - Git使用哈希值作为文件名
+- 哈希函数输出的无序性  
+    - 相同的输入给出的哈希值是相同的
+    - 稍有不同的输入(例如两个文件只差一个比特)，给出的哈希值是完全不同的
+    - `echo -n "aa" | sha1sum`
+    - `e0c9035898dd52fc65c41454cec9c4d2611bfb37 `
+    - 这个性质是设计哈希函数的科学家精心调配的
+    - 这意味着两个大小相近的文件很难碰撞
+    - 即使恶意碰撞，恶意文件也很难使有意义的
+    - 例如，原文件`Alice 需要偿还对 Bob 的 1000 美元的债务`
+    - 有意义的恶意碰撞`Alice 需要偿还对 Bob 的 10 美元的债务`很难产生
+- 哈希碰撞    
+    - 哈希函数的可能的输入是无穷的，而可能的输出是有限的，16的40次方个。
+    - 理论上，一个哈希值可能对应了很多可能的输入。但是实践中很难碰到
+    - 所以如果两个文件的哈希值相同，那么我们有很强的信心说这两个文件是相同的。
+
 ## 彻底理解Git
 
 本文假设你已经了解Git，并可以使用它对项目做版本控制。我们将重点关注支撑Git的图结构以及图结构的属性是如何指导Git行为的。在考察原理时，我们会创建真实的状态模型，而不是通过各种实验的结果**妄做猜想**。通过这个真实的状态模型，我们可以更直观地了解Git已经做了什么，正在做什么，以及接下来要做什么。
@@ -14,17 +49,21 @@ GitHub网友 [pysnow530](https://github.com/pysnow530) 对文件进行了第一�
 ### 创建项目
 
 ```
-~ $ mkdir alpha
-~ $ cd alpha
+# 注意目录的位置
+mkdir alpha
+cd alpha
+pwd
+# 以下的大部分示例我们都没有显示提示符，默认都是工作在`alpha`的根目录下。
+# 因此也没有却分命令和命令的输出，请自行分辨。
 ```
 
 我们创建了一个`alpha`目录来存放项目。
 
 ```
-~/alpha $ mkdir data
-~/alpha $ printf 'a' > data/letter.txt
+ mkdir data
+ printf 'a' > data/letter.txt
 ```
-**注意！**一定按照这里的命令来创建文件。此时文件末尾是没有换行的。使用`echo`或`vim`等编辑器会导致换行的产生。这将影响接下来的哈希算法的结果。
+**注意**，一定按照这里的命令来创建文件。此时文件末尾是没有换行的。使用`echo`或`vim`等编辑器会导致换行的产生。这将影响接下来的哈希算法的结果。
 
 在`alpha`目录下创建`data`目录，并在`data`下创建一个内容为`a`的文件`letter.txt`。现在，`alpha`的目录结构如下：
 
@@ -34,18 +73,20 @@ alpha
     └── letter.txt
 ```
 
-可以通过`apt install tree`来安装`tree`命令。`
+可以通过`sudo apt install tree`来安装`tree`命令。`tree ../alpha`来查看`alpha`的目录结构。
 
 ### 初始化仓库
 
 ```
-~/alpha $ git init
-Initialized empty Git repository
+git init
+
+> Initialized empty Git repository
 ```
 
 `git init`命令将当前目录初始化为一个Git仓库。它会在当前目录下创建一个`.git`目录来存放Git自己需要使用的文件。这些文件记录了Git配置和版本历史等的所有信息。它们都是一些普通文件，可以使用编辑器或shell命令对它们进行浏览或编辑。也就是说，我们可以像编辑项目文件一样，来浏览或编辑项目的版本历史。
 
-现在，`alpha`的目录结构变成了这个样子：
+现在，通过命令`tree ../alpha -a`来观察`alpha`的目录结构。
+`.git`目录下的文件是由Git创建并维护的。其它文件组成了工作区，由我们自己维护。
 
 ```
 alpha
@@ -56,27 +97,63 @@ alpha
     etc...
 ```
 
-`.git`目录下的文件是由Git创建并维护的。其它文件组成了工作区，由我们自己维护。
+- 注意此时`objects`文件夹是空的
+- `cat .git/HEAD` 可以发现此时已经指向了`ref: refs/heads/master`
+- 但是，`.git/refs/`还是个空文件夹
+- 注意此时还没后`index`文件
+- 总的来说，`git` 准备了一个空架子，下面我们将看到它是如何被填充的
 
-### 添加文件
+### 向git添加文件
 
 ```
-~/alpha $ git add data/letter.txt
+ git add data/letter.txt
 ```
 
-添加`data/letter.txt`到Git。该操作分两步完成。
+添加`data/letter.txt`到Git。这个命令背后进行了两项操作。
 
 第一，它会在`.git/objects/`目录下创建一个新的blob文件。
+```
+../alpha
+├── .git
+...
+│   ├── objects
+│   │   ├── 2e
+│   │   │   └── 65efe2a145dda7ee51d1741299f848e5bf752e
+...
+└── data
+    └── letter.txt
+```    
 
-这个blob文件包含了`data/letter.txt`文件压缩后的内容，并以内容的哈希值作为文件名。哈希是一段算法，它将给定内容转换为更小的<sup>1</sup>，且能唯一<sup>2</sup>确定原内容的值。例如，Git对`a`作哈希得到`2e65efe2a145dda7ee51d1741299f848e5bf752e`。哈希值的头两个字符用作对象数据库的目录名：`.git/objects/2e/`，剩下的字符用作blob文件的文件名：`.git/objects/2e/65efe2a145dda7ee51d1741299f848e5bf752e`。
+"blob" 是 "Binary Large Object" 的缩写。
+这个blob文件包含了`data/letter.txt`文件压缩处理后的内容，并以内容的哈希值作为文件名。
+这意味着我们用`cat`命令来直接查看这个文件是看不到`a`的。
 
-注意刚才添加文件时，Git将它的内容保存到`objects`目录的过程。即使我们把`data/letter.txt`文件从工作区删掉，它的内容仍然可以在Git中找回。
+可以用如下命令查看Git压缩处理后的文件的内容：`git cat-file -p 2e65 #至少要给四个字符作为文件名`
 
-- What is the hash value of my file?
-`git hash-object data/letter.txt`
 
-- What is inside the .git/objects/  BLOB binary large object ?
-`git cat-file -p 2e65 #至少要给四个字符作为文件名`
+
+哈希是一段算法，它将给定内容转换为固定长度，且能唯一确定原内容的值。
+例如，Git对`a`作哈希得到`2e65efe2a145dda7ee51d1741299f848e5bf752e`。
+哈希值的头两个字符用作对象数据库的目录名：`.git/objects/2e/`，剩下的字符用作blob文件的文件名：`.git/objects/2e/65efe2a145dda7ee51d1741299f848e5bf752e`。
+
+再请注意，Git在对这个压缩处理红的文件求哈希值时加了料：除了文件内容，还加上了文件大小等信息。
+所以，单纯运算SHA1的不等`2e65`的结果 
+```
+sha1sum .git/objects/2e/65efe2a145dda7ee51d1741299f848e5bf752e
+> c8938cbcb4ebb2d711f08e858f7635a3f6d39cde 
+```
+需要用如下命令来查看某个文件对应的Git系统内的哈希值：
+```
+git hash-object data/letter.txt
+```
+
+经过这一步的操作，Git将它的内容保存到`objects`目录的过程。如果需要的话，我们随时可以把`data/letter.txt`文件的内容复原出来。当然，目前这些信息下，我们还不知道这个文件的文件名。
+
+---
+---
+---
+---
+
 
 第二，git将`data/letter.txt`文件添加到index。index是一个列表，它记录着仓库需要维护的所有文件。该列表保存在`.git/index`文件内，每一行维护一个文件名到blob哈希值的映射。执行`git add`命令后的index如下：
 
@@ -87,7 +164,7 @@ data/letter.txt 2e65efe2a145dda7ee51d1741299f848e5bf752e
 我们来创建一个内容为`1234`的文件`data/number.txt`。
 
 ```
-~/alpha $ printf '1234' > data/number.txt
+ printf '1234' > data/number.txt
 ```
 
 现在工作区的目录结构如下：
@@ -102,7 +179,7 @@ alpha
 将`data/number.txt`添加到Git。
 
 ```
-~/alpha $ git add data
+ git add data
 ```
 
 `git add`命令创建一个包含`data/number.txt`内容的blob对象，然后添加一个index项，将`data/number.txt`指向刚刚创建的blob对象。执行完后的index如下：
@@ -126,8 +203,8 @@ git index viewer
 注意，虽然我们执行的是`git add data`，但只有`data`目录内的文件被加到index，`data`目录不会被加到index。
 
 ```
-~/alpha $ printf '1' > data/number.txt
-~/alpha $ git add data
+ printf '1' > data/number.txt
+ git add data
 ```
 
 我们将`data/number.txt`的内容修正为`1`，然后将文件重新加到index。这条命令会根据新的文件内容重新生成一个blob文件，并更新`data/number.txt`在index中的指向。
@@ -135,7 +212,7 @@ git index viewer
 ### 创建提交
 
 ```
-~/alpha $ git commit -m 'a1'
+ git commit -m 'a1'
           [master (root-commit) 774b54a] a1
 ```
 
@@ -229,7 +306,7 @@ ref: refs/heads/master
 注意，`data/letter.txt`和`data/number.txt`的内容在工作区、index和提交`a1`是一致的。index和`HEAD`都通过哈希值指向文件对应的blob对象，而工作区的文件内容直接保存在文件里。
 
 ```
-~/alpha $ printf '2' > data/number.txt
+ printf '2' > data/number.txt
 ```
 
 将`data/number.txt`的内容更新为`2`。这个操作只修改了工作区，index和`HEAD`保持不变。
@@ -237,7 +314,7 @@ ref: refs/heads/master
 ![data/number.txt set to 2 in the working copy](images/5-a1-wc-number-set-to-2.png)
 
 ```
-~/alpha $ git add data/number.txt
+ git add data/number.txt
 ```
 
 将文件添加到Git。此操作将在`objects`目录下添加一个内容为`2`的blob对象，然后将index中的`data/number.txt`记录指向该blob对象。
@@ -245,7 +322,7 @@ ref: refs/heads/master
 ![data/number.txt set to 2 in the working copy and index](images/6-a1-wc-and-index-number-set-to-2.png)
 
 ```
-~/alpha $ git commit -m 'a2'
+ git commit -m 'a2'
           [master f0af7e6] a2
 ```
 
@@ -310,7 +387,7 @@ commit对象的第一行指向新的`root` tree，第二行指向父提交`a1`�
 ### 检出提交
 
 ```
-~/alpha $ git checkout 37888c2
+ git checkout 37888c2
           You are in 'detached HEAD' state...
 ```
 
@@ -335,9 +412,9 @@ f0af7e62679e144bb28c627ee3e8f7bdb235eee9
 ![Detached HEAD on a2 commit](images/9-a2-detached-head.png)
 
 ```
-~/alpha $ printf '3' > data/number.txt
-~/alpha $ git add data/number.txt
-~/alpha $ git commit -m 'a3'
+ printf '3' > data/number.txt
+ git add data/number.txt
+ git commit -m 'a3'
           [detached HEAD 3645a0e] a3
 ```
 
@@ -352,7 +429,7 @@ Git将`HEAD`更新为`a3`的哈希值。此时仓库仍然处于detached `HEAD`�
 ### 创建分支
 
 ```
-~/alpha $ git branch deputy
+ git branch deputy
 ```
 
 创建一个新分支`deputy`。该操作只是创建一个新文件`.git/refs/heads/deputy`，并把`HEAD`指向的`a3`的哈希值写入该文件。
@@ -366,7 +443,7 @@ Git将`HEAD`更新为`a3`的哈希值。此时仓库仍然处于detached `HEAD`�
 ### 检出分支
 
 ```
-~/alpha $ git checkout master
+ git checkout master
           Switched to branch 'master'
 ```
 
@@ -389,8 +466,8 @@ ref: refs/heads/master
 ### 检出与工作区有冲突的分支
 
 ```
-~/alpha $ printf '789' > data/number.txt
-~/alpha $ git checkout deputy
+ printf '789' > data/number.txt
+ git checkout deputy
           Your changes to these files would be overwritten
           by checkout:
             data/number.txt
@@ -409,8 +486,8 @@ Git也可以把要检出的文件内容合并到工作区，但这要复杂的�
 所以Git终止了检出操作。
 
 ```
-~/alpha $ printf '2' > data/number.txt
-~/alpha $ git checkout deputy
+ printf '2' > data/number.txt
+ git checkout deputy
           Switched to branch 'deputy'
 ```
 
@@ -421,7 +498,7 @@ Git也可以把要检出的文件内容合并到工作区，但这要复杂的�
 ### 合并祖先提交
 
 ```
-~/alpha $ git merge master
+ git merge master
           Already up-to-date.
 ```
 
@@ -432,7 +509,7 @@ Git也可以把要检出的文件内容合并到工作区，但这要复杂的�
 ### 合并后代提交
 
 ```
-~/alpha $ git checkout master
+ git checkout master
           Switched to branch 'master'
 ```
 
@@ -441,7 +518,7 @@ Git也可以把要检出的文件内容合并到工作区，但这要复杂的�
 ![master checked out and pointing at the a2 commit](images/14-a3-on-master-on-a2.png)
 
 ```
-~/alpha $ git merge deputy
+ git merge deputy
           Fast-forward
 ```
 
@@ -456,20 +533,20 @@ Git获取源提交和它指向的树图，将树图中的文件写入工作区�
 ### 合并不同提交线的两个提交
 
 ```
-~/alpha $ printf '4' > data/number.txt
-~/alpha $ git add data/number.txt
-~/alpha $ git commit -m 'a4'
+ printf '4' > data/number.txt
+ git add data/number.txt
+ git commit -m 'a4'
           [master 7b7bd9a] a4
 ```
 
 将`data/number.txt`内容修改为`4`，然后提交。
 
 ```
-~/alpha $ git checkout deputy
+ git checkout deputy
           Switched to branch 'deputy'
-          ~/alpha $ printf 'b' > data/letter.txt
-          ~/alpha $ git add data/letter.txt
-          ~/alpha $ git commit -m 'b3'
+           printf 'b' > data/letter.txt
+           git add data/letter.txt
+           git commit -m 'b3'
                     [deputy 982dffb] b3
 ```
 
@@ -482,7 +559,7 @@ Git获取源提交和它指向的树图，将树图中的文件写入工作区�
 **图属性**：一个提交可以有多个父提交，这意味着我们可以通过创建一个合并提交来合并两个不同的提交线。
 
 ```
-~/alpha $ git merge master -m 'b4'
+ git merge master -m 'b4'
           Merge made by the 'recursive' strategy.
 ```
 
@@ -535,9 +612,9 @@ b4
 ### 合并不同提交线且有相同修改文件的两个提交
 
 ```
-~/alpha $ git checkout master
+ git checkout master
           Switched to branch 'master'
-~/alpha $ git merge deputy
+ git merge deputy
           Fast-forward
 ```
 
@@ -546,22 +623,22 @@ b4
 ![deputy merged into master to bring master up to the latest commit, b4](images/19-b4-master-deputy-on-b4.png)
 
 ```
-~/alpha $ git checkout deputy
+ git checkout deputy
           Switched to branch 'deputy'
-~/alpha $ printf '5' > data/number.txt
-~/alpha $ git add data/number.txt
-~/alpha $ git commit -m 'b5'
+ printf '5' > data/number.txt
+ git add data/number.txt
+ git commit -m 'b5'
           [deputy bd797c2] b5
 ```
 
 检出`deputy`。将`data/number.txt`内容修改为`5`，然后提交。
 
 ```
-~/alpha $ git checkout master
+ git checkout master
           Switched to branch 'master'
-~/alpha $ printf '6' > data/number.txt
-~/alpha $ git add data/number.txt
-~/alpha $ git commit -m 'b6'
+ printf '6' > data/number.txt
+ git add data/number.txt
+ git commit -m 'b6'
           [master 4c3ce18] b6
 ```
 
@@ -570,7 +647,7 @@ b4
 ![b5 commit on deputy and b6 commit on master](images/20-b5-on-deputy-b6-on-master.png)
 
 ```
-~/alpha $ git merge deputy
+ git merge deputy
           CONFLICT in data/number.txt
           Automatic merge failed; fix conflicts and
           commit the result.
@@ -621,8 +698,8 @@ stage `0`的`data/letter.txt`项跟合并前一样。stage `0`的`data/number.tx
 合并中止了。
 
 ```
-~/alpha $ printf '11' > data/number.txt
-~/alpha $ git add data/number.txt
+ printf '11' > data/number.txt
+ git add data/number.txt
 ```
 
 将两个有冲突的文件合并，这里我们将`data/number.txt`的内容修改为`11`，然后将文件添加到index，以告诉Git冲突已经解决了。Git为`11`创建一个blob，移除index中的三项`data/number.txt`，并添加stage为`0`的`data/number.txt`项，该项指向新创建blob。现在index变成了：
@@ -633,7 +710,7 @@ stage `0`的`data/letter.txt`项跟合并前一样。stage `0`的`data/number.tx
 ```
 
 ```
-~/alpha $ git commit -m 'b11'
+ git commit -m 'b11'
           [master 251a513] b11
 ```
 
@@ -650,7 +727,7 @@ stage `0`的`data/letter.txt`项跟合并前一样。stage `0`的`data/number.tx
 ![The working copy, index, b11 commit and its tree graph](images/23-b11-with-objects-wc-and-index.png)
 
 ```
-~/alpha $ git rm data/letter.txt
+ git rm data/letter.txt
           rm 'data/letter.txt'
 ```
 
@@ -659,7 +736,7 @@ stage `0`的`data/letter.txt`项跟合并前一样。stage `0`的`data/number.tx
 ![After data/letter.txt rmed from working copy and index](images/24-b11-letter-removed-from-wc-and-index.png)
 
 ```
-~/alpha $ git commit -m '11'
+ git commit -m '11'
           [master d14c7d2] 11
 ```
 
@@ -670,7 +747,7 @@ stage `0`的`data/letter.txt`项跟合并前一样。stage `0`的`data/number.tx
 ### 拷贝仓库
 
 ```
-~/alpha $ cd ..
+ cd ..
       ~ $ cp -R alpha bravo
 ```
 
@@ -694,7 +771,7 @@ stage `0`的`data/letter.txt`项跟合并前一样。stage `0`的`data/number.tx
 
 ```
       ~ $ cd alpha
-~/alpha $ git remote add bravo ../bravo
+ git remote add bravo ../bravo
 ```
 
 回到`alpha`仓库，将`bravo`设置为`alpha`仓库的远程仓库。该操作将在`alpha/.git/config`添加两行内容：
@@ -709,7 +786,7 @@ stage `0`的`data/letter.txt`项跟合并前一样。stage `0`的`data/number.tx
 ### 从远程仓库获取分支
 
 ```
-~/alpha $ cd ../bravo
+ cd ../bravo
 ~/bravo $ printf '12' > data/number.txt
 ~/bravo $ git add data/number.txt
 ~/bravo $ git commit -m '12'
@@ -722,7 +799,7 @@ stage `0`的`data/letter.txt`项跟合并前一样。stage `0`的`data/number.tx
 
 ```
 ~/bravo $ cd ../alpha
-~/alpha $ git fetch bravo master
+ git fetch bravo master
           Unpacking objects: 100%
           From ../bravo
             * branch master -> FETCH_HEAD
@@ -753,7 +830,7 @@ stage `0`的`data/letter.txt`项跟合并前一样。stage `0`的`data/number.tx
 ### 合并FETCH_HEAD
 
 ```
-~/alpha $ git merge FETCH_HEAD
+ git merge FETCH_HEAD
           Updating d14c7d2..94cd04d
           Fast-forward
 ```
@@ -765,7 +842,7 @@ stage `0`的`data/letter.txt`项跟合并前一样。stage `0`的`data/number.tx
 ### 从远程仓库拉取分支
 
 ```
-~/alpha $ git pull bravo master
+ git pull bravo master
           Already up-to-date.
 ```
 
@@ -774,7 +851,7 @@ stage `0`的`data/letter.txt`项跟合并前一样。stage `0`的`data/number.tx
 ### 克隆仓库
 
 ```
-~/alpha $ cd ..
+ cd ..
       ~ $ git clone alpha charlie
           Cloning into 'charlie'
 ```
@@ -785,22 +862,22 @@ stage `0`的`data/letter.txt`项跟合并前一样。stage `0`的`data/number.tx
 
 ```
       ~ $ cd alpha
-~/alpha $ printf '13' > data/number.txt
-~/alpha $ git add data/number.txt
-~/alpha $ git commit -m '13'
+ printf '13' > data/number.txt
+ git add data/number.txt
+ git commit -m '13'
           [master 3238468] 13
 ```
 
 返回`alpha`仓库，将`data/number.txt`修改为`13`，然后提交到`alpha`仓库的`master`分支。
 
 ```
-~/alpha $ git remote add charlie ../charlie
+ git remote add charlie ../charlie
 ```
 
 将`charlie`设为`alpha`仓库的远程分支。
 
 ```
-~/alpha $ git push charlie master
+ git push charlie master
           Writing objects: 100%
           remote error: refusing to update checked out
           branch: refs/heads/master because it will make
@@ -818,7 +895,7 @@ stage `0`的`data/letter.txt`项跟合并前一样。stage `0`的`data/number.tx
 ### 克隆裸仓库
 
 ```
-~/alpha $ cd ..
+ cd ..
       ~ $ git clone alpha delta --bare
           Cloning into bare repository 'delta'
 ```
@@ -839,15 +916,15 @@ delta
 
 ```
       ~ $ cd alpha
-~/alpha $ git remote add delta ../delta
+ git remote add delta ../delta
 ```
 
 回到`alpha`仓库，将`delta`仓库设为`alpha`的远程仓库。
 
 ```
-~/alpha $ printf '14' > data/number.txt
-~/alpha $ git add data/number.txt
-~/alpha $ git commit -m '14'
+ printf '14' > data/number.txt
+ git add data/number.txt
+ git commit -m '14'
           [master cb51da8] 14
 ```
 
@@ -856,7 +933,7 @@ delta
 ![14 commit on alpha](images/31-14-alpha.png)
 
 ```
-~/alpha $ git push delta master
+ git push delta master
           Writing objects: 100%
           To ../delta
             3238468..cb51da8 master -> master
