@@ -740,11 +740,11 @@ Git获取源提交和它指向的树图，将树图中的文件写入工作区�
 
 ```
  git checkout deputy
-          Switched to branch 'deputy'
-           printf 'b' > data/letter.txt
-           git add data/letter.txt
-           git commit -m 'b3'
-                    [deputy 982dffb] b3
+        #  Switched to branch 'deputy'
+ printf 'b' > data/letter.txt
+ git add data/letter.txt
+ git commit -m 'b3'
+        #  [deputy 982dffb] b3
 ```
 
 检出到`deputy`，将`data/letter.txt`内容修改为`b`，然后提交。
