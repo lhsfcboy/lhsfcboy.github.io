@@ -431,6 +431,9 @@ author Your Name <you@example.com> 1728297034 +0000
 committer Your Name <you@example.com> 1728297034 +0000
 
 a1
+
+# 或者用下面的命令从master直接到root的内容
+git cat-file -p $(cut -c 1-4 .git/refs/heads/master)
 ```
 
 - root指向data目录
