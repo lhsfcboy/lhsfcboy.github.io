@@ -2,9 +2,17 @@
 
 - 英文原版：<http://maryrosecook.com/blog/post/git-from-the-inside-out>.
 - 翻译地址：<https://github.com/pysnow530/git-from-the-inside-out/blob/master/README.md>.  
+  GitHub网友 [pysnow530](https://github.com/pysnow530) 取得原作者MaryRosecook同意后对文件进行了第一次翻译。
+  - 这里在其工作的基础上进行了扩展，加入了个人的读书笔记，把语句修改为个人的习惯表达。
 
-GitHub网友 [pysnow530](https://github.com/pysnow530) 取得原作者MaryRosecook同意后对文件进行了第一次翻译。
-这里在其工作的基础上进行了扩展，加入了个人的读书笔记，把语句修改为个人的习惯表达。
+多年前初读这篇文章有醍醐灌顶的感觉，奉为Git原理教程的上乘之作。
+现在从教学的角度来重新看这篇教程，值得改进的地方太多了。
+- 比如每个输出都要搭配对应的命令，不给命令就给输出，还是成了黑盒。
+- 概念的引入缺乏合理规划。
+- 通过`printf`的输入默认没有空格，给学习带来完全没有必要的干扰。
+
+这篇文章的精华大概就是工作流和配图。
+这里试图以Git初学者的角度重新整理一遍。
 
 ## 预备知识
 
@@ -41,6 +49,17 @@ GitHub网友 [pysnow530](https://github.com/pysnow530) 取得原作者MaryRoseco
     - 理论上，一个哈希值可能对应了很多可能的输入。但是实践中很难碰到
     - 所以如果两个文件的哈希值相同，那么我们有很强的信心说这两个文件是相同的。
 
+### 工具的准备
+
+- tree命令
+  - 文章中多次查看目录结构，可以通过`sudo apt install tree`来安装`tree`命令。
+  - 如果由于种种原因无法安装tree命令，那就自己撺一个
+```bash
+            find . | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/" 
+alias tree='find . | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/" '
+```
+
+
 ## 彻底理解Git
 
 本文假设你已经了解Git，并可以使用它对项目做版本控制。我们将重点关注支撑Git的图结构以及图结构的属性是如何指导Git行为的。在考察原理时，我们会创建真实的状态模型，而不是通过各种实验的结果**妄做猜想**。通过这个真实的状态模型，我们可以更直观地了解Git已经做了什么，正在做什么，以及接下来要做什么。
@@ -73,7 +92,7 @@ alpha
     └── letter.txt
 ```
 
-可以通过`sudo apt install tree`来安装`tree`命令。`tree ../alpha`来查看`alpha`的目录结构。
+`tree ../alpha`来查看`alpha`的目录结构。
 
 ### 初始化仓库
 
