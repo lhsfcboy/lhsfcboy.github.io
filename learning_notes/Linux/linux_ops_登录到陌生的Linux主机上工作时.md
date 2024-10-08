@@ -24,15 +24,32 @@
 
 ### 3. 使用 `export` 等设置常用命令的参数
    可以通过 `export` 命令设置一些环境变量，以提高工作效率：
-   ```bash
-   export GREP_OPTIONS='--color=auto'  # 使得 grep 命令以彩色高亮搜索结果
-   export PS1='\u@\h:\w\$ '        # 设置命令行提示符显示 用户名@主机名:当前目录$
-   ```
+```bash
+export GREP_OPTIONS='--color=auto'  # 使得 grep 命令以彩色高亮搜索结果
+# GREP_OPTIONS 已在较新的 grep 版本中被弃用（自 GNU grep 2.21 起）
+   
+alias grep='grep --color=auto -i' # 使得 grep 命令以彩色高亮搜索结果
+export PS1='\u@\h:\w\$ '          # 设置命令行提示符显示 用户名@主机名:当前目录$
 
-### 4. 使用环境变量优化命令行体验
-   一些环境变量可以显著提升操作体验。类似于 `GREP_OPTIONS`，我们可以设置其他有用的环境变量。
+export HISTCONTROL=ignoredups:erasedups
+                                  # ignoredups：忽略重复的命令。
+                                  # erasedups：删除所有重复的命令，只保留最后一个
+export HISTIGNORE="ls:cd:cd -:pwd:exit:history"
+                                  # HISTIGNORE：指定不记录的命令列表
+export PROMPT_COMMAND='history -a'
+                                  # 每次显示提示符前，自动将保存当前会话的历史命令，确保历史记录的实时性
+export CLICOLOR=1                 # 启用颜色输出
+export LS_COLORS='di=34:ln=36:so=35:pi=33:ex=32:*.txt=31:*.sh=32'
+                                  # 定义不同类型文件的颜色编码。
+                                  # 目录（di）为蓝色，符号链接（ln）为青色，可执行文件（ex）为绿色，.txt 文件为红色，.sh 文件为绿色
+```
 
-   **TODO**：询问 ChatGPT 了解更多类似 `GREP_OPTIONS` 的有用环境变量。
+### 模拟tree命令
+```shell
+which tree # 确认没有现存的tree命令或别名
+            find . | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"  # 确认命令运行正常
+alias tree='find . | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/" '
+```
 
 ### 快速掌握系统的主要信息
 
