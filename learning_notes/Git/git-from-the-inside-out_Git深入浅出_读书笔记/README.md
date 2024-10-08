@@ -3,8 +3,7 @@
 - 英文原版：<http://maryrosecook.com/blog/post/git-from-the-inside-out>.
 - 翻译地址：<https://github.com/pysnow530/git-from-the-inside-out/blob/master/README.md>.  
   GitHub网友 [pysnow530](https://github.com/pysnow530) 取得原作者MaryRosecook同意后对文件进行了第一次翻译。
-  - 这里在其工作的基础上进行了扩展，加入了个人的读书笔记，把语句修改为个人的习惯表达。
-
+  
 多年前初读这篇文章有醍醐灌顶的感觉，奉为Git原理教程的上乘之作。
 现在从教学的角度来重新看这篇教程，还是有一些值得商榷的地方。
 - 比如每个输出都要搭配对应的命令，不给命令就给输出，还是成了黑盒。
@@ -12,7 +11,7 @@
 - 通过`printf`的输入默认没有空格，给学习带来完全没有必要的干扰。
 
 这篇文章的精华大概就是工作流和配图。
-这里试图以Git初学者的角度重新整理一遍。
+这里试图以Git初学者的角度重新整理一遍，加入了个人的读书笔记，把语句修改为个人的习惯表达。
 
 ## 预备知识
 
