@@ -503,6 +503,13 @@ git ls-files --stage
           [master f0af7e6] a2
 ```
 
+完成这次提交以后，进一步解释细节前，我们先介绍一个新的命令：
+
+```
+git log
+git log --oneline --graph --all
+```
+
 提交此次变更。Git在这里做的操作跟之前第一次提交时相同。
 
 第一步，创建包含index文件列表的tree图。
@@ -597,17 +604,19 @@ f0af7e62679e144bb28c627ee3e8f7bdb235eee9
 
 Git将`HEAD`更新为`a3`的哈希值。此时仓库仍然处于detached `HEAD`状态，而没有在一个分支上，因为没有ref指向`a3`或它之后的提交。这意味着它很容易丢失。
 
-从现在起，我们将在Git的状态图中忽略tree和blob。
-
 ![a3 commit that is not on a branch](images/10-a3-detached-head.png)
 
 ### 创建分支
 
 ```
  git branch deputy
+
+ cat .git/HEAD
 ```
 
 创建一个新分支`deputy`。该操作只是创建一个新文件`.git/refs/heads/deputy`，并把`HEAD`指向的`a3`的哈希值写入该文件。
+
+deputy是英语中”副手，副职“的意思。
 
 **图属性**：分支只是ref，而ref只是文件。这意味着Git的分支是很轻量的。
 
@@ -650,7 +659,7 @@ ref: refs/heads/master
           switch branches.
 ```
 
-用户小手一抖，将`data/number.txt`文件的内容改成了`789`，然后试图检出`deputy`。Git阻止了这场血案。
+用户一时手误，将`data/number.txt`文件的内容改成了`789`，然后试图检出`deputy`。Git阻止了这场血案。
 
 `HEAD`通过`master`指向`a2`，`data/number.txt`在`a2`提交时的内容是`2`。`deputy`指向`a3`，该文件在`a3`提交时的内容是`3`。而在工作区中，该文件内容是`789`。这些版本的文件内容都不相同，我们必须先解决这些差异。
 
@@ -668,16 +677,27 @@ Git也可以把要检出的文件内容合并到工作区，但这要复杂的�
 
 现在我们意识到了这次失误，将文件改回原内容。现在可以成功检出`deputy`了。
 
+我们当然可以选择手动回复这个操作，实践当中要避免手动的操作，可以使用如下命令
+```
+git restore xxxx.txt
+```
+
 ![deputy checked out](images/13-a3ondeputy.png)
 
 ### 合并祖先提交
 
 ```
  git merge master
-          Already up-to-date.
+ #  Already up-to-date.
 ```
 
 将`master`合并到`deputy`。合并两个分支就是合并他们的提交。`deputy`指向合并的目的提交，`master`指向合并的源提交。Git不会对本次合并做任何操作，只是提示`Already up-to-date.`。
+
+再回顾一次，当前在`master`分支，merge命令会把目标分支deputy的变化吸收到本分支master里。
+```text
+(master) $ git merge deputy
+```
+
 
 **图属性**：提交序列被解释为对项目内容的一系列更改。这意味着，如果源提交是目的提交的祖先提交，Git将不会做合并操作。这些修改已经被合并过了。
 
@@ -685,7 +705,7 @@ Git也可以把要检出的文件内容合并到工作区，但这要复杂的�
 
 ```
  git checkout master
-          Switched to branch 'master'
+ # Switched to branch 'master'
 ```
 
 检出`master`。
@@ -694,7 +714,7 @@ Git也可以把要检出的文件内容合并到工作区，但这要复杂的�
 
 ```
  git merge deputy
-          Fast-forward
+ # Fast-forward
 ```
 
 将`deputy`合并到`master`。Git发现目的提交`a2`是源提交`a3`的祖先提交。Git使用了fast-forward合并。
