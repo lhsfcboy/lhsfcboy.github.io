@@ -437,6 +437,9 @@ a1
 ```
 git cat-file -p ffe2
 040000 tree 0eed1217a2947f4930583229987d90fe5e8e0b74    data
+
+# 或者下面这个命令
+git ls-tree HEAD data     # 查看现在的表示data的tree对象
 ```
 
 - data目录指向两个blob文件
@@ -444,6 +447,9 @@ git cat-file -p ffe2
 git cat-file -p 0eed
 100644 blob 2e65efe2a145dda7ee51d1741299f848e5bf752e    letter.txt
 100644 blob 56a6051ca2b02b04ef92d5150c9ef600403cb1de    number.txt
+
+# 或者下面这个命令
+git ls-tree HEAD data -r  # 查看现在tree对象指向的内容
 ```
 
 - 两个blob文件里储存了文件的具体内容
