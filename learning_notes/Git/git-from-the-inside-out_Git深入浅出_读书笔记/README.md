@@ -15,7 +15,7 @@
 
 ## 预备知识
 
-### Git流行之前的文件版本管理（草稿）
+### Git流行之前的文件版本管理VCS（草稿）
 - 开始一个新项目
   - 建立一个文件夹，在其中写下`helloworld.c`
 - 单个文件到多个文件
@@ -142,7 +142,6 @@ export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 alias tree='find . | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/" '
 ```
 
-
 ## git from the inside out Git深入浅出
 
 本文假设你已经了解Git，并可以使用它对项目做版本控制。
@@ -208,7 +207,6 @@ alpha
 - 注意此时还没后`index`文件
 - 总的来说，`git` 准备了一个空架子，下面我们将看到它是如何被填充的
 - 为了方便起见，我们可以用下面的tree命令暂时省去一些细节
-
 `tree -a -I 'COMMIT_EDITMSG|branches|description|hooks|tags'`
 
 ### 向git添加文件
