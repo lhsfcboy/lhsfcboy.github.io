@@ -544,6 +544,7 @@ commit对象的第一行指向新的`root` tree，第二行`parent`指向父提�
 
 ![a2 commit](images/7-a2.png)
 
+我们看下图，去除了工作区和`index`区域，集中理解两次提交以后的指向关系。
 ![Git graph without the working copy and index](images/8-a2-just-objects-commits-and-refs.png)
 
 **图属性**：项目内容被保存到blob和tree对象组成的树形结构里。这意味着只有变化的文件才被保存到对象数据库。看上图，`a2`重用了`a1`提交前生成的`a` blob。同样的，如果一个目录在提交前后没有变化，那么这个目录及其子目录的tree对象和blob对象都可以重用。通常，我们的单个提交只包含极少的变化文件，这意味着Git可以使用少量磁盘空间保存大量提交历史。
