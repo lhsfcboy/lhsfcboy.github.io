@@ -15,6 +15,7 @@
 
 计划进行的进一步修正：
 - 每个命令行保持先简要说明，再给出命令，后附详细说明的格式
+- 分支间切换时，使用switch命令代替checkout
 
 ## 预备知识
 
@@ -216,7 +217,7 @@ alpha
 
 - 注意此时`objects`文件夹是空的
 - `cat .git/HEAD` 可以发现此时已经指向了`ref: refs/heads/master`
-- 但是，`.git/refs/`还是个空文件夹
+- 但是，`.git/refs/`目录下还没有`master`文件
 - 注意此时还没后`index`文件
 - 总的来说，`git` 准备了一个空架子，下面我们将看到它是如何被填充的
 - 为了方便起见，我们可以用下面的tree命令暂时省去一些细节
@@ -227,7 +228,7 @@ alpha
 ```
  git add data/letter.txt
 ```
-
+这个命令告诉Git，我们想要Git管理这个文件。
 添加`data/letter.txt`到Git。这个命令背后进行了两项操作。
 
 第一，它会在`.git/objects/`目录下创建一个新的blob文件。
@@ -244,7 +245,7 @@ alpha
 ```    
 
 "blob" 是 "Binary Large Object" 的缩写。
-这个blob文件包含了`data/letter.txt`文件压缩处理后的内容，并以内容的哈希值作为文件名。
+这个blob文件包含了`data/letter.txt`文件压缩处理前的内容，并以内容的哈希值作为文件名。
 这意味着我们用`cat`命令来直接查看这个文件是看不到`a`的。
 
 可以用如下命令查看Git压缩处理后的文件的内容：
@@ -253,10 +254,12 @@ git cat-file -p 2e65 #至少要给四个字符作为文件名
 ```
 
 哈希是一段算法，它将给定内容转换为固定长度，且能唯一确定原内容的值。
-例如，Git对`a`作哈希得到`2e65efe2a145dda7ee51d1741299f848e5bf752e`。
-哈希值的头两个字符用作对象数据库的目录名：`.git/objects/2e/`，剩下的字符用作blob文件的文件名：`.git/objects/2e/65efe2a145dda7ee51d1741299f848e5bf752e`。
+例如，Git对`a`这个文件作哈希得到`2e65efe2a145dda7ee51d1741299f848e5bf752e`。
 
-再请注意，Git在对这个压缩处理过的文件求哈希值时加了料：除了文件内容，还加上了文件大小等信息。
+Git管理blob文件时，使用哈希值的头两个字符用作对象数据库的目录名：`.git/objects/2e/`，剩下的字符用作blob文件的文件名：`.git/objects/2e/65efe2a145dda7ee51d1741299f848e5bf752e`。
+
+
+[哈希]再请注意，Git在对这个压缩处理过的文件求哈希值时加了料：除了文件内容，还加上了文件大小等信息。
 所以，单纯运算SHA1得不到`2e65`的结果 
 ```
 sha1sum .git/objects/2e/65efe2a145dda7ee51d1741299f848e5bf752e
@@ -267,7 +270,7 @@ sha1sum .git/objects/2e/65efe2a145dda7ee51d1741299f848e5bf752e
 git hash-object data/letter.txt
 ```
 
-经过这一步的操作，Git将它的内容保存到`objects`目录的过程。如果需要的话，我们随时可以把`data/letter.txt`文件的内容复原出来。当然，目前这些信息下，我们还不知道这个文件的文件名。
+经过这一步的操作，Git将它的内容保存到了`objects`目录下。如果需要的话，我们随时可以把`data/letter.txt`文件的内容复原出来。当然，目前这些信息下，我们还不知道这个文件的文件名。
 
 第二，git将`data/letter.txt`文件添加到index。
 index是一个列表，它记录着仓库需要维护的所有文件。
@@ -319,7 +322,7 @@ data/number.txt 274c0052dd5408f8ae2bc8440029ff67d79bc5c3
 
 我们将`data/number.txt`的内容修正为`1`，然后将文件重新加到index。这条命令会根据新的文件内容重新生成一个blob文件，并更新`data/number.txt`在index中的指向。
 
-### 创建提交
+### 创建第一个提交
 
 ```
 git commit -m 'a1'
@@ -342,7 +345,7 @@ git commit -m 'a1'
   - 概念：分支，其中master是系统给默认分支起的名字
   - HEAD我们可以从名字感性的认识到这是最上面的，最新的。
 
-稍后我们在《在看一遍第一次提交》的部分会反方先再看一遍。
+稍后我们在《在看一遍第一次提交》的部分会反方向再看一遍。
 
 #### 创建tree图结构
 
@@ -360,6 +363,7 @@ Git通过tree图来记录项目的当前状态。
 100664 blob 2e65efe2a145dda7ee51d1741299f848e5bf752e letter.txt
 100664 blob 56a6051ca2b02b04ef92d5150c9ef600403cb1de number.txt
 ```
+我们注意到这与`index`内容相似
 
 第一行记录了`data/letter.txt`文件的所有信息，我们可以使用这些信息来恢复`data/letter.txt`文件。空格分隔的第一部分表示该文件的权限，第二部分表示该记录对应的是一个blob对象，第三部分是该blob的哈希值，第四部分记录了文件名。
 
@@ -407,7 +411,7 @@ ref: refs/heads/master
 
 好了，`HEAD`现在指向`master`，`master`就是我们的当前分支。
 
-`HEAD`和`master`都是引用。引用是一个标签，我们可以通过它找到某个提交。
+`HEAD`和`master`都是引用。引用是类似指针的存在，我们可以通过它找到某个提交。
 
 由于这是我们的第一个提交，代表`master`引用的文件还不存在。不过不用担心，Git会创建该文件`.git/refs/heads/master`，并写入提交对象的哈希值：
 
@@ -421,12 +425,10 @@ ref: refs/heads/master
 
 ![HEAD pointing at master and master pointing at the a1 commit](images/3-a1-refs.png)
 
-`HEAD`指向`master`，这跟提交前一样。但是`master`现在已经存在了，而且指向我们新创建的提交对象。
-
 ### 在看一遍第一次提交
 
 
-`a1`提交指向的`root`就是代表项目的根目录的文件.
+`a1`提交指向的`root`就是代表项目的根目录的tree对象.
 
 但是`master`和`HEAD`是两个引入的新概念。
 `master`是系统给默认分支起的名字。
@@ -515,17 +517,18 @@ git ls-tree -r master
 ![data/number.txt set to 2 in the working copy](images/5-a1-wc-number-set-to-2.png)
 
 
+下面我们将文件添加到Git。此操作将在`objects`目录下添加一个内容为`2`的blob对象，然后将index中的`data/number.txt`记录指向该blob对象。
+```
+ git add data/number.txt
+```
+![data/number.txt set to 2 in the working copy and index](images/6-a1-wc-and-index-number-set-to-2.png)
+
 比较index 和 HEAD的不同
 ```
 git ls-tree -r HEAD
 git ls-files --stage
 ```
 
-下面我们将文件添加到Git。此操作将在`objects`目录下添加一个内容为`2`的blob对象，然后将index中的`data/number.txt`记录指向该blob对象。
-```
- git add data/number.txt
-```
-![data/number.txt set to 2 in the working copy and index](images/6-a1-wc-and-index-number-set-to-2.png)
 
 然后我们提交此次更改为`a2`
 ```
@@ -583,11 +586,10 @@ commit对象的第一行指向新的`root` tree，第二行`parent`指向父提�
 
 - 每个提交都有一个父提交。这意味着仓库可以记录项目提交历史。显然，仓库的第一个提交是没有父提交的。
   - 我们稍后会看到多个提交可能有同一个父提交，或者说一个提交可能有两个父提交
-  - 夫提交没有记录自己的子提交的信息，所以我们可以从任意一个提交向上溯源，找到父提交，直至找到第一个提交。
+  - 父提交没有记录自己的子提交的信息，所以我们可以从任意一个提交向上溯源，找到父提交，直至找到第一个提交，反之却不成立
 
 - ref是某段提交历史的入口。这意味着我们可以给某个提交一个有意义的名字。用户将工作组织成不同`版本线`，并赋予有意义的ref，如`fix-for-bug-376`。
-  - Git使用符号链接来操作提交历史，如`HEAD`、`MERGE_HEAD`和`FETCH_HEAD`。
-  - 从图上能看到这个指向链接
+  - Git使用符号链接来操作提交历史，从图上能看到这个指向链
   - `HEAD`和`master`的用处在此时还不够明确，稍后我们将能体会到
   - 所谓不同的版本线就像是平行宇宙，在某个节点开始分叉，之后在某个节点两条版本线会再次融合
     - 可以先看看后面《合并不同提交线且有相同修改文件的两个提交》部分的的插图体会这句话
@@ -601,8 +603,7 @@ commit对象的第一行指向新的`root` tree，第二行`parent`指向父提�
   - 这是计算机科学中常用的思维方法，只需要保留对一个对象的引用，就可以访问到这个对象
 
 - 工作区和ref指向的提交更容易被访问到，其它提交会麻烦一点。这意味着最近的提交历史更容易被访问，但它们更经常被修改。
-  - [超纲] 或者说，Git has a fading memory that must be jogged with increasingly vicious prods。
-  - 工作区是在历史里最容易找到的，它就在仓库的根目录，不需要执行Git命令。它也是在历史里我们最经常修改的，用户可以针对一个文件修改N个版本，但Git只记录执行`add`命令时的版本。
+  - 工作区是最容易找到的，它就在仓库的根目录，不需要执行Git命令。它也是我们最经常修改的，用户可以针对一个文件修改N个版本，但Git只记录执行`add`命令时的版本。
   - `HEAD`指向的提交很容易找到，它就是当前分支的最近一个提交。`HEAD`也是我们最经常修改的ref
   - 其它ref指向的提交也很容易找到，我们只要把它们检出就可以了。例如`master`
   - 所谓的容易找到就是说从`HEAD`或者`master`开始可以轻松访问到对应的blob文件
@@ -718,7 +719,7 @@ ref: refs/heads/master
 
 用户一时手误，将`data/number.txt`文件的内容改成了`789`，然后试图检出`deputy`。Git阻止了这场血案。
 
-`HEAD`通过`master`指向`a2`，`data/number.txt`在`a2`提交时的内容是`2`。`deputy`指向`a3`，该文件在`a3`提交时的内容是`3`。而在工作区中，该文件内容是`789`。这些版本的文件内容都不相同，我们必须先解决这些差异。
+`HEAD`通过`master`指向`a2`，`data/number.txt`在`a2`提交时的内容是`2`。而在工作区中，该文件内容是`789`。这两个版本的文件内容不相同，我们必须先解决这些差异。
 
 Git可以使用要检出的文件内容替换工作区的文件内容，但这样会导致文件内容的丢失。
 
@@ -744,7 +745,7 @@ git restore xxxx.txt
 
 ### 合并祖先提交
 - 我们当前工作在`deputy`分支。包含有`a3`, `a2`, `a1`三个提交。
-- 而`master`分支包含有`a2`, `a1`, 两个提交。
+- 而`master`分支包含有`a2`, `a1`两个提交。
 - `master`是个更古老的分支。
 
 现在我们将`master`分支合并到`deputy`分支中。
