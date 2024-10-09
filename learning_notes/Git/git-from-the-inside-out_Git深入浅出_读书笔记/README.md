@@ -60,10 +60,17 @@ L大侠的提交
   |  |-letter.txt abcdefgh
   |  |-number.txt 1234
 ```
-- 比较N和B，发现`letter.txt`没有变化。
-- 比较L和B，发现`number.txt`没有变化。
+- 比较N和Base，发现`letter.txt`没有变化。
+- 比较L和Base，发现`number.txt`没有变化。
 
-对同一个文件的修改
+```
+合并后的提交
+  |-data
+  |  |-letter.txt abcdefgh
+  |  |-number.txt 12345678
+```
+
+在看一个对同一个文件的修改的例子
 ```text
 cat letter.txt
 11
@@ -74,7 +81,7 @@ cat letter.txt
 66
 77
 
-Mr.Little Number的提交
+Mr.Header的提交
 cat letter.txt
 00
 22
@@ -84,7 +91,7 @@ cat letter.txt
 66
 77
 
-Ms.Big Number的提交
+Ms.Tailer的提交
 cat letter.txt
 11
 22
@@ -97,11 +104,12 @@ cat letter.txt
 99
 ```
 
-注意，这种合并在函数的语义层面未必是正确的，因此不能疏于检查且务必充分的测试每个新提交。
+所以文本层面上，这种合并是可以自动进行的。
+但是，这种合并在函数的语义层面未必是正确的，因此不能疏于检查且务必充分的测试每个新提交。
 
 ### 哈希函数/摘要算法
 
-哈希函数是一种将给定内容转换为更小的值，且能唯一确定原内容的算法。
+哈希函数是一种将给定内容转换为固定长度的值，且能唯一确定原内容的算法。
 
 - 无论多大的输入，给出的输出是定长的。
   - 例如，Git默认的哈希算法: `SHA-1`，输出为 40 个十六进制字符
@@ -118,7 +126,8 @@ cat letter.txt
     - `e0c9035898dd52fc65c41454cec9c4d2611bfb37 `
     - 这个性质是设计哈希函数的科学家精心调配的
     - 这意味着两个大小相近的文件很难碰撞
-    - 即使恶意碰撞，恶意文件也很难使有意义的
+      - 两个不同文件的哈希值相同叫做碰撞
+    - 即使恶意碰撞，恶意文件也很难是有意义的
     - 例如，原文件`Alice 需要偿还对 Bob 的 1000 美元的债务`
     - 有意义的恶意碰撞`Alice 需要偿还对 Bob 的 10 美元的债务`很难产生
 - 哈希碰撞    
@@ -136,6 +145,7 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
+```
 
 - tree命令
   - 文章中多次查看目录结构，可以通过`sudo apt install tree`来安装`tree`命令。
@@ -422,7 +432,7 @@ ref: refs/heads/master
 `master`是系统给默认分支起的名字。
 `HEAD`我们可以从名字感性的认识到这是`最上面的，最新的`。
 
-从HEAD开始，我们能够一步一步找到文件的内容。
+如下所示，从`HEAD`开始，我们能够一步一步找到文件的内容。
 
 - HEAD指向master
 ```
@@ -477,7 +487,7 @@ git cat-file -p 56a6
 ```
 
 
-这个从HEAD找到具体blob文件的过程可以直接运行
+这个从HEAD找到具体blob文件的过程可以直接一步到位
 ```
 git ls-tree -r HEAD
 ```
@@ -490,7 +500,7 @@ git ls-tree -r master
 
 ### 创建第二个提交
 
-下图是提交`a1`后的Git图（包含工作区和index）：
+下图是提交`a1`后的Git状态图（包含工作区和index）：
 
 ![a1 commit shown with the working copy and index](images/4-a1-wc-and-index.png)
 
@@ -511,16 +521,13 @@ git ls-tree -r HEAD
 git ls-files --stage
 ```
 
-
-
+下面我们将文件添加到Git。此操作将在`objects`目录下添加一个内容为`2`的blob对象，然后将index中的`data/number.txt`记录指向该blob对象。
 ```
  git add data/number.txt
 ```
-
-将文件添加到Git。此操作将在`objects`目录下添加一个内容为`2`的blob对象，然后将index中的`data/number.txt`记录指向该blob对象。
-
 ![data/number.txt set to 2 in the working copy and index](images/6-a1-wc-and-index-number-set-to-2.png)
 
+然后我们提交此次更改为`a2`
 ```
  git commit -m 'a2'
           [master f0af7e6] a2
@@ -534,7 +541,7 @@ git log --oneline --graph --all
 ```
 `git log`可以查看当前的提交记录，包括提交记录的提交者、提交日期、提交信息等。
 
-提交此次变更时，Git在这里做的操作跟之前第一次提交时相同。
+回到这次提交。提交此次变更时，Git在这里做的操作跟之前第一次提交时相同。
 
 第一步，创建包含index文件列表的tree图。
 
@@ -575,9 +582,10 @@ commit对象的第一行指向新的`root` tree，第二行`parent`指向父提�
 - 项目内容被保存到blob和tree对象组成的树形结构里。这意味着只有变化的文件才被保存到对象数据库。看上图，`a2`重用了`a1`提交前生成的`a` blob。同样的，如果一个目录在提交前后没有变化，那么这个目录及其子目录的tree对象和blob对象都可以重用。通常，我们的单个提交只包含极少的变化文件，这意味着Git可以使用少量磁盘空间保存大量提交历史。
 
 - 每个提交都有一个父提交。这意味着仓库可以记录项目提交历史。显然，仓库的第一个提交是没有父提交的。
-  - 我们稍后会看到多个提交可能有同一个父提交，但是一个提交只能有一个父提交。
+  - 我们稍后会看到多个提交可能有同一个父提交，或者说一个提交可能有两个父提交
+  - 夫提交没有记录自己的子提交的信息，所以我们可以从任意一个提交向上溯源，找到父提交，直至找到第一个提交。
 
-- ref是某段提交历史的入口。这意味着我们可以给某个提交一个有意义的名字。用户将工作组织成不同版本线，并赋予有意义的ref，如`fix-for-bug-376`。
+- ref是某段提交历史的入口。这意味着我们可以给某个提交一个有意义的名字。用户将工作组织成不同`版本线`，并赋予有意义的ref，如`fix-for-bug-376`。
   - Git使用符号链接来操作提交历史，如`HEAD`、`MERGE_HEAD`和`FETCH_HEAD`。
   - 从图上能看到这个指向链接
   - `HEAD`和`master`的用处在此时还不够明确，稍后我们将能体会到
@@ -589,27 +597,29 @@ commit对象的第一行指向新的`root` tree，第二行`parent`指向父提�
 - `objects/`目录下的结点是不可变的。添加的文件内容和创建的提交都保存在`objects`目录下。
 
 - ref是可变的。因此，一个分支的状态是可以修改的。`master`分支指向的提交可能是项目当前最好的版本，但它会被一个新的更好的提交取代。
-  - 所谓的`ref`，是类似C语言`指针`的概念，实际上有些材料就把`ref`称为指针
-  
+  - 所谓的`ref`，就是引用，是类似C语言`指针`的概念，实际上有些材料就把`ref`称为指针，例如把`HEAD`称为头指针
+  - 这是计算机科学中常用的思维方法，只需要保留对一个对象的引用，就可以访问到这个对象
 
-- 工作区和ref指向的提交更容易被访问到，其它提交会麻烦一点。这意味着最近的提交历史更容易被访问，但它们更经常被修改。或者说，Git has a fading memory that must be jogged with increasingly vicious prods。
-
-工作区是在历史里最容易找到的，它就在仓库的根目录，不需要执行Git命令。它也是在历史里我们最经常修改的，用户可以针对一个文件修改N个版本，但Git只记录执行`add`命令时的版本。
-
-`HEAD`指向的提交很容易找到，它就是当前分支的最近一个提交。执行`git statsh`<sup>4</sup>命令后的工作区就是它的内容。同时，`HEAD`也是我们最经常修改的ref。
-
-其它ref指向的提交也很容易找到，我们只要把它们检出就可以了。修改其它分支没有修改`HEAD`来得经常，但当修改其它分支涉及到的功能时，它们就会变得非常有用。
-
-没有被ref指向的提交是很难找到的。在某个ref上的提交越多，操作之前的提交就越不容易。但我们通常很少操作很久之前的提交<sup>5</sup>。
+- 工作区和ref指向的提交更容易被访问到，其它提交会麻烦一点。这意味着最近的提交历史更容易被访问，但它们更经常被修改。
+  - [超纲] 或者说，Git has a fading memory that must be jogged with increasingly vicious prods。
+  - 工作区是在历史里最容易找到的，它就在仓库的根目录，不需要执行Git命令。它也是在历史里我们最经常修改的，用户可以针对一个文件修改N个版本，但Git只记录执行`add`命令时的版本。
+  - `HEAD`指向的提交很容易找到，它就是当前分支的最近一个提交。`HEAD`也是我们最经常修改的ref
+  - 其它ref指向的提交也很容易找到，我们只要把它们检出就可以了。例如`master`
+  - 所谓的容易找到就是说从`HEAD`或者`master`开始可以轻松访问到对应的blob文件
+    - 也就是刚刚提到的ref是某段提交历史的入口
 
 ### 检出提交
+- 所谓的检出提交，就是把某个状态的项目文件还原到工作区目录下。
+- 那么工作区原来的文件怎么办？ 一般来说工作区的文件都以某种形式存在于blob文件里了，我们当然可以随时再回复到那个状态。
+- 如果某个文件修改以后还没来得及提交呢？这种情况Git会阻止我们checkout, 详情后续介绍。
 
+下面我们将把`a2`这个提交checkout到工作区。
 ```
  git checkout 37888c2
  >         You are in 'detached HEAD' state...
 ```
 
-使用`a2`的哈希值检出该提交。(此命令不能直接运行，请先使用`git log`找到你仓库里`a2`的哈希值。)
+使用`a2`的哈希值检出该提交。(此命令不能直接照抄运行，请先使用`git log`找到你仓库里`a2`的哈希值。)
 
 检出操作分四步。
 
@@ -625,7 +635,8 @@ commit对象的第一行指向新的`root` tree，第二行`parent`指向父提�
 f0af7e62679e144bb28c627ee3e8f7bdb235eee9
 ```
 
-将`HEAD`内容设置为某个哈希值会导致仓库进入detached `HEAD`状态。注意下图中的`HEAD`，它直接指向`a2`提交，而不再指向`master`。
+[严重超纲] 将`HEAD`内容设置为某个哈希值会导致仓库进入detached `HEAD`状态。注意下图中的`HEAD`，它直接指向`a2`提交，而不再指向`master`。
+这里我们主要体会以下checkout的概念，和ref的指向变化。
 
 ![Detached HEAD on a2 commit](images/9-a2-detached-head.png)
 
@@ -639,8 +650,14 @@ f0af7e62679e144bb28c627ee3e8f7bdb235eee9
 将`data/number.txt`的内容修改为`3`，然后提交。Git查看`HEAD`来确定`a3`的父提交，它没有发现分支，而是找到了`a2`的哈希值。
 
 Git将`HEAD`更新为`a3`的哈希值。此时仓库仍然处于detached `HEAD`状态，而没有在一个分支上，因为没有ref指向`a3`或它之后的提交。这意味着它很容易丢失。
+- `detached HEAD`（分离的 HEAD 状态）具体是说当前的 HEAD 不指向某个分支，而是指向一个具体的提交
+- `因为没有ref指向`a3`或它之后的提交。这意味着它很容易丢失。`
+  - 我们通常期望分支ref指向某个版本线的最新提交。而现在不是这个状态。
+  - 一旦此时`HEAD`被修改指向为`a1`或`a2`, 那么就再也没有ref指向`a3`了, 除非我们事先记下来了`a3`的哈希值, 否则再也无法访问到它了。
 
 ![a3 commit that is not on a branch](images/10-a3-detached-head.png)
+
+之后我们学习了创建分支后，会学习`git switch`来在分支间切换。
 
 ### 创建分支
 
@@ -654,7 +671,8 @@ Git将`HEAD`更新为`a3`的哈希值。此时仓库仍然处于detached `HEAD`�
 
 deputy是英语中”副手，副职“的意思。
 
-**图属性**：分支只是ref，而ref只是文件。这意味着Git的分支是很轻量的。
+分支只是ref，而ref只是文件。这意味着Git的分支是很轻量的。
+- 意思是说系统没有傻乎乎的重新复制一份所有文件
 
 创建`deputy`分支使得`a3`附属到了该分支上，`a3`现在安全了。`HEAD`仍然处于detached状态，因为它仍直接指向一个提交。
 
@@ -664,7 +682,9 @@ deputy是英语中”副手，副职“的意思。
 
 ```
  git checkout master
-          Switched to branch 'master'
+>          Switched to branch 'master'
+
+# 更加现代的用法是 git switch
 ```
 
 检出`master`分支。
@@ -680,6 +700,7 @@ deputy是英语中”副手，副职“的意思。
 ```
 ref: refs/heads/master
 ```
+至此，`HEAD`重新指向了分支。
 
 ![master checked out and pointing at the a2 commit](images/12-a3-on-master-on-a2.png)
 
@@ -688,11 +709,11 @@ ref: refs/heads/master
 ```
  printf '789' > data/number.txt
  git checkout deputy
-          Your changes to these files would be overwritten
-          by checkout:
-            data/number.txt
-          Commit your changes or stash them before you
-          switch branches.
+>         Your changes to these files would be overwritten
+>         by checkout:
+>           data/number.txt
+>         Commit your changes or stash them before you
+>         switch branches.
 ```
 
 用户一时手误，将`data/number.txt`文件的内容改成了`789`，然后试图检出`deputy`。Git阻止了这场血案。
@@ -701,7 +722,7 @@ ref: refs/heads/master
 
 Git可以使用要检出的文件内容替换工作区的文件内容，但这样会导致文件内容的丢失。
 
-Git也可以把要检出的文件内容合并到工作区，但这要复杂的多。
+[超纲] Git也可以把要检出的文件内容合并到工作区，但这要复杂的多。
 
 所以Git终止了检出操作。
 
@@ -716,26 +737,26 @@ Git也可以把要检出的文件内容合并到工作区，但这要复杂的�
 我们当然可以选择手动回复这个操作，实践当中要避免手动的操作，可以使用如下命令
 ```
 git restore xxxx.txt
+# 将其恢复到上一次提交（HEAD）的状态
 ```
 
 ![deputy checked out](images/13-a3ondeputy.png)
 
 ### 合并祖先提交
+- 我们当前工作在`deputy`分支。包含有`a3`, `a2`, `a1`三个提交。
+- 而`master`分支包含有`a2`, `a1`, 两个提交。
+- `master`是个更古老的分支。
 
+现在我们将`master`分支合并到`deputy`分支中。
 ```
  git merge master
  #  Already up-to-date.
 ```
 
-将`master`合并到`deputy`。合并两个分支就是合并他们的提交。`deputy`指向合并的目的提交，`master`指向合并的源提交。Git不会对本次合并做任何操作，只是提示`Already up-to-date.`。
-
-再回顾一次，当前在`master`分支，merge命令会把目标分支deputy的变化吸收到本分支master里。
-```text
-(master) $ git merge deputy
-```
-
-
-**图属性**：提交序列被解释为对项目内容的一系列更改。这意味着，如果源提交是目的提交的祖先提交，Git将不会做合并操作。这些修改已经被合并过了。
+- 合并两个分支就是合并他们的提交。`deputy`指向合并的目的提交，`master`指向合并的源提交。
+- `deputy`分支将把所有`master`的提交合并到自己。
+- 显然，这是已经现成的状态。
+- Git不会对本次合并做任何操作，只是提示`Already up-to-date.`。
 
 ### 合并后代提交
 
@@ -752,14 +773,17 @@ git restore xxxx.txt
  git merge deputy
  # Fast-forward
 ```
-
+再回顾一次，当前在`master`分支，merge命令会把目标分支`deputy`的变化吸收到本分支`master`里。
+```text
+(master) $ git merge deputy
+```
 将`deputy`合并到`master`。Git发现目的提交`a2`是源提交`a3`的祖先提交。Git使用了fast-forward合并。
 
 Git获取源提交和它指向的树图，将树图中的文件写入工作区和index。然后使用"fast-forward"技术将`master`指向`a3`。
 
 ![a3 commit from deputy fast-forward merged into master](images/15-a3-on-master.png)
 
-**图属性**：提交序列被解释为对仓库内容的一系列更改。这意味着，如果源提交是目的提交的后代提交，提交历史是不会改变的，因为已经存在一段提交来描述目的提交和源提交之间的变化。但是Git的状态图是会改变的。`HEAD`指向的`ref`会更新为源提交。
+上述的两种合并只能算是重新整理了分支状态，下面开始真正意义上的合并。
 
 ### 合并不同提交线的两个提交
 
@@ -785,9 +809,9 @@ Git获取源提交和它指向的树图，将树图中的文件写入工作区�
 
 ![a4 committed to master, b3 committed to deputy and deputy checked out](images/16-a4-b3-on-deputy.png)
 
-**图属性**：多个提交可以共用一个父提交，这意味着我们可以在提交历史里创建新的提交线。
-
-**图属性**：一个提交可以有多个父提交，这意味着我们可以通过创建一个合并提交来合并两个不同的提交线。
+- 我们之前提到多个提交可以共用一个父提交，这意味着我们可以在任意一个历史提交上开始创建新的提交线。
+- 一个提交可以有多个父提交，这意味着我们可以通过创建一个合并提交来合并两个不同的提交线。
+  - 两个平行宇宙收束
 
 ```
  git merge master -m 'b4'
@@ -800,11 +824,11 @@ Git发现目的提交`b3`和源提交`a4`在两个不同的提交线上，它创
 
 第一步，Git将源提交的哈希值写入文件`alpha/.git/MERGE_HEAD`。若此文件存在，说明Git正在做合并操作。
 
-第二步，Git查找源提交和目的提交的最近一个公共父提交，即基提交。
+第二步，Git查找源提交和目的提交的最近一个公共父提交，即基提交`a3`。
 
 ![a3, the base commit of a4 and b3](images/17-a4-b3-on-deputy.png)
 
-**图属性**：每个提交都有一个父提交。这意味着我们可以发现两个提交线分开自哪个提交。Git查找`b3`和`a4`的所有祖先提交，发现了最近的公共父提交`a3`。这正是他们的基提交。
+- 每个提交都有一个父提交。这意味着我们可以发现两个提交线分开自哪个提交。Git查找`b3`和`a4`的所有祖先提交，发现了最近的公共父提交`a3`。这正是他们的基提交。
 
 第三步，Git为基提交、源提交和目的提交创建索引。
 
@@ -816,7 +840,14 @@ Git获取基提交、源提交和目的提交的文件列表，然后针对每�
 
 第二项记录`data/number.txt`的状态。在我们的例子中，该文件内容在基提交和目的提交相同，但在基提交和源提交不同。这个条目的状态也是修改。
 
-**图属性**：查找一个合并操作的基提交是可行的。这意味着，如果基提交中的一个文件只在源提交或目的提交做了修改，Git可以自动合并该文件，这样就减少了用户的工作量。
+总结为表格
+|                 | base: a3 | master: a4 | deputy: b3 |
+|-----------------|----------|------------|------------|
+| data/letter.txt | a        | a          | b          |
+| data/number.txt | 3        | 4          | 3          |
+
+
+如果基提交中的一个文件只在源提交或目的提交做了修改，VCS可以自动合并该文件，这样就减少了用户的工作量。
 
 第五步，Git将差异中的项更新到工作区。`data/letter.txt`内容被修改为`b`，`data/number.txt`内容被修改为`4`。
 
@@ -900,7 +931,7 @@ b4
 
 第五步，差异列表中的文件被写入工作区。对于冲突的部分，Git将两个版本都写入工作区。`data/number.txt`的内容变为：
 
-```
+```text
 <<<<<<< HEAD
 6
 =======
@@ -979,7 +1010,7 @@ stage `0`的`data/letter.txt`项跟合并前一样。stage `0`的`data/number.tx
 
 ```
  cd ..
-      ~ $ cp -R alpha bravo
+cp -R alpha bravo
 ```
 
 将`alpha/`拷贝到`bravo/`。此时将出现下面的目录结构：
@@ -1001,7 +1032,7 @@ stage `0`的`data/letter.txt`项跟合并前一样。stage `0`的`data/number.tx
 ### 关联其它仓库
 
 ```
-      ~ $ cd alpha
+ cd alpha
  git remote add bravo ../bravo
 ```
 
@@ -1186,5 +1217,5 @@ Git构建在图上，几乎所有的Git命令都是在操作这个图。想要�
 
 原文的脚注部分保留部分于此
 - `git prune`删除所有不能被ref访问到的对象。执行此命令可能会丢失数据。
-4. `git stash`将工作区和`HEAD`提交的所有差异保存到一个安全的地方。它们可以在以后取回。
-5. `rebase`命令可以用来添加、编辑或删除历史提交。
+- `git stash`将工作区和`HEAD`提交的所有差异保存到一个安全的地方。它们可以在以后取回。
+- `rebase`命令可以用来添加、编辑或删除历史提交。
