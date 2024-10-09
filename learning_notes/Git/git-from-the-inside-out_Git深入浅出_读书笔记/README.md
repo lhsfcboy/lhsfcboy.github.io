@@ -1008,6 +1008,8 @@ stage `0`的`data/letter.txt`项跟合并前一样。stage `0`的`data/number.tx
 
 ### 拷贝仓库
 
+从这里开始，我们模拟了两个人之间的合作情况。建议分别开两个终端窗口，方便自己确认当前状态。
+
 ```
  cd ..
 cp -R alpha bravo
