@@ -16,3 +16,8 @@ Linux在工程实践中很多时候时作为运行平台。
 - 《Linux 101》作者：中国科学技术大学 Linux 用户协会
   - https://101.lug.ustc.edu.cn/
   - 排版精美
+
+
+- Bash 脚本教程 作者： 阮一峰
+  - 发布说明：https://www.ruanyifeng.com/blog/2020/04/bash-tutorial.html
+  - 阅读页面：https://wangdoc.com/bash/
