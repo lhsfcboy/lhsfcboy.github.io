@@ -14,14 +14,16 @@
 
 ## 平板电脑
 + 现在使用: iPad mini
-
-
     
 ## 电脑
-+ 现在使用: ThinkPad x220i 加SSD 加内存
 + 现在备用：RedmiBook Pro 14 2022 锐龙版
-  + https://www.mi.com/redmibook/pro14-amd/specs 
-+ 现在退役: ThinkPad E595  
+  + https://www.mi.com/redmibook/pro14-amd/specs
+  + Windows 11 系统
++ 现在退役: ThinkPad E595
+  + Windows 10 系统
++ 现在备用: ThinkPad x220i 加SSD 加内存
+    + Windows 7 系统
+
 ###### 对电脑的需求
 + 原生支持蓝牙(几乎没有不支持的)
 + SSD硬盘, 不低于512G, 最好双硬盘
