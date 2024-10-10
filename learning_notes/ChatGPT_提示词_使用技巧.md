@@ -34,3 +34,16 @@ From: https://openai.com/chatgpt/pricing/
 
 - [TODO] 是否有效果完全一致的中文版呢?
 
+## 输出Markdown格式
+
+在输出markdown格式的回答，而回答内容本身包含连续三个单引号时，ChatGPT的Web页面会错误的进行渲染。
+
+目前找到的解决方案是，额外给出一个提示词：
+```
+Enclose it to avoid render it in browser (Plain Text Format)
+```
+
+尚未找到等同的中文提示词。
+
+方案来自：https://community.openai.com/t/chatgpt-output-as-markdown/501444/15
+
