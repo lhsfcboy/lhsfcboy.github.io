@@ -1,85 +1,68 @@
-# Bash的基础操作
+# Bash 的基础操作
+- 移动光标
+- 命令编辑
+- 历史命令
 
-## Moving 光标跳转
+## 移动光标
 
-![visual cheetsheet](https://raw.githubusercontent.com/fliptheweb/bash-shortcuts-cheat-sheet/master/moving_cli.png)
+![快捷键图示](https://raw.githubusercontent.com/fliptheweb/bash-shortcuts-cheat-sheet/master/moving_cli.png)
 
-| command  | description                    |
-|----------|--------------------------------|
-| ctrl + a | Goto BEGINNING of command line |
-| ctrl + e | Goto END of command line       |
-| ctrl + b | move back one character        |
-| ctrl + f | move forward one character     |
-| alt + f  | move cursor FORWARD one word   |
-| alt + b  | move cursor BACK one word      |
-| ctrl + xx | Toggle between the start of line and current cursor position |
-| ctrl + ] + x	 | Where x is any character, moves the cursor forward to the next occurance of x |
-| alt + ctrl + ] + x  | Where x is any character, moves the cursor backwards to the previous occurance of x |
+| 命令      | 描述                                |
+|-----------|-------------------------------------|
+| ctrl + a  | 跳转到命令行的开头                   |
+| ctrl + e  | 跳转到命令行的末尾                   |
+| ctrl + b  | 光标向左移动一个字符                 |
+| ctrl + f  | 光标向右移动一个字符                 |
+| alt + f   | 光标向右移动一个单词                 |
+| alt + b   | 光标向左移动一个单词                 |
 
-在 Linux 命令行输入命令时，有很多快捷键，比如 ctrl-a（回到行首）。它们都来自行编辑库 readline。
-[Things You Didn't Know About GNU Readline](https://twobithistory.org/2019/08/22/readline.html)
+在 Linux 命令行中输入命令时，有许多快捷键，例如 ctrl-a（回到行首）。这些快捷键来自 Readline 行编辑库。
+[你可能不知道的 GNU Readline](https://twobithistory.org/2019/08/22/readline.html)
 
-## Edit / Other
+## 编辑/其他操作
 
-| command  | description                    |
-|----------|--------------------------------|
-| ctrl + d          | Delete the character under the cursor |
-| ctrl + h          | Delete the previous character before cursor |
-| ctrl + u          | Clear all / cut BEFORE cursor |
-| ctrl + k          | Clear all / cut AFTER cursor |
-| ctrl + w          | delete the word BEFORE the cursor |
-| alt + d           | delete the word FROM the cursor |
-| ctrl + y          | paste (if you used a previous command to delete) |
-| ctrl + i          | command completion like Tab
-| ctrl + l          | Clear the screen (same as clear command) |
-| ctrl + c          | kill whatever is running |
-| ctrl + d          | Exit shell (same as exit command when cursor line is empty) |
-| ctrl + z          | Place current process in background |
-| ctrl + _          | Undo |
-| ctrl + x ctrl + u	| Undo the last changes. ctrl+ _ does the same |
-| ctrl + t          | Swap the last two characters before the cursor |
-| esc + t           | Swap last two words before the cursor |
-| alt + t           | swap current word with previous |
-| esc + .           | |
-| esc + _           | |
-| alt + [Backspace] | delete PREVIOUS word |
-| alt + <           | Move to the first line in the history |
-| alt + >           | Move to the end of the input history, i.e., the line currently being entered |
-| alt + ?           | display the file/folder names in the current path as help |
-| alt + *           | print all the file/folder names in the current path as parameter |
-| alt + .           | print the LAST ARGUMENT (ie "vim file1.txt file2.txt" will yield "file2.txt") |
-| alt + c           | capitalize the first character to end of word starting at cursor (whole word if cursor is at the beginning of word)|
-| alt + u           | make uppercase from cursor to end of word |
-| alt + l           | make lowercase from cursor to end of word |
-| alt + n           | |
-| alt + p           | Non-incremental reverse search of history. |
-| alt + r           |Undo all changes to the line|
-| alt + ctl + e     |Expand command line. |
-| ~[TAB][TAB]       | List all users |
-| $[TAB][TAB]       | List all system variables |
-| @[TAB][TAB]       | List all entries in your /etc/hosts file |
-| [TAB]             | Auto complete |
-| cd -              | change to PREVIOUS working directory |
+| 命令              | 描述                                |
+|-------------------|-------------------------------------|
+| ctrl + d          | 删除光标下的字符                    |
+| ctrl + h          | 删除光标前的字符                    |
+| ctrl + u          | 清除光标前的所有内容                |
+| ctrl + k          | 清除光标后的所有内容                |
+| ctrl + w          | 删除光标前的一个单词                |
+| alt + d           | 删除光标后的一个单词                |
+| ctrl + y          | 粘贴先前删除的内容                  |
+| ctrl + i          | 命令补全（类似 Tab 键）             |
+| ctrl + l          | 清屏（等同于 clear 命令）           |
+| ctrl + c          | 终止当前运行的进程                  |
+| ctrl + d          | 退出 shell（当行为空时与 exit 命令相同） |
+| ctrl + z          | 将当前进程置于后台                  |
+| alt + [Backspace] | 删除光标前的单词                   |
+| alt + ?           | 显示当前路径中的文件/文件夹帮助     |
+| alt + *           | 显示当前路径中的所有文件/文件夹     |
+| alt + .           | 显示上一个命令的最后一个参数        |
+| ~[TAB][TAB]       | 列出所有用户                       |
+| $[TAB][TAB]       | 列出所有系统变量                   |
+| @[TAB][TAB]       | 列出 /etc/hosts 文件中的所有条目    |
+| [TAB]             | 自动补全                           |
+| cd -              | 切换到上一个工作目录               |
 
-## History
+## 历史记录
 
-| command  | description                    |
-|----------|--------------------------------|
-| ctrl + r          | Search backward starting at the current line and moving 'up' through the history as necessary |
-| crtl + s          | Search forward starting at the current line and moving 'down' through the history as necessary |
-| ctrl + p          | Fetch the previous command from the history list, moving back in the list (same as up arrow) |
-| ctrl + n          | Fetch the next command from the history list, moving forward in the list (same as down arrow) |
-| ctrl + o          | Execute the command found via Ctrl+r or Ctrl+s |
-| ctrl + g          | Escape from history searching mode |
-| !!                | Run PREVIOUS command (ie `sudo !!`) |
-| !vi               | Run PREVIOUS command that BEGINS with vi |
-| !vi:p             | Print previously run command that BEGINS with vi |
-| !n		            | Execute nth command in history |
-| !$		            | Last argument of last command |
-| !^		            | First argument of last command |
-| ^abc^xyz	        | Replace first occurance of abc with xyz in last command and execute it |
+| 命令              | 描述                                |
+|-------------------|-------------------------------------|
+| ctrl + r          | 从当前行开始，向上搜索历史记录       |
+| ctrl + s          | 从当前行开始，向下搜索历史记录       |
+| ctrl + p          | 获取历史记录中的上一条命令（等同于向上箭头） |
+| ctrl + n          | 获取历史记录中的下一条命令（等同于向下箭头） |
+| ctrl + o          | 执行通过 Ctrl+r 或 Ctrl+s 搜索到的命令 |
+| ctrl + g          | 退出历史记录搜索模式                |
+| !!                | 执行上一条命令（如 `sudo !!`）      |
+| !vi               | 执行以 vi 开头的上一条命令          |
+| !n                | 执行历史记录中的第 n 条命令         |
+| !$                | 上一条命令的最后一个参数            |
+| !^                | 上一条命令的第一个参数              |
+| alt + <           | 跳转到历史记录的第一行              |
+| alt + >           | 跳转到历史记录的最后一行            |
 
-
-## References
+### 参考资料
 0. https://gist.github.com/tuxfight3r/60051ac67c5f0445efee
 1. https://github.com/fliptheweb/bash-shortcuts-cheat-sheet/blob/master/README.md
