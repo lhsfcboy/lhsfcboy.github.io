@@ -16,8 +16,12 @@
   - 将下载后的字体文件解压缩，然后将文件复制到 %windir%\Fonts 文件夹
 - Dropbox https://www.dropbox.com/install    
 - Everything 文件搜索工具 https://www.voidtools.com/zh-cn/
+
+## 远程办公区
 - ZOOM https://zoom.us/download
 - 腾讯会议
+- Citrix Workspace App
+
   
 ## 基础软件 - 输入法
 现代的微软自带输入法已经比较堪用。
@@ -57,6 +61,7 @@
   - http://maruko.appinn.me
 - 转码
   - HandBrake和ShanaEncoder
+    
 ## 录屏
 - screen To Gif
   - http://screentogif.codeplex.com
@@ -68,6 +73,7 @@
   - 这款录屏工具非常轻量，仅 675 KB，并且直接在 Windows Store 上架，相比于传统的录屏工具在安全性上更加可靠
 
 ## 不常用软件备份区
+- LibreOffice
 - 火绒安全软件
 - qBittorrent增强版
   - 现代人已经不依靠下载软件了，以防万一做个记录
@@ -110,7 +116,10 @@
 ## 磁盘空间管理
 - SpaceSniffer
   - 图形化的页面直观展示各个文件夹的磁盘空间占用
-
+- wiztree
+  - 快速、轻量级的硬盘空间分析工具
+  - 有portable版本
+    
 ## 资源浏览器增强
 - Windows11开始微软默认提供了基本且简陋的标签式资源浏览器页面，勉强堪用
 - Clover
@@ -126,3 +135,7 @@
   - Preview, Uncheck Show preview ... 
   - 双击Toolbar时复制现有Tab 
   - Events, Double Clikc on Toolbar, Duplicate active tab
+
+## 危险工具
+- DiskGenius
+  - 磁盘分区&恢复
