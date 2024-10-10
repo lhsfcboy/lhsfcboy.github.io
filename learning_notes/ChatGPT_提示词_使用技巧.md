@@ -44,3 +44,6 @@ Enclose it to avoid render it in browser (Plain Text Format)
 ```
 
 尚未找到等同的中文提示词。
+
+方案来自：https://community.openai.com/t/chatgpt-output-as-markdown/501444/15
+
