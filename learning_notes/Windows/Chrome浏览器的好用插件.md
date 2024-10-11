@@ -14,12 +14,19 @@
   - 替代品： uBlock Origin Lite
 - Better History
   - 分日期、时间轴查看浏览历史
-- Enable Copy
 - Distill web monitor
   - 页面变化监视
 
 ## 相对不常用的部分插件
 
+- 侧边栏垂直标签页
+  - 竖向展示标签页
+  - 标签页多而标题过长时，原有的标签页难以管理  这个插件通过在侧边栏中竖向展示标签页解决这个问题
+  - 类似的国外产品：  Tab Shelf 
+- 网页清道夫
+  - 
+- Enable Copy
+  - 破除复制限制功能
 - Grammarly for Chrome
   - 英语语法检查
 - Nimbus 截屏 录屏
@@ -27,7 +34,7 @@
   - 完全用键盘操作网页
   - 修改键位, 使用左键盘区的字母标记链接, 来实现单手操作
   - https://chromewebstore.google.com/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb
-  - 
+  - F键启动跳转链接
 - Stylish
   - 为任意网站自定义主题
 - Tampermonkey
