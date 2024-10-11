@@ -1,5 +1,7 @@
 # Python虚拟环境的设置
 
+[[toc]]
+
 ## 所谓全局环境
 
 - pip: python的包管理工具，可以用于安装python包。
@@ -57,46 +59,75 @@ https://docs.python.org/zh-cn/3.12/library/venv.html
 - virtualenv: 创建隔绝的Python环境的工具
 - virtualenvwrapper: 对virtualenv的一层包装
 
+主要命令
+- 查看所有的命令：virtualenvwrapper --help
+- 创建基本环境：mkvirtualenv [环境名]
+  - mkvirtualenv --python=/usr/bin/python2.7 testenv
+- 删除环境：rmvirtualenv [环境名]
+- 激活环境：workon [环境名]
+- 退出环境：deactivate
+- 列出所有环境：workon 或者 lsvirtualenv -b
+
 
 ```bash
-
 pip install virtualenv
-virtualenv --version
+virtualenv test_venv
+tree test_venv/ -L 2
+test_venv/
+├── bin
+│   ├── activate
+│   ├── activate.csh
+│   ├── activate.fish
+│   ├── activate_this.py
+│   ├── easy_install
+│   ├── easy_install-3.6
+│   ├── pip
+│   ├── pip3
+│   ├── pip3.6
+│   ├── python -> python3.6
+│   ├── python3 -> python3.6
+│   ├── python3.6
+│   ├── python-config
+│   └── wheel
+├── include
+│   └── python3.6m -> /usr/local/include/python3.6m
+├── lib
+│   └── python3.6
+└── pip-selfcheck.json
 
-cd my_project_folder
-virtualenv my_project
-# virtualenv my_project 将会在当前的目录中创建一个文件夹，
-# 包含了Python可执行文件， 以及 pip 库的一份拷贝
-
-virtualenv -p /usr/bin/python2.7 my_project
-# 可以选择使用一个Python解释器来创建
+## bin 目录中包含一些在这个虚拟环境中可用的命令，以及开启虚拟环境的脚本 activate
+## include 中包含虚拟环境中的头文件，包括 Python 的头文件
+## lib 中就是一些依赖库
 
 # 激活虚拟环境
-source my_project/bin/activate
-
-pip install virtualenvwrapper
-export WORKON_HOME=~/Envs
-source /usr/local/bin/virtualenvwrapper.sh
-
-# 创建一个虚拟环境
-mkvirtualenv my_project
-# WORKON_HOME中创建 my_project 文件夹
-mkvirtualenv --python=python3.6 p36
-
-# 在虚拟环境上工作
-workon my_project
-
-# 停止
+source /path/to/project/spider/bin/activate
+# 退出虚拟环境
 deactivate
 
-# 删除
-rmvirtualenv my_project
+# 删除虚拟环境
+## 删掉掉目录下的 bin、include 和 lib 三个目录
+```
 
-# 列举所有的环境
-lsvirtualenv
+如果没有启动虚拟环境，系统也安装了pip工具，那么套件将被安装在系统环境中，为了避免发生此事，可以在 `~/.bashrc` 文件中加上：`export PIP_REQUIRE_VIRTUALENV=true`
 
-# 查看环境里安装了哪些包
-lssitepackages
+### virtualenvwrapper
+
+virtualenv 的一个最大的缺点就是，每次开启虚拟环境之前要去虚拟环境所在目录下的 bin 目录下 source 一下 activate，这就需要我们记住每个虚拟环境所在的目录。
+
+一种可行的解决方案是，将所有的虚拟环境目录全都集中起来，比如放到 ~/virtualenvs/，并对不同的虚拟环境使用不同的目录来管理。virtualenvwrapper 正是这样做的。
+
+```bash
+pip install virtualenvwrapper
+find / -name virtualenvwrapper.sh
+
+/usr/local/bin/virtualenvwrapper.sh
+
+## 配置环境变量
+# vim ~/.bashrc
+export WORKON_HOME='~/.virtualenvs'
+source /usr/local/bin/virtualenvwrapper.sh
+## WORKON_HOME 就是它将要用来存放各种虚拟环境目录的目录
+
 ```
   
 ## 基于Anaconda
