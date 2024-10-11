@@ -26,6 +26,8 @@
 - Vimium
   - 完全用键盘操作网页
   - 修改键位, 使用左键盘区的字母标记链接, 来实现单手操作
+  - https://chromewebstore.google.com/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb
+  - 
 - Stylish
   - 为任意网站自定义主题
 - Tampermonkey
