@@ -3,6 +3,7 @@
 ## Reference
 
 - https://sollove.com/2013/03/03/my-first-5-minutes-on-a-server-or-essential-security-for-linux-servers/
+- https://becomesovran.com/blog/server-setup-basics.html
 
 ## 创建新用户
 
