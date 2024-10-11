@@ -77,10 +77,6 @@ sudo apt install -f
 
 - 卸载自带的fcitx输入法
  - `sudo apt-get remove fxitx`
-## 开发工具类
-
-- vscode
-  - https://code.visualstudio.com/
 
 
 ## Docker Community Edition
@@ -125,64 +121,3 @@ docker-compose --version
 #docker compose会自动安装所依赖的python2.7
 python -V #检查是否是2.7
 ```
-
-## Node.js & npm
-
-Hyperledger Fabric SDK for Node.js, version 8.9.4 and higher or 10.15.3 and higher.
-
-- <https://github.com/nodesource/distributions/blob/master/README.md>
-
-```text
-curl -sL https://deb.nodesource.com/setup_6.x | sudo bash -
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-sudo apt-get install -y nodejs
-
-node -v
-npm -v
-
-#或者使用
-sudo apt-get install nodejs
-# Node.js and npm packages are available from the default Ubuntu 18.04 repositories.
-# At the time of writing, the version included in the Ubuntu repositories is v8.10.0 which is the previous TLS version.
-
-#或者使用n工具来制定想要的版本
-  sudo npm cache clean -f
-  sudo npm install -g n
-  sudo n 8
-  
-#或者使用snap工具
-#https://github.com/nodesource/distributions/blob/master/README.md#snapinstall
-sudo snap install node --classic --channel=8
-sudo snap refresh node --channel=10
-```
-
-## Golang
-
-```text
-# Archived versions could be found at https://golang.org/dl/
-wget https://dl.google.com/go/go1.7.6.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.7.6.linux-amd64.tar.gz
-
-wget https://dl.google.com/go/go1.9.2.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.9.2.linux-amd64.tar.gz 
-
-echo $PATH
-echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.profile
-echo 'export GOROOT=/usr/local/go' >> ~/.profile
-echo 'export GOPATH=$HOME/go' >> ~/.profile
-chmod +x ~/.profile
-~/.profile
-echo $PATH
-
-# Or, install from APT
-# https://github.com/golang/go/wiki/Ubuntu
-
-go version
-```
-
-
-
-
-
-
