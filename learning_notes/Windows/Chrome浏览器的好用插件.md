@@ -35,6 +35,7 @@
   - 修改键位, 使用左键盘区的字母标记链接, 来实现单手操作
   - https://chromewebstore.google.com/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb
   - F键启动跳转链接
+    - 这与知乎内置的快捷键冲突......
 - Stylish
   - 为任意网站自定义主题
 - Tampermonkey
