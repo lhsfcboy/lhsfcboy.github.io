@@ -2,6 +2,10 @@
 
 Linux中的GCC是一件很麻烦的事情, 轻易不要碰的好
 
+## 常见发行版
+- RHEL/CentOS/Rocky
+- Ubuntu
+
 ## 主要发行版的GCC版本
 
 | Distribution     | Kernel | GCC   | GLIBC | Supported until |
