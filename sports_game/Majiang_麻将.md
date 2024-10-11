@@ -2,12 +2,12 @@
 
 ## 综述与参考
 
-https://zh.wikipedia.org/wiki/麻将
+- https://zh.wikipedia.org/wiki/麻将
+- https://www.bilibili.com/video/BV1g64y1c7mf/
+- https://www.bilibili.com/video/BV19Y411L7wL/
 
-https://www.bilibili.com/video/BV1g64y1c7mf/
-
-https://www.bilibili.com/video/BV19Y411L7wL/
-
+开源软件模拟
+- https://github.com/liumengniu/majiang
 # 道具
 
 一副标准的四人麻将牌通常有 136张牌，具体构成如下：
