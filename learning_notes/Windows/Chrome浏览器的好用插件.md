@@ -39,17 +39,22 @@
 
 ## 编程开发相关的插件
 
-- EditThisCookie
-  - Cookie编辑/删除
 - IE Tab
 - User-Agent Switcher for Chrome
-- goog.gl URL Shortener
-- Chrome UA Spoofer
-  - 以其他平台/浏览器来请求网页
-- 
+- goog.gl
+  - URL Shortener
 - Quick source viewer
 - JSON viewer
 - iFormatTool
   - 可格式化js、json、css等，带高亮、压缩、美化等操作
 - Octotree
   - Github在左侧显示目录结构树，现在已经用不到了吧
+ 
+# 爬虫等相关
+
+- Cookie-Editor
+- EditThisCookie 
+  - Cookie编辑/删除
+- Chrome UA Spoofer
+  - 以其他平台/浏览器来请求网页
+- Proxy SwitchySharp
