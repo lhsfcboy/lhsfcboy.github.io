@@ -1,4 +1,3 @@
-```
 已剪辑自: https://zhuanlan.zhihu.com/p/31700225
 
 Patterns mean "I have run out of language." - Rich Hickey
