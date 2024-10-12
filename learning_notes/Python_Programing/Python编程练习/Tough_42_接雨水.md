@@ -1,8 +1,13 @@
 # 接雨水
 
-接雨水问题（Trapping Rain Water Problem）似乎经常出现在国内IT公司的面试环节之中，备受调侃之余，也很值得思考。给定一个非负整数数组 height，数组中的每个元素代表一个柱子的高度。柱子之间的空隙可以接住雨水。你的任务是计算数组中能够接住的雨水的总量。
+接雨水问题（Trapping Rain Water Problem）似乎经常出现在国内IT公司的面试环节之中，备受调侃之余，也很值得思考。
 
+给定一个非负整数数组 height，数组中的每个元素代表一个柱子的高度。柱子之间的空隙可以接住雨水。你的任务是计算数组中能够接住的雨水的总量。
 
+参考资料
+- [【力扣hot100】【LeetCode 42】接雨水｜双指针](https://www.bilibili.com/video/BV1CmtZePErE/)
+- [Python|动态规划解接雨水问题](https://developer.aliyun.com/article/1257648)
+- https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0042.接雨水.md
 
 ## 理解题意
 
