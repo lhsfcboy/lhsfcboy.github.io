@@ -1,7 +1,9 @@
-已剪辑自: https://zhuanlan.zhihu.com/p/31700225
-
-Patterns mean "I have run out of language." - Rich Hickey
-之前学习设计模式的时候总是没有什么感觉，因为记性不好一直没记住多少。python不像java中比较强调设计模式(编程套路)，动态语言也内置了像是装饰器、迭代器等模式，另外python中的『一切皆对象』、鸭子类型等也导致python中实现的设计模式和其他语言有些差别。根据YAGNI(you aren't gonna need it)和KISS(Keep it simple sutpid)原则，如果能用简单易懂的方式实现，最好不要滥用设计模式以免增加复杂度和维护难度。本博客是《Mastering Python Design Patterns》的读书笔记，涵盖大部分设计模式(力求pythonic实现)，有兴趣可以参考下，代码示例版本为python3.5.2。
+- 已剪辑自: https://zhuanlan.zhihu.com/p/31700225
+- Patterns mean "I have run out of language." - Rich Hickey
+- python不像java中比较强调设计模式(编程套路)，动态语言也内置了像是装饰器、迭代器等模式.
+- 另外python中的『一切皆对象』、鸭子类型等也导致python中实现的设计模式和其他语言有些差别。
+- 根据YAGNI(you aren't gonna need it)和KISS(Keep it simple sutpid)原则，如果能用简单易懂的方式实现，最好不要滥用设计模式以免增加复杂度和维护难度。
+- 本博客是《Mastering Python Design Patterns》的读书笔记，涵盖大部分设计模式(力求pythonic实现)，有兴趣可以参考下，代码示例版本为python3.5.2。
 
 1. The Factory Pattern (工厂模式：解决对象创建问题)
    先来看三种创建模式中的第一种工厂模式。
@@ -121,4 +123,3 @@ Patterns mean "I have run out of language." - Rich Hickey
        def play(self):
            self.hero.interact_with(self.obstacle)
    ```
-```
