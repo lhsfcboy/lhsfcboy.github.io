@@ -24,10 +24,10 @@ Linux中的GCC是一件很麻烦的事情, 轻易不要碰的好。
 
 - Docker容器化技术流行以后，内核版本`uname -r`变成了很关键的考虑因素。
 - https://en.wikipedia.org/wiki/Linux_kernel_version_history#Releases_6.x.y
-- 
-
-
-| Distribution     | Kernel | GCC   | GLIBC | Supported until |
-|------------------|--------|-------|-------|-----------------|
-| RHEL/CentOS 7.5  | 3.10   | 4.8.5 | 2.17  |                 |
-| Ubuntu 18.04.1   | 4.15.0 | 7.3.0 | 2.27  | 2028-04         |
+| Distribution                    | Version       | Kernel Version | GCC Version | glibc Version | Support Lifetime      |
+|---------------------------------|---------------|----------------|-------------|---------------|-----------------------|
+| Red Hat Enterprise Linux        | 9.3           | 5.14           | 11          | 2.34          | May 2032              |
+| Ubuntu LTS                      | 22.04 LTS     | 5.15           | 11.2        | 2.35          | April 2027 (Standard) |
+| SUSE Linux Enterprise Server    | 15 SP5        | 5.14           | 7.5         | 2.26          | 2028 (Standard)       |
+| Debian                          | 12 (Bookworm) | 6.1            | 12.2        | 2.36          | June 2028             |
+| Oracle Linux                    | 9             | 5.14           | 11          | 2.34          | June 2032             |
