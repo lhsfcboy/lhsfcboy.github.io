@@ -24,6 +24,7 @@ Linux中的GCC是一件很麻烦的事情, 轻易不要碰的好。
 
 - Docker容器化技术流行以后，内核版本`uname -r`变成了很关键的考虑因素。
 - https://en.wikipedia.org/wiki/Linux_kernel_version_history#Releases_6.x.y
+  
 | Distribution                    | Version       | Kernel Version | GCC Version | glibc Version | Support Lifetime      |
 |---------------------------------|---------------|----------------|-------------|---------------|-----------------------|
 | Red Hat Enterprise Linux        | 9.3           | 5.14           | 11          | 2.34          | May 2032              |
