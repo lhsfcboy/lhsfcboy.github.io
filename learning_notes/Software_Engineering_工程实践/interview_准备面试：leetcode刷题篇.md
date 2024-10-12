@@ -1,9 +1,12 @@
-## [python刷完leetcode600题](https://zhuanlan.zhihu.com/p/37528269)
+## leetcode
 
-刷题原则：
-
-- 理解题意
+- leet-code 是一份网络流传的面试编程题库
+- 刷题原则：理解题意
 - 先实现后优化
+
+
+- [python刷完leetcode600题](https://zhuanlan.zhihu.com/p/37528269)
+- https://github.com/youngyangyang04/leetcode-master/blob/master/README.md
 
 ## AI时代的刷题 
 - https://www.marscode.cn/practice/
