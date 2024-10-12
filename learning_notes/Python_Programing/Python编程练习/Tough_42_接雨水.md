@@ -58,3 +58,64 @@ def trap(height):
 height=[0,1,0,2,1,0,1,3,2,1,2,1]
 print(trap(height))
 ```
+
+
+## 思路升级版 双指针
+```python
+import unittest
+from typing import List
+
+class Solution:
+    def trap(self, height: List[int]) -> int:
+        if not height:
+            return 0
+        result = 0
+        max_v = max(height)
+        max_index = height.index(max_v)
+        i = 0
+        j = len(height) - 1
+        last = 0
+        while i < max_index:
+            if height[i] > last:
+                last = height[i]
+            elif height[i] < last:
+                result += (last - height[i])
+            i += 1
+        last = 0
+        while j > max_index:
+            if height[j] > last:
+                last = height[j]
+            elif height[j] < last:
+                result += (last - height[j])
+            j -= 1
+        return result
+
+class TestSolution(unittest.TestCase):
+    def setUp(self):
+        self.solution = Solution()
+
+    def test_trap(self):
+        # 测试用例1：空列表
+        self.assertEqual(self.solution.trap([]), 0)
+        
+        # 测试用例2：没有储水的情况（递增）
+        self.assertEqual(self.solution.trap([1, 2, 3, 4]), 0)
+        
+        # 测试用例3：没有储水的情况（递减）
+        self.assertEqual(self.solution.trap([4, 3, 2, 1]), 0)
+        
+        # 测试用例4：正常储水情况
+        self.assertEqual(self.solution.trap([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]), 6)
+        
+        # 测试用例5：所有柱子高度相同
+        self.assertEqual(self.solution.trap([3, 3, 3, 3]), 0)
+        
+        # 测试用例6：单个柱子
+        self.assertEqual(self.solution.trap([1]), 0)
+        
+        # 测试用例7：两个柱子
+        self.assertEqual(self.solution.trap([1, 2]), 0)
+
+if __name__ == "__main__":
+    unittest.main()
+```    
