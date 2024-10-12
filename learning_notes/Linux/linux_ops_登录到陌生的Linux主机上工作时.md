@@ -55,6 +55,7 @@ alias watch='func() { while true; do clear; "$@"; sleep 5; done; }; func'
 
 ```bash
 cat /etc/os-release # 查看 Linux 发行版本
+hostnamectl         # 作系统版本、硬件架构
 uptime              # 查看系统已启动时间
 df -h               # 查看磁盘使用情况
 ```
