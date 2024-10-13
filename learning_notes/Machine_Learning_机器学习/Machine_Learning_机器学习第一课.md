@@ -3,6 +3,8 @@
   - 机器学习
     - 深度学习 / 神经网络
       - Transformer / LLM大语言模型
+        - OpenAI公司的GPT技术
+          - GPT 4 等一系列产品
 
 ## 教材套装
 - 网络上有很多, 例如 https://github.com/Mikoto10032/DeepLearning/blob/master/README.md
