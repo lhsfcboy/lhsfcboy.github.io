@@ -22,9 +22,60 @@
 ### Git流行之前的文件版本管理VCS（草稿）
 - 开始一个新项目
   - 我们准备创建一个项目，项目名称为`Hello World`, 主要功能是输出`Hello World! From C Language.`
-  - 建立一个文件夹`Hello_World`，在其中写下`helloworld.c`
+  - 建立一个文件夹`Hello_World`，在其中写下具体源代码文件
+    - 由于这个项目功能复杂，我们将分割为3个文件管理
+    - `main.c`  程序入口
+    - `hello.h` 
+    - `hello.c`
   - 创建配套的Makefile, 编译出`hello.o`来执行
   - 哪些文件需要管理？源文件？编译产物？
+```c
+// main.c
+
+#include "hello.h"
+
+int main(void) {
+    say_hello();
+    return 0;
+}
+//#==========#==========#==========#==========#
+// hello.h
+
+#ifndef HELLO_H
+#define HELLO_H
+
+// 函数声明
+void say_hello(void);
+
+#endif // HELLO_H
+//#==========#==========#==========#==========#
+// hello.c
+
+#include <stdio.h>
+#include "hello.h"
+
+// 函数定义
+void say_hello(void) {
+    printf("Hello, World!\n");
+}
+```
+
+Makefile
+```make
+# 目标可执行文件名
+hello: hello.o
+	gcc -o hello hello.o main.c
+
+# 生成 hello.o 对象文件
+hello.o: hello.c hello.h
+	gcc -c hello.c -o hello.o
+
+# 清理生成的文件
+clean:
+	rm -f hello.o hello
+```
+
+
 - 单个文件到多个文件
 - 单线程开发到多线程开发
   - 单个人可能同时处理多个版本
