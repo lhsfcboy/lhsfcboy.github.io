@@ -21,7 +21,7 @@
 
 ### Git流行之前的文件版本管理VCS（草稿）
 - 开始一个新项目
-  - 我们准备创建一个项目，主要功能是输出`Hello World! From C Language.`
+  - 我们准备创建一个项目，项目名称为`Hello World`, 主要功能是输出`Hello World! From C Language.`
   - 建立一个文件夹`Hello_World`，在其中写下`helloworld.c`
   - 创建配套的Makefile, 编译出`hello.o`来执行
   - 哪些文件需要管理？源文件？编译产物？
