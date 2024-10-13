@@ -3,15 +3,13 @@
 ## 简介
 
 MIT的Strang教授所执教的线性代数课笔记, 使用 `Jupyter Notebook` 编写.
-同时整理了Markdown格式.
 
-`Github` 加载 `.ipynb` 的速度较慢，且很多公式的渲染不正确, 应该在 [Nbviewer](http://nbviewer.jupyter.org/github/zlotus/notes-linear-algebra/blob/master/ReadMe.ipynb) 
+`Github` 加载 `.ipynb` 的速度较慢，且很多公式的渲染不正确, 可以在 [Nbviewer](http://nbviewer.jupyter.org/github/zlotus/notes-linear-algebra/blob/master/ReadMe.ipynb) 
 或本地搭建的`Jupyter Notebook`环境中查看该项目.
 
 ## 内容来源
 
 - [官方课程网址](http://web.mit.edu/18.06/www/)
-
 - [zlotus的线性代数笔记 @Github]( https://github.com/zlotus/notes-linear-algebra )
 - [zlotus的线性代数笔记 @NbViewer](http://nbviewer.jupyter.org/github/zlotus/notes-linear-algebra/blob/master/ReadMe.ipynb)
 - [知乎专栏 MIT线性代数课程精细笔记](https://zhuanlan.zhihu.com/p/28277072)
@@ -20,6 +18,7 @@ MIT的Strang教授所执教的线性代数课笔记, 使用 `Jupyter Notebook` �
 
 - [网易公开课 习题课视频](http://open.163.com/special/opencourse/mitxianxingdaishuxitike.html)
 - [PDF格式的笔记](https://github.com/MLNLP-World/MIT-Linear-Algebra-Notes/tree/master)
+  
 ----
 
 ## 目录
