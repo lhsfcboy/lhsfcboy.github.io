@@ -19,7 +19,7 @@ MIT的Strang教授所执教的线性代数课笔记, 使用 `Jupyter Notebook` �
 - [带中文字幕Youtube](https://www.youtube.com/playlist?list=PL6839449936471E0C)
 
 - [网易公开课 习题课视频](http://open.163.com/special/opencourse/mitxianxingdaishuxitike.html)
-
+- [PDF格式的笔记](https://github.com/MLNLP-World/MIT-Linear-Algebra-Notes/tree/master)
 ----
 
 ## 目录
