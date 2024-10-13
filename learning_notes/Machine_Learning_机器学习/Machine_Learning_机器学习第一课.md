@@ -1,12 +1,16 @@
 ## 主要概念辨析
 - 人工智能 
-  - 机器学习
-    - 深度学习 / 神经网络
+  - 机器学习 机器学习是人工智能的一个子领域，专注于通过数据和算法使机器自主学习和改进
+    - 深度学习 / 神经网络 (Deep Learning / Neural Networks): 深度学习是机器学习的一个子集，利用多层神经网络模拟人脑的工作方式，以处理复杂的数据
+      - 卷积神经网络（CNN）2012年
       - 循环神经网络（RNN）和长短时记忆网络（LSTM）
       - Transformer 2017年发表论文
         - 巨量参数的Transformer技术 -> LLM大语言模型, 例如 GPT-3 就拥有 1750 亿个参数
           - OpenAI公司的 GPT 4 等一系列产品
-
+- 当代的机器学习流行历史
+  - 2006年 MIT发布`机器学习`公开课
+  - 2016年 AlphaGo战胜了围棋世界冠军李世石
+  - 2022年 ChatGPT
 ## 教材套装
 - 网络上有很多, 例如 https://github.com/Mikoto10032/DeepLearning/blob/master/README.md
 
