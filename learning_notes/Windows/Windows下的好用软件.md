@@ -21,7 +21,6 @@
 - ZOOM https://zoom.us/download
 - 腾讯会议
 - Citrix Workspace App
-
   
 ## 基础软件 - 输入法
 现代的微软自带输入法已经比较堪用。
@@ -34,7 +33,12 @@
   - 中文状态下使用英文标点
   - 隐藏状态栏
 - Google 日本語入力
-- 
+
+## PDF浏览
+- Chrome或Edge等浏览器就能足以胜任了
+- SumatraPDF
+  - 它不锁 PDF 文件，可以随时覆盖，并且自动刷新
+    
 ## 媒体播放器篇
 核心诉求
 - 支持格式多
