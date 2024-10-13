@@ -3,9 +3,9 @@
   - 机器学习
     - 深度学习 / 神经网络
       - 循环神经网络（RNN）和长短时记忆网络（LSTM）
-      - Transformer / LLM大语言模型
-        - OpenAI公司的GPT技术
-          - GPT 4 等一系列产品
+      - Transformer 2017年发表论文
+        - 巨量参数的Transformer技术 -> LLM大语言模型, 例如 GPT-3 就拥有 1750 亿个参数
+          - OpenAI公司的 GPT 4 等一系列产品
 
 ## 教材套装
 - 网络上有很多, 例如 https://github.com/Mikoto10032/DeepLearning/blob/master/README.md
