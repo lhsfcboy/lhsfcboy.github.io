@@ -7,7 +7,7 @@
 
 ## 入门教材
 - [Neural Networks and Deep Learning 深入浅出神经网络与深度学习（Michael Nielsen）](https://book.douban.com/subject/35128111/)
-  - https://github.com/Mikoto10032/DeepLearning/blob/master/books/神经网络和深度学习neural networks and deep-learning-中文_ALL.pdf
+  - [电子版](https://github.com/Mikoto10032/DeepLearning/blob/master/books/神经网络和深度学习neural networks and deep-learning-中文_ALL.pdf)
   - 手动实现了对手写字符的识别
 
 ## 机器学习的数学基础
