@@ -2,6 +2,7 @@
 - 人工智能 
   - 机器学习
     - 深度学习 / 神经网络
+      - 循环神经网络（RNN）和长短时记忆网络（LSTM）
       - Transformer / LLM大语言模型
         - OpenAI公司的GPT技术
           - GPT 4 等一系列产品
