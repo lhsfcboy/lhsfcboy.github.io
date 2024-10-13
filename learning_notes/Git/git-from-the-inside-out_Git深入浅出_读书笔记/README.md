@@ -74,8 +74,10 @@ hello.o: hello.c hello.h
 clean:
 	rm -f hello.o hello
 ```
-
-
+- 发布一个新的版本，版本代号`Hello, Earth! From Computer`
+  - 需要修改哪些文件?
+  - 如果要求回到上一个版本怎么办?
+  - 干脆创建一个新文件夹算了
 - 单个文件到多个文件
 - 单线程开发到多线程开发
   - 单个人可能同时处理多个版本
