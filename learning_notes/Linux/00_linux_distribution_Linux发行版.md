@@ -23,13 +23,21 @@ Linux中的GCC是一件很麻烦的事情, 轻易不要碰的好。
 
 ## 发行版的几个核心指标: Linux内核版本，GCC，GLIBC版本
 
+- 云主机服务商开始发布各自的Linux版本
+  - 亚马逊 AWS
+    - Amazon Linux 2
+    - Amazon Linux 2023
+  - 微软 Azure
+  - 甲骨文云（Oracle Cloud）
+    - Oracle Linux 甲骨文基于RHEL克隆的Linux发行版
 - Docker容器化技术流行以后，内核版本`uname -r`变成了很关键的考虑因素。
+  - 1对1对应RHEL发布 https://en.wikipedia.org/wiki/Oracle_Linux#Release_history
 - Linux内核
   - 官网 https://www.kernel.org/
   - latest stable:   6.11
   - 最近的大版本 https://en.wikipedia.org/wiki/Linux_kernel_version_history#Releases_6.x.y
 
-企业引用中流行的版本  
+企业应用中流行的版本  
 | Distribution                    | Version       | Kernel Version | GCC Version | glibc Version | Support Lifetime      |
 |---------------------------------|---------------|----------------|-------------|---------------|-----------------------|
 | Red Hat Enterprise Linux        | 9.3           | 5.14           | 11          | 2.34          | May 2032              |
