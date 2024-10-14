@@ -20,13 +20,16 @@ Linux中的GCC是一件很麻烦的事情, 轻易不要碰的好。
 - openeuler
   - 华为主推的免费开源系统
   - 国内自主化项目可能会用到
- 
-    
+
 ## 发行版的几个核心指标: Linux内核版本，GCC，GLIBC版本
 
 - Docker容器化技术流行以后，内核版本`uname -r`变成了很关键的考虑因素。
-- https://en.wikipedia.org/wiki/Linux_kernel_version_history#Releases_6.x.y
-  
+- Linux内核
+  - 官网 https://www.kernel.org/
+  - latest stable:   6.11
+  - 最近的大版本 https://en.wikipedia.org/wiki/Linux_kernel_version_history#Releases_6.x.y
+
+企业引用中流行的版本  
 | Distribution                    | Version       | Kernel Version | GCC Version | glibc Version | Support Lifetime      |
 |---------------------------------|---------------|----------------|-------------|---------------|-----------------------|
 | Red Hat Enterprise Linux        | 9.3           | 5.14           | 11          | 2.34          | May 2032              |
@@ -34,3 +37,19 @@ Linux中的GCC是一件很麻烦的事情, 轻易不要碰的好。
 | SUSE Linux Enterprise Server    | 15 SP5        | 5.14           | 7.5         | 2.26          | 2028 (Standard)       |
 | Debian                          | 12 (Bookworm) | 6.1            | 12.2        | 2.36          | June 2028             |
 | Oracle Linux                    | 9             | 5.14           | 11          | 2.34          | June 2032             |
+
+RHEL红帽企业版的内核版本: 
+- 版本使用说明: https://access.redhat.com/articles/3078
+- RHEL 9 5.14
+- RHEL 8 4.18
+- RHEL 7 3.10
+- RHEL 6 2.6
+
+Ubuntu 的内核版本将以发布时最新版本为准. 2024, Ubuntu announced a change in policy to always use the latest upstream code of the Linux kernel at the time of each Ubuntu release, even if the kernel code hasn't seen a stable release.
+- 版本使用说明: https://ubuntu.com/about/release-cycle#ubuntu-kernel-release-cycle
+- 24.10 6.11
+- 24.04 6.8
+- 22.04 5.15
+- 20.04 5.4
+- 18.04 4.15
+- 16.04 4.4
