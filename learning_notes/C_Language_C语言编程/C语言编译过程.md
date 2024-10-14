@@ -10,7 +10,6 @@
 
 ```c
 ### 文件1: `main.c`
-
 #include "rot18.h"
 
 int main(void) {
@@ -27,7 +26,6 @@ void rot(char str[]);
 
 ```c
 ### 文件3: `rot18.c`
-
 #include "rot18.h"
 
 void rot(char str[]) {
