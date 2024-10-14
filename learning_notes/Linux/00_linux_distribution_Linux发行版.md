@@ -28,7 +28,7 @@ Linux中的GCC是一件很麻烦的事情, 轻易不要碰的好。
   - 甲骨文云（Oracle Cloud）
     - Oracle Linux 甲骨文基于RHEL克隆的Linux发行版
     - 1对1对应RHEL发布 https://en.wikipedia.org/wiki/Oracle_Linux#Release_history
-- Docker容器化技术流行以后，内核版本`uname -r`变成了很关键的考虑因素。
+- 内核版本`uname -r`也是很关键的考虑因素。
   - Linux内核 官网 https://www.kernel.org/
   - latest stable:   6.11
   - 最近的大版本 https://en.wikipedia.org/wiki/Linux_kernel_version_history#Releases_6.x.y
