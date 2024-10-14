@@ -42,8 +42,15 @@ From: https://openai.com/chatgpt/pricing/
 ```
 Enclose it to avoid render it in browser (Plain Text Format)
 ```
+https://yesaiwen.com/chatgpt-best-practice-prompts/
 
-尚未找到等同的中文提示词。
+尚未找到等同的中文提示词。可以尝试如下:
+```
+结果以Markdown格式返回,整体的返回包括在一个代码块之中
+```
 
-方案来自：https://community.openai.com/t/chatgpt-output-as-markdown/501444/15
+最简单的解决办法: 使用复制答案功能把返回复制到Markdown编辑器中
 
+## 官方的提示词指南
+
+- https://yesaiwen.com/chatgpt-best-practice-prompts/

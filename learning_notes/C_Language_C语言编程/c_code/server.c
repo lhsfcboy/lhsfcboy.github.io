@@ -1,55 +1,98 @@
- /********i*****************
- * server.c server program
- *
+// 设置一个服务器，监听指定的端口（10000）。
+// 接受一个客户端连接。
+// 进入一个循环，从标准输入读取数据并发送给客户端，然后从客户端读取数据并输出到标准输出。
+// 当接收到 "quit" 消息时，关闭连接并退出。
+
+// 需要注意的是，这个服务器只能处理一个客户端连接，并且没有实现更复杂的错误处理或多线程支持
+
+/**
+ * server.c - Simple server program
  */
+
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <netdb.h>
 #include <string.h>
-#define PORT (u_short)10000
+#include <unistd.h>
+#include <arpa/inet.h>
+
+#define PORT 10000
 #define BUF_LEN 100
 
-char hostname[]="tkcoetipoff_98";
-char buf[BUF_LEN];
+int main() {
+    struct hostent *myhost;
+    struct sockaddr_in me;
+    int s_waiting, s;
+    char hostname[] = "tkcoetipoff_98";
+    char buf[BUF_LEN];
 
-main()
-{
-	struct hostent *myhost;
-	struct sockaddr_in me;
-	int	s_waiting,s;
+    // Get host by name
+    myhost = gethostbyname(hostname);
+    if (myhost == NULL) {
+        perror("gethostbyname failed");
+        return 1;
+    }
+    printf("Host: %s\n", myhost->h_name);
 
-	myhost = gethostbyname(hostname);
-	printf ("%s", myhost->h_name);
-	
-	bzero((char *)&me,sizeof(me));
-	me.sin_family = AF_INET;
-	me.sin_port = PORT;
-	bcopy(myhost->h_addr,
-	(char *)&me.sin_addr,myhost->h_length);
-	
-	printf ("---------------\n");
-	s_waiting = socket (AF_INET,SOCK_STREAM,0);
-	bind(s_waiting,(struct sockaddr*) &me, sizeof(me));
-	printf ("---------------\n");
-	listen(s_waiting, 1);
-	s = accept(s_waiting, NULL, NULL);
-	close (s_waiting);
+    // Set up server address
+    memset(&me, 0, sizeof(me));
+    me.sin_family = AF_INET;
+    me.sin_port = htons(PORT);
+    memcpy(&me.sin_addr, myhost->h_addr, myhost->h_length);
 
-	write(1, "hello there ! \n", 20);
+    printf("Setting up server...\n");
 
-	do
-		{
-		int n;
-		n = read(0, buf, BUF_LEN);
-		write(s, buf, n);
-		n = read(s, buf, BUF_LEN);
-		write(1, buf, n);
-		}
-	while(strncmp(buf, "quit", 4)!= 0);
-	
-	close(s);
+    // Create socket
+    s_waiting = socket(AF_INET, SOCK_STREAM, 0);
+    if (s_waiting < 0) {
+        perror("socket creation failed");
+        return 1;
+    }
 
-	
+    // Bind socket
+    if (bind(s_waiting, (struct sockaddr*)&me, sizeof(me)) < 0) {
+        perror("bind failed");
+        close(s_waiting);
+        return 1;
+    }
+
+    printf("Server is listening...\n");
+
+    // Listen for connections
+    if (listen(s_waiting, 1) < 0) {
+        perror("listen failed");
+        close(s_waiting);
+        return 1;
+    }
+
+    // Accept connection
+    s = accept(s_waiting, NULL, NULL);
+    if (s < 0) {
+        perror("accept failed");
+        close(s_waiting);
+        return 1;
+    }
+
+    close(s_waiting);
+    printf("Client connected. Hello there!\n");
+
+    // Communication loop
+    do {
+        int n;
+        n = read(STDIN_FILENO, buf, BUF_LEN);
+        if (n > 0) {
+            write(s, buf, n);
+        }
+        n = read(s, buf, BUF_LEN);
+        if (n > 0) {
+            write(STDOUT_FILENO, buf, n);
+        }
+    } while (strncmp(buf, "quit", 4) != 0);
+
+    close(s);
+    printf("Connection closed.\n");
+
+    return 0;
 }

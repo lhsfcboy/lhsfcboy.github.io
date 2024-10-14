@@ -1,6 +1,68 @@
-# pass
+# C语言编译过程
 
-## gcc
+## `main`函数怎么找到`rot`函数定义的?
+
+看下面的简单程序
+
+1. **`main.c`**: 调用了 `rot()` 函数
+2. **`rot18.h`**: 只声明了 `rot(char str[])` 函数
+3. **`rot18.c`**: 包含了 `rot()` 函数的基本实现
+
+```c
+### 文件1: `main.c`
+#include "rot18.h"
+
+int main(void) {
+    char str[] = "Hello, World!";
+    rot(str);
+    return 0;
+}
+```
+
+```c
+### 文件2: `rot18.h`
+void rot(char str[]);
+```
+
+```c
+### 文件3: `rot18.c`
+#include "rot18.h"
+
+void rot(char str[]) {
+    printf("Rot function called with: %s\n", str);
+}
+```
+
+上述源文件可以生成一个可执行文件`main.out`
+```bash
+gcc main.c rot18.c -o main.out
+```
+
+`main.c`只包含了`rot18.h`, `rot18.h`也不过只有一句声明, 那么程序是怎么找到`rot18()`函数的具体实现的?
+
+### 编译链接到执行
+```bash
+gcc -c main.c -o main.o
+gcc -c rot18.c -o rot18.o
+```
+编译（compilation）：当你编译 main.c 时，编译器会找到 #include "rot18.h"，并通过头文件知道有一个叫做 rot() 的函数，它的具体实现可能在别的文件中。
+编译器会检查 main.c 文件中是否有语法错误，并生成目标文件（main.o），但此时还不会关心 rot() 的具体实现。
+
+同时，rot18.c 也会被编译，生成它的目标文件（rot18.o）。这时候，rot() 的实现已经在 rot18.o 中了。
+
+```bash
+gcc main.o rot18.o -o main.out
+```
+链接（linking）：在编译生成所有目标文件之后，链接器负责把这些目标文件（如 main.o 和 rot18.o）组合在一起，生成最终的可执行文件。
+在链接的过程中，链接器会查找所有编译生成的目标文件（包括 rot18.o），并寻找 rot() 函数的实现。
+由于 rot18.o 文件实现了 rot() 函数，链接器就会将 main.o 中的 rot() 函数调用链接到 rot18.o 中的 rot() 函数上。
+
+另外, rot18.h 是一个头文件，它不需要单独编译或链接。头文件的作用是为源文件提供函数声明和包含必要的库。
+在编译过程中，头文件会通过 #include "rot18.h" 被包含到 .c 文件中，编译器在处理 .c 文件时会自动引入相关的头文件内容。
+因此，编译和链接命令并不需要专门提及 rot18.h 文件。
+只需要确保在 .c 文件所在的目录中有 rot18.h 文件，编译器就会自动处理它。
+
+## 编译步骤
 
 help.h
 
