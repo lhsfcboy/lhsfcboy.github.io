@@ -5,12 +5,16 @@
       - 卷积神经网络（CNN）2012年
       - 循环神经网络（RNN）和长短时记忆网络（LSTM）RNN适用于处理序列数据，如时间序列或自然语言，LSTM是RNN的一种改进，能够更好地捕捉长期依赖关系
       - Transformer 2017年发表论文
-        - 巨量参数的Transformer技术 -> LLM大语言模型, 例如 GPT-3 就拥有 1750 亿个参数
-          - OpenAI公司的 GPT 4 等一系列产品
+        - 巨量参数的Transformer技术 -> LLM大语言模型 
+          - OpenAI公司的 GPT-2 / GPT-3 / GPT-4 等一系列产品
+          - 对比人类的大脑拥有860亿个神经元
 - 当代的机器学习流行历史
   - 2006年 MIT发布`机器学习`公开课
   - 2016年 AlphaGo战胜了围棋世界冠军李世石
-  - 2022年 ChatGPT
+  - 2017年 Tranformer 论文发表
+  - 2019年 GPT-2 面世, 有15亿个参数
+  - 2020年 GPT-3 面世, 有1750亿个参数 进入实用化阶段
+  - 2023年 GPT-4 面世
 ## 教材套装
 - 网络上有很多, 例如 https://github.com/Mikoto10032/DeepLearning/blob/master/README.md
 
