@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双打轮转表</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>8人双打轮转表</h1>
+    <table id="rotationTable">
+        <thead>
+            <tr>
+                <th>轮次</th>
+                <th>场地 1</th>
+                <th>场地 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- JS生成轮转表内容 -->
+        </tbody>
+    </table>
+
+    <script>
+        // 定义8个人的名字
+        const players = ['玩家1', '玩家2', '玩家3', '玩家4', '玩家5', '玩家6', '玩家7', '玩家8'];
+
+        // 生成轮转表
+        function generateRotation(players) {
+            const rotations = [];
+            const totalRounds = players.length - 1;  // 总轮数为7轮
+
+            // 每轮双打的队伍划分
+            for (let round = 0; round < totalRounds; round++) {
+                const team1 = [players[0], players[(round + 1) % 7 + 1]]; // 第一组固定玩家0，另一人循环变化
+                const team2 = [players[(round + 2) % 7 + 1], players[(round + 3) % 7 + 1]]; // 剩下的其他人循环组成队伍
+
+                const team3 = [players[(round + 4) % 7 + 1], players[(round + 5) % 7 + 1]]; // 场地2队伍
+
+                rotations.push({
+                    round: round + 1,
+                    court1: `${team1[0]} & ${team1[1]} 对 ${team2[0]} & ${team2[1]}`,
+                    court2: `${team3[0]} & ${team3[1]} 对 ${players[(round + 6) % 7 + 1]} & ${players[(round + 7) % 7 + 1]}`
+                });
+            }
+
+            return rotations;
+        }
+
+        // 渲染轮转表到网页上
+        function renderTable() {
+            const tableBody = document.querySelector('#rotationTable tbody');
+            const rotations = generateRotation(players);
+
+            rotations.forEach(rotation => {
+                const row = document.createElement('tr');
+
+                const roundCell = document.createElement('td');
+                roundCell.textContent = rotation.round;
+                row.appendChild(roundCell);
+
+                const court1Cell = document.createElement('td');
+                court1Cell.textContent = rotation.court1;
+                row.appendChild(court1Cell);
+
+                const court2Cell = document.createElement('td');
+                court2Cell.textContent = rotation.court2;
+                row.appendChild(court2Cell);
+
+                tableBody.appendChild(row);
+            });
+        }
+
+        // 页面加载时生成表格
+        document.addEventListener('DOMContentLoaded', renderTable);
+    </script>
+
+</body>
+</html>
