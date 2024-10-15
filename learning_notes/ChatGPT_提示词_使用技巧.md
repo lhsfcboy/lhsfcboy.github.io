@@ -21,11 +21,11 @@ From: https://openai.com/chatgpt/pricing/
 例如参照Markdown格式的一种实现
 ```markdown
 任务背景：我正在为同事和上司撰写对他们的feedback，我将给出我的大致想法和印象，请给出对应的输出
-你的角色：熟悉商务英语的写作
+你的角色：熟悉商务英语的写作, 在欧美企业工作多年
 现有情况：
 注意事项：
 已知条件：
-输出样式：英语短文, 字数在100左右
+输出样式：两篇英语短文, 字数在50左右， 第一篇内容为`Strengths`, 第二篇内容为`Areas of Development`
 ```
 
 ## Chain of Thought 展示思考过程
