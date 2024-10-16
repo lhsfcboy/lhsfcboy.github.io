@@ -39,6 +39,7 @@ PPI的计算: https://www.calculatorsoup.com/calculators/technology/ppi-calculat
   - 现有显示器 U3818DW 23.8寸, 外形宽54cm 1080p 23.8  ===> 93 PPI
   - 可能27寸更好, 2560x1440 WQHD, 比23寸的1920x1080 FHD更宽一点, 两个网页可以完整的并排放下
 - Dell U3824DW 37.5寸 159382JPY
+    - https://ea2cn.shop.dell.com/zh-cn/shop/%E6%88%B4%E5%B0%94-ultrasharp-38-%E6%9B%B2%E9%9D%A2-usb-c-hub-%E6%98%BE%E7%A4%BA%E5%99%A8-u3824dw/apd/210-bhzd/
     - PPI 110 3840 * 1600 
 - E595 笔记本屏幕
     -  1920x1080 15.6 ==> PPI 141
