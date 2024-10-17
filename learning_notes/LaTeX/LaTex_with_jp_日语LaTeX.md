@@ -1,6 +1,13 @@
 # 日文 LaTeX
 
-在不同 TeX 引擎和宏包下的最简日文示例
+## 最快方案: 使用网络服务 Cloud Latex
+
+- https://cloudlatex.io/ja
+
+## 搭建本地环境
+
+- https://zhuanlan.zhihu.com/p/19910110
+- https://zhuanlan.zhihu.com/p/19912674
 
 ## 常见的TeX引擎
 
