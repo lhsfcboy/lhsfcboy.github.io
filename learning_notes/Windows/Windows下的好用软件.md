@@ -38,6 +38,25 @@
 - Chrome或Edge等浏览器就能足以胜任了
 - SumatraPDF
   - 它不锁 PDF 文件，可以随时覆盖，并且自动刷新
+ 
+## PDF轻量化编辑
+- Briss
+  - 切白边  
+  - 对日语支持不好  
+  - [Optimize PDFs for reading on your Kindle](http://www.freewaregenius.com/optimize-pdfs-for-reading-on-your-kindle-3-crop-then-convert-to-a-kindle-friendly-format/)  
+
+- PDF Scissors / Phantom / PDFill
+  - 切白边 备用  
+
+- PDF Split and Merge (PDFSAM)
+  - PDF切割合并  
+  - [Official site](http://www.pdfsam.org/)  
+
+- SmallPDF
+  - [在线PDF编辑](http://smallpdf.com/cn)  
+
+- PDF Shaper
+  - 本地PDF处理工具  
     
 ## 媒体播放器篇
 核心诉求
