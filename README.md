@@ -6,6 +6,7 @@
 
 # Let the learning begin
 
-https://lhsfcboy.github.io/
-
-https://github.com/lhsfcboy/lhsfcboy.github.io
+- https://twitter.com/lhsfcboy
+- https://www.linkedin.com/in/luo-hongshuai-mike-35496a57/
+- https://github.com/lhsfcboy/lhsfcboy.github.io
+- https://www.zhihu.com/people/lhsfcboy/posts
