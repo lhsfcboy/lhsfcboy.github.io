@@ -72,13 +72,19 @@ Cons
   - 可以借助Latex实现
 - 所有外站链接都需要额外跳转
 - 图片功能比较孱弱
-  - 没有任何的简单编辑功能
+  - 没有任何的简单编辑功能, 例如大小调整
+  - 可以借助第三方的在线的`图片resize`服务
+    - https://picresize.com/
+    - https://www.adobe.com/express/feature/image/resize
+    - https://imageresizer.com/
+  - 如果主要使用来自网络的图片, 还可以考虑Chrome插件的形式调整图片大小
 ## GitHub Markdown
   - 键盘快捷键直观且方便
     - e 编辑
     - Ctrl S 保存  Enter 确认
   - GitHub的Web版本下，Markdown可以自动处理图片了！
     - Markdown的图片管理曾经是个非常头疼的问题，现在竟然有了免费的图床!
+    - 可以在Markdown中储存不够重要的图片
 ## Github Jupyter
 - 似乎不支持raw类型的cell的web显示, 需要用Markdown格式的cell保存说明文字的cell
 ## 本地MarkDown
