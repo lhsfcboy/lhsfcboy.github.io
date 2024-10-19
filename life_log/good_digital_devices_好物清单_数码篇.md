@@ -5,11 +5,6 @@
 - 列表展示需求详细
 - 三级标题提示具体产品
 
-## 充电宝
-- 自带电源插头
-- 自带充电线
-- 支持边充电, 边放电
-
 ## 家用路由器
 
 ## 平板电脑
@@ -24,7 +19,7 @@
 + 现在备用: ThinkPad x220i 加SSD 加内存
     + Windows 7 系统
 
-###### 对电脑的需求
+### 对电脑的需求
 + 原生支持蓝牙(几乎没有不支持的)
 + SSD硬盘, 不低于512G, 最好双硬盘
 + 窄边框
@@ -57,15 +52,15 @@ PPI的计算: https://www.calculatorsoup.com/calculators/technology/ppi-calculat
     - Huawei (3440×1440) 34
         - https://www.yodobashi.com/product/100000001006776851/
         - 809×542×220 mm
- 
-
+          
 ## 耳机
-  - 没有音质追求, 必须是无线蓝牙
+ - 没有音质追求, 必须是无线蓝牙
     - 耳罩式耳机 携带不够方便, 飞机/大巴里休息时, 支架容易碰到座椅靠背
     - 挂绳式耳机 
     - 分体式耳机 耳机盒
-###### BOSE QC35 (搭配宜家黑色耳机挂架)
-###### Jabra Elite Active 65t - Titanium Black 捷波朗
+- AirPods Pro 2
+    - 搭配苹果手机很好用
+-  Jabra Elite Active 65t - Titanium Black 捷波朗
     - 通过公司内渠道购买 16000JPY 约为980RMB, 京东促销价约为1200RMB
     - 防汗防尘IP56, 取出自动连接蓝牙
     - 收纳盒上没有采用磁吸设计感觉
