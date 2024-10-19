@@ -26,8 +26,16 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 完成以上设置后，每次启动 PowerShell 时都会自动使用 UTF-8 编码输出。
 
 --------------------------------------------------------------------------------
-## 修改输入输出的文件编码为UTF-8.
+## CMD
+
+### 修改输入输出的文件编码为UTF-8.
 > chcp 65001
+通过如下管理员权限命令使CMD窗口启动时自动使用UTF-8编码(chcp 65001)。
+```
+reg add "HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor" /v Autorun /t REG_SZ /d "chcp 65001>nul" /f
+# 如果需要恢复
+reg delete "HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor" /v Autorun /f
+```
 
 ## Windows 窗口与CMD的切换
 - 命令行窗口时，用文件浏览器打开当前目录 `start .`
