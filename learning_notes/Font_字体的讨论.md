@@ -1,5 +1,10 @@
 #  字体
 
+## 思源等宽
+
+https://github.com/adobe-fonts/source-han-mono/releases/
+`请逐步指导我如何在Windows11下载安装支持亚洲字符的Source Han Mono`
+
 ## 程序源代码用的字体
 基础要求
 - 严格等宽
