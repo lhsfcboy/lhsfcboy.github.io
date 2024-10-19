@@ -82,6 +82,7 @@ PPI的计算: https://www.calculatorsoup.com/calculators/technology/ppi-calculat
 - Google Home Mini
   - "Hey, Google, Good morning"
   - "Hey, Google, Set an alarm for 6 a.m. that plays music"
+  - 2023年2月以后已经无法设置音乐闹钟了, 直接扔掉了
 
 ## 打印机
   - 支持无线连接, 支持自动双面, 带有扫描功能
