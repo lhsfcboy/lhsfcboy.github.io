@@ -48,6 +48,7 @@ PPI的计算: https://www.calculatorsoup.com/calculators/technology/ppi-calculat
     - PPI 110 3840 * 1600 
 - E595 笔记本屏幕
     -  1920x1080 15.6 ==> PPI 141
+-  ========================================
 - 候选屏幕
     - Huawei QHD 27 https://consumer.huawei.com/jp/monitors/mateview-gt-27-se/buy/
     - Dell 4k 27 ===> 163 不考虑!
