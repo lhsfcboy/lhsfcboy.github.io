@@ -1,5 +1,12 @@
 #  字体
 
+## 字体的背景知识
+
+- https://www.bilibili.com/video/BV19r4y1W74d/
+
+## Noto Sans Mono CJK SC
+- https://github.com/notofonts/noto-cjk/blob/main/Sans/Mono/NotoSansMonoCJKsc-Regular.otf
+
 ## 思源等宽
 
 https://github.com/adobe-fonts/source-han-mono/releases/
@@ -87,7 +94,8 @@ https://drxie.github.io/OSFCC/
 
 ## 字体封装
 
-思源字体的封装格式是 OpenType/CFF (OTF)。该格式由 Adobe 主导开发，Windows 和 Office 软件中的 OTF 解析和渲染程序也由他们直接提供给微软。然而，Adobe 并没有专门为 Office 软件编写 OTF 字体的嵌入功能，这导致 OTF 格式的思源字体无法嵌入。
+思源字体的封装格式是 OpenType/CFF (OTF)。该格式由 Adobe 主导开发，Windows 和 Office 软件中的 OTF 解析和渲染程序也由他们直接提供给微软。
+然而，Adobe 并没有专门为 Office 软件编写 OTF 字体的嵌入功能，这导致 OTF 格式的思源字体无法嵌入。
 
 不过，市面上常见的另一种字体格式，TrueType (TTF)，是微软（和苹果）直接开发的，该格式在 Windows 和 Office 上支持良好，支持嵌入。
 
