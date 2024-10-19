@@ -2,7 +2,7 @@
 
 ## PowerShell 
 
-### owerShell 设置 UTF-8 输出编码
+### PowerShell 设置 UTF-8 输出编码
 
 要让 PowerShell 的输出编码设置 `[Console]::OutputEncoding = [System.Text.Encoding]::UTF8` 永久生效，需要将其添加到 PowerShell 的配置文件中。具体步骤如下：
 
