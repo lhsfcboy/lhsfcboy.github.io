@@ -14,6 +14,7 @@ https://github.com/adobe-fonts/source-han-mono/releases/
 扩展要求
 - 支持中文与日文
 - 汉字宽度等于两个字母
+  - 例如: 严格2:1等宽的“思源黑体HW”
 
 ```
 Ubuntu Mono (中英文严格等宽)
@@ -83,4 +84,10 @@ https://drxie.github.io/OSFCC/
 
 - 简介：同样由 Adobe 和 Google 合作开发，提供高质量的宋体字形。
 - 下载链接：[GitHub - adobe-fonts/source-han-serif](https://github.com/adobe-fonts/source-han-serif)
+
+## 字体封装
+
+思源字体的封装格式是 OpenType/CFF (OTF)。该格式由 Adobe 主导开发，Windows 和 Office 软件中的 OTF 解析和渲染程序也由他们直接提供给微软。然而，Adobe 并没有专门为 Office 软件编写 OTF 字体的嵌入功能，这导致 OTF 格式的思源字体无法嵌入。
+
+不过，市面上常见的另一种字体格式，TrueType (TTF)，是微软（和苹果）直接开发的，该格式在 Windows 和 Office 上支持良好，支持嵌入。
 
