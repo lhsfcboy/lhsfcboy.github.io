@@ -78,11 +78,6 @@ PPI的计算: https://www.calculatorsoup.com/calculators/technology/ppi-calculat
       - 侧听功能类似于穿透功能，麦克风会收集不同的声音选择性的进行复制放大，让我们听到自己想听到的声音
       - 专注模式下有个粉色噪音音效
 
-## 家智能硬件
-- Google Home Mini
-  - "Hey, Google, Good morning"
-  - "Hey, Google, Set an alarm for 6 a.m. that plays music"
-  - 2023年2月以后已经无法设置音乐闹钟了, 直接扔掉了
 
 ## 打印机
   - 支持无线连接, 支持自动双面, 带有扫描功能
@@ -128,3 +123,11 @@ PPI的计算: https://www.calculatorsoup.com/calculators/technology/ppi-calculat
 | 罗技 MX Master 3S        | 600 RMB | 124 x 84 x 51     | Type-C 充电     |
 | 赛技双滚轮人体工学鼠标     | -       | 120 x 85 x 50     | Type-C 充电     |
 | 美国 W&P 无线蓝牙鼠标     | 118 RMB | 124 x 82 x 49     | -              |
+
+================================================================================
+
+## 家智能硬件
+- Google Home Mini
+  - "Hey, Google, Good morning"
+  - "Hey, Google, Set an alarm for 6 a.m. that plays music"
+  - 2024年2月以后已经无法设置音乐闹钟了, 直接扔掉了
