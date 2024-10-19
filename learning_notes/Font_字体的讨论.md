@@ -38,8 +38,22 @@ $fonts = New-Object System.Drawing.Text.InstalledFontCollection
 $fonts.Families | ForEach-Object { $_.Name }
 ```
 
-
 ## 常见的中文字体名称
+
+目前宋体、黑体、仿宋体和楷体成为汉字印刷的主要四种字体
+- 宋体
+  - 白体 笔画有粗细变化，而且一般是横细竖粗，末端有装饰部分（即“字脚”或“衬线”），点、撇、捺、钩等笔画有尖端
+  - 日本的明朝体（日语：明朝体／みんちょうたい
+- 黑体
+  - 笔画厚度均匀，平笔无节。与白体相反，和拉丁字母的无衬线体（英语：sans-serif）属于同类
+  - 中文里的黑体，与日文中的ゴシック体（ゴシックたい）属于同一种风格
+- 仿宋体
+  - 采用宋体结构、楷书笔画的较为清秀挺拔的字体，笔画横竖粗细均匀，
+  - 常用于排印副标题、诗词短文、批注、引文等，在一些读物中也用来排印正文部分。
+  - 仿宋体亦是中国公文指定内文字体。
+- 楷体
+  - 手写字体风格 印刷最早期参照的字体
+
 在筛选字体时，可以参考以下常见的中文字体名称：
 
 - SimSun（宋体）
@@ -56,7 +70,9 @@ $fonts.Families | ForEach-Object { $_.Name }
 - STSong（华文宋体）
 - STFangSong（华文仿宋）
 
-## 开源且可以商用的字体
+## 中文开源字体集 Open Source Fonts Collection for Chinese
+
+https://drxie.github.io/OSFCC/
 
 ### 1. 思源黑体（Source Han Sans）
 
@@ -68,22 +84,3 @@ $fonts.Families | ForEach-Object { $_.Name }
 - 简介：同样由 Adobe 和 Google 合作开发，提供高质量的宋体字形。
 - 下载链接：[GitHub - adobe-fonts/source-han-serif](https://github.com/adobe-fonts/source-han-serif)
 
-### 3. Noto Sans CJK
-
-- 简介：Google 的 Noto 字体家族的一部分，旨在消除“豆腐块”（无法显示的字符），支持多种语言。
-- 下载链接：[Google Noto Fonts](https://www.google.com/get/noto/#sans-hans)
-
-### 4. 霞鹜文楷
-
-- 简介：由国内开发者 LXGW 基于思源宋体修改，优化了字形和标点，适合阅读和显示。
-- 下载链接：[GitHub - lxgw/LxgwWenKai](https://github.com/lxgw/LxgwWenKai)
-
-### 5. 霞鹜新晰黑
-
-- 简介：同样由 LXGW 开发，专为屏幕显示优化的黑体字体。
-- 下载链接：[GitHub - lxgw/LxgwClearGothic](https://github.com/lxgw/LxgwClearGothic)
-
-### 6. 更纱黑体（Sarasa Gothic）
-
-- 简介：基于思源黑体和 Iosevka 混合的等宽字体，适合编程和终端使用。
-- 下载链接：[GitHub - be5invis/Sarasa-Gothic](https://github.com/be5invis/Sarasa-Gothic)
