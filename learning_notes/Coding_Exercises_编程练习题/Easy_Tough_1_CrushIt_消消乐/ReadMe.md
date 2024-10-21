@@ -1,5 +1,12 @@
 # C语言的消消乐
 
+## 原题地址
+
+https://github.com/csnwc/Exercises-In-C/tree/2d21129e7d4bfec665640720429404bbd2b5531a/Code/Week5/CrushIt
+
+CrushIt.pdf
+
+
 ## 核心功能函数
 - 初始化游戏板 (initialise()) - 从文件或给定的字符串初始化游戏板。
 - 匹配和清除块 (match()) - 找出水平或垂直线上连续三个或以上相同的块，并将它们替换为'.'（空块）。
