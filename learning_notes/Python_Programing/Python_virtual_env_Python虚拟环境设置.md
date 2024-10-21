@@ -1,10 +1,13 @@
 # Python虚拟环境的设置
 
-[[toc]]
-
 ## 所谓全局环境
 
 - pip: python的包管理工具，可以用于安装python包。
+
+## Windows下安装Python
+
+**不要**通过 Microsoft Store 安装Python，它使用了一个沙盒环境来隔离应用程序，路径会比较特殊。
+`C:\Users\lhsfc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\Scripts`是 Microsoft Store 版本的 Python 的标准安装位置。
   
 ## 主流的环境管理工具
 
