@@ -1,14 +1,10 @@
 # 布里斯托大学 计算机科学系 计算机架构课程
 
-https://cs-uob.github.io/COMS10015/
-
-
-## 通过实际电子元件学习计算机结构中的布尔代数部分
-https://github.com/danpage/nandboard
-
+- https://cs-uob-overview-of-architecture.github.io/
 
 ## Unit Information
-https://www.bristol.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=22%2F23&unitCode=COMSM1302
+
+https://www.bristol.ac.uk/unit-programme-catalogue/UnitDetails.jsa?ayrCode=24%2F25&unitCode=COMSM1302
 
 This unit introduces students to how a computer works, linking high-level programming languages to the hardware on which programs are executed. The unit starts from basic digital electronics and gradually builds up to the design of a simple computer system.
 
