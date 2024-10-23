@@ -5,8 +5,7 @@ Implement a stack with min() function, which will return the smallest number in 
 It should support push, pop and min operation all in O(1) cost.
 """
 
-
-
+```python
 class MinStack:
     
     def __init__(self):
@@ -39,3 +38,4 @@ class MinStack:
     def min(self):
         return self.min_number[-1]
         # write your code here
+```
