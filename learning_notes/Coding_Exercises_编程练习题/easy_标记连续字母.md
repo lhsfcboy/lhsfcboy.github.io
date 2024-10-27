@@ -66,6 +66,8 @@ char* markConsecutiveChars(const char *input) {
 ## 避开对最后一个字母的判断
 
 处理最后一个数字的部分有些ugly, 是不是可以考虑先读入第一个字符, 然后开始循环, 比较 `i-1` 和 `i`
+或者合并逻辑.
+
 ```c
     int count = 1;  // 用于计数连续字符
     for (int i = 0; i < length; i++) {
