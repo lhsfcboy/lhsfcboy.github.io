@@ -7,9 +7,11 @@
 ```c
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include <assert.h>
 
 // 函数声明
-void markConsecutiveChars(char *input, char *output);
+char* markConsecutiveChars(const char *input);
 
 int main() {
     // 测试用例
@@ -22,19 +24,27 @@ int main() {
 }
 
 // 函数实现
-void markConsecutiveChars(char *input, char *output) {
-    // 初始化 memset(output, '\0', length + 1);  // 将 output 的前 length+1 个字节都设置为 '\0'
+char* markConsecutiveChars(const char *input) {
     int length = strlen(input);
-    for (int i = 0; i <= length; i++) {
-        output[i] = '\0';
+    char *output = (char*)malloc((length + 1) * sizeof(char));  // 分配内存给 output
+    // 初始化 output
+    memset(output, '0', length);
+    output[length] = '\0';
+
+    // 核心逻辑：标记连续字符
+    for (int i = 1; i < length; i++) {
+        if (input[i] == input[i - 1]) {
+            output[i] = '1';
+            output[i - 1] = '1';  // 也标记前一个字符
+        }
     }
 
-    // 核心逻辑
-    // ...
-
-    // 打印当前的结果
+    // 打印当前的结果（仅用于调试）
     printf("Input: %s\nOutput: %s\n", input, output);
+
+    return output;
 }
+
 ```
 
 ```c
