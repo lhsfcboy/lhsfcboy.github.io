@@ -1,15 +1,14 @@
 # 标记三个以上重复的字符
 
-
-
-
-
+代码框架:
 ```c
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include <assert.h>
 
 // 函数声明
-void markConsecutiveChars(char *input, char *output);
+char* markConsecutiveChars(const char *input);
 
 int main() {
     // 测试用例
@@ -22,20 +21,24 @@ int main() {
 }
 
 // 函数实现
-void markConsecutiveChars(char *input, char *output) {
-    // 初始化 memset(output, '\0', length + 1);  // 将 output 的前 length+1 个字节都设置为 '\0'
+char* markConsecutiveChars(const char *input) {
     int length = strlen(input);
-    for (int i = 0; i <= length; i++) {
-        output[i] = '\0';
-    }
+    char *output = malloc(length + 1);  // 分配内存，C 语言中，malloc 返回 void *，直接赋值给 char * 不需要类型转换
+    memset(output, '0', length); // 初始化 output  省略了 sizeof(char)，因为 sizeof(char) 始终为 1
+    output[length] = '\0'; // 添加字符串结束符
 
-    // 核心逻辑
-    // ...
+    // 核心逻辑：标记连续字符
 
-    // 打印当前的结果
-    printf("Input: %s\nOutput: %s\n", input, output);
+
+    // 打印当前的结果（仅用于调试）
+    printf("Input:  %s\nOutput: %s\n", input, output);
+
+    return output;
 }
+
 ```
+
+## 简单实现
 
 ```c
     int count = 1; // 初始化计数器
@@ -60,7 +63,11 @@ void markConsecutiveChars(char *input, char *output) {
     }
 ```
 
+## 避开对最后一个字母的判断
+
 处理最后一个数字的部分有些ugly, 是不是可以考虑先读入第一个字符, 然后开始循环, 比较 `i-1` 和 `i`
+或者合并逻辑.
+
 ```c
     int count = 1;  // 用于计数连续字符
     for (int i = 0; i < length; i++) {
@@ -78,7 +85,10 @@ void markConsecutiveChars(char *input, char *output) {
     }
 ```    
 
-考虑用一个数组把已经开始匹配但是还没有结束的字符记录下来, 然后再处理
+## 通过数组来暂存还没有结束匹配的字符
+
+考虑用一个数组把已经开始匹配但是还没有结束的字符记录下来, 然后继续处理
+
 ```c
     int index_of_unfinished_match[length];  // 用于存储尚未结束匹配的索引
     int top = -1;  // 栈顶指针
@@ -111,6 +121,16 @@ void markConsecutiveChars(char *input, char *output) {
         }
     }
 ```    
+
+对数组的操作:
+- 只对数组尾部的数据感兴趣
+  - 没有通过数组下标访问尾部以外的任何值
+  - 添加元素每次都是在最右边
+  - 删除元素每次都是在最右边
+
+## WIP
+
+WIP
 
 ```c
 void markConsecutiveChars(char *input, char *output) {
