@@ -26,10 +26,9 @@ int main() {
 // 函数实现
 char* markConsecutiveChars(const char *input) {
     int length = strlen(input);
-    char *output = (char*)malloc((length + 1) * sizeof(char));  // 分配内存给 output
-    // 初始化 output
-    memset(output, '0', length);
-    output[length] = '\0';
+    char *output = malloc(length + 1);  // 分配内存，C 语言中，malloc 返回 void *，直接赋值给 char * 不需要类型转换
+    memset(output, '0', length); // 初始化 output  省略了 sizeof(char)，因为 sizeof(char) 始终为 1
+    output[length] = '\0'; // 添加字符串结束符
 
     // 核心逻辑：标记连续字符
 
