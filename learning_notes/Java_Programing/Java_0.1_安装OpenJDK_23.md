@@ -17,8 +17,9 @@
 - CMD
 
 ```cmd
+echo %JAVA_HOME%
 echo %Path:;=&echo.%
-
+where java
 ```
 
 - PowerShell
