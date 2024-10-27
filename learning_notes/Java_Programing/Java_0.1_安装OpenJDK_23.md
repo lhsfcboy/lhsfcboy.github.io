@@ -7,7 +7,7 @@
 
 ## 环境变量
 
-- 系统变量 `系统变量`
+- 系统变量 `JAVA_HOME`
   - 变量值设置为 Java 的安装路径，例如 C:\Program Files\Java\jdk-版本号
 - 系统变量 `Path`
   - 添加 Java 的二进制文件路径`%JAVA_HOME%\bin`
