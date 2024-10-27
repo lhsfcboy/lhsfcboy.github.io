@@ -32,12 +32,7 @@ char* markConsecutiveChars(const char *input) {
     output[length] = '\0';
 
     // 核心逻辑：标记连续字符
-    for (int i = 1; i < length; i++) {
-        if (input[i] == input[i - 1]) {
-            output[i] = '1';
-            output[i - 1] = '1';  // 也标记前一个字符
-        }
-    }
+
 
     // 打印当前的结果（仅用于调试）
     printf("Input: %s\nOutput: %s\n", input, output);
