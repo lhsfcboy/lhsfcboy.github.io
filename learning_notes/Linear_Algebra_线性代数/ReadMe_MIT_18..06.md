@@ -10,14 +10,16 @@ MIT的Strang教授所执教的线性代数课笔记, 使用 `Jupyter Notebook` �
 ## 内容来源
 
 - [官方课程网址](http://web.mit.edu/18.06/www/)
+  - [MIT 18.06](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/)
+- [网易公开课 主课视频](http://open.163.com/special/opencourse/daishu.html)
+- [带中文字幕Youtube](https://www.youtube.com/playlist?list=PL6839449936471E0C)
+- ==================================================
 - [zlotus的线性代数笔记 @Github]( https://github.com/zlotus/notes-linear-algebra )
 - [zlotus的线性代数笔记 @NbViewer](http://nbviewer.jupyter.org/github/zlotus/notes-linear-algebra/blob/master/ReadMe.ipynb)
 - [知乎专栏 MIT线性代数课程精细笔记](https://zhuanlan.zhihu.com/p/28277072)
-- [网易公开课 主课视频](http://open.163.com/special/opencourse/daishu.html)
-- [带中文字幕Youtube](https://www.youtube.com/playlist?list=PL6839449936471E0C)
-
-- [网易公开课 习题课视频](http://open.163.com/special/opencourse/mitxianxingdaishuxitike.html)
 - [PDF格式的笔记](https://github.com/MLNLP-World/MIT-Linear-Algebra-Notes/tree/master)
+- ==================================================
+- [网易公开课 习题课视频](http://open.163.com/special/opencourse/mitxianxingdaishuxitike.html)
   
 ----
 
