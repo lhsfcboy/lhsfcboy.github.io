@@ -33,11 +33,6 @@ $Env:Path -split ';'
 
 ```powershell
 > dir "C:\Program Files\Common Files\Oracle\Java\javapath"
-
-
-    目录: C:\Program Files\Common Files\Oracle\Java\javapath
-
-
 Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----
 -a----         2024/9/30      8:13         715864 java.exe
