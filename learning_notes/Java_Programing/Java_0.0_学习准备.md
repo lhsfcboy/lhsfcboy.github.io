@@ -73,7 +73,7 @@ Java SE(Java平台标准版)的版本更新计划由Oracle主导, 定期发布�
 运行`java -version`命令时，显示的版本号通常是内部版本号，例如 1.8.0_371。
 
 ```shell
-# java -version of Java 18
+# java -version of Java 8
 java version "1.8.0_371"
 Java(TM) SE Runtime Environment (build 1.8.0_371-b11)
 Java HotSpot(TM) 64-Bit Server VM (build 25.371-b11, mixed mode)
