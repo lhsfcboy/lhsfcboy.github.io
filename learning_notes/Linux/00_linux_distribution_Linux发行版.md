@@ -6,6 +6,7 @@ Linux中的GCC是一件很麻烦的事情, 轻易不要碰的好。
 ## 常见发行版
 
 发行版的选择
+
 - 对初学者而言各个系统几乎没有区别。
 - 对实际系统维护者而言，我们也很少处在挑选发行版的岗位。
 - 如果不知道应该选择什么，那就意味着对发行版没有特别要求。
@@ -14,6 +15,7 @@ Linux中的GCC是一件很麻烦的事情, 轻易不要碰的好。
   - 5年以后呢？5年以后公司在不在都还不一定呢。
 
 常见的发行版
+
 - Debian / Ubuntu
   - 默认选择Ubuntu版本
 - Fedora / RHEL / CentOS / Rocky
@@ -35,6 +37,7 @@ Linux中的GCC是一件很麻烦的事情, 轻易不要碰的好。
   - 最近的大版本 https://en.wikipedia.org/wiki/Linux_kernel_version_history#Releases_6.x.y
 
 企业应用中流行的版本  
+
 | Distribution                    | Version       | Kernel Version | GCC Version | glibc Version | Support Lifetime      |
 |---------------------------------|---------------|----------------|-------------|---------------|-----------------------|
 | Red Hat Enterprise Linux        | 9.3           | 5.14           | 11          | 2.34          | May 2032              |
@@ -44,6 +47,7 @@ Linux中的GCC是一件很麻烦的事情, 轻易不要碰的好。
 | Oracle Linux                    | 9             | 5.14           | 11          | 2.34          | June 2032             |
 
 RHEL红帽企业版的内核版本: 
+
 - 版本使用说明: https://access.redhat.com/articles/3078
 - RHEL 9 5.14
 - RHEL 8 4.18
@@ -51,6 +55,7 @@ RHEL红帽企业版的内核版本:
 - RHEL 6 2.6
 
 Ubuntu 的内核版本将以发布时最新版本为准. 2024, Ubuntu announced a change in policy to always use the latest upstream code of the Linux kernel at the time of each Ubuntu release, even if the kernel code hasn't seen a stable release.
+
 - 版本使用说明: https://ubuntu.com/about/release-cycle#ubuntu-kernel-release-cycle
 - 24.10 6.11
 - 24.04 6.8

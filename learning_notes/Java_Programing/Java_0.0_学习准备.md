@@ -8,6 +8,7 @@
 ## 版本历史
 
 Java 首先是一个规范(标准),具体包括:
+
 - Java语言规范(JLS - Java Language Specification)
 - Java虚拟机规范(JVMS - Java Virtual Machine Specification)
 - Java API规范
@@ -30,6 +31,7 @@ OpenJDK是大多数其他JDK发行版的基础
 ### Other
 
 其他常见的JDK发行版:
+
 - AdoptOpenJDK(现在的Adoptium)
 - Amazon Corretto
 - Azul Zulu
@@ -46,6 +48,7 @@ Java SE(Java平台标准版)的版本更新计划由Oracle主导, 定期发布�
 对OpenJDK而言, 可以说没有LTS这个概念, 具体的商业支持由各个厂家决定.
 
 近期的主要版本和Oracle JDK的商业支持时间[Oracle Java SE Support Roadmap](https://www.oracle.com/cn/java/technologies/java-se-support-roadmap.html)
+
 - 目前还在生命周期内的LTS版本
 - 最新的GA版本
 - 下一个计划发布的LTS版本 
@@ -82,4 +85,5 @@ Java HotSpot(TM) 64-Bit Server VM (build 23.0.1+11-39, mixed mode, sharing)
 ```
 
 ## 参考资料
+
 - [OpenJDKと各種JDKディストリビューションの情報源まとめ](https://qiita.com/yamadamn/items/2dd26a014791b9557199)
