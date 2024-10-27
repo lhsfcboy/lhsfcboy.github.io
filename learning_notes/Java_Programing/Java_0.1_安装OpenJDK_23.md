@@ -40,6 +40,18 @@ Mode                 LastWriteTime         Length Name
 -a----         2024/9/30      8:13         715864 javac.exe
 -a----         2024/9/30      8:13         715872 javaw.exe
 -a----         2024/9/30      8:13         715864 jshell.exe
+
+> dir "C:\Program Files\Common Files\Oracle\Java"
+ Volume in drive C is Windows
+ Volume Serial Number is 4CE0-0E01
+
+ Directory of C:\Program Files\Common Files\Oracle\Java
+
+2024/10/27  10:23    <DIR>          .
+2024/10/27  10:23    <DIR>          ..
+2024/10/27  10:23    <JUNCTION>     javapath [C:\Program Files\Common Files\Oracle\Java\javapath_target_302825171]
+2024/10/27  10:23    <DIR>          javapath_target_302825171
+               0 File(s)              0 bytes
 ```
 
 这是由安装程序自动设置. 使用这个路径的目的是方便 Java 更新。当安装了新的 Java 版本时，这些快捷方式会自动更新，不需要每次更新时手动修改 Path.
