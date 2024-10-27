@@ -7,10 +7,48 @@
 
 ## 版本历史
 
+Java 首先是一个规范(标准),具体包括:
+- Java语言规范(JLS - Java Language Specification)
+- Java虚拟机规范(JVMS - Java Virtual Machine Specification)
+- Java API规范
+
+各个不同厂家由不同实现, 最主要的两个实现:
+
+### OpenJDK
+
+[OepnJDK](https://openjdk.org/projects/jdk/)是社区开发的Java实现。
+Oracle 是 OpenJDK 的主要贡献者之一, Oracle有官方的OpenJDK发布页面[Oracle OpenJDK Releases](https://jdk.java.net/),
+或者[Java Downloads](https://www.oracle.com/java/technologies/downloads/)
+
+OpenJDK是大多数其他JDK发行版的基础
+
+### Oracle JDK
+
+由Oracle公司开发维护, 基于OpenJDK构建, 包含一些闭源组件和商业特性
+从Java 11开始用于商业用途 需要商业许可证
+
+### Other
+
+其他常见的JDK发行版:
+- AdoptOpenJDK(现在的Adoptium)
+- Amazon Corretto
+- Azul Zulu
+- Red Hat OpenJDK
+
+这些都是基于OpenJDK的实现,但可能会添加一些特定的优化和工具。它们都遵循相同的Java规范,所以用这些JDK编写的Java代码都是兼容的。
+
+## 版本生命周期
+
+Java SE(Java平台标准版)的版本更新计划由Oracle主导, 定期发布新版本，其中某些版本被指定为LTS版本, 这为整个Java生态系统提供了一个参考基准
+
+不同的JDK提供商可以自行决定对哪些版本提供长期支持, 支持时间和支持方式也可能不同.
+
+对OpenJDK而言, 可以说没有LTS这个概念, 具体的商业支持由各个厂家决定.
+
+近期的主要版本和Oracle JDK的商业支持时间[Oracle Java SE Support Roadmap](https://www.oracle.com/cn/java/technologies/java-se-support-roadmap.html)
 - 目前还在生命周期内的LTS版本
 - 最新的GA版本
-- 下一个计划发布的LTS版本
-- [Oracle Java SE Support Roadmap](https://www.oracle.com/cn/java/technologies/java-se-support-roadmap.html)
+- 下一个计划发布的LTS版本 
 
 | Release      | GA Date | 内部版本号 | Extended Support |
 |--------------|---------|------------|------------------|
@@ -43,8 +81,5 @@ Java(TM) SE Runtime Environment (build 23.0.1+11-39)
 Java HotSpot(TM) 64-Bit Server VM (build 23.0.1+11-39, mixed mode, sharing)
 ```
 
-## OepnJDK vs Oracle JDK vs Other
-
-[OepnJDK](https://openjdk.org/projects/jdk/)是社区开发的Java实现。
-Oracle 是 OpenJDK 的主要贡献者之一, Oracle有官方的OpenJDK发布页面[Oracle OpenJDK Releases](https://jdk.java.net/),
-或者[Java Downloads](https://www.oracle.com/java/technologies/downloads/)
+## 参考资料
+- [OpenJDKと各種JDKディストリビューションの情報源まとめ](https://qiita.com/yamadamn/items/2dd26a014791b9557199)
