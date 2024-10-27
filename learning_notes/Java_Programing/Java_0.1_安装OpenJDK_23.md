@@ -41,17 +41,10 @@ Mode                 LastWriteTime         Length Name
 -a----         2024/9/30      8:13         715872 javaw.exe
 -a----         2024/9/30      8:13         715864 jshell.exe
 
-> dir "C:\Program Files\Common Files\Oracle\Java"
- Volume in drive C is Windows
- Volume Serial Number is 4CE0-0E01
 ================================================================================
- Directory of C:\Program Files\Common Files\Oracle\Java
-
-2024/10/27  10:23    <DIR>          .
-2024/10/27  10:23    <DIR>          ..
+> dir "C:\Program Files\Common Files\Oracle\Java"
 2024/10/27  10:23    <JUNCTION>     javapath [C:\Program Files\Common Files\Oracle\Java\javapath_target_302825171]
 2024/10/27  10:23    <DIR>          javapath_target_302825171
-               0 File(s)              0 bytes
 ================================================================================
 > Get-Item "C:\Program Files\Common Files\Oracle\Java\javapath\java.exe" | Select-Object Name,Target
 
