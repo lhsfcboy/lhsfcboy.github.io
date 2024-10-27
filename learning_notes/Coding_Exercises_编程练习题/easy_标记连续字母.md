@@ -124,6 +124,9 @@ char* markConsecutiveChars(const char *input) {
 
 对数组的操作:
 - 只对数组尾部的数据感兴趣
+  - 没有通过数组下标访问尾部以外的任何值
+  - 添加元素每次都是在最右边
+  - 删除元素每次都是在最右边
 
 ## WIP
 
