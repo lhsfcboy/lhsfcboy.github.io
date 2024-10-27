@@ -31,7 +31,7 @@ char* markConsecutiveChars(const char *input) {
 
 
     // 打印当前的结果（仅用于调试）
-    printf("Input: %s\nOutput: %s\n", input, output);
+    printf("Input:  %s\nOutput: %s\n", input, output);
 
     return output;
 }
