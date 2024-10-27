@@ -1,9 +1,6 @@
 # 标记三个以上重复的字符
 
-
-
-
-
+代码框架:
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -41,6 +38,8 @@ char* markConsecutiveChars(const char *input) {
 
 ```
 
+## 简单实现
+
 ```c
     int count = 1; // 初始化计数器
     for (int i = 1; i <= length; i++) {
@@ -64,6 +63,8 @@ char* markConsecutiveChars(const char *input) {
     }
 ```
 
+## 可否避开对最后一个字母的判断
+
 处理最后一个数字的部分有些ugly, 是不是可以考虑先读入第一个字符, 然后开始循环, 比较 `i-1` 和 `i`
 ```c
     int count = 1;  // 用于计数连续字符
@@ -82,7 +83,10 @@ char* markConsecutiveChars(const char *input) {
     }
 ```    
 
-考虑用一个数组把已经开始匹配但是还没有结束的字符记录下来, 然后再处理
+## 通过数组来暂存还没有结束匹配的字符
+
+考虑用一个数组把已经开始匹配但是还没有结束的字符记录下来, 然后继续处理
+
 ```c
     int index_of_unfinished_match[length];  // 用于存储尚未结束匹配的索引
     int top = -1;  // 栈顶指针
@@ -115,6 +119,10 @@ char* markConsecutiveChars(const char *input) {
         }
     }
 ```    
+
+## WIP
+
+WIP
 
 ```c
 void markConsecutiveChars(char *input, char *output) {
