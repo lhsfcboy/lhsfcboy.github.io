@@ -122,6 +122,9 @@ char* markConsecutiveChars(const char *input) {
     }
 ```    
 
+对数组的操作:
+- 只对数组尾部的数据感兴趣
+
 ## WIP
 
 WIP
