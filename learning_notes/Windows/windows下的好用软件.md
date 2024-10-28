@@ -95,12 +95,18 @@
 - Screenbits
   - 这款录屏工具非常轻量，仅 675 KB，并且直接在 Windows Store 上架，相比于传统的录屏工具在安全性上更加可靠
 
+## 下载
+现代人已经不依靠下载软件了，以防万一做个记录。
+Tracker：记录下载同一个资源的用户信息并提供给你，帮助你与其他用户建立连接。使用 Tracker 可以帮你获取到更多的用户，用户数量增加，相应的也会提高下载速度。
+- qBittorrent增强版
+  - https://github.com/c0re100/qBittorrent-Enhanced-Edition
+  - qBittorrent是个开源的BT下载工具，而qBittorrent Enhanced Edition是在前者的基础上进行二次开发，添加了一些功能的非官方版
+  - 对于一般下载者而言，主要是自动更新tracker这个功能比较方便，可以订阅一个tracker URL，不用手动维护
+  - [国人维护](https://trackerslist.com/#/zh)
+
 ## 不常用软件备份区
 - LibreOffice
 - 火绒安全软件
-- qBittorrent增强版
-  - 现代人已经不依靠下载软件了，以防万一做个记录
-  - https://github.com/c0re100/qBittorrent-Enhanced-Edition
 - TrafficMonitor
   - 任务栏中实时显示网速
 - Ditto
