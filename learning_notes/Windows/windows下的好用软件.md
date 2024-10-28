@@ -102,7 +102,7 @@ Tracker：记录下载同一个资源的用户信息并提供给你，帮助你�
   - https://github.com/c0re100/qBittorrent-Enhanced-Edition
   - qBittorrent是个开源的BT下载工具，而qBittorrent Enhanced Edition是在前者的基础上进行二次开发，添加了一些功能的非官方版
   - 对于一般下载者而言，主要是自动更新tracker这个功能比较方便，可以订阅一个tracker URL，不用手动维护
-  - [国人维护](https://trackerslist.com/#/zh)
+  - [国人维护的一份列表](https://trackerslist.com/#/zh) , 另外一份老外用的比较多 https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt
 
 ## 不常用软件备份区
 - LibreOffice
