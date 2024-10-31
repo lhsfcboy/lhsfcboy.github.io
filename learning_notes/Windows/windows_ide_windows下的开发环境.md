@@ -15,7 +15,31 @@ notepad $PROFILE                          # 编辑配置文件
 
 将以下代码添加到配置文件中：
 ```powershell
-[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+# 1. 设置PowerShell控制台的代码页为UTF-8
+chcp 65001
+
+# 2. 设置PowerShell的输入输出编码
+$OutputEncoding = [System.Text.Encoding]::UTF8
+[System.Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+[System.Console]::InputEncoding = [System.Text.Encoding]::UTF8
+
+# 3. 为当前用户设置永久性的编码配置
+# 检查配置文件是否存在
+if (!(Test-Path -Path $PROFILE)) {
+    # 如果配置文件不存在，创建配置文件
+    New-Item -ItemType File -Path $PROFILE -Force
+}
+
+# 添加编码设置到配置文件
+$profileContent = @'
+# 设置PowerShell的默认编码为UTF-8
+$OutputEncoding = [System.Text.Encoding]::UTF8
+[System.Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+[System.Console]::InputEncoding = [System.Text.Encoding]::UTF8
+'@
+
+# 将配置添加到配置文件
+Add-Content -Path $PROFILE -Value $profileContent -Force
 ```
 
 如果遇到执行策略限制，需要运行：
