@@ -21,6 +21,10 @@
 
 ## 语言无关
 
+### AI
+
+- TONGYI Lingma 通义灵码
+
 ### 文件图标
 
 依据文件类型设置不同的文件图标
@@ -48,19 +52,29 @@
 
 - [vscode-input-sequence](https://marketplace.visualstudio.com/items?itemName=tomoki1207.vscode-input-sequence)
 
-## CSV
+### PDF
+
+- vscode-pdf
+
+## CSV / Excel
 
 - Rainbow CSV
+- Excel Viewer
   
 ## Markdown
 
+- Markdown PDF
 - Markdown All in One
   + 自动调整列表的数字序号
   + 自动格式化表格
     `Alt + Shift + F`
+- markdownlint    
 
 ## python相关
 
+- Python
+- Python Debugger
+- Pylance
 - pylint
 
 ```json
