@@ -65,38 +65,6 @@
 "files.autoGuessEncoding": true,
 ```
 
-## 外观设置
-
-- Sublime Material Theme - Dark
-
-注释所用的字体格式为斜体,且是墨绿色, 很难在黑色背景中看清.
-修改配置文件: `/c/Users/Mike/.vscode/extensions/jprestidge.theme-material-theme-1.0.1/themes/Material-Theme.tmTheme`.
-
-删除掉控制`comments`格式的如下两行, 并将颜色改为 `<string>#37EC27</string>` (亮绿色.
-
-```xml
-<key>fontStyle</key>
-<string>italic</string>
-```
-
-- Dracula Theme
-  深色主题
-
-- Material Icon Theme
-  依据文件类型设置不同的文件图标
-
-- Indent Rainbow
-  使得对齐更加具有可读性
-
-- Bracket Pair Colorizer
-  为代码中的匹配的括号自动着色，以不同的颜色进行区分
-
-- highlight-matching-tag
-  高亮匹配的标签
-
 ## Markdown 相关
 
 - 原生支持实时预览? `Ctrl + K, V`
-
-
-
