@@ -4,6 +4,8 @@
 
 - 官方Web市场: [Extensions for Visual Studio Code](https://marketplace.visualstudio.com/vscode)
 - 查看已安装的插件列表: `code --list-extensions`
+- 只安装自己理解其用途的插件!
+- 对于插件带来的快捷键覆盖等问题保持警觉!
 
 ## 有待尝试
 
