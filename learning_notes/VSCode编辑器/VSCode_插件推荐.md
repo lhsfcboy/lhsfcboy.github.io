@@ -12,10 +12,16 @@
 - Path Autocomplete / Path Intellisense
 - Output Colorizer
 - Trailing Spaces 高亮行末空格
+- Indent Rainbow
+  - 使得对齐更加具有可读性
+- highlight-matching-tag
+  - 高亮匹配的标签 
 
 ## 语言无关
 
 ### 文件图标
+
+依据文件类型设置不同的文件图标
 
 - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
 - [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)
@@ -33,7 +39,7 @@
 
 ### 代码格式化
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- 匹配括号着色 / Bracket Pair Colorizer
+- 匹配括号着色 / Bracket Pair Colorizer / Bracket Pair Colorizer
   - 已经包含在其他插件功能中了, 不需要额外安装
 
 ### 文本输入相关
