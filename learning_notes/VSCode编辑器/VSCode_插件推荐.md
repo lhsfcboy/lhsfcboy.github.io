@@ -75,20 +75,9 @@
 - Python
 - Python Debugger
 - Pylance
-- pylint
-
-```json
-    "python.linting.pylintArgs": [
-        "--disable=C0301,C0111,C0103,E0611"
-    ],
-
-    "python.linting.pylintArgs": [
-        "--disable=C0413,C0301,C0111,C0103,E0611,W0105,W0611,W0621,W0404"
-    ],
-```
-
-- 禁止的规则
-  - C0111:Missing module docstring
+- [Pylint](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint)
+  - 禁止的规则
+  - missing-module-docstring / C0114
   - C0301:Line too long
   - C0103:Constant name doesn't conform to UPPER_CASE naming style
   - C0413:Import "" should be placed at the top of the module
@@ -97,3 +86,14 @@
   - W0611:Unused import random
   - W0404:Reimport ''
   - W1203:Use % formatting in logging functions and pass the % parameters as arguments
+```json
+    "python.linting.pylintArgs": [
+        "--disable=C0413,  # Import related",
+        "--disable=C0301,  # Line length",
+        "--disable=C0111,  # Documentation",
+        "--disable=C0103,  # Naming",
+        "--disable=E0611,  # Import errors",
+        "--disable=W0105,W0611,W0621,W0404  # Various warnings"
+    ]
+```
+
