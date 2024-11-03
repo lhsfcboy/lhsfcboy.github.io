@@ -68,3 +68,11 @@
 ## Markdown 相关
 
 - 原生支持实时预览? `Ctrl + K, V`
+
+## 其他
+
+显示控制字符
+
+```json
+"editor.renderControlCharacters": true
+```
