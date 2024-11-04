@@ -29,9 +29,9 @@ int main()
 - 在终端窗口中使用`make`命令, 对应的`Makefile`示例如下
 
 ```make
-all: clean main run
+all: clean build run
 
-main: main.c
+build: main.c
 	gcc -Wall -Wextra -std=c99 -o main main.c
 
 run: main
@@ -84,6 +84,62 @@ clean:
 借助于这个配置, 我们可以设置断点后进行调试运行了.
 
 ## 改写为make模式
+
+```json
+{
+  "tasks": [
+    {
+      "type": "shell", // 使用 shell 类型任务来执行 make 命令
+      "label": "make build", // 任务标签，显示为“Make: Build project”
+      "command": "make build", // 运行 make 命令
+      "args": [
+        // 可以在此添加额外的 make 参数（如需要）
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}" // 设置当前工作目录为项目的根目录
+      },
+      "problemMatcher": [
+        "$gcc" // 使用 $gcc 作为问题匹配器，捕获编译错误和警告
+      ],
+      "group": {
+        "kind": "build", // 将任务归类为“build”类型
+        "isDefault": true // 设置该任务为默认构建任务
+      },
+      "detail": "Task to build the project using make." // 任务的详细描述
+    }
+  ],
+  "version": "2.0.0" // tasks.json 配置文件版本
+}
+```
+
+但是此时, 按下`Run`按钮依然不能识别到这个任务, 应为`Run`按钮是从`.vscod/launch.json`中取得任务列表
+
+```json
+{
+  "tasks": [
+    {
+      "type": "shell", // 使用 shell 类型任务来执行 make 命令
+      "label": "make build", // 任务标签，显示为“Make: Build project”
+      "command": "make build", // 运行 make 命令
+      "args": [
+        // 可以在此添加额外的 make 参数（如需要）
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}" // 设置当前工作目录为项目的根目录
+      },
+      "problemMatcher": [
+        "$gcc" // 使用 $gcc 作为问题匹配器，捕获编译错误和警告
+      ],
+      "group": {
+        "kind": "build", // 将任务归类为“build”类型
+        "isDefault": true // 设置该任务为默认构建任务
+      },
+      "detail": "Task to build the project using make." // 任务的详细描述
+    }
+  ],
+  "version": "2.0.0" // tasks.json 配置文件版本
+}
+```
 
 ## 多个文件的编译运行
 
