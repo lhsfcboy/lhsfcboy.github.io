@@ -2,6 +2,10 @@
 
 以C语言为例.
 
+## gcc常用参数
+
+-fdiagnostics-color=always
+
 ## 单个文件的编译运行与调试
 
 对于如下的单个C语言文件, `main.c`
@@ -41,7 +45,7 @@ clean:
 
 ## 使用VS Code的执行工具
 
-`Ctrl Shift B`第一次运行时, 会出现如下的`tasks.json`
+`Ctrl Shift B`第一次运行时, 会出现如下的`tasks.json`, 此处追加了注释部分方便理解
 
 ```json
 {
