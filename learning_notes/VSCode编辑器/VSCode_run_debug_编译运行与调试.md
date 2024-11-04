@@ -2,10 +2,6 @@
 
 以C语言为例.
 
-## gcc常用参数
-
--fdiagnostics-color=always
-
 ## 单个文件的编译运行与调试
 
 对于如下的单个C语言文件, `main.c`
