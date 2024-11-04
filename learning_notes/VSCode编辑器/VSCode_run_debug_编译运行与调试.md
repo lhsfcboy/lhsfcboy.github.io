@@ -45,7 +45,10 @@ clean:
 
 ## 使用VS Code的执行工具
 
-`Ctrl Shift B`第一次运行时, 会出现如下的`tasks.json`, 此处追加了注释部分方便理解
+第一次点击`Run`运行时, 会出现下拉列表要求我们选择具体debug配置
+![image](https://github.com/user-attachments/assets/edfb79cf-713f-4d70-b1be-a4b64baf3a59)
+
+选择高亮的选项后, 会在工作区目录下生成`.vscode/tasks.json`, 并默认添加了一个使用`gcc`的此配置, 处追加了注释部分方便理解
 
 ```json
 {
