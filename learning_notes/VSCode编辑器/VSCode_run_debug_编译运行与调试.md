@@ -16,9 +16,9 @@ int main()
 }
 ```
 
-- 使用命令行
+- 在终端窗口中使用命令行
   `gcc -Wall -Wextra -std=c99 -o main main.c`
-- 使用`make`命令, 对应的`Makefile`示例如下
+- 在终端窗口中使用`make`命令, 对应的`Makefile`示例如下
 
 ```make
 all: clean main run
