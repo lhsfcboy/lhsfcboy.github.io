@@ -2,10 +2,6 @@
 
 以C语言为例.
 
-## gcc常用参数
-
--fdiagnostics-color=always
-
 ## 单个文件的编译运行与调试
 
 对于如下的单个C语言文件, `main.c`
@@ -29,9 +25,9 @@ int main()
 - 在终端窗口中使用`make`命令, 对应的`Makefile`示例如下
 
 ```make
-all: clean main run
+all: clean build run
 
-main: main.c
+build: main.c
 	gcc -Wall -Wextra -std=c99 -o main main.c
 
 run: main
@@ -85,25 +81,69 @@ clean:
 
 ## 改写为make模式
 
-## 多个文件的编译运行
+```json
+{
+  "tasks": [
+    {
+      "type": "shell", // 使用 shell 类型任务来执行 make 命令
+      "label": "make build", // 任务标签，显示为“Make: Build project”
+      "command": "make build", // 运行 make 命令
+      "args": [
+        // 可以在此添加额外的 make 参数（如需要）
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}" // 设置当前工作目录为项目的根目录
+      },
+      "problemMatcher": [
+        "$gcc" // 使用 $gcc 作为问题匹配器，捕获编译错误和警告
+      ],
+      "group": {
+        "kind": "build", // 将任务归类为“build”类型
+        "isDefault": true // 设置该任务为默认构建任务
+      },
+      "detail": "Task to build the project using make." // 任务的详细描述
+    }
+  ],
+  "version": "2.0.0" // tasks.json 配置文件版本
+}
+```
 
-这里推荐借助`make`命令实现
+但是此时, 按下`Run`按钮依然不能识别到这个任务, 应为`Run`按钮是从`.vscod/launch.json`中取得任务列表
 
 ```json
 {
-  "version": "2.0.0",
   "tasks": [
     {
-      "label": "Run Make",
-      "type": "shell",
-      "command": "make",
-      "group": {
-        "kind": "build",
-        "isDefault": true
+      "type": "shell", // 使用 shell 类型任务来执行 make 命令
+      "label": "make build", // 任务标签，显示为“Make: Build project”
+      "command": "make build", // 运行 make 命令
+      "args": [
+        // 可以在此添加额外的 make 参数（如需要）
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}" // 设置当前工作目录为项目的根目录
       },
-      "problemMatcher": [],
-      "detail": "Runs the Make command to build the project."
+      "problemMatcher": [
+        "$gcc" // 使用 $gcc 作为问题匹配器，捕获编译错误和警告
+      ],
+      "group": {
+        "kind": "build", // 将任务归类为“build”类型
+        "isDefault": true // 设置该任务为默认构建任务
+      },
+      "detail": "Task to build the project using make." // 任务的详细描述
     }
-  ]
+  ],
+  "version": "2.0.0" // tasks.json 配置文件版本
 }
 ```
+
+## 多个文件的编译运行
+
+如果直接配置`gcc`命令, 那么需要修改两个细节
+
+- 输入文件` "${file}"`
+  - `"*.c"` // 编译对象为当前位置的所有c文件
+-指定输出文件 `"-o", "${fileDirname}\\${fileBasenameNoExtension}.exe"`
+  - `"-o", "${fileDirname}\\a.exe"`   // 固定化输出文件名
+
+还是推荐借助`make`命令实现
