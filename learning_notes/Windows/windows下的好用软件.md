@@ -75,7 +75,9 @@
   - 设置为开机启动
   - 设置快捷键为Ctrl + Alt + A
   - 关闭QQ/TIM的截图快捷键
-- 图片大小调整 开源 绿色
+- Caesium Image Compressor
+  - https://saerasoft.com/caesium#downloads
+  - 图片大小调整 开源GUI工具 绿色
 ## 视频处理、多媒体编辑 
 - Audacity
   - 音频编辑软件
