@@ -1,8 +1,12 @@
 # VS Code下如何编译/调试文件
 
+参考链接:
+- [Integrate with External Tools via Tasks](https://code.visualstudio.com/Docs/editor/tasks)
+- [vscode中launch.json和tasks.json的基础配置](https://www.cnblogs.com/dylaris/p/18401199)
+- [VSCode 配置指南！（含 C++、Python、Java 环境配置）](https://cloud.tencent.com/developer/article/1901050)
+
 以C语言为例.
 ![屏幕截图 2024-11-08 211643](https://github.com/user-attachments/assets/5a703099-a415-42ca-9c3f-9c7e06450682)
-
 
 ## 单个文件的编译运行与调试
 
