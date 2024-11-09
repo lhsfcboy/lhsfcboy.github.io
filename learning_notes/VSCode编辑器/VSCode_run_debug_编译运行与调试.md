@@ -23,22 +23,33 @@ int main()
 ```
 
 - 在终端窗口中使用命令行
-  `gcc -Wall -Wextra -std=c99 -o main main.c`
+  - 编译: `gcc -Wall -Wextra -std=c99 -g -o main main.c`
+    - 注意使用了`-g`选项编译的可执行文件才能调试
+  - 运行: `./main`
+  - 调试: `gdb ./main`
+  - 发布: `gcc -Wall -Wextra -std=c99 -O2 -o main main.c`
+    - 注意去除了`-g`选项, 添加了`-O2`选项
 - 在终端窗口中使用`make`命令, 对应的`Makefile`示例如下
 
 ```make
 all: clean build run
 
 build: main.c
-	gcc -Wall -Wextra -std=c99 -o main main.c
+	gcc -Wall -Wextra -std=c99 -g -o main main.c
 
 run: main
 	./main
 
-clean:
-	rm -f sum_program
+release: clean main.c
+	gcc -Wall -Wextra -std=c99 -O2 -o main main.c
 
-.PHONY: all run clean
+debug: main
+	gdb ./main
+
+clean:
+	rm -f main
+
+.PHONY: all run clean release debug
 ```
 
 ## 使用VS Code的执行工具
