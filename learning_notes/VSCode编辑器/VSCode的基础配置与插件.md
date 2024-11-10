@@ -80,11 +80,20 @@
 
 ## 有待尝试
 
-- TODO Highlight
+- TODO Highlight / TODO Tree
+  - https://qiita.com/taka-kawa/items/673716d77795c937d422
 - Bookmartks
+  - 在文档几个不同位置跳转时，这个书签插件很实用，右键菜单里直接设置/取消书签，快捷键在不同的书签位置跳转，左边还有当前书签列表，双击立马跳转
 - Path Autocomplete / Path Intellisense
+  - 自动完成文件名、文件路径
 - Output Colorizer
 - Trailing Spaces 高亮行末空格
+  - 一般会配置自动删除行末空格, 这个插件已经没有意义了
+- Blockman
+  - 用浅显的背景色，直观的展示代码的层次结构
+  - ![image](https://github.com/user-attachments/assets/2f4f9e34-65f7-4b70-96f7-6160251a3595)
+- Window Colors
+  - 适合多开 vscode 的同学们，看着几个 vscode 窗口经常蒙圈找不到谁是谁的, 可以为每个项目制定一个专属的颜色，多开窗口再也不会迷路
 - Indent Rainbow
   - 使得对齐更加具有可读性
 - highlight-matching-tag
