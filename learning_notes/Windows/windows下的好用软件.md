@@ -68,18 +68,23 @@
 - VLC
 - QQ影音
 
-## 截图、视频处理、多媒体编辑 
+## 截屏, 图片处理
+
+- Snipaste
+  - 截图工具 https://https://www.snipaste.com/www.snipaste.com/
+  - 设置为开机启动
+  - 设置快捷键为Ctrl + Alt + A
+  - 关闭QQ/TIM的截图快捷键
+- Caesium Image Compressor
+  - https://saerasoft.com/caesium#downloads
+  - 图片大小调整 开源GUI工具 绿色
+## 视频处理、多媒体编辑 
 - Audacity
   - 音频编辑软件
 - LosslessCut
   - 简单的视频片段剪切
 - Carnac
   - 按下键时在屏幕一角实时显示按下的键位
-- Snipaste
-  - 截图工具 https://https://www.snipaste.com/www.snipaste.com/
-  - 设置为开机启动
-  - 设置快捷键为Ctrl + Alt + A
-  - 关闭QQ/TIM的截图快捷键
 - 视频压制 小丸工具箱
   - http://maruko.appinn.me
 - 转码
