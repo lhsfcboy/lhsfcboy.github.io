@@ -2,15 +2,13 @@
 
 ## 廖雪峰《Makefile教程》
 
-- Makefile教程 - 廖雪峰的官方网站
-  [liaoxuefeng.com/books/makefile/introduction/index.html](https://liaoxuefeng.com/books/makefile/introduction/index.html)
+- [Makefile教程 - 廖雪峰的官方网站](https://liaoxuefeng.com/books/makefile/introduction/index.html)
+  - 简短实用
 
 ## 陈皓 《跟我一起写Makefile》
 
-- 跟我一起写Makefile - 跟我一起写Makefile 1.0 文档
-  [seisman.github.io/how-to-write-makefile/index.html](https://seisman.github.io/how-to-write-makefile/index.html)
-- 字典式教程
-  [跟我一起写Makefile - 跟我一起写Makefile 1.0 文档字典式教程](https://seisman.github.io/how-to-write-makefile/index.html)
+- [跟我一起写Makefile - 跟我一起写Makefile 1.0 文档字典式教程](https://seisman.github.io/how-to-write-makefile/index.html)
+  - 细致详实
 
 ## 李云《驾驭Makefile》
 
