@@ -1,12 +1,9 @@
-
-
-
-
-
+# Taken_日本宅建考试
 
 ## 考试当天
 
 ### 考试结束以后
+
 -宅建考试解答速报Tac：
 https://www.tac-school.co.jp/kouza_takken/sokuhou.html
 
