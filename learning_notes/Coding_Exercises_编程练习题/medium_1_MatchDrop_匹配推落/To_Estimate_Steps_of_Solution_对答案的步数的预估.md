@@ -18,7 +18,7 @@
 在实现solve函数中的verbose 功能的过程中. 需要依次打印出从0开始到第一个找到的解的棋盘状态.
 e.g. In above diagram, the first found solved board is `board_id:105`, and then we use parent_id reference to find the trail: `[0,2,5, ...... , 105]`
 因此, 需要有一个数组来储存这一系列的棋盘的`board_id`.
-And in above case, the array size is `N + 1`.
+And in above case, the array size is `N+1`.
 
 And for the very first step, I need to decide the size of the array.
 Since `-Wvla` is used in the given Makefile, I cant use the feature of `Variable Length Arrays` to detamine the array size when running the code.
@@ -58,7 +58,7 @@ CNT_LS_LEN:  definition…        // 变量名备选: solution_size  solution_st
 n: generation_num
 generation：definition…
 
-## 具体的数学推导/展示计算过程
+## 初步的思考
 
 As a beginning, I started with the most complated case: a 6 * 6 board.
 
@@ -80,7 +80,7 @@ That means if solution exist, then it will no more then level 7, hence the solut
 
 But above conclusion is based on assumption that each node will ALWAYS generate 6 child nodes. Which is clearly not ture, as we do may face the duplicated board. And in that case, the solution_steps will be grater then 8.
 
-Insated of tighten the assumptions, I think I could explor the situation of width of 5.
+Insated of tighten that assumptions, I think I could explor the situation of width of 5.
 With same assumption and caclaution, the solution_steps will be 9.
 
 | level |           | nodes number | cumulative sum |
@@ -111,17 +111,19 @@ And when width is 3, the solution_steps will be 12.
 |    10 | pow(3, 10) |        59049 |          88573 |
 |    11 | pow(3, 11) |       177147 |         265720 |
 
-And when width is 3, the solution_steps will be 18.
+And when width is 2, the solution_steps will be 18.
 
 | level |            | nodes number | cumulative sum |
 |-------|------------|--------------|----------------|
 |     0 | pow(2, 0)  |            1 |              1 |
 |     1 | pow(2, 1)  |            2 |              3 |
 |   ... | ...        |          ... |            ... |
+|    13 | pow(2, 13) |         8192 |          16383 |
+|   ... | ...        |          ... |            ... |
 |    16 | pow(2, 16) |        65536 |         131071 |
 |    17 | pow(2, 17) |       131072 |         262143 |
 
-And when width is 1, I can manually compose the most complex board as below:
+And when width is 1, I can manually compose the most complex board (but have a solution) as below:
 
 ```text
 Hawk=>A
@@ -136,12 +138,58 @@ A
 
 We need 6 push to squize out the annoying X on the board top.
 
-## 结语
+At this point, it seems we woulc be confident to say, the solution steps will not more then 18.
+But if we consider that each new level may be not `fully filled`, then it is possible that the solution_steps will be more then 18.
+
+## 跟进一步的思考
+
+The example of width 1 remind me, at ceratin condation, we could actually traverse all possible board states before reach 200,000. And may possiable only need less steps then above conclusion.
+
+e.g. when width is 2, one of the completed case (again, but with a solution) could be:
+
+```text
+Hawk=>X
+Board=>
+AA
+BB
+AA
+BB
+AA
+BB
+```
+
+All possible permutations will be 12,012, it could be calculated using the following formula:
+![alt text](https://www.sciweavers.org/download/Tex2Img_1731763871.jpg)
+
+\frac{13!}{6! \times 6!}
+
+If we review the table of width of 2 in previous section, it looks like we may find the solution on level 13.
+But again, it is based the assumption that each level is `fully filled`
+
+Next step, when width is 3, one of the completed case (again, but with a solution) could be:
+
+```text
+Hawk=>X
+Board=>
+AAA
+BBB
+CCC
+AAA
+BBB
+CCC
+```
+
+3,259,09,584
+\frac{19!}{6! \times 6! \times 6!}
+
+## 结论
+
+非常幸运的是, 我们是在解决一个工程问题而不是一个数学问题. 最后我决定使用`20`这个数字.
 
 ## 后记
 
 这份文件是用Markdown格式编写以后转换为PDF格式的.
-其中的公式部分使用了https://www.sciweavers.org/free-online-latex-equation-editor来生成基于LaTex语法的方程式图片.
+表格部分使用了 https://www.tablesgenerator.com/markdown_tables 来方便生成.
+公式部分使用了 https://www.sciweavers.org/free-online-latex-equation-editor 来生成基于LaTex语法的方程式图片.
 图片部分使用了Google Drawings.
 请问老师在具体工具上有哪些推荐?
-https://www.tablesgenerator.com/markdown_tables
