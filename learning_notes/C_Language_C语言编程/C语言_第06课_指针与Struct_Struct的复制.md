@@ -74,3 +74,7 @@ void main()
     printf("person2 ==> Name: %-6s, Age: %d, Height: %.2f\n", person2.name, person2.age, person2.height);
 }
 ```
+
+## WIP
+
+请给我一个c语言中 Struct的复制时, 由于成员中包含指针, 导致用等号复制 没能成功复制的案例
