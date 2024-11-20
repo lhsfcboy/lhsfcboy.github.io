@@ -1,13 +1,13 @@
 # 日文 LaTeX
 
-## 最快方案: 使用网络服务 Cloud Latex
-
-- https://cloudlatex.io/ja
-
-## 搭建本地环境
+## 基础知识
 
 - https://zhuanlan.zhihu.com/p/19910110
 - https://zhuanlan.zhihu.com/p/19912674
+
+## 最快方案: 使用网络服务 Cloud Latex
+
+- https://cloudlatex.io/ja
 
 ## 常见的TeX引擎
 
