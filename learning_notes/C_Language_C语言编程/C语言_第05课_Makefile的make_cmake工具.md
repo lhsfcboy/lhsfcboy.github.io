@@ -18,7 +18,7 @@ CMake常用于大型C/C++项目中，因为它可以解决跨平台编译和复�
 
 以下是一个简单的C语言项目示例，该项目包含一个源文件和一个`CMakeLists.txt`文件，使其能够在Linux、Windows和macOS上使用GCC编译。
 
-### 项目结构
+## 项目结构
 
 创建一个包含以下文件和文件夹的项目结构：
 
@@ -29,7 +29,7 @@ MyProject/
 └── CMakeLists.txt
 ```
 
-### `main.c` 文件
+## `main.c` 文件
 
 在`src`文件夹中，编写一个简单的`main.c`程序：
 
@@ -42,7 +42,7 @@ int main() {
 }
 ```
 
-### `CMakeLists.txt` 文件
+## `CMakeLists.txt` 文件
 
 在项目根目录下的`CMakeLists.txt`文件中添加以下内容：
 
@@ -76,7 +76,7 @@ if (UNIX AND NOT APPLE)
 endif()
 ```
 
-### 构建和编译项目
+## 构建和编译项目
 
 在不同平台上，使用以下命令编译项目：
 
