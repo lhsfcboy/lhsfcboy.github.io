@@ -1,5 +1,9 @@
 # CMake
 
+[工具篇：make a sparrow cmake buildsystem](https://mp.weixin.qq.com/s?__biz=Mzg5MzU4NTU5Nw==&mid=2247484193&idx=1&sn=506d375db6cac6a667f28183d3669e9b)
+
+[工具篇：再谈cmake](https://mp.weixin.qq.com/s?__biz=Mzg5MzU4NTU5Nw==&mid=2247484288&idx=1&sn=e974dd630c608624d59fac197192cebb)
+
 CMake是一种跨平台的构建工具，主要用于管理和简化软件的编译过程，特别是对于跨平台的C/C++项目。它通过提供一种通用的配置文件（`CMakeLists.txt`），生成适合目标平台的构建文件（如Makefile、Visual Studio工程文件等），从而使项目在不同操作系统和开发环境下更容易编译和构建。
 
 CMake的主要功能包括：
