@@ -1,5 +1,9 @@
 # Windows下的开发环境
 
+## WIP win10 配置系统默认utf-8编码
+
+​www.cnblogs.com/walker-world/p/9548852.html
+
 ## PowerShell 
 
 ### PowerShell 设置 UTF-8 输出编码
