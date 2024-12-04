@@ -1,3 +1,9 @@
+# SQL 学习
+
+## 教程
+
+https://www.w3schools.com/sql/default.asp
+
 https://github.com/baagod/sql_node/blob/master/mysql/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.md
 
 https://github.com/C10H16/MySQL-notes/blob/master/1-MySQL%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C.md
@@ -20,3 +26,10 @@ SELECT TOP 50 PERCENT * FROM Customers;
 完整的单词，而不是缩写。例如使用middle_name，不是mid_nm。
 
 使用常用缩写。对于几个长词而言，缩写词比词本身更为常见，比如i18n和l10n，这时使用缩写。
+
+
+
+- [Oracle Database Express Edition](http://www.oracle.com/technetwork/database/database-technologies/express-edition/overview/index.html)
+- SQLite3
+
+
