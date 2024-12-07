@@ -15,6 +15,20 @@ https://gist.github.com/Chryzanthemum/29cc9a6a69900d044562d54bf31df321
 SELECT TOP 3 * FROM Customers;
 SELECT TOP 50 PERCENT * FROM Customers;
 ```
+
+## 常见的数据库
+
+- MySQL
+- PostgreSQL
+ - PostgreSQL 开发者把它念作post-gress-Q-L。PostgreSQL 的 Slogan 是 "世界上最先进的开源关系型数据库"
+ - 严格支持SQL语言
+- [Oracle Database Express Edition](http://www.oracle.com/technetwork/database/database-technologies/express-edition/overview/index.html)
+- Microsoft SQL Server
+- Sybase SQL Server
+  - 现在归属德国SAP公司
+- SQLite3
+  - 单机/测试/学习
+
 ### 数据库的表和字段命名
 
 小写。标识符应该全部用小写字母来书写，使用first_name，不是"First_Name"或者"FirstName"。
@@ -26,11 +40,6 @@ SELECT TOP 50 PERCENT * FROM Customers;
 完整的单词，而不是缩写。例如使用middle_name，不是mid_nm。
 
 使用常用缩写。对于几个长词而言，缩写词比词本身更为常见，比如i18n和l10n，这时使用缩写。
-
-
-
-- [Oracle Database Express Edition](http://www.oracle.com/technetwork/database/database-technologies/express-edition/overview/index.html)
-- SQLite3
 
 
 ## SQL语句执行顺序
