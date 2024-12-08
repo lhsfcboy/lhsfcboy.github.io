@@ -1,0 +1,1 @@
+docker run -d --restart unless-stopped --name baota -p 8888:8888 -p 22:22 -p 443:443 -p 3000:3000 -p 227:227 -p 80:80 -p 888:888 -p 3306:3306 -p 8080:8080 -v E:/BtPanel/WebRoot:/www/wwwroot -v E:/BtPanel/mysql_data:/www/server/data -v E:/BtPanel/vhost:/www/server/panel/vhost wongvio227/btpanel_php81_go_mysql57:latest

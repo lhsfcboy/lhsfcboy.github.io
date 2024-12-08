@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>用户发布详情</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+            rel="stylesheet">
+        <style>
+        :root {
+            --active-color: #dc3545;
+            --inactive-color: #6c757d;
+        }
+        
+        body {
+            padding-top: 56px;
+            padding-bottom: 60px;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .avatar-sm {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+        }
+        
+        .follow-btn {
+            border-radius: 20px;
+            padding: 0.375rem 1.5rem;
+        }
+        
+        .carousel-inner {
+            border-radius: 8px;
+        }
+        
+        .carousel-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        .comment-input {
+            border-radius: 20px;
+            background-color: #f8f9fa;
+        }
+        
+        .bottom-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            border-top: 1px solid #dee2e6;
+            padding: 0.75rem 1rem;
+            z-index: 1030;
+        }
+        
+        .stats-item {
+            display: flex;
+            align-items: center;
+            color: var(--inactive-color);
+            margin-left: 1rem;
+        }
+        
+        .stats-item.active {
+            color: var(--active-color);
+        }
+        
+        .stats-item i {
+            margin-right: 0.25rem;
+        }
+        
+        .comment-area {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+    </style>
+    </head>
+    <body>
+        <!-- 顶部导航 -->
+        <nav class="navbar navbar-expand fixed-top">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center">
+                    <a class="nav-link me-3" href="#">
+                        <i class="bi bi-arrow-left"></i>
+                    </a>
+                    <img src="https://placehold.co/40x40" class="avatar"
+                        alt="User">
+                </div>
+
+                <button class="btn btn-danger follow-btn">关注</button>
+            </div>
+        </nav>
+
+        <!-- 主体内容 -->
+        <div class="container mb-5">
+            <!-- 图片轮播 -->
+            <div id="postCarousel" class="carousel slide mt-3"
+                data-bs-touch="true" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#postCarousel"
+                        data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#postCarousel"
+                        data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#postCarousel"
+                        data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://placehold.co/800x600" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://placehold.co/800x600" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://placehold.co/800x600" alt="Image 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button"
+                    data-bs-target="#postCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button"
+                    data-bs-target="#postCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+
+            <!-- 文字内容 -->
+            <div class="mt-3">
+                <p>这是一段示例文字内容，描述了用户发布的具体内容。可以包含多行文字，表情符号等😊</p>
+                <p class="text-muted small">2024-11-06 12:30</p>
+            </div>
+
+            <!-- 评论输入框 -->
+            <div class="d-flex align-items-center mt-4">
+                <img src="https://placehold.co/40x40" class="avatar-sm me-2"
+                    alt="Current user">
+                <div class="flex-grow-1">
+                    <input type="text" class="form-control comment-input"
+                        placeholder="说点什么...">
+                </div>
+            </div>
+
+            <!-- 评论列表 -->
+            <div class="comment-area mt-4">
+                <div class="d-flex mb-3">
+                    <img src="https://placehold.co/40x40" class="avatar-sm me-2"
+                        alt="Commenter">
+                    <div>
+                        <div class="fw-bold">用户名1</div>
+                        <p class="mb-1">这是第一条评论内容</p>
+                        <small class="text-muted">2小时前</small>
+                    </div>
+                </div>
+
+                <div class="d-flex mb-3">
+                    <img src="https://placehold.co/40x40" class="avatar-sm me-2"
+                        alt="Commenter">
+                    <div>
+                        <div class="fw-bold">用户名2</div>
+                        <p class="mb-1">这是第二条评论内容，可能会比较长一些，展示多行文字的效果。</p>
+                        <small class="text-muted">5小时前</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部工具栏 -->
+        <div class="bottom-bar">
+            <div class="d-flex align-items-center">
+                <div class="flex-grow-1">
+                    <input type="text" class="form-control comment-input"
+                        placeholder="发表评论...">
+                </div>
+                <div class="stats-item active">
+                    <i class="bi bi-heart-fill"></i>
+                    <span>2.5k</span>
+                </div>
+                <div class="stats-item">
+                    <i class="bi bi-bookmark"></i>
+                    <span>1.2k</span>
+                </div>
+                <div class="stats-item">
+                    <i class="bi bi-chat"></i>
+                    <span>368</span>
+                </div>
+            </div>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+        // 初始化轮播
+        document.addEventListener('DOMContentLoaded', function() {
+            var carousel = new bootstrap.Carousel(document.getElementById('postCarousel'), {
+                interval: 3000,
+                touch: true
+            });
+        });
+    </script>
+    </body>
+</html>

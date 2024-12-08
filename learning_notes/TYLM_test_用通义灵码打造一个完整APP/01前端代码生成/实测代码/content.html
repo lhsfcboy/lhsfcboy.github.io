@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bootstrap Mobile Page</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+            rel="stylesheet">
+        <style>
+        .navbar .nav-link {
+            color: gray;
+        }
+        .navbar .nav-link.active {
+            color: red;
+        }
+        .rounded-circle {
+            border-radius: 50%;
+        }
+        .carousel-inner img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+    </head>
+    <body>
+        <!-- 顶部导航 -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <i class="bi bi-arrow-left"></i>
+                </a>
+                <a class="navbar-brand" href="#">
+                    <img src="https://placehold.co/40x40" alt="User Avatar"
+                        class="rounded-circle">
+                </a>
+                <div class="ml-auto">
+                    <button class="btn btn-outline-secondary">关注</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 页面主体 -->
+        <div class="container mt-5">
+            <!-- 发布的图集 -->
+            <div id="carouselExampleIndicators" class="carousel slide"
+                data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide-to="1"></li>
+                    <li data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/2.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/3.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <a class="carousel-control-prev"
+                    href="#carouselExampleIndicators" role="button"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"
+                        aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next"
+                    href="#carouselExampleIndicators" role="button"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"
+                        aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+
+            <!-- 文字段落内容 -->
+            <p class="mt-4">
+                这是一段随机生成的中文内容。这是一段随机生成的中文内容。这是一段随机生成的中文内容。这是一段随机生成的中文内容。
+                这是一段随机生成的中文内容。这是一段随机生成的中文内容。这是一段随机生成的中文内容。这是一段随机生成的中文内容。
+                这是一段随机生成的中文内容。这是一段随机生成的中文内容。这是一段随机生成的中文内容。这是一段随机生成的中文内容。
+                这是一段随机生成的中文内容。这是一段随机生成的中文内容。这是一段随机生成的中文内容。这是一段随机生成的中文内容。
+                这是一段随机生成的中文内容。这是一段随机生成的中文内容。这是一段随机生成的中文内容。这是一段随机生成的中文内容。
+            </p>
+
+            <!-- 留言行 -->
+            <div class="row mt-4">
+                <div class="col-2">
+                    <img src="https://placehold.co/40x40" alt="User Avatar"
+                        class="rounded-circle">
+                </div>
+                <div class="col-10">
+                    <input type="text" class="form-control"
+                        placeholder="写下你的留言...">
+                </div>
+            </div>
+
+            <!-- 留言互动部分 -->
+            <div class="mt-4">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <img src="https://placehold.co/40x40" alt="User Avatar"
+                            class="rounded-circle me-2">
+                        <span>用户1：</span>
+                        <span>这是一条评论。</span>
+                    </div>
+                </div>
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <img src="https://placehold.co/40x40" alt="User Avatar"
+                            class="rounded-circle me-2">
+                        <span>用户2：</span>
+                        <span>这是一条评论。</span>
+                    </div>
+                </div>
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <img src="https://placehold.co/40x40" alt="User Avatar"
+                            class="rounded-circle me-2">
+                        <span>用户3：</span>
+                        <span>这是一条评论。</span>
+                    </div>
+                </div>
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <img src="https://placehold.co/40x40" alt="User Avatar"
+                            class="rounded-circle me-2">
+                        <span>用户4：</span>
+                        <span>这是一条评论。</span>
+                    </div>
+                </div>
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <img src="https://placehold.co/40x40" alt="User Avatar"
+                            class="rounded-circle me-2">
+                        <span>用户5：</span>
+                        <span>这是一条评论。</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部导航 -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-bottom">
+            <div class="container-fluid">
+                <input type="text" class="form-control w-50"
+                    placeholder="输入评论...">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-heart me-2"></i>
+                    <span>100</span>
+                    <i class="bi bi-bookmark me-2"></i>
+                    <span>50</span>
+                    <i class="bi bi-chat me-2"></i>
+                    <span>20</span>
+                </div>
+            </div>
+        </nav>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    </body>
+</html>
