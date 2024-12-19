@@ -4,24 +4,39 @@
 
 - pip: python的包管理工具，可以用于安装python包。
 
+```shell
+# 显示当前安装的 pip 版本信息
+pip --version
+# 将当前环境中所有的非可编辑模式安装的包升级到最新版本
+pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U
+# 将所有已安装的、存在更新版本的 Python 包升级到最新版本
+pip list --outdated | awk 'NR>2 {print $1}' | xargs pip install -U
+```
+
 ## Windows下安装Python
 
 **不要**通过 Microsoft Store 安装Python，它使用了一个沙盒环境来隔离应用程序，路径会比较特殊。
 `C:\Users\lhsfc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\Scripts`是 Microsoft Store 版本的 Python 的标准安装位置。
-  
+
+## Python版本的考量 Python2 vs Python3
+
+- 无特殊需求的话，不再安装任何Python2版本
+- 无特殊需求的话, 使用最新版Python3版本
+
+## 虚拟环境的管理
+
+ 虚拟环境：一个独立的Python环境，里面装了各种包，但不会安装到系统目录中。
+
 ## 主流的环境管理工具
 
-- conda: python虚拟环境管理工具，其中一个功能是安装python包。
-- miniconda: conda的压缩包，自带了一个名为base的虚拟环境，这个虚拟环境里只安装了python和几个必要的库。
-- anaconda：conda的压缩包。自带了一个名为base的虚拟环境，这个虚拟环境里安装了很多和数据处理有关的python包。
-
 主要参考文章
+
 - [10.2 细数Python 虚拟环境的管理方案](https://sspai.com/post/75978)
 - [『折腾指北』Python 开发环境管理](https://sspai.com/post/82499)
 - [Pipenv & 虚拟环境](https://pythonguidecn.readthedocs.io/zh/latest/dev/virtualenvs.html)
 
-
 其他参考文章
+
 - https://www.zhihu.com/question/404402864
 - https://note.com/e2718/n/n4d1bf2110990
 - https://github.com/walter201230/Python/blob/master/Article/advanced/%E4%BD%BF%E7%94%A8Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83.md
@@ -40,33 +55,37 @@
 
 venv --- 创建虚拟环境
 
-https://docs.python.org/zh-cn/3.12/library/venv.html
+<https://docs.python.org/zh-cn/3.12/library/venv.html>
 
 ### Windows下的一种安装方式
 
-- 无特殊需求的话，不再安装任何Python2版本。
 - 安装所需要的版本到独立目录，例如
   - Python3.12 -> "C:\Python312\python.exe"
   - Python3.11 -> "C:\Python311\python.exe"
   - Python3.10 -> "C:\Python310\python.exe"
 - 构建单独的venv环境
+
   ```cmd
   "C:\Python312\python.exe" -m venv D:\venv312-base
   "C:\Python312\python.exe" -m venv D:\venv312-project-A
   "C:\Python312\python.exe" -m venv D:\venv312-project-B
   ```
+
 - 激活并检查
+
   ```cmd
   D:\venv312-base\Scripts\activate.bat
   python --version
   pip install numpy
   ```
+
 ## 基于virtualenv/virtualenvwrapper
 
 - virtualenv: 创建隔绝的Python环境的工具
 - virtualenvwrapper: 对virtualenv的一层包装
 
 主要命令
+
 - 查看所有的命令：virtualenvwrapper --help
 - 创建基本环境：mkvirtualenv [环境名]
   - mkvirtualenv --python=/usr/bin/python2.7 testenv
@@ -74,7 +93,6 @@ https://docs.python.org/zh-cn/3.12/library/venv.html
 - 激活环境：workon [环境名]
 - 退出环境：deactivate
 - 列出所有环境：workon 或者 lsvirtualenv -b
-
 
 ```bash
 pip install virtualenv
@@ -136,4 +154,3 @@ source /usr/local/bin/virtualenvwrapper.sh
 ## WORKON_HOME 就是它将要用来存放各种虚拟环境目录的目录
 
 ```
-  

@@ -7,7 +7,7 @@
 <https://pythonguidecn.readthedocs.io/zh/latest/writing/structure.html#id5>
 
 ```text
-README.md   
+README.md
 LICENSE
 Makefile
 setup.py
@@ -34,4 +34,8 @@ test:
 PHONY: init test
 ```
 
-## Python包层级管理
+## import兄弟目录
+
+- 小型项目或临时场景：可以使用 sys.path.append。
+- 开发环境：推荐使用 PYTHONPATH 或相对导入。
+- 生产代码或分发项目：建议使用包安装方式。

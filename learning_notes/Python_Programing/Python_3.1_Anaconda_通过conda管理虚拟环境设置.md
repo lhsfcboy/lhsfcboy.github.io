@@ -1,7 +1,11 @@
+# 基于Anaconda
 
-## 基于Anaconda
+- conda: python虚拟环境管理工具，其中一个功能是安装python包。
+- miniconda: conda的压缩包，自带了一个名为base的虚拟环境，这个虚拟环境里只安装了python和几个必要的库。
+- anaconda：conda的压缩包。自带了一个名为base的虚拟环境，这个虚拟环境里安装了很多和数据处理有关的python包。
 
 [Anaconda多环境多版本python配置指导](https://www.jianshu.com/p/d2e15200ee9b0)
+
 - anaconda安装路径不要出现空格
 - 选择空间大的硬盘
 - 把Anaconda加入环境变量
