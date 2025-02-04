@@ -1,0 +1,49 @@
+During this workbook, we have spent the majority of the time exploring the use of IntelliJ.
+At this stage however, it is worth spending a little bit of time taking a look at how we can build and run
+Java projects from the command line. This is important because the assessed exercises later on in the
+unit will be marked on the command line (and you need to make sure that your code will actually build and run from there).
+
+You may have used *GNU Make* previously - this software saves you from having
+to manually type out all the compile and linking commands every time you want to build your software.
+`make` takes care of running all the required build commands (as specified in the `Makefile`)
+and intelligently works out what needs to be done.
+`make` however isn't commonly used for Java development since building Java projects
+usually involves much more complicated activities than just running a set of commands.
+This is where the **Maven** build system comes in - it provides various tools for building and running complex Java projects.
+
+On your command line, change into the project root folder (the directory where the `pom.xml` file resides) and type one of the following commands (depending on your platform):
+
+    Linux/OSX:   ./mvnw clean compile
+    Windows:     mvnw clean compile
+
+**Note**: On some unix systems, you _might_ need to make `mvnw` executable first (i.e. by running `chmod u+x mvnw`)
+
+The command is doing 2 separate things in sequential order:
+
+1. `clean` ensures that everything will be freshly built by cleaning out (deleting) previously generated files
+2. `compile` compiles and builds all files and resources (stopping if any build errors are encountered)
+
+Note that you can learn more about these and other build tasks in the official <a href="https://maven.apache.org/guides/getting-started/index.html" target="_blank">Maven documentation</a>.
+
+The first time you run the compile command, it might take a while to complete so be patient. This is because Maven may need to download various project dependencies. If successful, the output on the command line should looks something like this:
+
+    [INFO] ------------------------------------------------------------------------
+    [INFO] BUILD SUCCESS
+    [INFO] ------------------------------------------------------------------------
+    [INFO] Total time: 42 s
+    [INFO] Finished at: 2022-01-01T00:00:00Z
+    [INFO] ------------------------------------------------------------------------
+
+If you get a `BUILD FAILURE`, it means the project failed to complete some of the specified tasks.
+If this is the case, it would be wise to go back into IntelliJ and make sure no code issues are detected there
+(i.e. no code is highlighted in red and the project can still be built and run).
+Fix any problems in IntelliJ and then return to the command line.
+
+Once you have successfully built your code on the command line, you can run your program using:
+
+    Linux/OSX:   ./mvnw exec:java
+    Windows:     mvnw exec:java
+
+For a given project, there may be many different things that can be executed - the above command runs the `main` method of the Java part of the project (currently the only thing we have written).
+
+If you are interested in finding out more about Maven, take a look at <a href="extras/maven.pdf" target="_blank">this document</a> that describes the of operation of the built tools in more detail.
