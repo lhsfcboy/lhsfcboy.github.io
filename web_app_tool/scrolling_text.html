@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单跑马灯</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .settings-page {
+            display: block;
+            max-width: 400px;
+            margin: 50px auto;
+        }
+        
+        .marquee-page {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: black;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .marquee-text {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            white-space: nowrap;
+            animation: scroll-left linear infinite;
+        }
+        
+        @keyframes scroll-left {
+            0% {
+                left: 100%;
+            }
+            100% {
+                left: -100%;
+            }
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+        }
+        
+        select {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 设置页面 -->
+    <div class="settings-page" id="settingsPage">
+        <h1>跑马灯设置</h1>
+        
+        <div class="form-group">
+            <label for="textInput">输入文字：</label>
+            <input type="text" id="textInput" value="欢迎使用跑马灯效果" placeholder="请输入要显示的文字">
+        </div>
+        
+        <div class="form-group">
+            <label for="colorSelect">文字颜色：</label>
+            <select id="colorSelect">
+                <option value="white">白色</option>
+                <option value="yellow">亮黄色</option>
+                <option value="lime">亮绿色</option>
+                <option value="red">亮红色</option>
+            </select>
+        </div>
+        
+        <button onclick="startMarquee()">开始跑马灯</button>
+    </div>
+    
+    <!-- 跑马灯页面 -->
+    <div class="marquee-page" id="marqueePage" onclick="backToSettings()">
+        <div class="marquee-text" id="marqueeText">欢迎使用跑马灯效果</div>
+    </div>
+
+    <script>
+        function startMarquee() {
+            const text = document.getElementById('textInput').value.trim();
+            const color = document.getElementById('colorSelect').value;
+            
+            if (!text) {
+                alert('请输入要显示的文字！');
+                return;
+            }
+            
+            // 设置跑马灯文字和颜色
+            const marqueeText = document.getElementById('marqueeText');
+            marqueeText.textContent = text;
+            marqueeText.style.color = color;
+            
+            // 根据屏幕宽度计算字体大小，确保显示约5个汉字
+            const screenWidth = window.innerWidth;
+            const fontSize = Math.max(screenWidth / 8, 24); // 最小24px
+            marqueeText.style.fontSize = fontSize + 'px';
+            
+            // 根据文字长度和字体大小计算动画时间
+            const textLength = text.length;
+            const animationDuration = Math.max(textLength * 0.5, 3); // 最少3秒
+            marqueeText.style.animationDuration = animationDuration + 's';
+            
+            // 切换到跑马灯页面
+            document.getElementById('settingsPage').style.display = 'none';
+            document.getElementById('marqueePage').style.display = 'block';
+            
+            // 自动进入全屏（如果浏览器支持）
+            const marqueeElement = document.getElementById('marqueePage');
+            if (marqueeElement.requestFullscreen) {
+                marqueeElement.requestFullscreen().catch(err => {
+                    console.log('无法进入全屏模式:', err);
+                });
+            } else if (marqueeElement.webkitRequestFullscreen) {
+                marqueeElement.webkitRequestFullscreen();
+            } else if (marqueeElement.msRequestFullscreen) {
+                marqueeElement.msRequestFullscreen();
+            }
+        }
+        
+        function backToSettings() {
+            // 退出全屏
+            if (document.exitFullscreen) {
+                document.exitFullscreen().catch(err => {
+                    console.log('退出全屏失败:', err);
+                });
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) {
+                document.msExitFullscreen();
+            }
+            
+            // 切换回设置页面
+            document.getElementById('marqueePage').style.display = 'none';
+            document.getElementById('settingsPage').style.display = 'block';
+        }
+        
+        // 监听全屏状态变化
+        document.addEventListener('fullscreenchange', function() {
+            if (!document.fullscreenElement) {
+                // 如果退出了全屏，自动返回设置页面
+                setTimeout(() => {
+                    if (document.getElementById('marqueePage').style.display === 'block') {
+                        backToSettings();
+                    }
+                }, 100);
+            }
+        });
+        
+        // 兼容不同浏览器的全屏事件
+        document.addEventListener('webkitfullscreenchange', function() {
+            if (!document.webkitFullscreenElement) {
+                setTimeout(() => {
+                    if (document.getElementById('marqueePage').style.display === 'block') {
+                        backToSettings();
+                    }
+                }, 100);
+            }
+        });
+        
+        // 窗口大小改变时重新计算字体大小
+        window.addEventListener('resize', function() {
+            if (document.getElementById('marqueePage').style.display === 'block') {
+                const marqueeText = document.getElementById('marqueeText');
+                const screenWidth = window.innerWidth;
+                const fontSize = Math.max(screenWidth / 8, 24);
+                marqueeText.style.fontSize = fontSize + 'px';
+            }
+        });
+    </script>
+</body>
+</html>
