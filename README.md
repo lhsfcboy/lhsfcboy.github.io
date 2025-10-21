@@ -10,6 +10,10 @@
 - https://www.linkedin.com/in/luo-hongshuai-mike-35496a57/
 - https://www.zhihu.com/people/lhsfcboy/posts
 
+## Web Tool
+
+- [跑马灯](https://lhsfcboy.github.io/web_tool/marquee.html)
+
 ## 文件夹 & 文件名的命名规范
 
 - 基本原则先英文后汉语
