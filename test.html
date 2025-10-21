@@ -3,471 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>跑马灯效果应用</title>
+    <title>简单跑马灯</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #333;
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
         }
 
-        .container {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            width: 90%;
-            max-width: 600px;
-            backdrop-filter: blur(10px);
-        }
-
-        .settings-panel {
+        .settings-page {
             display: block;
+            max-width: 400px;
+            margin: 50px auto;
         }
 
-        .marquee-panel {
+        .marquee-page {
             display: none;
-            text-align: center;
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: #000;
-            z-index: 1000;
+            background: black;
+            overflow: hidden;
+            cursor: pointer;
         }
 
-        h1 {
-            text-align: center;
-            color: #4a5568;
-            margin-bottom: 30px;
-            font-size: 2.5em;
-            font-weight: 300;
+        .marquee-text {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            white-space: nowrap;
+            animation: scroll-left linear infinite;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                left: 100%;
+            }
+            100% {
+                left: -100%;
+            }
         }
 
         .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 15px;
         }
 
         label {
             display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #4a5568;
-            font-size: 1.1em;
+            margin-bottom: 5px;
+            background-color: white;
+            padding: 5px 8px;
+            border-radius: 3px;
         }
 
-        input[type="text"], input[type="color"], input[type="range"], select {
+        input[type="text"], select, button {
             width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #e2e8f0;
-            border-radius: 10px;
+            height: 44px;
+            padding: 8px;
             font-size: 16px;
-            transition: all 0.3s ease;
-            background: white;
-        }
-
-        input[type="text"]:focus, select:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
-
-        input[type="range"] {
-            height: 8px;
-            background: #e2e8f0;
-            border-radius: 5px;
-            outline: none;
-        }
-
-        input[type="range"]::-webkit-slider-thumb {
-            appearance: none;
-            width: 20px;
-            height: 20px;
-            background: #667eea;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-
-        .range-group {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .range-group input[type="range"] {
-            flex: 1;
-        }
-
-        .range-value {
-            background: #667eea;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-weight: 600;
-            min-width: 50px;
-            text-align: center;
-        }
-
-        .color-group {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .color-group input[type="color"] {
-            width: 60px;
-            height: 50px;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-
-        .color-group input[type="text"] {
-            flex: 1;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
 
         button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin-top: 10px;
+            background-color: #007bff;
             color: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 25px;
-            font-size: 18px;
-            font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-            margin-top: 20px;
         }
 
         button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
-        }
-
-        button:active {
-            transform: translateY(0);
-        }
-
-        .back-button {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            margin-bottom: 20px;
-            margin-top: 0;
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            z-index: 1001;
-            width: auto;
-            padding: 10px 20px;
-            font-size: 16px;
-        }
-
-        .marquee-container {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            position: relative;
-            background: #000;
-            margin: 0;
-            display: flex;
-            align-items: center;
-        }
-
-        .marquee-text {
-            white-space: nowrap;
-            position: absolute;
-            animation: marquee linear infinite;
-        }
-
-        @keyframes marquee {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
-        .preview {
-            background: #f7fafc;
-            border: 2px dashed #cbd5e0;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
-            text-align: center;
-            min-height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .direction-group {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-
-        .direction-option {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .direction-option:hover {
-            border-color: #667eea;
-            background: rgba(102, 126, 234, 0.05);
-        }
-
-        .direction-option input[type="radio"] {
-            width: auto;
-        }
-
-        .direction-option.selected {
-            border-color: #667eea;
-            background: rgba(102, 126, 234, 0.1);
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- 设置面板 -->
-        <div class="settings-panel" id="settingsPanel">
-            <h1>🎪 跑马灯设置</h1>
-            
-            <div class="form-group">
-                <label for="textInput">显示文字：</label>
-                <input type="text" id="textInput" placeholder="请输入要显示的文字..." value="欢迎使用跑马灯效果！">
-            </div>
+    <!-- 设置页面 -->
+    <div class="settings-page" id="settingsPage">
+        <h1>跑马灯设置</h1>
 
-            <div class="form-group">
-                <label for="fontSize">字体大小：</label>
-                <div class="range-group">
-                    <input type="range" id="fontSize" min="12" max="72" value="24">
-                    <span class="range-value" id="fontSizeValue">24px</span>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="textColor">文字颜色：</label>
-                <div class="color-group">
-                    <input type="color" id="textColor" value="#ffffff">
-                    <input type="text" id="textColorHex" value="#ffffff" placeholder="#ffffff">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="bgColor">背景颜色：</label>
-                <div class="color-group">
-                    <input type="color" id="bgColor" value="#000000">
-                    <input type="text" id="bgColorHex" value="#000000" placeholder="#000000">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="speed">滚动速度：</label>
-                <div class="range-group">
-                    <input type="range" id="speed" min="1" max="10" value="5">
-                    <span class="range-value" id="speedValue">5</span>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>滚动方向：</label>
-                <div class="direction-group">
-                    <div class="direction-option selected" data-direction="left">
-                        <input type="radio" name="direction" value="left" checked>
-                        <span>← 向左滚动</span>
-                    </div>
-                    <div class="direction-option" data-direction="right">
-                        <input type="radio" name="direction" value="right">
-                        <span>向右滚动 →</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>预览效果：</label>
-                <div class="preview" id="preview">
-                    <span id="previewText">欢迎使用跑马灯效果！</span>
-                </div>
-            </div>
-
-            <button onclick="startMarquee()">🚀 开始跑马灯</button>
+        <div class="form-group">
+            <input type="text" id="textInput" value="欢迎使用跑马灯效果" placeholder="请在此处输入循环展示的文字">
         </div>
 
-        <!-- 跑马灯面板 -->
-        <div class="marquee-panel" id="marqueePanel">
-            <button class="back-button" onclick="backToSettings()">← 返回设置</button>
-            <div class="marquee-container" id="marqueeContainer">
-                <div class="marquee-text" id="marqueeText">欢迎使用跑马灯效果！</div>
-            </div>
+        <div class="form-group">
+            <select id="colorSelect">
+                <option value="white" >文字颜色：白色</option>
+                <option value="yellow">文字颜色：亮黄色</option>
+                <option value="lime"  >文字颜色：亮绿色</option>
+                <option value="red"   >文字颜色：亮红色</option>
+            </select>
         </div>
+
+        <button onclick="startMarquee()">开始跑马灯</button>
+    </div>
+
+    <!-- 跑马灯页面 -->
+    <div class="marquee-page" id="marqueePage" onclick="backToSettings()">
+        <div class="marquee-text" id="marqueeText">欢迎使用跑马灯效果</div>
     </div>
 
     <script>
-        // 获取DOM元素
-        const textInput = document.getElementById('textInput');
-        const fontSize = document.getElementById('fontSize');
-        const fontSizeValue = document.getElementById('fontSizeValue');
-        const textColor = document.getElementById('textColor');
-        const textColorHex = document.getElementById('textColorHex');
-        const bgColor = document.getElementById('bgColor');
-        const bgColorHex = document.getElementById('bgColorHex');
-        const speed = document.getElementById('speed');
-        const speedValue = document.getElementById('speedValue');
-        const preview = document.getElementById('preview');
-        const previewText = document.getElementById('previewText');
-        const settingsPanel = document.getElementById('settingsPanel');
-        const marqueePanel = document.getElementById('marqueePanel');
-        const marqueeContainer = document.getElementById('marqueeContainer');
-        const marqueeText = document.getElementById('marqueeText');
-        const directionOptions = document.querySelectorAll('.direction-option');
+        // 计算合适的字体大小，确保显示4-6个汉字
+        function calculateFontSize(screenWidth) {
+            // 目标显示字符数：4-6个汉字，取中间值5个作为基准
+            const targetChars = 5;
+            // 汉字宽度约等于字体大小，考虑一些间距，乘以1.1的系数
+            const charWidthRatio = 1.1;
+            // 预留一些边距，使用屏幕宽度的90%
+            const usableWidth = screenWidth * 0.9;
 
-        // 初始化事件监听器
-        function initEventListeners() {
-            // 文字输入
-            textInput.addEventListener('input', updatePreview);
-            
-            // 字体大小
-            fontSize.addEventListener('input', function() {
-                fontSizeValue.textContent = this.value + 'px';
-                updatePreview();
-            });
-            
-            // 文字颜色
-            textColor.addEventListener('input', function() {
-                textColorHex.value = this.value;
-                updatePreview();
-            });
-            
-            textColorHex.addEventListener('input', function() {
-                if (isValidHex(this.value)) {
-                    textColor.value = this.value;
-                    updatePreview();
-                }
-            });
-            
-            // 背景颜色
-            bgColor.addEventListener('input', function() {
-                bgColorHex.value = this.value;
-                updatePreview();
-            });
-            
-            bgColorHex.addEventListener('input', function() {
-                if (isValidHex(this.value)) {
-                    bgColor.value = this.value;
-                    updatePreview();
-                }
-            });
-            
-            // 速度
-            speed.addEventListener('input', function() {
-                speedValue.textContent = this.value;
-            });
-            
-            // 方向选择
-            directionOptions.forEach(option => {
-                option.addEventListener('click', function() {
-                    directionOptions.forEach(opt => opt.classList.remove('selected'));
-                    this.classList.add('selected');
-                    this.querySelector('input[type="radio"]').checked = true;
-                });
-            });
+            // 计算字体大小：可用宽度 / (目标字符数 * 字符宽度比例)
+            let fontSize = usableWidth / (targetChars * charWidthRatio);
+
+            // 设置最小和最大字体大小限制
+            const minFontSize = 24;  // 最小24px，确保在小屏幕上可读
+            const maxFontSize = 200; // 最大200px，避免在大屏幕上过大
+
+            fontSize = Math.max(minFontSize, Math.min(maxFontSize, fontSize));
+
+            return Math.round(fontSize);
         }
 
-        // 验证十六进制颜色值
-        function isValidHex(hex) {
-            return /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/.test(hex);
-        }
-
-        // 更新预览
-        function updatePreview() {
-            const text = textInput.value || '请输入文字...';
-            const size = fontSize.value + 'px';
-            const color = textColor.value;
-            const background = bgColor.value;
-            
-            previewText.textContent = text;
-            preview.style.fontSize = size;
-            preview.style.color = color;
-            preview.style.backgroundColor = background;
-        }
-
-        // 开始跑马灯
         function startMarquee() {
-            const text = textInput.value.trim();
+            const text = document.getElementById('textInput').value.trim();
+            const color = document.getElementById('colorSelect').value;
+
             if (!text) {
                 alert('请输入要显示的文字！');
                 return;
             }
 
-            // 获取设置值
-            const size = fontSize.value + 'px';
-            const color = textColor.value;
-            const background = bgColor.value;
-            const speedValue = parseInt(speed.value);
-            const direction = document.querySelector('input[name="direction"]:checked').value;
-            
-            // 应用样式到跑马灯
+            // 设置跑马灯文字和颜色
+            const marqueeText = document.getElementById('marqueeText');
             marqueeText.textContent = text;
-            marqueeText.style.fontSize = size;
             marqueeText.style.color = color;
-            marqueeContainer.style.backgroundColor = background;
-            
-            // 计算动画持续时间（速度越大，持续时间越短）
-            const duration = (11 - speedValue) * 2; // 2-20秒
-            
-            // 设置动画方向和持续时间
-            if (direction === 'right') {
-                marqueeText.style.animation = `marqueeRight ${duration}s linear infinite`;
-            } else {
-                marqueeText.style.animation = `marquee ${duration}s linear infinite`;
+
+            // 使用新的字体大小计算方法
+            const screenWidth = window.innerWidth;
+            const fontSize = calculateFontSize(screenWidth);
+            marqueeText.style.fontSize = fontSize + 'px';
+
+            // 根据文字长度和字体大小计算动画时间
+            const textLength = text.length;
+            const animationDuration = Math.max(textLength * 0.5, 3); // 最少3秒
+            marqueeText.style.animationDuration = animationDuration + 's';
+
+            // 切换到跑马灯页面
+            document.getElementById('settingsPage').style.display = 'none';
+            document.getElementById('marqueePage').style.display = 'block';
+
+            // 自动进入全屏（如果浏览器支持）
+            const marqueeElement = document.getElementById('marqueePage');
+            if (marqueeElement.requestFullscreen) {
+                marqueeElement.requestFullscreen().catch(err => {
+                    console.log('无法进入全屏模式:', err);
+                });
+            } else if (marqueeElement.webkitRequestFullscreen) {
+                marqueeElement.webkitRequestFullscreen();
+            } else if (marqueeElement.msRequestFullscreen) {
+                marqueeElement.msRequestFullscreen();
             }
-            
-            // 切换到跑马灯面板
-            settingsPanel.style.display = 'none';
-            marqueePanel.style.display = 'block';
         }
 
-        // 返回设置
         function backToSettings() {
-            settingsPanel.style.display = 'block';
-            marqueePanel.style.display = 'none';
+            // 退出全屏
+            if (document.exitFullscreen) {
+                document.exitFullscreen().catch(err => {
+                    console.log('退出全屏失败:', err);
+                });
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) {
+                document.msExitFullscreen();
+            }
+
+            // 切换回设置页面
+            document.getElementById('marqueePage').style.display = 'none';
+            document.getElementById('settingsPage').style.display = 'block';
         }
 
-        // 添加向右滚动的动画
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes marqueeRight {
-                0% {
-                    transform: translateX(-100%);
-                }
-                100% {
-                    transform: translateX(100%);
-                }
+        // 监听全屏状态变化
+        document.addEventListener('fullscreenchange', function() {
+            if (!document.fullscreenElement) {
+                // 如果退出了全屏，自动返回设置页面
+                setTimeout(() => {
+                    if (document.getElementById('marqueePage').style.display === 'block') {
+                        backToSettings();
+                    }
+                }, 100);
             }
-        `;
-        document.head.appendChild(style);
+        });
 
-        // 初始化
-        initEventListeners();
-        updatePreview();
+        // 兼容不同浏览器的全屏事件
+        document.addEventListener('webkitfullscreenchange', function() {
+            if (!document.webkitFullscreenElement) {
+                setTimeout(() => {
+                    if (document.getElementById('marqueePage').style.display === 'block') {
+                        backToSettings();
+                    }
+                }, 100);
+            }
+        });
+
+        // 窗口大小改变时重新计算字体大小
+        window.addEventListener('resize', function() {
+            if (document.getElementById('marqueePage').style.display === 'block') {
+                const marqueeText = document.getElementById('marqueeText');
+                const screenWidth = window.innerWidth;
+                const fontSize = calculateFontSize(screenWidth);
+                marqueeText.style.fontSize = fontSize + 'px';
+            }
+        });
     </script>
 </body>
 </html>
