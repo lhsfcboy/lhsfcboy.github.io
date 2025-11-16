@@ -2,8 +2,25 @@
 
 https://zh.wikipedia.org/zh-cn/YouTube下载软件比较
 
+## yt-dlp
+
+- 目前相对更为活跃的yt-dlp
+- https://github.com/yt-dlp/yt-dlp
+
+## you-get
+
+主要面向国内视频网站
+
+- https://github.com/soimort/you-get
+
+```shell
+# 下载播放列表
+you-get https://www.bilibili.com/video/av9700817/ --playlist
+```
+
 ## youtube_dl
 
+- 曾经的主流工具, 已经缺乏更新维护
 - https://github.com/ytdl-org/youtube-dl
   - pip install -U youtube_dl
   - https://zh.wikipedia.org/wiki/Youtube-dl
@@ -44,18 +61,3 @@ youtube-dl.exe --embed-subs --write-sub url
 youtube-dl -o '%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' https://www.youtube.com/user/TheLinuxFoundation/playlists
 ```
 
-## yt-dlp
-
-- 相对更为活跃的yt-dlp
-- https://github.com/yt-dlp/yt-dlp
-
-## you-get
-
-主要面向国内视频网站
-
-- https://github.com/soimort/you-get
-
-```shell
-# 下载播放列表
-you-get https://www.bilibili.com/video/av9700817/ --playlist
-```
