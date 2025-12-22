@@ -1,3 +1,0 @@
-Java-Introduction.pdf 18 21
-Java-Objects.pdf 23 26
-Generics-Encapsulation.pdf 26 26

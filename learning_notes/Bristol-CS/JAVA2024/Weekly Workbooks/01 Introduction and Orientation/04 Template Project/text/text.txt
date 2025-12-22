@@ -1,8 +1,0 @@
-Rather than you having to create a new project each time we start a workbook or assignment,
-we will often provide you with an existing template project (in order to help you get started).
-These templates will contain all of the rules and dependencies required to build a project. One of the main benefits is that these projects can be imported directly into Intellij (or any other IDE for that matter). This will save us a lot of time installing required libraries and setting up the build environment.
-
-For the next couple of workbooks, we will be using the <a href="extras/IntelliJ Template/" target="_blank">shapes</a> template project.
-You should copy the entire `cw-shapes` directory into your work folder (wherever you want to keep your code for this unit). In order to open an existing project in IntelliJ, simply click on the `Open` button on the IntelliJ startup screen and pick the `cw-shapes` folder using the file dialog. 
-
-Open the `cw-shapes` project now and make sure you can run the code before moving on to the next task. The first time you open a project, you may find that you have to wait some time before you can run it - this is due to the need for IntelliJ to download any dependencies and generate various project setting files (see the progress bar at the bottom of the window for details). Note that the first time you open the project you may well need to select a JDK from the list of available development kits (if you see the `Project JDK is not defined - Setup JDK` message when you open the project).

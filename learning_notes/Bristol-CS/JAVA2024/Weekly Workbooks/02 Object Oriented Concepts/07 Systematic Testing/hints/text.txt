@@ -1,4 +1,0 @@
-Perhaps the simplest way to approach this task is to create a multi-branch IF statement that will classify the triangle. The order of the branches of the IF statements will be very important: you should check for specific/special cases at the top, with more general cases at the bottom (you'll soon understand why later !)
-
-Before you ask, yes the test cases are all correct !  All triangle are as listed in the test file.
-The final three scalene triangles are _almost_ other types of triangle, but not quite ;o)
