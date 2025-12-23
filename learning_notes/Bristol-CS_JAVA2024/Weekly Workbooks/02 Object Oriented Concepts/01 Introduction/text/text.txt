@@ -1,0 +1,3 @@
+There are a number of key concepts that we must have a solid grasp of if we are to effectively use Object Oriented programming languages (such as Java !). These structures build on top of each other (as illustrated in the diagram below) with higher-level concepts being built upon the foundation of the lower-levels.
+
+In the following sections of this workbook, we explore these constructs in more detail - introducing them in theory and then applying them in practice to programming activities. These concepts are closely interlinked, so we will introduce them in pairs in the following workbook tasks.

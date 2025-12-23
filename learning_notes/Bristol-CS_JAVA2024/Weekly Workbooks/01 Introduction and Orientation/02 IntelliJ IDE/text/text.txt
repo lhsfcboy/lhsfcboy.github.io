@@ -1,0 +1,16 @@
+Previously on this programme, the emphasis was on learning to program.
+In this current teaching block, we will be focusing on the skills required to turn you into a _developer_.
+Part of this skillset is the ability to effectively use an Integrated Development Environment (IDE).
+In this unit, we will therefore be using the IntelliJ IDE in order to support development.
+This is already installed on the lab machines and can be found either via the application menus or on the command line at 
+`/opt/idea/2024/bin/idea.sh`. This installation _should_ already have the UoB license enabled, 
+If however it asks you to provide license details when you first run it, enter the following as the on-site license server:
+`http://ls-jetbrains.bris.ac.uk:8080`
+
+You do not HAVE to install IntelliJ on your own laptop, however many people choose to do so (in order to work from home).
+If you plan to use your own computer for writing code, now is a good time to get IntelliJ installed.
+Follow the step-by-step installation instructions that were provided in the briefing slides for this session (available via GitHub).
+For a more detailed walk-through, see the following platform-specific videos for getting started with IntelliJ on 
+<a href="https://web.microsoftstream.com/video/608b2c4c-1834-4429-9c86-bf19530c7f3a" target="_blank">Ubuntu</a>, 
+<a href="https://web.microsoftstream.com/video/382a7600-3940-4415-a680-002de6960b99" target="_blank">Windows</a> and
+<a href="https://mediasite.bris.ac.uk/Mediasite/Play/e879f20d3cb44e989202926a64f5be481d" target="_blank">Mac OSX</a>.

@@ -1,0 +1,7 @@
+It is no good being able to store the colour of a shape if there is no way to access it ! After all, how would we draw a shape if there was no way to find out what colour it was ? Take a look at the slides and video above to find out why we need to be careful when providing access to encapsulated data. Using this knowledge, add `setColour` and `getColour` methods to the `TwoDimensionalShape` class that allow the colour to be updated and retrieved.
+
+Now update the `toString` method of your Triangle class so that the printable String that is returned also contains the colour of the triangle (e.g. "This is a BLUE Triangle with sides of length 4, 5, 7"). Test this out in your main method by creating a triangle, setting its colour and then printing it out.
+
+Now, what if we wanted to add colour details to all shapes' `toString` methods ? So that calling `toString` on Circles, Rectangles etc. would also return the colour of that shape as part of the String. What would be the most efficient way of doing that (i.e. writing the least amount of code, with the minimum amount of replication) ?
+
+Finally in this task: as programmers, we have a lot of control over the access to our variables, methods and classes. Check out the "PRO" slides and video above for more details on the various options available.
