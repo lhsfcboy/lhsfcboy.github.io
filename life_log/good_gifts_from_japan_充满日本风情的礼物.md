@@ -5,14 +5,16 @@
 ## 食品
 
 ### 果酱等
+
 - 軽井沢ファーマーズギフト
-  - https://www.amazon.co.jp/storefront?me=A2WVO0OJ4EAMVI&ref_=ssf_share
+  - <https://www.amazon.co.jp/storefront?me=A2WVO0OJ4EAMVI&ref_=ssf_share>
 
 ## 工艺品
 
 ### 玻璃工艺品类
+
 - 江戸切子 富士山に鶴・桜 冷酒グラス ペア
-  - https://amzn.asia/d/6YfjBrd
+  - <https://amzn.asia/d/6YfjBrd>
 - 富士山酒杯
 
 ### 八音盒

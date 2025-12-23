@@ -6,30 +6,18 @@
 29-6, Sarugaku-cho, Shibuya-ku
 Tokyo 150-0033
 Tel +81 (0)3 3496 3001
-tyoamb@um.dk
-http://japan.um.dk
+<tyoamb@um.dk>
+<http://japan.um.dk>
 Office hours: Weekdays 9:30-12:00 13:30-16:30
 Personal appearance at the Embassy only by prior appointment.
 
-Appointments, consular inquiries (passport, visa, residence permit, certifications): tyoambcon@um.dk
+Appointments, consular inquiries (passport, visa, residence permit, certifications): <tyoambcon@um.dk>
 
 [The official portal for foreign nationals who wish to visit, live or work in Denmark](https://www.nyidanmark.dk/en-GB)
 
 Short-stay-visa
 
 Cultural-visa?
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## 过程
 
@@ -69,7 +57,7 @@ Cultural-visa?
 
 然后就是预约面试时间。这个需要你主动发邮件给大使馆，并且，要提前至少2周时间，并且要在大使馆工作时间，并且你要已经完成了网上申请。
 
-日本东京的丹麦大使邮箱是这个：tyoambcon@um.dk
+日本东京的丹麦大使邮箱是这个：<tyoambcon@um.dk>
 申请面试的邮件必须用他规定的邮件subject：
 subject line should read: Schengen Visa Appointment – [applicant’s full name]. Email should contain: Name, Nationality, Telephone number, Preferred date(s) to come to the Embassy.
 

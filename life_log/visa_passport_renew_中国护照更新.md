@@ -2,7 +2,7 @@
 
 ## 中国大使馆@东京
 
-登录“中国公民海外申请护照在线预约”网站 http://ppt.mfa.gov.cn
+登录“中国公民海外申请护照在线预约”网站 <http://ppt.mfa.gov.cn>
 
 - 档案号码 201905150449496
 
@@ -14,7 +14,7 @@
 工作日上午9:00-12:00（中国及日本节假日休息），对外接待，受理申请和领证。
 
 - 符合规定的数码照片, 文件大小在30K至80K之间
-- 电子护照人像照片规格要求 http://ppt.mfa.gov.cn/appo/page/instruction.html
+- 电子护照人像照片规格要求 <http://ppt.mfa.gov.cn/appo/page/instruction.html>
 - 若照片符合需求但是无法提交也可申请时直接提交原件，工作人员检查以后会扫描为电子件
 
 ### 数码照片
@@ -22,7 +22,7 @@
 注意， 有些证明写真机不支持白色背景
 
 - 証明写真機Ki-Re-i EX（Withスマホ）
-  - https://play.google.com/store/apps/details?id=jp.co.dnp.kirei
+  - <https://play.google.com/store/apps/details?id=jp.co.dnp.kirei>
 
 ### 普通护照换发
 

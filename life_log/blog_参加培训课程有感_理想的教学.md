@@ -1,6 +1,6 @@
 # 参加几个培训项目有感
 
-有个叫做Asahi的老师非常热心的张罗, tasahi@waseda.jp
+有个叫做Asahi的老师非常热心的张罗, <tasahi@waseda.jp>
 
 ## FPGA
 
@@ -51,7 +51,7 @@ FPGA也是使用AWS的FPGA服务来体验.
   - 考虑markdown格式
 - 图文必须必须一致
   - 特别注意箭头的起点和终点, 要与其意义相符
- 
+
 ## 理想的教学
 
 ## 课程介绍
