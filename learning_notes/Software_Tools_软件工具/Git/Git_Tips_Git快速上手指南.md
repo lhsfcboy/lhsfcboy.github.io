@@ -17,12 +17,18 @@ git commit -m "add the mail c file "                       #把文件提交到�
 git push origin master
 
 ####与远程保持同步#####
+
+```bash
 git fetch                            #把git的东西抓取到你本地
 git merge                            # 再merge
 
 git pull                             # 等价于git fetch ; git merge
 
 git push                             #再push
+
+# 少废话，一行命令直接梭哈
+git pull;git add -A; git commit -m "`date +"%F%t%T"` Daily Commit";git push;
+```
 
 ####完全重建版本库####危险!!!!#####
 rm -rf .git
