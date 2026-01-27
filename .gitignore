@@ -1,0 +1,20 @@
+# General
+.DS_Store
+*.log
+*.swp
+*~
+.vscode/
+.idea/
+
+# SSL/TLS Keys and Certs
+*.key
+*.crt
+*.csr
+*.pem
+*.pfx
+*.p12
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini

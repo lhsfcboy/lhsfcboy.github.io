@@ -1,36 +1,18 @@
 #!/usr/bin/env bash
 
-trap 'echo "Server exiting"; exit 0' SIGTERM SIGINT
+trap 'echo "webserver_0.2.sh exiting"; exit 0' SIGTERM SIGINT
 
-# HTTPS配置
-CERT_FILE="/tmp/server.crt"
-KEY_FILE="/tmp/server.key"
-PORT=8443
-
-msg="Hello, HTTPS world"
-delay_seconds=1
-
-# 生成自签名证书和密钥（如果不存在）
-generate_cert() {
-  if [[ ! -f "$CERT_FILE" ]] || [[ ! -f "$KEY_FILE" ]]; then
+# 确保 SSL 证书和密钥存在
+if [[ ! -f "server.crt" || ! -f "server.key" ]]; then
     echo "Generating self-signed certificate..."
-    openssl req -x509 -newkey rsa:2048 -keyout "$KEY_FILE" -out "$CERT_FILE" \
-      -days 365 -nodes -subj "/C=JP/ST=Tokyo/L=Tokyo/O=Test/CN=localhost" 2>/dev/null
-    echo "Certificate generated at $CERT_FILE"
-    echo "Key generated at $KEY_FILE"
-  fi
-}
+    openssl req -x509 -newkey rsa:2048 -keyout server.key -out server.crt -days 365 -nodes -subj "/CN=localhost" 2>/dev/null
+fi
 
-# 验证依赖工具
-check_dependencies() {
-  if ! command -v openssl &> /dev/null; then
-    echo "Error: openssl is not installed"
-    exit 1
-  fi
-}
+msg="Hello, world"
+delay_seconds=1 # 设置延迟时间，单位为秒
+port=8443
 
-check_dependencies
-generate_cert
+echo "Starting HTTPS server on port ${port}..."
 
 while true; do
   # 获取当前JST时间
@@ -43,10 +25,10 @@ while true; do
     printf "HTTP/1.1 200 OK\r\n"
     printf "Content-Type: text/plain\r\n"
     printf "Content-Length: %d\r\n" "$((${#response_body} + 1))"
-    printf "Connection: close\r\n"
+    printf "Connection: close\r\n" # 确保连接在响应后关闭
     printf "\r\n"
     printf "%s\n\n" "${response_body}"
-  } | openssl s_server -cert "$CERT_FILE" -key "$KEY_FILE" -port $PORT -quiet 2>/dev/null
+  } | openssl s_server -accept "${port}" -cert server.crt -key server.key -naccept 1 -quiet 2>/dev/null
 
   # 在处理完一个连接后，添加延迟
   echo "Request processed, sleeping for ${delay_seconds} seconds..."
