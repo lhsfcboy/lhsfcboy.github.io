@@ -4,8 +4,9 @@
 
 本项目用于创建GitHub的个人主页, 存放配置文件, 代码片段和其他可以公开的资料~
 
-- https://github.com/lhsfcboy/lhsfcboy.github.io
-
+- [项目源代码]https://github.com/lhsfcboy/lhsfcboy.github.io
+- https://lhsfcboy.github.io/
+  
 ## Web Tool
 
 - [跑马灯](https://lhsfcboy.github.io/web_tool/marquee.html)
