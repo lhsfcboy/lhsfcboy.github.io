@@ -30,3 +30,21 @@
 
 ## Git快速配置笔记
 
+### 从远程clone到本地
+
+```bash
+cd path-to-parent_folder
+git clone https://github.com/username/repo.git
+```
+
+### 把本地的项目链接到远程
+
+```bash
+echo "# repo-name" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:username/repo-name.git
+git push -u origin main
+```
